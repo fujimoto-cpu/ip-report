@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONNEKT IP News Daily Report — 2026-03-29</title>
+<style>
+  :root {
+    --primary: #1a1a2e;
+    --accent: #e94560;
+    --accent2: #0f3460;
+    --jp-color: #c0392b;
+    --gl-color: #2980b9;
+    --bg: #f5f5f7;
+    --card-bg: #ffffff;
+    --text: #1d1d1f;
+    --muted: #6e6e73;
+    --border: #e0e0e5;
+    --tag-jp: #fdecea;
+    --tag-gl: #e8f4fd;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+    color: #fff;
+    padding: 48px 24px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 70% 50%, rgba(233,69,96,0.18) 0%, transparent 60%);
+  }
+  .header-inner { position: relative; max-width: 860px; margin: 0 auto; }
+  .brand-tag {
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 4px 16px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 18px;
+  }
+  header h1 {
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+  header h1 span { color: #e94560; }
+  .header-date {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 1px;
+  }
+
+  /* ── SUMMARY BANNER ── */
+  .summary-banner {
+    background: #fff8e7;
+    border-left: 4px solid #f5a623;
+    margin: 32px auto;
+    max-width: 860px;
+    border-radius: 0 12px 12px 0;
+    padding: 20px 24px;
+    font-size: 14px;
+  }
+  .summary-banner .banner-title {
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #b8860b;
+    margin-bottom: 10px;
+  }
+  .summary-banner ol { padding-left: 18px; color: #444; }
+  .summary-banner ol li { margin-bottom: 5px; }
+  .konnekt-tip {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed #e8d5a0;
+    font-size: 13px;
+    color: #6b5a00;
+  }
+  .konnekt-tip strong { color: #b8860b; }
+
+  /* ── MAIN LAYOUT ── */
+  main { max-width: 860px; margin: 0 auto; padding: 0 16px 60px; }
+
+  /* ── SECTION HEADING ── */
+  .section-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 40px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-heading .flag-badge {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    background: var(--bg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .section-heading h2 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+  .section-heading .count-badge {
+    margin-left: auto;
+    background: var(--border);
+    border-radius: 12px;
+    padding: 2px 10px;
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  /* ── ARTICLE CARD ── */
+  .article-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s;
+  }
+  .article-card:hover { box-shadow: 0 6px 28px rgba(0,0,0,0.13); }
+
+  .card-top {
+    display: flex;
+    gap: 0;
+  }
+  .card-accent-bar {
+    width: 5px;
+    flex-shrink: 0;
+  }
+  .jp .card-accent-bar { background: var(--jp-color); }
+  .gl .card-accent-bar { background: var(--gl-color); }
+
+  .card-body { padding: 22px 24px; flex: 1; }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .region-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 6px;
+    padding: 2px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .jp .region-tag { background: var(--tag-jp); color: var(--jp-color); }
+  .gl .region-tag { background: var(--tag-gl); color: var(--gl-color); }
+
+  .source-name { font-size: 12px; color: var(--muted); font-weight: 500; }
+  .pub-date { font-size: 12px; color: var(--muted); margin-left: auto; }
+
+  .card-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    color: var(--text);
+    letter-spacing: -0.2px;
+  }
+  .card-summary {
+    font-size: 13.5px;
+    color: #444;
+    line-height: 1.75;
+    margin-bottom: 14px;
+  }
+  .card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 6px 14px;
+    transition: background 0.15s;
+  }
+  .jp .card-link { background: var(--tag-jp); color: var(--jp-color); }
+  .gl .card-link { background: var(--tag-gl); color: var(--gl-color); }
+  .jp .card-link:hover { background: #f5c6c2; }
+  .gl .card-link:hover { background: #c8e6f8; }
+  .card-link::after { content: '↗'; font-size: 11px; }
+
+  /* ── RECOMMENDATIONS ── */
+  .rec-section { margin-top: 48px; }
+  .rec-section h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+  }
+  .rec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 600px) { .rec-grid { grid-template-columns: 1fr; } }
+  .rec-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    border-top: 3px solid var(--accent);
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: #333;
+  }
+  .rec-card:nth-child(2) { border-top-color: #8e44ad; }
+  .rec-card:nth-child(3) { border-top-color: #27ae60; }
+  .rec-card:nth-child(4) { border-top-color: #f39c12; }
+  .rec-label {
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--accent);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .rec-card:nth-child(2) .rec-label { color: #8e44ad; }
+  .rec-card:nth-child(3) .rec-label { color: #27ae60; }
+  .rec-card:nth-child(4) .rec-label { color: #f39c12; }
+
+  /* ── BACKNUMBER ── */
+  .backnumber {
+    margin-top: 40px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .backnumber h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+  .backnumber ul { list-style: none; }
+  .backnumber li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .backnumber li:last-child { border-bottom: none; }
+  .backnumber a { color: var(--accent2); text-decoration: none; font-weight: 500; }
+  .backnumber a:hover { text-decoration: underline; }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 32px 16px;
+    font-size: 12px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    margin-top: 20px;
+  }
+  footer strong { color: var(--text); }
+</style>
+</head>
+<body>
+
+<!-- ════════ HEADER ════════ -->
+<header>
+  <div class="header-inner">
+    <div class="brand-tag">KONNEKT INTERNATIONAL — IP News Daily</div>
+    <h1>📊 IP <span>News</span> Report</h1>
+    <p class="header-date">2026年3月29日（日）</p>
+  </div>
+</header>
+
+<!-- ════════ SUMMARY BANNER ════════ -->
+<div class="summary-banner">
+  <div class="banner-title">📌 本日のIPニュース 3大トピック</div>
+  <ol>
+    <li><strong>AnimeJapan 2026 が開幕</strong> — 120社超が出展する過去最大規模のアニメ・IPビジネス商談展が東京ビッグサイトで進行中</li>
+    <li><strong>Licensing Expo 2026（5月・ラスベガス）</strong> がアジア出展社数・過去最多を予告 — IPライセンス業界のグローバル化が加速</li>
+    <li><strong>Dentsu × Iconic Arts</strong> がデータ駆動型IPクリエイション会社とグローバルパートナーシップ締結 — ブランドのアニメIP活用支援を強化</li>
+  </ol>
+  <div class="konnekt-tip">
+    <strong>💡 KONNEKTへの示唆：</strong>
+    AnimeJapan 2026の商談機会でワンピース・サンリオ等のIPライセンス拡充を図るとともに、Licensing Expo 2026（5月）への出展準備を加速し、KISS・AerosmithグッズのKONNEKTEDオンデマンドシステムとの連動によるグローバル展開を推進すべき。
+  </div>
+</div>
+
+<main>
+
+<!-- ════════ JAPAN SECTION ════════ -->
+<div class="section-heading">
+  <div class="flag-badge">🇯🇵</div>
+  <h2>日本の記事</h2>
+  <span class="count-badge">3本</span>
+</div>
+
+<!-- JP Article 1 -->
+<div class="article-card jp">
+  <div class="card-top">
+    <div class="card-accent-bar"></div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="region-tag">🇯🇵 Japan</span>
+        <span class="source-name">The New Publishing Standard</span>
+        <span class="pub-date">2026年3月28日〜</span>
+      </div>
+      <div class="card-title">AnimeJapan 2026 が開幕——過去最大規模でアニメIPビジネス商談が活況</div>
+      <div class="card-summary">
+        AnimeJapan 2026が東京ビッグサイトで3月28〜31日に開幕。過去最大となる120社以上が出展し、アニプレックス・KADOKAWA・東映らが国際ライセンス商談を展開。クロスメディアIP展開・グローバル配信・出版ライセンスが重点テーマで、世界的なアニメIPビジネスの主要商談拠点として機能している。
+      </div>
+      <a class="card-link" href="https://thenewpublishingstandard.com/2026/01/19/animejapan-2026-publishing-opportunities/" target="_blank">元記事を読む</a>
+    </div>
+  </div>
+</div>
+
+<!-- JP Article 2 -->
+<div class="article-card jp">
+  <div class="card-top">
+    <div class="card-accent-bar"></div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="region-tag">🇯🇵 Japan</span>
+        <span class="source-name">D2Cブランド専門メディア</span>
+        <span class="pub-date">2026年（最新）</span>
+      </div>
+      <div class="card-title">日本D2C市場が3兆円規模へ——インフルエンサー・タレントD2Cブランドが牽引する成功法則</div>
+      <div class="card-summary">
+        日本のD2C市場が2026年に約3兆円規模に到達し、年成長率15〜20%で拡大。アパレルD2C成功の三本柱は「データ×共感性×スピード」とされ、タレントプロデュースブランドが急成長している。17kgの年商30億円達成・airClosetの黒字化など注目事例が相次ぐ。
+      </div>
+      <a class="card-link" href="https://stock-sun.com/column/d2c-brand/" target="_blank">元記事を読む</a>
+    </div>
+  </div>
+</div>
+
+<!-- JP Article 3 -->
+<div class="article-card jp">
+  <div class="card-top">
+    <div class="card-accent-bar"></div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="region-tag">🇯🇵 Japan</span>
+        <span class="source-name">KADOKAWA IPライセンスビジネスサイト</span>
+        <span class="pub-date">2026年</span>
+      </div>
+      <div class="card-title">KADOKAWA、ソニー出資受けアニメIPライセンスをグローバル展開——2026年新作を積極提供</div>
+      <div class="card-summary">
+        ソニーの約320億円出資で戦略的優位を強化したKADOKAWAが、Re:Zero・KonoSuba・ソードアート・オンライン等の人気IPを世界的なストリーミング競争における資産として展開。IPライセンスビジネスサイト通じ2026年放映アニメの商品化・タイアップ企画を積極受け付け中。
+      </div>
+      <a class="card-link" href="https://license.kadokawa.co.jp/anime/" target="_blank">元記事を読む</a>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ GLOBAL SECTION ════════ -->
+<div class="section-heading">
+  <div class="flag-badge">🌍</div>
+  <h2>グローバルの記事</h2>
+  <span class="count-badge">3本</span>
+</div>
+
+<!-- GL Article 1 -->
+<div class="article-card gl">
+  <div class="card-top">
+    <div class="card-accent-bar"></div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="region-tag">🌍 Global</span>
+        <span class="source-name">License Global / Las Vegas Today</span>
+        <span class="pub-date">March 27, 2026</span>
+      </div>
+      <div class="card-title">Licensing Expo 2026 Promises Biggest Show Yet — Record Asian Exhibitors, AI &amp; Consolidation on Agenda</div>
+      <div class="card-summary">
+        Licensing Expo 2026（5月19〜21日・ラスベガス マンダレイベイ）は過去最大規模の開催が確定し、アジア出展社数が過去最多を記録する見込み。Netflix/Warner Bros.統合によるIPライブラリへの影響、AIのライセンス活用、グローバル関税のライセンス取引への影響が主要議題となる予定。
+      </div>
+      <a class="card-link" href="https://nationaltoday.com/us/nv/las-vegas/news/2026/03/27/licensing-expo-2026-promises-biggest-show-yet/" target="_blank">元記事を読む</a>
+    </div>
+  </div>
+</div>
+
+<!-- GL Article 2 -->
+<div class="article-card gl">
+  <div class="card-top">
+    <div class="card-accent-bar"></div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="region-tag">🌍 Global</span>
+        <span class="source-name">Licensing International</span>
+        <span class="pub-date">2026年</span>
+      </div>
+      <div class="card-title">Dentsu Partners with Iconic Arts to Accelerate Data-Driven IP Creation for Brands Through Anime &amp; Entertainment</div>
+      <div class="card-summary">
+        電通エンタテインメントとIconic Artsがグローバル戦略パートナーシップを締結し、コンテンツ・体験・消費者向け商品にわたるデータ駆動型IPをブランド向けに創出。アニメや連続ドラマ形式のエンターテインメントに特化し、ブランドが短期キャンペーンから長期IP展開へ移行するのを支援する。
+      </div>
+      <a class="card-link" href="https://licensinginternational.org/news/dentsu-partners-with-iconic-arts-to-accelerate-ip-creation-for-brands-through-data-driven-entertainment/" target="_blank">元記事を読む</a>
+    </div>
+  </div>
+</div>
+
+<!-- GL Article 3 -->
+<div class="article-card gl">
+  <div class="card-top">
+    <div class="card-accent-bar"></div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="region-tag">🌍 Global</span>
+        <span class="source-name">Anime News Network</span>
+        <span class="pub-date">March 26, 2026</span>
+      </div>
+      <div class="card-title">Seven Seas Entertainment Licenses Three New Manga Series — Japanese IP Expands in English-Language Markets</div>
+      <div class="card-summary">
+        Seven Seas Entertainmentが2026年3月末に3タイトルの新規マンガライセンスを取得。「The One-Eyed, One-Armed, One-Legged Sorcerer」「Your Meteor, Hidden in Flowers」「I SAY（Boys Love）」がいずれも2027年1月に英語版リリース予定。日本IPの英語圏出版市場への定常的な拡大が続いている。
+      </div>
+      <a class="card-link" href="https://www.animenewsnetwork.com/press-release/2026-03-26/seven-seas-licenses-the-one-eyed-one-armed-one-legged-sorcerer-manga-series/.235753" target="_blank">元記事を読む</a>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ RECOMMENDATIONS ════════ -->
+<div class="rec-section">
+  <h2>💡 KONNEKT INTERNATIONAL への提言</h2>
+  <div class="rec-grid">
+
+    <div class="rec-card">
+      <div class="rec-label">🛍️ D2Cブランド機会</div>
+      <strong>アンジュシャルム / Armillary / LA BANDA</strong><br><br>
+      日本D2C市場の3兆円突破を機に、各ブランドのSNSライブ配信・受注生産モデルを積極導入。「データ×共感性×スピード」の成功法則に沿ってファンコミュニティを深耕し、KONNEKTEDゼロウェイストシステムと連動した在庫リスクなき高利益率モデルを確立する。
+    </div>
+
+    <div class="rec-card">
+      <div class="rec-label">🎌 キャラクターIPライセンス戦略</div>
+      <strong>One Piece / Sanrio / KISS</strong><br><br>
+      AnimeJapan 2026（3/28〜31・東京ビッグサイト）開催中の今こそ、既存IPポートフォリオの新ライセンシー開拓と海外バイヤーとのアパレル商品化商談を積極推進。KADOKAWAのグローバルライセンスモデルを参考に、One Piece・SanrioのアジアOEM/ODM拡充とKISS・Aerosmithの音楽IPアジア向け展開を同時強化する。
+    </div>
+
+    <div class="rec-card">
+      <div class="rec-label">🌐 グローバルマーチャンダイズ展開</div>
+      <strong>GOODS / CUSTOMIZE 事業</strong><br><br>
+      Licensing Expo 2026（5/19〜21・ラスベガス）はアジア出展社過去最多の見込みで、北米・欧州バイヤーへのアプローチ最大の機会。YRリアルタイムカスタマイズとKONNEKTEDオンデマンド製造の組み合わせを英語プレゼン資料に整理し、音楽バンドIPグッズの在庫レスソリューションとして国際展開を図る。
+    </div>
+
+    <div class="rec-card">
+      <div class="rec-label">🤖 AI × IP権利管理</div>
+      <strong>新時代のIP戦略</strong><br><br>
+      Dentsu×Iconic Artsのデータ駆動型IPクリエイションモデルに学び、D2CブランドのコンテンツにAI生成ビジュアルを積極導入する検討を開始。Seven Seasの積極的なマンガライセンス取得動向を参考に、保有キャラクターIPのデジタル出版・電子書籍ライセンス領域への参入可能性も検討し、タレントの肖像・声のAI利用ガイドラインをライセンシーへ明文化してリスク管理体制を強化する。
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════ BACKNUMBER ════════ -->
+<div class="backnumber">
+  <h3>📂 バックナンバー</h3>
+  <ul>
+    <li><a href="https://www.notion.so/3317f11c9bd0812896f5e71364b5a38b" target="_blank">📊 [IP Report] 2026-03-28</a></li>
+  </ul>
+</div>
+
+</main>
+
+<!-- ════════ FOOTER ════════ -->
+<footer>
+  <strong>KONNEKT INTERNATIONAL INC.（コネクト・インターナショナル株式会社）</strong><br>
+  IP News Daily Report — 自動生成レポート | 2026-03-29<br>
+  Connecting values from around the world to create new trends.
+</footer>
+
+</body>
+</html>
