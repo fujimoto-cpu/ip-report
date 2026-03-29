@@ -3,205 +3,391 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KONNEKT IP News Report — 2026-03-29</title>
+<title>KONNEKT IP News Daily Report — 2026-03-29</title>
 <style>
-  :root { --primary:#1a1a2e; --accent:#e94560; --accent2:#0f3460; --jp-color:#c0392b; --gl-color:#2980b9; --bg:#f5f5f7; --card-bg:#fff; --text:#1d1d1f; --muted:#6e6e73; --border:#e0e0e5; --tag-jp:#fdecea; --tag-gl:#e8f4fd; }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Noto Sans JP',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
-  header { background:linear-gradient(135deg,#1a1a2e 0%,#16213e 60%,#0f3460 100%); color:#fff; padding:48px 24px 40px; text-align:center; position:relative; overflow:hidden; }
-  header::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 70% 50%,rgba(233,69,96,.18) 0%,transparent 60%); }
-  .hi { position:relative; max-width:900px; margin:0 auto; }
-  .brand-tag { display:inline-block; border:1px solid rgba(255,255,255,.3); border-radius:20px; padding:4px 16px; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.7); margin-bottom:18px; }
-  header h1 { font-size:clamp(22px,4vw,34px); font-weight:700; margin-bottom:8px; }
-  header h1 span { color:#e94560; }
-  .hdate { font-size:14px; color:rgba(255,255,255,.55); letter-spacing:1px; }
-  .banner { background:#fff8e7; border-left:4px solid #f5a623; margin:32px auto; max-width:900px; border-radius:0 12px 12px 0; padding:20px 28px; font-size:14px; }
-  .bt { font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:1px; color:#b8860b; margin-bottom:10px; }
-  .banner ol { padding-left:18px; color:#444; }
-  .banner ol li { margin-bottom:6px; }
-  .ktip { margin-top:14px; padding-top:14px; border-top:1px dashed #e8d5a0; font-size:13px; color:#6b5a00; }
-  .ktip strong { color:#b8860b; }
-  main { max-width:900px; margin:0 auto; padding:0 16px 60px; }
-  .sh { display:flex; align-items:center; gap:10px; margin:44px 0 20px; padding-bottom:12px; border-bottom:2px solid var(--border); }
-  .fb { width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:20px; background:var(--bg); box-shadow:0 2px 8px rgba(0,0,0,.1); }
-  .sh h2 { font-size:20px; font-weight:700; }
-  .cb { margin-left:auto; background:var(--border); border-radius:12px; padding:2px 10px; font-size:12px; color:var(--muted); font-weight:600; }
-  .ac { background:var(--card-bg); border-radius:16px; box-shadow:0 2px 16px rgba(0,0,0,.07); margin-bottom:24px; overflow:hidden; transition:box-shadow .2s; }
-  .ac:hover { box-shadow:0 6px 28px rgba(0,0,0,.13); }
-  .cimg { width:100%; height:200px; object-fit:cover; display:block; }
-  .cph { width:100%; height:200px; display:flex; align-items:center; justify-content:center; font-size:13px; color:#fff; font-weight:600; letter-spacing:1px; }
-  .jp .cph { background:linear-gradient(135deg,#c0392b,#e74c3c); }
-  .gl .cph { background:linear-gradient(135deg,#1a6fa8,#2980b9); }
-  .ci { display:flex; }
-  .cab { width:5px; flex-shrink:0; }
-  .jp .cab { background:var(--jp-color); }
-  .gl .cab { background:var(--gl-color); }
-  .cb2 { padding:22px 24px; flex:1; }
-  .cm { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
-  .rt { display:inline-flex; align-items:center; gap:4px; border-radius:6px; padding:2px 10px; font-size:11px; font-weight:700; letter-spacing:.5px; text-transform:uppercase; }
-  .jp .rt { background:var(--tag-jp); color:var(--jp-color); }
-  .gl .rt { background:var(--tag-gl); color:var(--gl-color); }
-  .sn { font-size:12px; color:var(--muted); font-weight:500; }
-  .pd { font-size:12px; color:var(--muted); margin-left:auto; }
-  .ct { font-size:16px; font-weight:700; line-height:1.4; margin-bottom:10px; }
-  .cs { font-size:13.5px; color:#444; line-height:1.8; margin-bottom:14px; }
-  .cl { display:inline-flex; align-items:center; gap:5px; font-size:12px; font-weight:600; text-decoration:none; border-radius:8px; padding:6px 14px; transition:background .15s; }
-  .jp .cl { background:var(--tag-jp); color:var(--jp-color); }
-  .gl .cl { background:var(--tag-gl); color:var(--gl-color); }
-  .cl::after { content:'↗'; font-size:11px; }
-  .rs { margin-top:52px; }
-  .rs h2 { font-size:20px; font-weight:700; margin-bottom:20px; padding-bottom:12px; border-bottom:2px solid var(--border); }
-  .rg { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-  @media(max-width:640px){ .rg { grid-template-columns:1fr; } }
-  .rc { background:#fff; border-radius:14px; padding:20px 22px; box-shadow:0 2px 12px rgba(0,0,0,.07); border-top:3px solid var(--accent); font-size:13.5px; line-height:1.75; color:#333; }
-  .rc:nth-child(2){ border-top-color:#8e44ad; }
-  .rc:nth-child(3){ border-top-color:#27ae60; }
-  .rc:nth-child(4){ border-top-color:#f39c12; }
-  .rl { font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:.8px; color:var(--accent); margin-bottom:8px; }
-  .rc:nth-child(2) .rl { color:#8e44ad; }
-  .rc:nth-child(3) .rl { color:#27ae60; }
-  .rc:nth-child(4) .rl { color:#f39c12; }
-  .bn { margin-top:44px; background:#fff; border-radius:14px; padding:20px 28px; box-shadow:0 2px 12px rgba(0,0,0,.06); }
-  .bn h3 { font-size:14px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:14px; }
-  .bn ul { list-style:none; }
-  .bn li { padding:10px 0; border-bottom:1px solid var(--border); font-size:13px; display:flex; align-items:center; gap:10px; }
-  .bn li:last-child { border-bottom:none; }
-  .bn a { color:var(--accent2); text-decoration:none; font-weight:600; }
-  .bn a:hover { text-decoration:underline; }
-  .dl { color:var(--muted); font-size:11px; background:var(--bg); padding:2px 8px; border-radius:6px; flex-shrink:0; }
-  footer { text-align:center; padding:32px 16px; font-size:12px; color:var(--muted); border-top:1px solid var(--border); margin-top:20px; }
-  footer strong { color:var(--text); }
+  :root {
+    --primary: #1a1a2e;
+    --accent: #e94560;
+    --accent2: #0f3460;
+    --jp-color: #c0392b;
+    --gl-color: #2980b9;
+    --bg: #f5f5f7;
+    --card-bg: #ffffff;
+    --text: #1d1d1f;
+    --muted: #6e6e73;
+    --border: #e0e0e5;
+    --tag-jp: #fdecea;
+    --tag-gl: #e8f4fd;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+    color: #fff;
+    padding: 48px 24px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 70% 50%, rgba(233,69,96,0.18) 0%, transparent 60%);
+  }
+  .header-inner { position: relative; max-width: 860px; margin: 0 auto; }
+  .brand-tag {
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 4px 16px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 18px;
+  }
+  header h1 { font-size: clamp(22px, 4vw, 34px); font-weight: 700; margin-bottom: 8px; }
+  header h1 span { color: #e94560; }
+  .header-date { font-size: 14px; color: rgba(255,255,255,0.55); letter-spacing: 1px; }
+
+  .summary-banner {
+    background: #fff8e7;
+    border-left: 4px solid #f5a623;
+    margin: 32px auto;
+    max-width: 860px;
+    border-radius: 0 12px 12px 0;
+    padding: 20px 24px;
+    font-size: 14px;
+  }
+  .summary-banner .banner-title { font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #b8860b; margin-bottom: 10px; }
+  .summary-banner ol { padding-left: 18px; color: #444; }
+  .summary-banner ol li { margin-bottom: 5px; }
+  .konnekt-tip { margin-top: 12px; padding-top: 12px; border-top: 1px dashed #e8d5a0; font-size: 13px; color: #6b5a00; }
+  .konnekt-tip strong { color: #b8860b; }
+
+  main { max-width: 860px; margin: 0 auto; padding: 0 16px 60px; }
+
+  .section-heading {
+    display: flex; align-items: center; gap: 10px;
+    margin: 40px 0 20px; padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-heading .flag-badge {
+    width: 36px; height: 36px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; background: var(--bg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .section-heading h2 { font-size: 20px; font-weight: 700; }
+  .section-heading .count-badge {
+    margin-left: auto; background: var(--border);
+    border-radius: 12px; padding: 2px 10px;
+    font-size: 12px; color: var(--muted); font-weight: 600;
+  }
+
+  .article-card {
+    background: var(--card-bg); border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    margin-bottom: 24px; overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  .article-card:hover { box-shadow: 0 6px 28px rgba(0,0,0,0.13); }
+
+  .card-accent-bar { height: 4px; }
+  .jp .card-accent-bar { background: var(--jp-color); }
+  .gl .card-accent-bar { background: var(--gl-color); }
+
+  .card-img {
+    width: 100%; height: 200px; object-fit: cover;
+    display: block; background: #ddd;
+  }
+  .card-body { padding: 20px 24px; }
+  .card-meta {
+    display: flex; align-items: center; gap: 8px;
+    flex-wrap: wrap; margin-bottom: 10px;
+  }
+  .region-tag {
+    display: inline-flex; align-items: center; gap: 4px;
+    border-radius: 6px; padding: 2px 10px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
+  }
+  .jp .region-tag { background: var(--tag-jp); color: var(--jp-color); }
+  .gl .region-tag { background: var(--tag-gl); color: var(--gl-color); }
+  .source-name { font-size: 12px; color: var(--muted); font-weight: 500; }
+  .pub-date { font-size: 12px; color: var(--muted); margin-left: auto; }
+
+  .card-title { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 12px; }
+  .card-summary { font-size: 13.5px; color: #444; line-height: 1.8; margin-bottom: 16px; }
+
+  .global-title-en { font-size: 13px; color: var(--muted); font-weight: 500; margin-bottom: 4px; }
+  .global-title-ja { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 12px; }
+
+  .card-link {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 12px; font-weight: 600; text-decoration: none;
+    border-radius: 8px; padding: 6px 14px; transition: opacity 0.15s;
+  }
+  .card-link:hover { opacity: 0.8; }
+  .jp .card-link { background: var(--tag-jp); color: var(--jp-color); }
+  .gl .card-link { background: var(--tag-gl); color: var(--gl-color); }
+  .card-link::after { content: ' ↗'; font-size: 11px; }
+
+  /* 提言セクション */
+  .rec-section { margin-top: 48px; }
+  .rec-section > h2 {
+    font-size: 20px; font-weight: 700; margin-bottom: 20px;
+    padding-bottom: 12px; border-bottom: 2px solid var(--border);
+  }
+  .rec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 600px) { .rec-grid { grid-template-columns: 1fr; } }
+  .rec-card {
+    background: #fff; border-radius: 14px; padding: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    border-top: 3px solid var(--accent);
+    font-size: 13.5px; line-height: 1.75; color: #333;
+  }
+  .rec-card:nth-child(2) { border-top-color: #8e44ad; }
+  .rec-card:nth-child(3) { border-top-color: #27ae60; }
+  .rec-card:nth-child(4) { border-top-color: #f39c12; }
+  .rec-label {
+    font-weight: 700; font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.8px; color: var(--accent); margin-bottom: 8px;
+  }
+  .rec-card:nth-child(2) .rec-label { color: #8e44ad; }
+  .rec-card:nth-child(3) .rec-label { color: #27ae60; }
+  .rec-card:nth-child(4) .rec-label { color: #f39c12; }
+
+  /* バックナンバー */
+  .backnumber {
+    margin-top: 40px; background: #fff; border-radius: 14px;
+    padding: 20px 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .backnumber h3 {
+    font-size: 14px; font-weight: 700; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;
+  }
+  .backnumber ul { list-style: none; }
+  .backnumber li { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+  .backnumber li:last-child { border-bottom: none; }
+  .backnumber a { color: var(--accent2); text-decoration: none; font-weight: 500; }
+  .backnumber a:hover { text-decoration: underline; }
+
+  footer {
+    text-align: center; padding: 32px 16px;
+    font-size: 12px; color: var(--muted);
+    border-top: 1px solid var(--border); margin-top: 20px;
+  }
+  footer strong { color: var(--text); }
 </style>
 </head>
 <body>
+
 <header>
-  <div class="hi">
+  <div class="header-inner">
     <div class="brand-tag">KONNEKT INTERNATIONAL — IP News Daily</div>
     <h1>📊 IP <span>News</span> Report</h1>
-    <p class="hdate">2026年3月29日（日）</p>
+    <p class="header-date">2026年3月29日（日）</p>
   </div>
 </header>
 
-<div class="banner">
-  <div class="bt">📌 本日のIPニュース 3大トピック</div>
+<div class="summary-banner">
+  <div class="banner-title">📌 本日のIPニュース 3大トピック</div>
   <ol>
-    <li><strong>AnimeJapan 2026が開幕</strong> — 120社超出展・過去最大規模。東京ビッグサイトでアニメIPの国際商談が活況</li>
-    <li><strong>Licensing Expo 2026（5月・ラスベガス）がアジア出展社数で過去最多を予告</strong> — NetflixのCMOが基調講演、AIマッチングシステムも初導入</li>
-    <li><strong>電通 × Iconic Arts がデータ駆動型IPクリエイションでグローバル提携</strong> — サントリーも出資参画、日米シナジーが注目を集める</li>
+    <li><strong>AnimeJapan 2026 が絶賛開催中</strong> — 世界最大のアニメ業界イベントが東京ビッグサイトで3/28〜31に開催。120社超が出展し、グローバルIPライセンス商談が活況。</li>
+    <li><strong>忍者ハットリくん×8 Lions、グローバルYouTube展開へ</strong> — テレビ朝日と英国IP企業が契約締結。日本のレガシーIPがデジタルファーストで世界27億人へリーチする新モデルが動き出した。</li>
+    <li><strong>Licensing Expo 2026（5月・ラスベガス）が過去最大規模に</strong> — アジア出展社が過去最多を記録。AI搭載マッチングシステムも導入され、グローバルIPビジネスの新拠点として注目が集まっている。</li>
   </ol>
-  <div class="ktip">
-    <strong>💡 KONNEKTへのヒント：</strong>
-    AnimeJapan 2026での商談機会、Licensing Expo 2026（5月）への出展検討、そしてAnge Charme（アンジュ シャルム）・Armillary.・LAVANDA・GOD ONLY KNOWSの各ブランドを国際バイヤーへ紹介する良い機会かもしれません。
+  <div class="konnekt-tip">
+    <strong>💡 KONNEKTへの示唆：</strong>
+    AnimeJapan 2026の商談機会でOne Piece・Sanrioなどの新ライセンス拡充を図りつつ、Licensing Expo 2026（5月）への参加準備を早めに進めておくと、KISS・Aerosmithグッズの新規ライセンシー開拓につながりやすそう。
   </div>
 </div>
 
 <main>
-<div class="sh"><div class="fb">🇯🇵</div><h2>日本の記事</h2><span class="cb">3本</span></div>
 
-<div class="ac jp">
-  <div class="cph">AnimeJapan 2026</div>
-  <div class="ci"><div class="cab"></div><div class="cb2">
-    <div class="cm"><span class="rt">🇯🇵 Japan</span><span class="sn">The New Publishing Standard</span><span class="pd">2026年3月28日〜31日</span></div>
-    <div class="ct">AnimeJapan 2026 が開幕——過去最大規模120社超が出展、国際IPライセンス商談が活況</div>
-    <div class="cs">東京ビッグサイトで3月28〜31日に開催中のAnimeJapan 2026は、過去最大となる120社以上が出展。アニプレックス・KADOKAWA・東映アニメーションらが国内外のバイヤーと国際ライセンス商談を積極展開しています。クロスメディアIP展開・グローバル配信・出版ライセンスが重点テーマで、海外エージェントや商社も多数参加。日本アニメIPビジネスの主要商談拠点として機能しており、商品化・コラボ・タイアップ案件の発掘に最適な場となっています。</div>
-    <a class="cl" href="https://thenewpublishingstandard.com/2026/01/19/animejapan-2026-publishing-opportunities/" target="_blank">元記事を読む</a>
-  </div></div>
+<!-- 日本の記事 -->
+<div class="section-heading">
+  <div class="flag-badge">🇯🇵</div>
+  <h2>日本の記事</h2>
+  <span class="count-badge">3本</span>
 </div>
 
-<div class="ac jp">
-  <div class="cph">日本D2C市場 — 3兆円規模へ</div>
-  <div class="ci"><div class="cab"></div><div class="cb2">
-    <div class="cm"><span class="rt">🇯🇵 Japan</span><span class="sn">D2Cブランド専門メディア</span><span class="pd">2026年（最新）</span></div>
-    <div class="ct">日本D2C市場が3兆円規模へ——インフルエンサー・タレントプロデュースブランドが牽引する成功法則</div>
-    <div class="cs">日本のD2C市場が2026年に約3兆円規模に到達し、年成長率15〜20%で拡大を続けています。アパレルD2C成功の三本柱は「データ×共感性×スピード」とされ、タレントプロデュースブランドが急成長の主役に。17kgの年商30億円達成・airClosetの黒字化など注目事例も相次いでいます。SNSライブ配信と受注生産モデルの組み合わせが在庫リスクを抑えながら利益率を高める新定番として定着しつつあります。</div>
-    <a class="cl" href="https://stock-sun.com/column/d2c-brand/" target="_blank">元記事を読む</a>
-  </div></div>
-</div>
-
-<div class="ac jp">
-  <div class="cph">KADOKAWA — グローバルIPライセンス</div>
-  <div class="ci"><div class="cab"></div><div class="cb2">
-    <div class="cm"><span class="rt">🇯🇵 Japan</span><span class="sn">KADOKAWAライセンスビジネスサイト</span><span class="pd">2026年</span></div>
-    <div class="ct">KADOKAWA、ソニー出資受けアニメIPライセンスをグローバル展開——2026年新作を積極提供</div>
-    <div class="cs">ソニーの約320億円出資で戦略的優位を強化したKADOKAWAが、Re:Zero・KonoSuba・ソードアート・オンライン等の人気IPを世界的なストリーミング競争における主要資産として活用。公式ライセンスビジネスサイトでは2026年放映アニメの商品化・タイアップ企画を広く受け付け中です。ライセンス審査から権利管理まで一元対応する体制が整っており、中小企業でも比較的参入しやすいスキームが整備されています。</div>
-    <a class="cl" href="https://license.kadokawa.co.jp/anime/" target="_blank">元記事を読む</a>
-  </div></div>
-</div>
-
-<div class="sh"><div class="fb">🌍</div><h2>グローバルの記事</h2><span class="cb">3本</span></div>
-
-<div class="ac gl">
-  <div class="cph">Licensing Expo 2026 — Las Vegas</div>
-  <div class="ci"><div class="cab"></div><div class="cb2">
-    <div class="cm"><span class="rt">🌍 Global</span><span class="sn">License Global / Las Vegas Today</span><span class="pd">2026年3月27日</span></div>
-    <div class="ct">Licensing Expo 2026 — 史上最大規模、NetflixのCMOが基調講演・AIマッチングシステムも初導入</div>
-    <div class="cs">
-      5月19〜21日にラスベガス マンダレイベイで開催されるLicensing Expo 2026は、過去最大規模での開催が確定しました。アジアからの出展社数が過去最多を記録する見込みで、日本・韓国・中国のIPホルダーの参加が特に増加しています。<br><br>
-      今年の目玉は<strong>NetflixのチーフマーケティングオフィサーによるBasel基調講演</strong>で、ストリーミング時代のIPライセンス戦略を語ります。また、展示会として初めて<strong>AIを活用したライセンシー・ライセンサーマッチングシステム</strong>が導入され、商談効率の大幅向上が期待されています。主要議題はNetflix/Warner Bros.統合によるIPライブラリへの影響・AI活用のライセンス実務・グローバル関税がライセンス取引に与える影響の3本柱です。KONNEKTにとって北米・欧州バイヤーへアプローチできる年に一度の大きなチャンスといえそうです。
+<!-- 日本①：AnimeJapan 2026 -->
+<div class="article-card jp">
+  <div class="card-accent-bar"></div>
+  <img class="card-img" src="https://cdn.thenewpublishingstandard.com/wp-content/uploads/2025/12/Comics-Anime-Connect.jpg" alt="AnimeJapan 2026" onerror="this.src='https://placehold.co/860x200?text=AnimeJapan+2026'">
+  <div class="card-body">
+    <div class="card-meta">
+      <span class="region-tag">🇯🇵 Japan</span>
+      <span class="source-name">The New Publishing Standard</span>
+      <span class="pub-date">2026年1月19日</span>
     </div>
-    <a class="cl" href="https://nationaltoday.com/us/nv/las-vegas/news/2026/03/27/licensing-expo-2026-promises-biggest-show-yet/" target="_blank">元記事を読む</a>
-  </div></div>
-</div>
-
-<div class="ac gl">
-  <div class="cph">Dentsu × Iconic Arts — IP-IQ Platform</div>
-  <div class="ci"><div class="cab"></div><div class="cb2">
-    <div class="cm"><span class="rt">🌍 Global</span><span class="sn">Licensing International</span><span class="pd">2026年3月</span></div>
-    <div class="ct">電通 × Iconic Arts、データ駆動型IPクリエイションでグローバル提携——「IP-IQ」プラットフォームで日米シナジーを創出、サントリーも出資参画</div>
-    <div class="cs">
-      電通エンタテインメントUSAと米国のIPスタジオIconic Artsがグローバル戦略パートナーシップを締結しました。中心となるのは独自開発の<strong>「IP-IQ」プラットフォーム</strong>で、消費者行動データ・SNSトレンド・文化的親和性を組み合わせてブランドのIPポテンシャルをリアルタイムにスコアリングします。<br><br>
-      具体的には、コンテンツ（アニメ・連続ドラマ）・体験（ポップアップ・イベント）・消費者向け商品（グッズ・コラボ）の3領域を横断してIPを育成する支援を提供。<strong>サントリーが戦略投資家として参画</strong>しており、日本の飲料ブランドIPを北米市場へ展開する実証プロジェクトも進行中です。短期キャンペーン思考から長期IP育成思考への転換を促す同モデルは、日本ブランドの海外進出において参考になりそうです。
+    <div class="card-title">AnimeJapan 2026 開幕——世界最大のアニメ業界イベントで IPビジネス商談が過去最大規模に</div>
+    <div class="card-summary">
+      世界最大のアニメ産業イベント「AnimeJapan 2026」が3月28〜31日、東京ビッグサイトで開催中。第13回となる今年は120社超が出展し過去最大規模。3月30〜31日のビジネスデーではプロ向けのライセンス商談・パートナーシップ交渉が集中的に行われ、パブリックデー（28〜29日）では15万人超の来場が見込まれる。グローバルアニメ市場は現在307億ドル規模で、2037年には1,297億ドルへ拡大すると試算されており、出版・ライセンス業界にとって商機が拡大している。
     </div>
-    <a class="cl" href="https://licensinginternational.org/news/dentsu-partners-with-iconic-arts-to-accelerate-ip-creation-for-brands-through-data-driven-entertainment/" target="_blank">元記事を読む</a>
-  </div></div>
-</div>
-
-<div class="ac gl">
-  <div class="cph">Seven Seas × Media Do — $80M買収</div>
-  <div class="ci"><div class="cab"></div><div class="cb2">
-    <div class="cm"><span class="rt">🌍 Global</span><span class="sn">Anime News Network</span><span class="pd">2026年3月26日</span></div>
-    <div class="ct">Seven Seas Entertainment、Media Doが約80億円で買収——AI翻訳の活用方針めぐり業界で議論</dt>
-    <div class="cs">
-      日本の電子書籍流通大手<strong>Media Do（メディアドゥ）がSeven Seas Entertainmentを約8,000万ドル（約80億円）で買収</strong>することが発表されました。Seven Seasは英語圏最大級のライセンスマンガ出版社のひとつで、「ダンジョン飯」「葬送のフリーレン」など多数の人気タイトルの英語版を手がけています。<br><br>
-      今回の買収でMedia Doは北米マンガ市場に本格参入し、日本のデジタル流通ノウハウと北米出版ライセンスを組み合わせた新たな収益モデルを構築する計画です。一方で、<strong>AI翻訳技術の積極活用方針</strong>を打ち出したことで、翻訳者や原作ファンコミュニティから懸念の声が上がっており、品質管理と翻訳者の処遇に関する議論が業界全体に広がっています。日本IPの海外デジタル流通において、AIとの共存をどう設計するかが問われる象徴的な事例といえそうです。
-    </div>
-    <a class="cl" href="https://www.animenewsnetwork.com/press-release/2026-03-26/seven-seas-licenses-the-one-eyed-one-armed-one-legged-sorcerer-manga-series/.235753" target="_blank">元記事を読む</a>
-  </div></div>
-</div>
-
-<div class="rs">
-  <h2>💡 KONNEKT INTERNATIONAL への提言</h2>
-  <div class="rg">
-    <div class="rc">
-      <div class="rl">🛍️ D2Cブランド機会</div>
-      <strong>Ange Charme（アンジュ シャルム）/ Armillary. / LAVANDA / GOD ONLY KNOWS</strong><br><br>
-      日本D2C市場の3兆円突破という追い風のなか、各ブランドのSNSライブ配信・受注生産モデルを組み合わせることで在庫リスクを抑えた展開が期待できそうです。「データ×共感性×スピード」の成功法則はKONNEKTEDゼロウェイストシステムとも相性が良いかもしれません。
-    </div>
-    <div class="rc">
-      <div class="rl">🎌 キャラクターIPライセンス戦略</div>
-      <strong>ワンピース / サンリオ / KISS</strong><br><br>
-      AnimeJapan 2026（3/28〜31・東京ビッグサイト）開催中の今、海外バイヤーとのアパレル商品化商談を進める良いタイミングかもしれません。KADOKAWAの公式ライセンス窓口も整備されており、既存IPの取り扱いブランド拡充を検討する参考になりそうです。
-    </div>
-    <div class="rc">
-      <div class="rl">🌐 グローバルマーチャンダイズ展開</div>
-      <strong>GOODS / CUSTOMIZE 事業</strong><br><br>
-      Licensing Expo 2026（5/19〜21・ラスベガス）はアジア出展社過去最多が予告されており、北米・欧州バイヤーへKONNEKTEDオンデマンド製造の仕組みを紹介する場として面白そうです。AIマッチングシステムの初導入で商談効率も上がりそうですね。
-    </div>
-    <div class="rc">
-      <div class="rl">🤖 AI × IP権利管理</div>
-      <strong>新時代のIP戦略</strong><br><br>
-      Media Do×Seven Seasの事例は、AI翻訳活用と品質・権利管理のバランスが今後のIP流通において重要なテーマになることを示しています。タレントの肖像・声のAI利用ポリシーをあらかじめ整理しておくと、ライセンシーとの関係構築がスムーズになりそうです。
-    </div>
+    <a class="card-link" href="https://thenewpublishingstandard.com/2026/01/19/animejapan-2026-publishing-opportunities/" target="_blank">元記事を読む</a>
   </div>
 </div>
 
-<div class="bn">
+<!-- 日本②：キャラクタービジネス市場調査 -->
+<div class="article-card jp">
+  <div class="card-accent-bar"></div>
+  <img class="card-img" src="https://www.yano.co.jp/press-release/images/3849_0.jpg" alt="キャラクタービジネス市場調査" onerror="this.src='https://placehold.co/860x200?text=Character+Business+Research'">
+  <div class="card-body">
+    <div class="card-meta">
+      <span class="region-tag">🇯🇵 Japan</span>
+      <span class="source-name">矢野経済研究所</span>
+      <span class="pub-date">2025年7月15日</span>
+    </div>
+    <div class="card-title">キャラクタービジネス市場が2兆7,773億円に——「ちいかわ」「サンリオ」「ドラゴンボール」が牽引、販売チャネルも多様化</div>
+    <div class="card-summary">
+      矢野経済研究所の調査によると、2024年度のキャラクタービジネス市場（商品化権・版権）は前年度比102.9%の2兆7,773億円に達した。「ちいかわ」「サンリオキャラクターズ」などファンシー系と、「ドラゴンボール」「呪術廻戦」などマンガ原作キャラクターのメディアミックス展開が好調。カラオケボックスでのコラボルーム＋物販一体型展開など、サービス×物販の融合が業界全体で活発化している。2025年度は2兆8,492億円への成長が予測される。
+    </div>
+    <a class="card-link" href="https://www.yano.co.jp/press-release/show/press_id/3849" target="_blank">元記事を読む</a>
+  </div>
+</div>
+
+<!-- 日本③：TSIシャロル D2C -->
+<div class="article-card jp">
+  <div class="card-accent-bar"></div>
+  <img class="card-img" src="https://media.wwdjapan.com/wp-content/uploads/2024/03/19182943/IMG_1547.jpeg" alt="TSI シャロル" onerror="this.src='https://placehold.co/860x200?text=D2C+Brand+Sharol'">
+  <div class="card-body">
+    <div class="card-meta">
+      <span class="region-tag">🇯🇵 Japan</span>
+      <span class="source-name">WWD JAPAN</span>
+      <span class="pub-date">2024年3月19日</span>
+    </div>
+    <div class="card-title">TSIの新顔D2Cブランド「シャロル」がリアル出店に積極的な理由——インフルエンサーD2C成熟期の生き残り戦略</div>
+    <div class="card-summary">
+      TSI傘下のHYBESが運営するD2Cブランド「シャロル」は、インフルエンサーHINANOをディレクターに迎え2022年秋冬にスタート。「インスタ投稿だけで売れる時代は終わった」という認識のもと、EC一辺倒から脱却しリアル店舗での顧客との相互理解を重視する。新宿ルミネ2での期間限定出店では想定より若い顧客層が来店し、常設店舗2店舗の展開を計画中。インフルエンサーD2Cが成熟フェーズへ移行し、体験型リアル接点が競争力の鍵になりつつある。
+    </div>
+    <a class="card-link" href="https://www.wwdjapan.com/articles/1780744" target="_blank">元記事を読む</a>
+  </div>
+</div>
+
+<!-- グローバルの記事 -->
+<div class="section-heading">
+  <div class="flag-badge">🌍</div>
+  <h2>グローバルの記事</h2>
+  <span class="count-badge">3本</span>
+</div>
+
+<!-- グローバル①：忍者ハットリくん -->
+<div class="article-card gl">
+  <div class="card-accent-bar"></div>
+  <img class="card-img" src="https://placehold.co/860x200/2980b9/ffffff?text=Ninja+Hattori+×+8+Lions+×+TV+Asahi" alt="Ninja Hattori Global Deal" onerror="this.src='https://placehold.co/860x200?text=Ninja+Hattori'">
+  <div class="card-body">
+    <div class="card-meta">
+      <span class="region-tag">🌍 Global</span>
+      <span class="source-name">Anime News Network</span>
+      <span class="pub-date">2026年3月17日</span>
+    </div>
+    <div class="global-title-en">8 Lions, TV Asahi, Ink Global Licensing Agreement for Anime Franchise Ninja Hattori</div>
+    <div class="global-title-ja">8ライオンズ＆テレビ朝日、「忍者ハットリくん」のグローバルライセンス契約を締結——YouTube多言語展開で世界27億人へリーチ</div>
+    <div class="card-summary">
+      <strong>【背景・文脈】</strong> ロンドン拠点のIP企業「8 Lions Entertainment」が、テレビ朝日と「忍者ハットリくん」のグローバルライセンス契約を締結。1964年に少年マガジンで連載が始まり、藤子不二雄A原作のこの国民的アニメは、アジア・中東・ラテンアメリカで根強い人気を誇るが、これまで日本国外での本格的なデジタル展開は限定的だった。今回の契約でその状況が大きく変わる。<br><br>
+      <strong>【主要な事実・数字・関係者】</strong> 契約範囲は日本国外でのSVOD（定額配信）・AVOD（広告付き無料配信）・FVOD（無料配信）プラットフォーム全般。8 LionsはYouTubeを主要チャンネルとして、スペイン語・アラビア語・タイ語・ベトナム語の多言語版チャンネルを第一弾として立ち上げる。YouTubeの月間アクティブユーザーは27億人。CEO Jiella Esmatは「これまでペイウォールの後ろに隠れていたアニメIPが、数百万のファンと直接つながれるようになる」とコメント。テレビ朝日はネットワーク系列23局を持つ大手放送局で、「ドクターX」など自社コンテンツの190カ国超への配信実績もある。8 Lionsは年内に日本支社を設立予定。<br><br>
+      <strong>【業界への影響】</strong> 無料多言語YouTubeチャンネルによる「デジタルファースト・グローバル展開」モデルは、過去作をデジタルで再活性化する新標準として業界が注目。配信拡大により海外でのグッズ・ライセンス需要が生まれることへの期待も高まっている。<br><br>
+      <strong>【KONNEKTとの関連】</strong> KONNEKTが扱うKISS・Aerosmith等の「レガシーIP×デジタル再活性化」という文脈と重なる。YouTubeチャンネルで海外ファンを育ててからグッズ展開へつなぐフローは、KONNEKTEDのオンデマンド製造と相性がよく、海外需要に応じた製造参入の余地を探ってみると面白いかもしれない。
+    </div>
+    <a class="card-link" href="https://www.animenewsnetwork.com/press-release/2026-03-17/8-lions-tv-asahi-ink-global-licensing-agreement-for-anime-franchise-ninja-hattori/.235417" target="_blank">元記事を読む</a>
+  </div>
+</div>
+
+<!-- グローバル②：Licensing Expo 2026 -->
+<div class="article-card gl">
+  <div class="card-accent-bar"></div>
+  <img class="card-img" src="https://nationaltoday.com/wp-content/uploads/not-wordpress/categories/business-industry.jpg" alt="Licensing Expo 2026" onerror="this.src='https://placehold.co/860x200?text=Licensing+Expo+2026'">
+  <div class="card-body">
+    <div class="card-meta">
+      <span class="region-tag">🌍 Global</span>
+      <span class="source-name">Las Vegas Today</span>
+      <span class="pub-date">2026年3月27日</span>
+    </div>
+    <div class="global-title-en">Licensing Expo 2026 Promises Biggest Show Yet — Record Asian Exhibitors, AI Matchmaking on Agenda</div>
+    <div class="global-title-ja">ライセンシング・エクスポ2026が過去最大規模に——アジア出展社が過去最多、AI搭載マッチングシステムも初導入</div>
+    <div class="card-summary">
+      <strong>【背景・文脈】</strong> 「Licensing Expo」はIPホルダーとライセンシー（グッズメーカー・小売業者等）が一堂に会する世界最大のライセンス業界トレードショー。毎年ラスベガスで開催され、KONNEKTが会員であるLIMAジャパン（日本ライセンシング・ビジネス協会）とも深く連携している。2026年版の告知が3月末に公式発表された。<br><br>
+      <strong>【主要な事実・数字・関係者】</strong> 開催：2026年5月19〜21日、マンダレイ・ベイ・コンベンションセンター（ラスベガス）。世界中から記録的な数の企業が出展予定で、特にアジアからの出展企業数が過去最多を見込む。新機能として、AI搭載のマッチメイキングシステムとイベント計画プラットフォームが初導入。チケットは新たに「Explorer Pass（教育重視・初心者向け）」と「Networking Pass（商談重視）」の2種が追加。主催はInforma Markets。「地政学的リスクや関税調整がライセンス取引に与える影響」が主要テーマの一つになる見通し。<br><br>
+      <strong>【業界への影響】</strong> 世界のIPビジネスをリードする主要企業が集まるこのイベントは、グローバルライセンストレンドの把握と新規ビジネス契約の締結の場として機能する。AIマッチングシステムの導入により、初参加企業でも効率よくパートナーを見つけやすくなっている。<br><br>
+      <strong>【KONNEKTとの関連】</strong> LIMAジャパン会員としての優位性を活かし、KISS・Aerosmithなどの音楽バンドIPの海外ライセンシー開拓、One Piece・Sanrioのグローバル展開強化を図る絶好の機会。5月という日程を考えると、参加登録と事前ミーティング設定を早めに動かしておくと余裕を持てそう。
+    </div>
+    <a class="card-link" href="https://nationaltoday.com/us/nv/las-vegas/news/2026/03/27/licensing-expo-2026-promises-biggest-show-yet/" target="_blank">元記事を読む</a>
+  </div>
+</div>
+
+<!-- グローバル③：Seven Seas マンガライセンス -->
+<div class="article-card gl">
+  <div class="card-accent-bar"></div>
+  <img class="card-img" src="https://placehold.co/860x200/1a5276/ffffff?text=Seven+Seas+Entertainment+—+New+Manga+License+March+2026" alt="Seven Seas Manga License" onerror="this.src='https://placehold.co/860x200?text=Seven+Seas+Manga'">
+  <div class="card-body">
+    <div class="card-meta">
+      <span class="region-tag">🌍 Global</span>
+      <span class="source-name">Anime News Network</span>
+      <span class="pub-date">2026年3月26日</span>
+    </div>
+    <div class="global-title-en">Seven Seas Entertainment Licenses 'The One-Eyed, One-Armed, One-Legged Sorcerer' Manga Series</div>
+    <div class="global-title-ja">セブン・シーズ・エンタテインメント、新マンガ3シリーズの英語版ライセンスを取得——日本IPの英語圏市場への定常的な拡大が続く</div>
+    <div class="card-summary">
+      <strong>【背景・文脈】</strong> 米国のマンガ・ライトノベル出版社「Seven Seas Entertainment」は、日本のマンガを英語圏向けにライセンス取得して出版する大手プレイヤー。同社の新規ライセンス取得は日本IPが海外市場でどう流通しているかを示す指標として業界が注目している。2026年3月末にも新たなライセンス取得を発表した。<br><br>
+      <strong>【主要な事実・数字・関係者】</strong> 今回ライセンス取得したのは「The One-Eyed, One-Armed, One-Legged Sorcerer（片目・片腕・片脚の魔術師）」。作画：Suzusuke、原作：Shibanobancha、キャラクター原案：Yu Yagami、3Dモデリング：Sumiheiによる作品。村が焼かれた際に右腕・左脚・右目を失った少年「アインス」が2,000年間孤独に魔法を修行し、伝説の「魔神」として復活するダーク・ファンタジー。第1巻は2027年1月発売予定で、定価は$13.99（米）/$18.99（加）。デジタル版も同時発売。<br><br>
+      <strong>【業界への影響】</strong> Seven Seasのような米系パブリッシャーが継続的に新規タイトルをライセンス取得していることは、英語圏でのマンガ需要が健全に拡大していることを示す。デジタルと紙の同時発売が標準化しており、海外展開のスピードが年々加速している。<br><br>
+      <strong>【KONNEKTとの関連】</strong> One Piece・Sanrioなど既存ライセンスIPの英語圏展開において、こうした米系パブリッシャーとの連携はグッズ・コラボ商品の販路を広げる可能性を持つ。新IPの海外展開プロセスの参考事例としても参照価値が高い。
+    </div>
+    <a class="card-link" href="https://www.animenewsnetwork.com/press-release/2026-03-26/seven-seas-licenses-the-one-eyed-one-armed-one-legged-sorcerer-manga-series/.235753" target="_blank">元記事を読む</a>
+  </div>
+</div>
+
+<!-- 提言 -->
+<div class="rec-section">
+  <h2>💡 KONNEKT INTERNATIONAL への提言</h2>
+  <div class="rec-grid">
+
+    <div class="rec-card">
+      <div class="rec-label">🛍️ D2Cブランド事業</div>
+      <strong>Ange Charme / Armillary. / LAVANDA / GOD ONLY KNOWS</strong><br><br>
+      「インスタ投稿だけで売れる時代は終わった」というTSIシャロルの事例が示すように、D2Cブランドはリアル接点の充実が次の差別化ポイントに。Ange CharmeやArmillary.では、ポップアップストアや受注会などの体験型イベントをKONNEKTEDのオンデマンド製造と組み合わせることで、在庫リスクを抑えながらファンとの関係を深めていけそう。
+    </div>
+
+    <div class="rec-card">
+      <div class="rec-label">🎌 キャラクターIPライセンス</div>
+      <strong>One Piece / Sanrio / KISS / Aerosmith</strong><br><br>
+      AnimeJapan 2026がちょうど開催中なので、One Piece・Sanrioの新ライセンシー候補との商談機会として活用できるタイミング。Licensing Expo 2026（5月・ラスベガス）は音楽バンドIP（KISS・Aerosmith）の海外ライセンシー開拓にも使える。参加登録と事前ミーティング設定を早めに動かしておくと動きやすくなりそう。
+    </div>
+
+    <div class="rec-card">
+      <div class="rec-label">🌐 グローバルマーチャンダイズ</div>
+      <strong>GOODS / CUSTOMIZE 事業</strong><br><br>
+      忍者ハットリくんのYouTube多言語展開モデルは、海外でコンテンツを広めてからグッズ需要を生み出すフローとして参考になる。KONNEKTEDのゼロウェイスト・オンデマンド製造は、こうした新興海外ファン向けの小ロット対応に強みがある。YRシステムの韓国・香港展開と合わせ、アジア向けリアルタイムカスタマイズの需要も探ってみると広がりがありそう。
+    </div>
+
+    <div class="rec-card">
+      <div class="rec-label">🤖 AI × IP権利管理</div>
+      <strong>ライセンス管理の効率化</strong><br><br>
+      Licensing Expo 2026ではAI搭載のマッチメイキングが初導入されるなど、ライセンス業界でもAI活用が加速中。タレントの肖像・声のAI利用をめぐる権利トラブルも増えており、KONNEKT管理のIPについて「AIでの利用はどこまで許諾するか」をライセンシー向けガイドラインとして明文化しておくと、将来的なリスクを未然に防げて安心感につながりやすい。
+    </div>
+
+  </div>
+</div>
+
+<!-- バックナンバー -->
+<div class="backnumber">
   <h3>📂 バックナンバー</h3>
   <ul>
-    <li><span class="dl">2026-03-29</span> <span>← 現在のレポート</span></li>
-    <li><span class="dl">2026-03-28</span> <a href="2026-03-28.html">📊 IP News Report — 2026-03-28</a></li>
+    <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-03-28.html" target="_blank">📊 IP Report — 2026-03-28</a></li>
+    <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-03-27.html" target="_blank">📊 IP Report — 2026-03-27</a></li>
+    <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-03-26.html" target="_blank">📊 IP Report — 2026-03-26</a></li>
+    <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-03-25.html" target="_blank">📊 IP Report — 2026-03-25</a></li>
+    <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-03-24.html" target="_blank">📊 IP Report — 2026-03-24</a></li>
   </ul>
 </div>
+
 </main>
 
 <footer>
@@ -209,5 +395,6 @@
   IP News Daily Report — 自動生成レポート | 2026-03-29<br>
   Connecting values from around the world to create new trends.
 </footer>
+
 </body>
 </html>
