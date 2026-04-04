@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONNEKT IP News Daily | 2026-04-05</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+    background: #0d0d1a;
+    color: #e0e0e0;
+    line-height: 1.7;
+  }
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+    padding: 48px 24px;
+    text-align: center;
+    border-bottom: 2px solid #e94560;
+  }
+  .header-label {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #e94560;
+    margin-bottom: 12px;
+  }
+  .header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+  .header .date {
+    font-size: 14px;
+    color: #8899aa;
+    letter-spacing: 2px;
+  }
+  /* Summary Banner */
+  .summary {
+    background: linear-gradient(90deg, #1e1e3a, #162040);
+    border-left: 4px solid #e94560;
+    margin: 32px auto;
+    max-width: 860px;
+    padding: 24px 32px;
+    border-radius: 0 8px 8px 0;
+  }
+  .summary h2 {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #e94560;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .summary ul {
+    list-style: none;
+    padding: 0;
+  }
+  .summary ul li {
+    padding: 4px 0 4px 20px;
+    position: relative;
+    font-size: 14px;
+    color: #c8d8e8;
+  }
+  .summary ul li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: #e94560;
+    font-size: 10px;
+    top: 7px;
+  }
+  .summary .hint {
+    margin-top: 14px;
+    font-size: 13px;
+    color: #8899aa;
+    border-top: 1px solid #2a2a4a;
+    padding-top: 12px;
+  }
+  /* Section */
+  .section {
+    max-width: 860px;
+    margin: 0 auto 48px;
+    padding: 0 24px;
+  }
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2a2a4a;
+  }
+  /* Card */
+  .card {
+    background: #151528;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  }
+  .card.japan { border-left: 4px solid #c0392b; }
+  .card.global { border-left: 4px solid #2980b9; }
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    background: #1a1a2e;
+  }
+  .card-body { padding: 24px; }
+  .card-meta {
+    font-size: 12px;
+    color: #667788;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+  .card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 14px;
+    line-height: 1.4;
+  }
+  .card h3 .en {
+    display: block;
+    font-size: 13px;
+    color: #8899aa;
+    font-weight: 400;
+    margin-top: 4px;
+  }
+  .card p {
+    font-size: 14px;
+    color: #b0c0d0;
+    margin-bottom: 16px;
+    line-height: 1.8;
+  }
+  .card a {
+    display: inline-block;
+    font-size: 12px;
+    color: #4da6ff;
+    text-decoration: none;
+    border-bottom: 1px solid #2980b9;
+    padding-bottom: 2px;
+    transition: color 0.2s;
+  }
+  .card a:hover { color: #80c0ff; }
+  /* Recommendations */
+  .recs {
+    max-width: 860px;
+    margin: 0 auto 48px;
+    padding: 0 24px;
+  }
+  .recs-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2a2a4a;
+  }
+  .recs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .rec-item {
+    background: #151528;
+    border-radius: 8px;
+    padding: 20px;
+    border-top: 3px solid;
+  }
+  .rec-item:nth-child(1) { border-color: #e94560; }
+  .rec-item:nth-child(2) { border-color: #2980b9; }
+  .rec-item:nth-child(3) { border-color: #27ae60; }
+  .rec-item:nth-child(4) { border-color: #f39c12; }
+  .rec-item h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+  .rec-item p {
+    font-size: 13px;
+    color: #8899aa;
+    line-height: 1.6;
+  }
+  /* Backnumber */
+  .backnumber {
+    max-width: 860px;
+    margin: 0 auto 64px;
+    padding: 0 24px;
+  }
+  .backnumber-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2a2a4a;
+  }
+  .backnumber ul {
+    list-style: none;
+    padding: 0;
+  }
+  .backnumber ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #1e1e36;
+  }
+  .backnumber ul li a {
+    font-size: 14px;
+    color: #4da6ff;
+    text-decoration: none;
+  }
+  .backnumber ul li a:hover { color: #80c0ff; }
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 32px;
+    font-size: 12px;
+    color: #445566;
+    border-top: 1px solid #1e1e36;
+  }
+  @media (max-width: 600px) {
+    .header h1 { font-size: 22px; }
+    .recs-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-label">KONNEKT INTERNATIONAL</div>
+  <h1>IP News Daily</h1>
+  <div class="date">2026 . 04 . 05</div>
+</div>
+
+<!-- Summary Banner -->
+<div class="summary">
+  <h2>Today's Highlights</h2>
+  <ul>
+    <li>ライセンシングジャパン 2026が6月に東京ビッグサイトで開催決定、800以上のIPが集結</li>
+    <li>電通×Iconic Artsが「データドリブンIP開発」で提携、アニメIPのグローバル展開を加速</li>
+    <li>欧米セレブリティD2Cブランドが株式保有型に移行、芸能人ブランドの設計思想が変化</li>
+  </ul>
+  <div class="hint">💡 KONNEKT示唆：アーティストD2Cブランドの「株式保有型ロイヤリティ設計」とIPのトランスメディア展開が今後の競争優位につながりそう</div>
+</div>
+
+<!-- 日本の記事 -->
+<div class="section">
+  <div class="section-title">🇯🇵 日本の最新IPニュース</div>
+
+  <!-- 日本記事1 -->
+  <div class="card japan">
+    <img src="https://placehold.co/860x200/1a1a2e/ffffff?text=IP+News" alt="ライセンシングジャパン 2026" onerror="this.src='https://placehold.co/860x200/1a1a2e/ffffff?text=IP+News'">
+    <div class="card-body">
+      <div class="card-meta">コンテンツ東京 / ライセンシングジャパン公式　｜　2026年（6月17〜19日開催）</div>
+      <h3>ライセンシングジャパン 2026 開催決定！国内外800以上のキャラクター・ブランドが集結</h3>
+      <p>日本最大のライセンス業界専門展「ライセンシングジャパン 2026」が6月17〜19日に東京ビッグサイトで開催決定。国内外から800以上のキャラクターとブランドが集結し、版権元・メーカー・小売が一堂に会する。アニメ・音楽・スポーツなど多様なIPが一挙に商談の場へ登場し、2026年の最新ライセンス動向と国際展開の事例が明らかになる見込みで、IP業界関係者必見のイベントとなっている。</p>
+      <a href="https://www.content-tokyo.jp/hub/ja-jp/about/lj.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- 日本記事2 -->
+  <div class="card japan">
+    <img src="https://placehold.co/860x200/1a1a2e/ffffff?text=IP+News" alt="IPコラボキャンペーン" onerror="this.src='https://placehold.co/860x200/1a1a2e/ffffff?text=IP+News'">
+    <div class="card-body">
+      <div class="card-meta">株式会社トランス　｜　2026年</div>
+      <h3>IPコラボとは？最新のキャンペーン事例や成功のポイントを徹底解説</h3>
+      <p>IPコラボキャンペーンはオリジナルグッズ販売やプレゼントを伴うケースが多く、コラボ限定アイテムはファン心理をつかむレアな体験を提供する。版権調整から限定グッズ制作まで一括支援する企業も増加。アーティストIPやキャラクターIPと連携したコラボは、新規顧客獲得とブランド認知向上を同時に実現する手法として注目されており、D2Cブランドとのコラボ展開も活発化している。</p>
+      <a href="https://www.trans.co.jp/column/promotion/ip_collaboration_campaign/" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+</div>
+
+<!-- グローバルの記事 -->
+<div class="section">
+  <div class="section-title">🌍 グローバルIPニュース</div>
+
+  <!-- グローバル記事1 -->
+  <div class="card global">
+    <img src="https://licensinginternational.org/wp-content/uploads/2026/02/dentnews.png" alt="Dentsu x Iconic Arts" onerror="this.src='https://placehold.co/860x200/1a1a2e/ffffff?text=IP+News'">
+    <div class="card-body">
+      <div class="card-meta">Licensing International　｜　February 24, 2026</div>
+      <h3>
+        電通×Iconic Artsが提携──データドリブンでブランドのエンタメIP開発を加速
+        <span class="en">Dentsu Partners with Iconic Arts to Accelerate IP Creation for Brands Through Data-Driven Entertainment</span>
+      </h3>
+      <p>電通エンターテインメント（Dentsu Entertainment）とエンタメ×テクノロジースタジオのIconic Artsが2026年2月、戦略的パートナーシップを締結した。両社の狙いは、キャンペーン単発の広告施策ではなく「長期エンタメIPおよびトランスメディアフランチャイズの開発」にある。</p>
+      <p>核心となるのはIconic Artsが独自開発したデータインテリジェンスプラットフォーム「IP-IQ」だ。制作開始前の段階でクリエイティブ方向性・オーディエンスターゲティング・長期スケーラビリティを分析し、グローバルで通用するストーリーを早期に特定できる点が特徴。Angela Johnson（Dentsu EVP）は「ブランドは今や、キャンペーンの枠を超えたエンタメ資産を求めている」とコメント。Ray Konishi（日米シナジー担当）は「このプラットフォームでグローバルポテンシャルのあるストーリーを最初の段階で見極められる」と語る。</p>
+      <p>パートナーシップでは特にアニメと連続エンタメフォーマットを重視。Iconic Artsはアメリカ・日本・ラテンアメリカで複数フォーマットにわたるコンテンツを展開しており、2025年にはサントリーホールディングスからの戦略投資も受けている。KONNEKTが展開する音楽バンドIP・キャラクターIPのグローバル展開において、IP-IQのようなデータドリブン手法は参考になる。GOD ONLY KNOWSやArmillary.など自社ブランドのトランスメディア展開を検討する際にも、制作前のデータ分析で市場適合性を確認するアプローチが活かせそうだ。</p>
+      <a href="https://licensinginternational.org/news/dentsu-partners-with-iconic-arts-to-accelerate-ip-creation-for-brands-through-data-driven-entertainment/" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- グローバル記事2 -->
+  <div class="card global">
+    <img src="https://thedrum-media.imgix.net/thedrum-user-assets-prod/s3/images/original/djokovic.webp" alt="Celebrity D2C brands" onerror="this.src='https://placehold.co/860x200/1a1a2e/ffffff?text=IP+News'">
+    <div class="card-body">
+      <div class="card-meta">The Drum　｜　January 19, 2026</div>
+      <h3>
+        芸能人D2Cブランドが「有名人」を再定義──広告契約から株式保有へのシフト加速
+        <span class="en">From endorsement to snackable fame: Star-backed D2C brands are remaking celebrity</span>
+      </h3>
+      <p>ソーシャルメディアの台頭でTikTokクリエイターとの競争が激化する中、芸能人たちは「環境的名声（ambient fame）」を確保する手段として、D2C（ダイレクト・ツー・コンシューマー）ブランドを選ぶケースが急増している。The Drumが分析した本記事では、伝統的な広告モデルからブランドオーナーシップへの根本的なシフトを解説している。</p>
+      <p>主な事例として、George ClooneyはCasamigos Tequilaをわずか4年で10億ドルで売却。Kim KardashianのSkimsは2019年のローンチから4年で40億ドルの企業価値へ到達。Kylie JennerのKhyは2023年ローンチ直後に完売を記録している。2026年もRihannaのFenty Beautyがセレブリティブランドとして最大規模の売上を誇る。経済的インセンティブも変化しており、従来の広告キャンペーンで数百万ドルを一括取得するモデルに対し、成長中のブランドに5〜10%の株式を取得することでより大きなリターンを狙う戦略が主流化しつつある。</p>
+      <p>さらに、メーム性（拡散性）の高い製品がSNSで自然にバイラルするメカニズムも重要で、有名人は「広告の顔」から「ブランド創業者」へのイメージシフトを意識的に図っている。Armillary.・Ange Charme・GOD ONLY KNOWS・LAVANDAといった自社アーティストD2Cブランドは、まさにこのグローバルトレンドと同じ方向性にある。欧米の成功事例が示す「株式保有型の長期関係」と「メーム性のある日常アイテム」という発想を、日本市場での展開戦略に活かせる機会がありそうだ。</p>
+      <a href="https://www.thedrum.com/opinion/from-endorsement-to-snackable-fame-star-backed-d2c-brands-are-remaking-celebrity" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+</div>
+
+<!-- 提言 -->
+<div class="recs">
+  <div class="recs-title">💡 KONNEKT INTERNATIONAL への提言</div>
+  <div class="recs-grid">
+    <div class="rec-item">
+      <h4>📊 データドリブンIPの設計</h4>
+      <p>Dentsu×Iconic Artsが示す「制作前のデータ分析」アプローチを参考に、音楽バンドIPやアーティストブランドのグローバル展開前に市場適合性を確認する仕組みの導入を検討したい。</p>
+    </div>
+    <div class="rec-item">
+      <h4>🌐 ライセンシングジャパン2026への出展</h4>
+      <p>6月の業界最大展示会は、Armillary.・GOD ONLY KNOWSなど自社ブランドのライセンス商談拡大の絶好の機会。出展または視察参加を検討する価値がありそう。</p>
+    </div>
+    <div class="rec-item">
+      <h4>💎 株式保有型ロイヤリティ設計</h4>
+      <p>欧米で加速する「広告費→株式保有」モデルを参考に、自社アーティストブランドのパートナー設計を見直す機会がありそう。長期的な価値共有型の構造が競合との差別化につながる可能性がある。</p>
+    </div>
+    <div class="rec-item">
+      <h4>🎯 コラボIPのメーム性強化</h4>
+      <p>IPコラボの成功要因である「レア体験×SNS拡散性」を意識し、Ange Charme・LAVANDAなどの限定コラボアイテムにSNSでバイラルしやすいユーモアや仕掛けを取り入れるアプローチも検討できそう。</p>
+    </div>
+  </div>
+</div>
+
+<!-- バックナンバー -->
+<div class="backnumber">
+  <div class="backnumber-title">📂 バックナンバー</div>
+  <ul>
+    <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-04-04.html" target="_blank" rel="noopener">2026-04-04 のレポート</a></li>
+    <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-04-03.html" target="_blank" rel="noopener">2026-04-03 のレポート</a></li>
+    <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-04-02.html" target="_blank" rel="noopener">2026-04-02 のレポート</a></li>
+    <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-04-01.html" target="_blank" rel="noopener">2026-04-01 のレポート</a></li>
+    <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-03-31.html" target="_blank" rel="noopener">2026-03-31 のレポート</a></li>
+  </ul>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  KONNEKT INTERNATIONAL INC. | IP News Daily | Generated by AI Secretary
+</div>
+
+</body>
+</html>
