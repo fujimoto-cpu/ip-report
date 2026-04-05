@@ -12,8 +12,6 @@
     color: #1a1a2e;
     line-height: 1.7;
   }
-
-  /* Header */
   .header {
     background: #ffffff;
     border-top: 5px solid;
@@ -30,20 +28,9 @@
     margin-bottom: 10px;
     font-weight: 600;
   }
-  .header h1 {
-    font-size: 30px;
-    font-weight: 800;
-    color: #1a1a2e;
-    letter-spacing: -0.5px;
-    margin-bottom: 6px;
-  }
-  .header .date {
-    font-size: 14px;
-    color: #8899aa;
-    letter-spacing: 3px;
-  }
+  .header h1 { font-size: 30px; font-weight: 800; color: #1a1a2e; margin-bottom: 6px; }
+  .header .date { font-size: 14px; color: #8899aa; letter-spacing: 3px; }
 
-  /* Summary Banner */
   .summary {
     background: #ffffff;
     border-left: 4px solid #2980b9;
@@ -53,46 +40,14 @@
     border-radius: 0 8px 8px 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   }
-  .summary h2 {
-    font-size: 11px;
-    letter-spacing: 2px;
-    color: #2980b9;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    font-weight: 700;
-  }
-  .summary ul { list-style: none; padding: 0; }
-  .summary ul li {
-    padding: 4px 0 4px 18px;
-    position: relative;
-    font-size: 14px;
-    color: #334155;
-  }
-  .summary ul li::before {
-    content: '▶';
-    position: absolute;
-    left: 0;
-    color: #2980b9;
-    font-size: 9px;
-    top: 8px;
-  }
+  .summary h2 { font-size: 11px; letter-spacing: 2px; color: #2980b9; text-transform: uppercase; margin-bottom: 12px; font-weight: 700; }
+  .summary ul { list-style: none; }
+  .summary ul li { padding: 4px 0 4px 18px; position: relative; font-size: 14px; color: #334155; }
+  .summary ul li::before { content: '▶'; position: absolute; left: 0; color: #2980b9; font-size: 9px; top: 8px; }
 
-  /* Section */
-  .section {
-    max-width: 860px;
-    margin: 0 auto 40px;
-    padding: 0 24px;
-  }
-  .section-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: #1a1a2e;
-    margin-bottom: 18px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #e2e8f0;
-  }
+  .section { max-width: 860px; margin: 0 auto 40px; padding: 0 24px; }
+  .section-title { font-size: 18px; font-weight: 700; color: #1a1a2e; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e2e8f0; }
 
-  /* Card */
   .card {
     background: #ffffff;
     border-radius: 10px;
@@ -101,143 +56,38 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     transition: transform 0.2s, box-shadow 0.2s;
   }
-  .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.10);
-  }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
   .card.japan { border-left: 4px solid #e74c3c; }
   .card.global { border-left: 4px solid #2980b9; }
-  .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-    background: #f0f4f8;
-  }
+  .card img { width: 100%; height: 200px; object-fit: cover; display: block; background: #f0f4f8; }
   .card-body { padding: 22px 24px; }
-  .card-meta {
-    font-size: 12px;
-    color: #94a3b8;
-    margin-bottom: 8px;
-    letter-spacing: 0.3px;
-  }
-  .card h3 {
-    font-size: 17px;
-    font-weight: 700;
-    color: #1a1a2e;
-    margin-bottom: 12px;
-    line-height: 1.45;
-  }
-  .card h3 .en {
-    display: block;
-    font-size: 12px;
-    color: #94a3b8;
-    font-weight: 400;
-    margin-top: 4px;
-  }
-  .card p {
-    font-size: 14px;
-    color: #475569;
-    margin-bottom: 14px;
-    line-height: 1.85;
-  }
-  .card .note {
-    font-size: 12px;
-    color: #f59e0b;
-    background: #fffbeb;
-    padding: 4px 10px;
-    border-radius: 4px;
-    margin-bottom: 12px;
-    display: inline-block;
-  }
-  .card a {
-    display: inline-block;
-    font-size: 12px;
-    color: #2980b9;
-    text-decoration: none;
-    border-bottom: 1px solid #bdd9ef;
-    padding-bottom: 1px;
-    transition: color 0.2s;
-  }
+  .card-meta { font-size: 12px; color: #94a3b8; margin-bottom: 8px; }
+  .card h3 { font-size: 17px; font-weight: 700; color: #1a1a2e; margin-bottom: 12px; line-height: 1.45; }
+  .card h3 .en { display: block; font-size: 12px; color: #94a3b8; font-weight: 400; margin-top: 4px; }
+  .card p { font-size: 14px; color: #475569; margin-bottom: 14px; line-height: 1.85; }
+  .card .note { font-size: 12px; color: #f59e0b; background: #fffbeb; padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; display: inline-block; }
+  .card a { display: inline-block; font-size: 12px; color: #2980b9; text-decoration: none; border-bottom: 1px solid #bdd9ef; padding-bottom: 1px; transition: color 0.2s; }
   .card a:hover { color: #1a6fa8; }
 
-  /* Recommendations */
-  .recs {
-    max-width: 860px;
-    margin: 0 auto 40px;
-    padding: 0 24px;
-  }
-  .recs-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: #1a1a2e;
-    margin-bottom: 18px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #e2e8f0;
-  }
-  .recs-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-  }
-  .rec-item {
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 18px 20px;
-    border-top: 3px solid;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
+  .recs { max-width: 860px; margin: 0 auto 40px; padding: 0 24px; }
+  .recs-title { font-size: 18px; font-weight: 700; color: #1a1a2e; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e2e8f0; }
+  .recs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .rec-item { background: #ffffff; border-radius: 8px; padding: 18px 20px; border-top: 3px solid; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
   .rec-item:nth-child(1) { border-color: #e74c3c; }
   .rec-item:nth-child(2) { border-color: #2980b9; }
   .rec-item:nth-child(3) { border-color: #27ae60; }
   .rec-item:nth-child(4) { border-color: #f39c12; }
-  .rec-item h4 {
-    font-size: 13px;
-    font-weight: 700;
-    color: #1a1a2e;
-    margin-bottom: 8px;
-  }
-  .rec-item p {
-    font-size: 13px;
-    color: #64748b;
-    line-height: 1.65;
-  }
+  .rec-item h4 { font-size: 13px; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; }
+  .rec-item p { font-size: 13px; color: #64748b; line-height: 1.65; }
 
-  /* Backnumber */
-  .backnumber {
-    max-width: 860px;
-    margin: 0 auto 64px;
-    padding: 0 24px;
-  }
-  .backnumber-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: #1a1a2e;
-    margin-bottom: 14px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #e2e8f0;
-  }
-  .backnumber ul { list-style: none; padding: 0; }
-  .backnumber ul li {
-    padding: 9px 0;
-    border-bottom: 1px solid #f1f5f9;
-  }
-  .backnumber ul li a {
-    font-size: 14px;
-    color: #2980b9;
-    text-decoration: none;
-  }
+  .backnumber { max-width: 860px; margin: 0 auto 64px; padding: 0 24px; }
+  .backnumber-title { font-size: 18px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #e2e8f0; }
+  .backnumber ul { list-style: none; }
+  .backnumber ul li { padding: 9px 0; border-bottom: 1px solid #f1f5f9; }
+  .backnumber ul li a { font-size: 14px; color: #2980b9; text-decoration: none; }
   .backnumber ul li a:hover { color: #1a6fa8; }
 
-  /* Footer */
-  .footer {
-    text-align: center;
-    padding: 28px;
-    font-size: 12px;
-    color: #94a3b8;
-    border-top: 1px solid #e2e8f0;
-    background: #ffffff;
-  }
+  .footer { text-align: center; padding: 28px; font-size: 12px; color: #94a3b8; border-top: 1px solid #e2e8f0; background: #ffffff; }
 
   @media (max-width: 600px) {
     .header h1 { font-size: 22px; }
@@ -247,20 +97,18 @@
 </head>
 <body>
 
-<!-- Header -->
 <div class="header">
   <div class="header-label">KONNEKT INTERNATIONAL</div>
   <h1>IP News Daily</h1>
   <div class="date">2026 . 04 . 05</div>
 </div>
 
-<!-- Summary Banner -->
 <div class="summary">
   <h2>Today's Highlights</h2>
   <ul>
-    <li>2026年春アニメが一斉スタート、国内外でのIPライセンス・グッズ展開に注目が集まる</li>
-    <li>License Globalが発表：2025年のライセンス商品小売売上が過去最大の1,177億ドルに到達</li>
-    <li>Datavault AI × Demora FoundationがK-Entertainmentトークナイゼーションで提携、韓流IPの資産化が本格化</li>
+    <li>ライセンシングジャパン 2026が6月開催確定——国内外800以上のIPが東京ビッグサイトに集結</li>
+    <li>License Global：2025年ライセンス商品小売売上が過去最大の1,177億ドルに到達、APACが急成長</li>
+    <li>Dreamday がインフルエンサー専門部門を新設——D2Cブランド向けのフルファネル・クリエイター施策が加速</li>
   </ul>
 </div>
 
@@ -268,37 +116,33 @@
 <div class="section">
   <div class="section-title">🇯🇵 日本の最新IPニュース</div>
 
-  <!-- 日本記事1 -->
   <div class="card japan">
-    <img src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News" alt="2026春アニメ">
+    <img src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News" alt="ライセンシングジャパン 2026" onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
+    <div class="card-body">
+      <div class="card-meta">コンテンツ東京 / ライセンシングジャパン　｜　2026年6月17〜19日開催</div>
+      <h3>ライセンシングジャパン 2026 開催確定——国内外800以上のキャラクター・ブランドが東京ビッグサイトに集結</h3>
+      <p>日本最大のライセンスビジネス専門展「ライセンシングジャパン 2026」が6月17〜19日に東京ビッグサイト西展示棟で開催される。国内外から800以上のキャラクター・ブランドが出展し、IPホルダーとライセンシーが一堂に会する商談の場となる。アニメ・音楽・スポーツ・ファッション等の多様なIPカテゴリが揃い、ライセンス料率の相場や最新契約トレンドが公開される見込みで、KONNEKT事業にも直結する情報収集の機会として注目される。</p>
+      <a href="https://www.content-tokyo.jp/hub/ja-jp/about/lj.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <div class="card japan">
+    <img src="https://high-five.careers/wp-content/uploads/2025/12/Character-business.png" alt="キャラクタービジネス" onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
+    <div class="card-body">
+      <div class="card-meta">HIGH-FIVE　｜　2026年</div>
+      <h3>キャラクタービジネスとは？——市場規模・仕組み・ライセンス料率の最新動向を解説</h3>
+      <p>キャラクタービジネスはIPホルダーとライセンシーが役割を分担するライセンスビジネスを軸に成立。国内ではサンリオが複数キャラクターのIPポートフォリオを多層化し、ライセンス収入300億円超・売上の約42%を占めるモデルを確立。ロイヤリティ率は一般的に4〜6%、人気IPでは8〜10%が相場。デジタル・体験型コンテンツを組み合わせた収益化が業界全体のトレンドとなっている。</p>
+      <a href="https://high-five.careers/column/character-business/" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <div class="card japan">
+    <img src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News" alt="2026春アニメ" onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
     <div class="card-body">
       <div class="card-meta">コミックナタリー　｜　2026年4月</div>
-      <h3>2026年春アニメ（4月期）が一斉スタート——IPライセンス・グッズ展開に注目</h3>
-      <p>2026年4月クールの新作テレビアニメが各局・各配信プラットフォームで続々とスタート。春アニメは毎年グッズ需要が高まるシーズンで、キャラクターIPのライセンス商品やコラボキャンペーンが集中して打ち出される時期でもある。今春もアパレル・雑貨・フード等のIPコラボが各社から予定されており、ライセンシーにとってはビジネスチャンスが豊富な季節となっている。</p>
+      <h3>2026年春アニメ（4月期）が一斉スタート——IPライセンス・グッズ展開の最需要期に突入</h3>
+      <p>2026年4月クールの新作テレビアニメが各局・配信プラットフォームで続々スタート。春クールはキャラクターIPのグッズ需要が年間で最も高まるシーズンであり、アパレル・雑貨・フード等のIPコラボキャンペーンが集中して展開される。ライセンシーにとっては旬のIPを活用した商品展開のビジネスチャンスが豊富で、春アニメIPとのタイムリーなコラボが売上に直結するタイミングとなっている。</p>
       <a href="https://natalie.mu/comic/anime/season/2026-spring" target="_blank" rel="noopener">元記事を読む →</a>
-    </div>
-  </div>
-
-  <!-- 日本記事2 -->
-  <div class="card japan">
-    <img src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News" alt="Licensing Expo 2026">
-    <div class="card-body">
-      <div class="card-meta">Licensing International　｜　2026年4月</div>
-      <h3>世界最大のライセンスイベント「Licensing Expo 2026」開催発表——ポケモン・SEGA・Netflixら集結</h3>
-      <p>5月19〜21日にラスベガス・Mandalay Bayで開催されるLicensing Expo 2026の詳細が発表された。ポケモン・LEGO・Warner Bros.・SEGA・BBC・Netflix・Sony Pictures Entertainmentなど世界の有力IPホルダーが出展予定。アニメ・K-pop・フード&ビバレッジの各カテゴリが特に活況で、国際的なIPライセンス商談の場として日本企業の注目も高まっている。</p>
-      <a href="https://licensinginternational.org/news/licensing-expo-2026-unveils-the-worlds-largest-most-influential-brand-licensing-event/" target="_blank" rel="noopener">元記事を読む →</a>
-    </div>
-  </div>
-
-  <!-- 日本記事3 -->
-  <div class="card japan">
-    <img src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News" alt="忍者ハットリくん グローバルライセンス">
-    <div class="card-body">
-      <div class="card-meta">Anime News Network　｜　March 17, 2026</div>
-      <div class="note">※直近7日以内の記事が見つかりませんでした</div>
-      <h3>8 Lions × TV朝日、「忍者ハットリくん」のグローバルライセンス契約を締結</h3>
-      <p>8 Lions EntertainmentがTV朝日との間で、アニメフランチャイズ「忍者ハットリくん」のグローバルライセンス契約を締結した。日本の国民的アニメIPが世界のストリーミングプラットフォームへ展開されるデジタル配信戦略が本格始動。ライセンスビジネスの観点から、国内アニメIPが海外展開する際のキャラクターグッズやコラボ展開の可能性にも注目が集まっている。</p>
-      <a href="https://www.animenewsnetwork.com/press-release/2026-03-17/8-lions-tv-asahi-ink-global-licensing-agreement-for-anime-franchise-ninja-hattori/.235417" target="_blank" rel="noopener">元記事を読む →</a>
     </div>
   </div>
 </div>
@@ -307,35 +151,31 @@
 <div class="section">
   <div class="section-title">🌍 グローバルIPニュース</div>
 
-  <!-- グローバル記事1 -->
   <div class="card global">
     <img src="https://licensinginternational.org/wp-content/uploads/2026/04/Top-Agents.png" alt="License Global Top Agents 2026" onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
     <div class="card-body">
       <div class="card-meta">Licensing International　｜　April 2, 2026</div>
       <h3>
-        2025年ライセンス商品小売売上が過去最高の1,177億ドル——License Global「Top Agents 2026」発表
+        2025年ライセンス商品小売売上が過去最高の1,177億ドル——「Top Agents 2026」レポート公表
         <span class="en">License Global Unveils 2026's Top Licensing Agents and Industry Trends</span>
       </h3>
-      <p>License Globalは2026年4月2日、年次レポート「Top Global Licensing Agents 2026」を公表した。同レポートによると、2025年におけるライセンス商品の世界小売売上高は史上初めて1,177億ドルを突破した。トップ10エージェントの合計売上は801億ドルで、前年比7.8%成長を記録している。</p>
-      <p>1位はIMG Licensing、続いてCAA Brand Management（BeanstalKと2026年2月に合併）、LMCAと続く。地域別では北米が564億ドルで首位、次いでAPAC（アジア太平洋）が223億ドルで2位に位置し、日本を含むアジア地域の存在感が増している。カテゴリ別ではファッション・アパレルが80%でトップを維持、フード&ビバレッジが68%、玩具・ゲームが8%成長で62%と続く。</p>
-      <p>業界トレンドとして、エンタメ企業の統廃合（ネットフリックスによるWarner Bros.買収等）や、Kポップ・アニメIPの国際的な拡大、クリエイター主導のソーシャルメディア発ブランドの台頭が挙げられている。KONNEKTが手がけるアーティストD2CブランドやキャラクターIPはこの成長トレンドど真ん中にあり、グローバル展開の加速を検討する際の根拠データとして参照できそうだ。</p>
+      <p>License Globalは2026年4月2日、年次レポート「Top Global Licensing Agents 2026」を公表した。2025年のライセンス商品世界小売売上高は史上初の1,177億ドルを突破。トップ10エージェント合計は801億ドルで前年比7.8%成長。1位はIMG Licensing、CAA Brand Management（BeanstalKと合併）、LMCAと続く。</p>
+      <p>地域別では北米が564億ドルで首位、APACが223億ドルで2位に急浮上し、日本を含むアジア市場の存在感が増している。カテゴリ別ではファッション・アパレルが80%でトップを維持、フード&ビバレッジが68%、玩具・ゲームが8%増の62%と成長。Kポップ・アニメIPの国際的拡大も引き続き追い風となっており、KONNEKTが手がけるアーティストブランドやキャラクターIPはこの成長トレンドの中心に位置する。グローバル展開を加速する際の市場規模データとして活用できそうだ。</p>
       <a href="https://licensinginternational.org/news/license-global-unveils-2026s-top-agents-and-industry-trends/" target="_blank" rel="noopener">元記事を読む →</a>
     </div>
   </div>
 
-  <!-- グローバル記事2 -->
   <div class="card global">
-    <img src="https://d1io3yog0oux5.cloudfront.net/_4496142423641b604e87e6c828c9bf42/datavaultsite/db/377/2738/social_image_resized.jpg" alt="Datavault AI x Demora K-Entertainment" onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
+    <img src="https://mma.prnewswire.com/media/2074305/Dreamday.jpg?p=facebook" alt="Dreamday Influencer Division" onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
     <div class="card-body">
-      <div class="card-meta">Datavault AI (IR)　｜　April 1, 2026</div>
+      <div class="card-meta">PR Newswire　｜　April 2, 2026</div>
       <h3>
-        Datavault AI × Demora FoundationがK-Entertainmentプラットフォームで提携——韓流IPを機関投資家向け資産に
-        <span class="en">Datavault AI and Demora Foundation Execute Technology Integration Agreement to Power the K-Entertainment & K-Wave Global Platform</span>
+        Dreamdayがインフルエンサー専門部門を新設——D2Cブランド向けフルファネル施策が本格化
+        <span class="en">Dreamday Launches Influencer Division and Appoints Madeline Reid as AVP of Influencer</span>
       </h3>
-      <p>NASDAQ上場のAIデータ企業Datavault AI（DVLT）と、K-Entertainmentプラットフォームを運営するDemora Foundationが2026年4月1日、テクノロジー統合協定を締結した。この提携の核心は「韓流IPの資産トークナイゼーション（tokenization）」——Kポップのコンサート収益・Kドラマのロイヤリティ・デジタル配信権・Kビューティーブランド・Kフードフランチャイズなどを、ブロックチェーン上のデジタル資産に変換し、機関投資家向けの金融商品として流通させる仕組みだ。</p>
-      <p>プラットフォームは156か国の2億人を超えるHallyu（韓流）ファンを対象とし、トークナイゼーションの対象となる韓流IPパイプラインは30億ドル以上と試算されている。Datavault AIが持つDataVault®・DataValue®・DataScore®・デジタルツイン技術を活用し、Kポップアーティストのツアー収益予測・Kドラマのライセンス収入流・ライブイベントのキャッシュフローをAIでスコアリング。米国内の3つのK-Wave都市（アトランタ・ダラス・ニューヨーク首都圏）を拠点にDMR-LIVEプロトコルで展開する。</p>
-      <p>KONNEKTが扱う音楽バンドIP（KISS・Aerosmith等）やアーティストブランドにおいても、IP収益のデジタル資産化・トークン化という新しいマネタイゼーション手法の参考事例として注目したい動きだ。グローバルファンベースを持つIPほどこのアプローチが活かせる可能性がありそう。</p>
-      <a href="https://ir.datavaultsite.com/news-events/press-releases/detail/442/datavault-ai-inc-nasdaq-dvlt-and-demora-foundation" target="_blank" rel="noopener">元記事を読む →</a>
+      <p>パフォーマンス特化型PRエージェンシーのDreamday（米国）が2026年4月2日、インフルエンサーマーケティング専門部門を正式に立ち上げ、Madeline Reid氏をAVP（副社長補佐）として招聘したと発表した。背景にあるのは、D2Cブランドにおけるクリエイター施策の需要急増だ。</p>
+      <p>新部門はInstagram・TikTok・YouTube・Substack等のプラットフォームをまたぐ3領域をカバーする：①商品のアーンド（earned）シーディング、②ペイド（paid）インフルエンサーキャンペーン、③タレントマネジメント。ShopMyやLTKとのコミッション型アフィリエイト連携も整備し、計測可能なビジネス成果に直結するモデルを提供する。Reid氏はGrey Goose・Magnum Ice Cream・Mountain Dewなど高級消費財ブランドを手がけた8年以上のキャリアを持つ。CEO Lauren Kleinmanは「インフルエンサー施策には"センス・人脈・規律"の三拍子が必要」と語る。Ange Charme・LAVANDA・Armillary.といったKONNEKTのアーティストD2Cブランドにおいても、こうしたフルファネルのインフルエンサー戦略を自社または外部パートナーで設計する機会がありそうだ。</p>
+      <a href="https://www.prnewswire.com/news-releases/dreamday-launches-influencer-division-and-appoints-madeline-reid-as-associate-vice-president-of-influencer-to-lead-capabilities-expansion-302731991.html" target="_blank" rel="noopener">元記事を読む →</a>
     </div>
   </div>
 </div>
@@ -345,20 +185,20 @@
   <div class="recs-title">💡 KONNEKT INTERNATIONAL への提言</div>
   <div class="recs-grid">
     <div class="rec-item">
-      <h4>🌸 春アニメシーズンのコラボ活用</h4>
-      <p>4月スタートのアニメIPとのコラボ展開は、グッズ・アパレル需要が高まる春商戦と重なる。KONNEKT GOODS部門として旬のアニメIPとのコラボ提案を検討してみるのがおすすめ。</p>
+      <h4>🌸 春アニメIPとのコラボ提案</h4>
+      <p>4月スタートのアニメIPとのコラボは、グッズ・アパレル需要が最も高まる今がベストタイミング。GOODS部門として旬のアニメIPとのコラボを検討してみるのがおすすめ。</p>
     </div>
     <div class="rec-item">
-      <h4>🌐 Licensing Expo 2026 への参加</h4>
-      <p>5月ラスベガスで開催される世界最大のIPライセンス商談会。ポケモン・SEGA・Netflixなど有力IPホルダーが集結する絶好の機会で、新規IPの獲得や情報収集に活かせそう。</p>
+      <h4>🌐 ライセンシングジャパン2026への参加</h4>
+      <p>6月の業界最大展示会はIPホルダー・ライセンシーが集結する商談の場。新規IPの獲得候補探しや、最新ライセンス料率のリサーチに活かせる機会がありそう。</p>
     </div>
     <div class="rec-item">
-      <h4>📊 IP収益のデジタル資産化に注目</h4>
-      <p>韓流IPのトークナイゼーション事例が示すように、IP収益を金融商品として流通させる動きが始まっている。音楽バンドIP事業においても、新たなファイナンス手法として参考にできる機会がありそう。</p>
+      <h4>📊 APACの成長波に乗る</h4>
+      <p>ライセンス売上でAPACが世界2位に急成長。アジア圏でのKONNEKTブランド展開（GOD ONLY KNOWS・Armillary.等）のグローバル進出検討を加速できそうなタイミング。</p>
     </div>
     <div class="rec-item">
-      <h4>🎌 日本アニメのグローバル展開参入</h4>
-      <p>忍者ハットリくんの事例が示すように、日本の老舗アニメIPも海外配信・ライセンス展開が加速中。LIMAジャパン会員として、こうした案件の橋渡し役を担える機会を探ってみたい。</p>
+      <h4>📱 フルファネル・インフルエンサー戦略</h4>
+      <p>Dreamdayの事例のように、D2Cブランドのインフルエンサー施策は「アーンド→ペイド→アフィリエイト」の一貫設計が主流に。Ange Charme・LAVANDAでも同様のフレームを取り入れる機会がありそう。</p>
     </div>
   </div>
 </div>
@@ -372,7 +212,6 @@
   </ul>
 </div>
 
-<!-- Footer -->
 <div class="footer">
   KONNEKT INTERNATIONAL INC. | IP News Daily | Generated by AI Secretary
 </div>
