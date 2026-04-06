@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONNEKT IP News Daily – 2026-04-06</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+    background: #f8fafc;
+    color: #1a1a2e;
+    line-height: 1.7;
+  }
+  /* Header */
+  header {
+    background: #fff;
+    border-top: 5px solid transparent;
+    border-image: linear-gradient(to right, #2980b9, #6dd5fa) 1;
+    padding: 32px 40px 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  }
+  header .logo-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 6px;
+  }
+  header .logo-badge {
+    background: linear-gradient(135deg, #2980b9, #6dd5fa);
+    color: #fff;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+    border-radius: 4px;
+  }
+  header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #1a1a2e;
+    letter-spacing: 0.5px;
+  }
+  header .date-line {
+    font-size: 13px;
+    color: #6b7a9a;
+    margin-top: 4px;
+  }
+
+  /* Container */
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: linear-gradient(135deg, #e8f4fd, #f0f9ff);
+    border: 1px solid #b3d9f7;
+    border-radius: 12px;
+    padding: 20px 28px;
+    margin-bottom: 36px;
+  }
+  .summary-banner h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #2980b9;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .summary-banner ul { list-style: none; }
+  .summary-banner ul li {
+    padding: 4px 0;
+    font-size: 14px;
+    color: #1a1a2e;
+  }
+  .summary-banner ul li::before { content: "▶ "; color: #2980b9; font-size: 11px; }
+
+  /* Section Title */
+  .section-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 36px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e2e8f0;
+  }
+
+  /* Card */
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    margin-bottom: 24px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  }
+  .card.japan { border-left: 5px solid #e74c3c; }
+  .card.global { border-left: 5px solid #2980b9; }
+
+  .card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    background: #e8f4fd;
+  }
+  .card-body { padding: 20px 24px; }
+  .card-meta {
+    font-size: 12px;
+    color: #6b7a9a;
+    margin-bottom: 8px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .card-meta .source-badge {
+    background: #f0f4f8;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .card-meta .date-badge {
+    color: #2980b9;
+    font-weight: 600;
+  }
+  .card-meta .notice {
+    color: #e67e22;
+    font-size: 11px;
+    font-style: italic;
+  }
+  .card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1a1a2e;
+    line-height: 1.5;
+  }
+  .card h3 .en-title {
+    font-size: 14px;
+    color: #4a5568;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .card p {
+    font-size: 14px;
+    color: #3d4a6a;
+    line-height: 1.75;
+    margin-bottom: 14px;
+  }
+  .card .read-more {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #2980b9;
+    text-decoration: none;
+    border: 1px solid #2980b9;
+    padding: 5px 14px;
+    border-radius: 20px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .card .read-more:hover { background: #2980b9; color: #fff; }
+  .card .read-more.red { color: #e74c3c; border-color: #e74c3c; }
+  .card .read-more.red:hover { background: #e74c3c; color: #fff; }
+
+  /* Translation block */
+  .translation-block {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 12px 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #2d3748;
+    border-left: 3px solid #2980b9;
+  }
+  .translation-block strong {
+    display: block;
+    font-size: 12px;
+    color: #2980b9;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+
+  /* Recommendations */
+  .reco-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 8px;
+  }
+  @media (max-width: 600px) { .reco-grid { grid-template-columns: 1fr; } }
+  .reco-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 18px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-top: 3px solid #2980b9;
+  }
+  .reco-card:nth-child(2) { border-top-color: #e74c3c; }
+  .reco-card:nth-child(3) { border-top-color: #27ae60; }
+  .reco-card:nth-child(4) { border-top-color: #f39c12; }
+  .reco-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #1a1a2e;
+  }
+  .reco-card p { font-size: 13px; color: #4a5568; line-height: 1.7; }
+
+  /* Backnumber */
+  .backnumber-section {
+    margin-top: 40px;
+    padding: 20px 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .backnumber-section h2 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+  .backnumber-section p { font-size: 14px; color: #6b7a9a; }
+  .backnumber-list { list-style: none; }
+  .backnumber-list li { padding: 4px 0; }
+  .backnumber-list a { color: #2980b9; text-decoration: none; font-size: 14px; }
+  .backnumber-list a:hover { text-decoration: underline; }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    font-size: 12px;
+    color: #a0aec0;
+    padding: 24px 0;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-row">
+    <span class="logo-badge">KONNEKT</span>
+    <h1>IP News Daily</h1>
+  </div>
+  <div class="date-line">2026年4月6日（月）| コネクト・インターナショナル株式会社 社内配信</div>
+</header>
+
+<div class="container">
+
+  <!-- Summary Banner -->
+  <div class="summary-banner">
+    <h2>🔔 Today's Highlights</h2>
+    <ul>
+      <li>経産省IP360補助金の第1回公募が開始。アニメ・音楽IPへの最大30億円規模の支援制度が活用フェーズへ</li>
+      <li>DECO*27 × 初音ミク展が大阪なんばマルイへ拡大。アーティスト×キャラクターIP融合の成功モデルが注目</li>
+      <li>グローバルライセンス市場が$1,177億に拡大。K-pop・アニメIPが牽引し、Licensing Expo 2026が5月に開催</li>
+    </ul>
+  </div>
+
+  <!-- Japan Section -->
+  <div class="section-title">🇯🇵 日本のIPニュース</div>
+
+  <!-- Japan Card 1 -->
+  <div class="card japan">
+    <img class="card-img" src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News" alt="DECO*27 feat.初音ミク EXHIBITION">
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="source-badge">攻略大百科</span>
+        <span class="date-badge">2026年4月（直近7日以内）</span>
+      </div>
+      <h3>DECO*27 feat.初音ミク EXHIBITION 大阪会場開催決定！限定グッズやチケット情報を公開</h3>
+      <p>音楽アーティストDECO*27と初音ミクIPを組み合わせた展示イベントが大阪なんばマルイにて2026年4月10日〜19日に開催。楽曲モチーフの展示・MVの世界観を体験できるスポットを設置し、描き下ろしメインビジュアル使用のオリジナルグッズや人気楽曲イラストの新作グッズを販売。2,000円ごとに購入特典ポストカードも配布予定。東京会場に続く大阪展開でファンコミュニティの熱量が継続している。</p>
+      <a href="https://premium.gamepedia.jp/hobby/archives/105415" target="_blank" class="read-more red">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- Japan Card 2 -->
+  <div class="card japan">
+    <img class="card-img" src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News" alt="経産省IP360">
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="source-badge">経済産業省北海道経済産業局</span>
+        <span class="date-badge">2026年4月2日（直近7日以内）</span>
+      </div>
+      <h3>【IP360補助金】令和7年度補正コンテンツ産業成長投資支援事業の公募を開始</h3>
+      <p>経済産業省がアニメ・ゲーム・マンガ・音楽・実写を対象としたIP360（コンテンツ産業成長投資支援事業）の公募を開始。スタートアップ向け補助率1/2・上限1,000万円で、AI・XR・ブロックチェーンを活用した開発プラットフォーム構築も対象。公募期間は2026年3月31日〜4月30日。IP海外展開を2033年までに20兆円とする国家目標に向けた重点施策として注目を集めている。</p>
+      <a href="https://www.hkd.meti.go.jp/hokch/20260402/index.htm" target="_blank" class="read-more red">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- Japan Card 3 -->
+  <div class="card japan">
+    <img class="card-img" src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News" alt="AnimeJapan 2026">
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="source-badge">Branc</span>
+        <span class="date-badge">2026年3月2日</span>
+        <span class="notice">※直近7日以内の記事が見つかりませんでした</span>
+      </div>
+      <h3>【AnimeJapan 2026】ビジネスデイのセミナー情報が公開。国内外のアニメビジネス動向を解説</h3>
+      <p>AnimeJapan 2026 ビジネスデイ（3月30日〜31日、東京ビッグサイト）のセミナー情報が公開。アニプレックス・KADOKAWA・東映アニメーションなど国内外70社超が出展し、キャラクターデータバンクによるライセンスビジネス構造・トレンド解説セミナーも予定。国内外のアニメIPビジネス最前線の動向を網羅した業界最大のビジネスイベントが盛況のうちに開催された模様。</p>
+      <a href="https://branc.jp/article/2026/03/02/2467.html" target="_blank" class="read-more red">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- Global Section -->
+  <div class="section-title">🌍 グローバルのIPニュース</div>
+
+  <!-- Global Card 1 -->
+  <div class="card global">
+    <img class="card-img" src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News" alt="License Global 2026">
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="source-badge">The Manila Times (GlobeNewswire)</span>
+        <span class="date-badge">2026年4月2日（直近7日以内）</span>
+      </div>
+      <h3>
+        <span class="en-title">Breaking Brand Licensing Records: License Global Unveils 2026's Top Agents and Industry Trends</span>
+        ライセンス業界が記録更新：License Global、2026年トップエージェントと最新トレンドを発表
+      </h3>
+      <div class="translation-block">
+        <strong>詳しい日本語訳・解説</strong>
+        License Globalが2026年のトップライセンシングエージェントランキングと業界トレンドを発表した。2025年の代理クライアント向けライセンス消費財の小売売上は前例のない1,177億ドルに達し、ライセンス業界の継続的な成長が確認された。<br><br>
+        最大のニュースは、CAAブランドマネジメントとBeanstalkが2026年2月の買収を経て合併したこと。大手エンターテインメントIPとブランドライセンスの垂直統合が進み、業界の集約化が加速している。この統合は、IPを保有するコンテンツホルダーにとっても交渉窓口の変化を意味しており、パートナー戦略の見直しを迫られる局面が増えていく可能性がある。<br><br>
+        注目すべき第2のトレンドは、クリエイター主導・SNS発のブランドが急速にファンベースを獲得し、ライセンス展開に至るケースが増加している点だ。YouTuberやインフルエンサーが育てたIPが、従来の有名人主導ブランドと同等以上のリーチを持ち始めており、ライセンス市場への新たな参入経路として定着しつつある。<br><br>
+        第3のトレンドとして、K-popやアニメに触発されたブランド拡張（グッズ・コラボ商品）のライセンス活動が勢いを増している。日本発のIPコンテンツが世界市場でのライセンス活動の重要な起爆剤となっており、グローバル展開を目指す日本のIPホルダーには追い風の環境が続いている。<br><br>
+        コネクト・インターナショナルとの関連では、同社が展開するAnge Charme（アンジュ シャルム）、GOD ONLY KNOWS、LAVANDA（ラバンダ）、Armillary.といったアーティストIPブランドをグローバルライセンス展開する際の重要な参考データとなる。特にK-pop・アニメ関連ライセンスの勢いが増す中、日本発のアーティストIPをグローバルに売り込む絶好のタイミングといえる。Licensing Expo 2026（5月19〜21日、ラスベガス・マンダレイベイ）への参加・視察を検討したい。
+      </div>
+      <a href="https://www.manilatimes.net/2026/04/02/tmt-newswire/globenewswire/breaking-brand-licensing-records-license-global-unveils-2026s-top-agents-and-industry-trends/2313155" target="_blank" class="read-more">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- Global Card 2 -->
+  <div class="card global">
+    <img class="card-img" src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News" alt="D2C Celebrity Brands">
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="source-badge">The Drum</span>
+        <span class="date-badge">2026年1月19日</span>
+        <span class="notice">※直近7日以内の記事が見つかりませんでした</span>
+      </div>
+      <h3>
+        <span class="en-title">From Endorsement to Snackable Fame: Star-backed D2C Brands Are Remaking Celebrity</span>
+        「推薦」から「創業者」へ：著名人主導D2Cブランドがセレブリティの定義を塗り替える
+      </h3>
+      <div class="translation-block">
+        <strong>詳しい日本語訳・解説</strong>
+        著名人によるD2Cブランドが「商品推薦」から「創業者モデル」へと急速に転換しつつある。従来の「Xが商品を推薦する」という形から、「Xがブランドを創った・信じる・投資した」というナラティブへの移行が鮮明だ。<br><br>
+        具体的には、著名人が消費者ブランドに5〜10%の株式参画を行い、単なる広告塔ではなく「共同創業者」として関与するモデルが主流化している。ベン・スティラーのソーダブランド「Stiller's Soda」、テニス選手ノバク・ジョコビッチのモロコシ系スナック「Cob Foods」、コメディアン・俳優のセス・ローゲンによるカナビス系ライフスタイルブランド「Houseplant」（インスタ90万フォロワー）などが代表例だ。<br><br>
+        2026年においては、「創業者」というアーキタイプが「セレブリティ」と並ぶ文化的地位を獲得しつつあると記事は主張する。大手ブランドの顔になるより、より小さくても自分のブランドを持ち、クリエイティブコントロールを握ることを選ぶ著名人が増えている。マーケティング言語も「X推薦」から「Xが信じる・Xが作った」へと変化しており、ファンとの関係性も深化している。<br><br>
+        この潮流はコネクト・インターナショナルが展開するアーティストIPビジネスと深く接続している。Ange Charme（アンジュ シャルム）やArmillary.のようなアーティスト発ブランドを、単なるグッズ販売にとどまらず「アーティスト創業型IPビジネス」として展開することで、ファンとの深い関係性とブランド価値の向上を図ることができる。GOD ONLY KNOWSやLAVANDA（ラバンダ）も、アーティスト自身の世界観をD2Cで届けるブランドとして再定義することを検討したい。
+      </div>
+      <a href="https://www.thedrum.com/opinion/from-endorsement-to-snackable-fame-star-backed-d2c-brands-are-remaking-celebrity" target="_blank" class="read-more">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- Recommendations -->
+  <div class="section-title">💡 KONNEKT への提言</div>
+  <div class="reco-grid">
+    <div class="reco-card">
+      <h4>🏛️ IP360補助金への申請を検討</h4>
+      <p>経産省IP360補助金の公募は4月30日まで。アニメ・音楽IPの海外展開計画があれば、Ange Charme・GOD ONLY KNOWSのコンテンツ開発・プラットフォーム整備に活用できる可能性がある。要件確認と早期申請準備がおすすめ。</p>
+    </div>
+    <div class="reco-card">
+      <h4>🌏 Licensing Expo 2026 視察を検討</h4>
+      <p>5月19〜21日にラスベガスで開催されるLicensing Expo 2026は、K-pop・アニメIPが注目される今年特に重要な場。Armillary.やLAVANDA（ラバンダ）のグローバル展開に向けたパートナー探しや市場調査に活用を検討したい。</p>
+    </div>
+    <div class="reco-card">
+      <h4>🎨 アーティスト×キャラクターIP融合モデルに注目</h4>
+      <p>DECO*27 × 初音ミクのような「アーティストIPとキャラクターIPの融合展開」が成功モデルとして定着しつつある。コネクトが持つ複数ブランドを横断したコラボ企画も、ファン層拡大の観点から面白い選択肢になりそう。</p>
+    </div>
+    <div class="reco-card">
+      <h4>📱 「創業者型」ブランドナラティブへの転換</h4>
+      <p>グローバルトレンドとして「アーティスト推薦」より「アーティストが創った」というストーリーがファンに刺さる時代に。GOD ONLY KNOWSやAnge Charme（アンジュ シャルム）のSNSコミュニケーションを「推薦」から「共創」のトーンに変えていくことがおすすめ。</p>
+    </div>
+  </div>
+
+  <!-- Backnumber -->
+  <div class="backnumber-section">
+    <h2>📂 バックナンバー</h2>
+    <p>現在、アーカイブはまだありません。本日（2026年4月6日）のレポートが最初のアーカイブとなります。</p>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2026 KONNEKT INTERNATIONAL INC. &nbsp;|&nbsp; 本レポートは社内配信専用です &nbsp;|&nbsp; Powered by KONNEKT IP News Agent
+</footer>
+
+</body>
+</html>
