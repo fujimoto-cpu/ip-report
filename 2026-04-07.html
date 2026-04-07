@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONNEKT IP News Daily – 2026-04-07</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Helvetica Neue', Arial, sans-serif;
+    background: #f8fafc;
+    color: #1a1a2e;
+    line-height: 1.7;
+  }
+
+  /* ── Header ── */
+  header {
+    background: #fff;
+    position: relative;
+    padding: 36px 40px 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  }
+  header::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: linear-gradient(90deg, #2980b9, #6dd5fa);
+    position: absolute;
+    top: 0; left: 0; right: 0;
+  }
+  .header-inner { max-width: 980px; margin: 0 auto; }
+  .header-logo {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #2980b9;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #1a1a2e;
+    letter-spacing: -0.5px;
+  }
+  .header-date {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #6b7280;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── Main ── */
+  main { max-width: 980px; margin: 0 auto; padding: 32px 20px 60px; }
+
+  /* ── Summary Banner ── */
+  .summary {
+    background: linear-gradient(135deg, #e8f4fd 0%, #f0f9f0 100%);
+    border-left: 4px solid #2980b9;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 36px;
+  }
+  .summary h2 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #2980b9;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .summary ul { list-style: none; padding: 0; }
+  .summary ul li {
+    padding: 4px 0;
+    font-size: 14px;
+    color: #1a1a2e;
+    display: flex;
+    gap: 8px;
+  }
+  .summary ul li::before { content: '▶'; color: #2980b9; font-size: 10px; margin-top: 4px; flex-shrink: 0; }
+
+  /* ── Section Heading ── */
+  .section-heading {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 40px 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-heading::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e5e7eb;
+    display: block;
+  }
+
+  /* ── Article Card ── */
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    margin-bottom: 24px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.11);
+  }
+  .card.japan { border-left: 4px solid #e74c3c; }
+  .card.global { border-left: 4px solid #2980b9; }
+
+  .card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: #f0f4f8;
+    display: block;
+  }
+  .card-body { padding: 20px 24px 22px; }
+  .card-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  .card.japan .card-tag { background: #fde8e8; color: #e74c3c; }
+  .card.global .card-tag { background: #e8f4fd; color: #2980b9; }
+  .card-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+  .card-title-en {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  .card-meta {
+    font-size: 12px;
+    color: #9ca3af;
+    margin-bottom: 14px;
+  }
+  .card-note {
+    font-size: 11px;
+    color: #e67e22;
+    background: #fef9e7;
+    border: 1px solid #fde68a;
+    border-radius: 4px;
+    padding: 4px 8px;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+  .card-summary {
+    font-size: 14px;
+    color: #374151;
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+  .card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #2980b9;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+  .card-link:hover { border-color: #2980b9; }
+
+  /* ── Proposal Grid ── */
+  .proposal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+  }
+  @media (max-width: 640px) { .proposal-grid { grid-template-columns: 1fr; } }
+  .proposal-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 22px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    border-top: 3px solid #2980b9;
+    transition: transform 0.18s ease;
+  }
+  .proposal-card:hover { transform: translateY(-2px); }
+  .proposal-card:nth-child(2) { border-top-color: #e74c3c; }
+  .proposal-card:nth-child(3) { border-top-color: #27ae60; }
+  .proposal-card:nth-child(4) { border-top-color: #8e44ad; }
+  .proposal-icon { font-size: 26px; margin-bottom: 10px; }
+  .proposal-title { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: #1a1a2e; }
+  .proposal-brand {
+    display: inline-block;
+    font-size: 11px;
+    background: #f3f4f6;
+    color: #374151;
+    border-radius: 3px;
+    padding: 2px 6px;
+    margin: 2px 2px 8px 0;
+    font-weight: 500;
+  }
+  .proposal-body { font-size: 13px; color: #4b5563; line-height: 1.7; }
+
+  /* ── Backnumber ── */
+  .backnumber {
+    background: #fff;
+    border-radius: 10px;
+    padding: 22px 26px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    margin-top: 40px;
+  }
+  .backnumber h2 { font-size: 15px; font-weight: 700; margin-bottom: 14px; color: #1a1a2e; }
+  .backnumber ul { list-style: none; }
+  .backnumber ul li { padding: 4px 0; font-size: 13px; }
+  .backnumber ul li a { color: #2980b9; text-decoration: none; }
+  .backnumber ul li a:hover { text-decoration: underline; }
+  .backnumber-empty { font-size: 13px; color: #9ca3af; }
+
+  /* ── Footer ── */
+  footer {
+    text-align: center;
+    font-size: 11px;
+    color: #9ca3af;
+    padding: 28px 16px 20px;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header>
+  <div class="header-inner">
+    <div class="header-logo">KONNEKT INTERNATIONAL INC.</div>
+    <h1>📰 IP News Daily</h1>
+    <div class="header-date">2026年4月7日（火）｜ Powered by KONNEKT IP Research Agent</div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ══ SUMMARY BANNER ══ -->
+  <div class="summary">
+    <h2>Today's Highlight</h2>
+    <ul>
+      <li>キャラクタービジネス市場、2024年度は前年比102.9%の2兆7,773億円に拡大——「ちいかわ」「呪術廻戦」等が牽引</li>
+      <li>Cursor、エージェント型AI機能を大幅強化しClaude Code・Codexと真っ向対抗——4月2日リリース（直近7日以内）</li>
+      <li>電通×Iconic Arts、データドリブンなIP創出で戦略パートナーシップ締結——アニメ・連続エンタメ分野に注力</li>
+    </ul>
+  </div>
+
+  <!-- ══ JAPAN ARTICLES ══ -->
+  <div class="section-heading">🇯🇵 日本のIPニュース</div>
+
+  <!-- Japan 1 -->
+  <div class="card japan">
+    <img class="card-img" src="https://placehold.co/860x200/fde8e8/e74c3c?text=Character+IP+Market+2024" alt="キャラクタービジネス市場規模" />
+    <div class="card-body">
+      <span class="card-tag">市場調査</span>
+      <div class="card-title">キャラクタービジネス市場規模、2024年度は2兆7,773億円に拡大</div>
+      <div class="card-meta">矢野経済研究所｜2025年</div>
+      <div class="card-note">※ 注：直近7日以内の記事が見つかりませんでした</div>
+      <div class="card-summary">
+        2024年度のキャラクタービジネス市場規模（商品化権・版権）は前年比102.9%の2兆7,773億円と推計。「ちいかわ」「サンリオキャラクターズ」などのファンシー系IPや「ドラゴンボール」「呪術廻戦」「ハイキュー!!」等の漫画原作キャラクターのメディアミックス展開が好調に推移し市場全体を牽引した。アニメ産業全体も前年比114.8%の3兆8,407億円に達し、SNS・動画配信の普及を背景に急成長が続いている。
+      </div>
+      <a class="card-link" href="https://www.yano.co.jp/press-release/show/press_id/3849" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- Japan 2 -->
+  <div class="card japan">
+    <img class="card-img" src="https://placehold.co/860x200/fde8e8/e74c3c?text=Licensing+Japan+2026" alt="ライセンシングジャパン2026" />
+    <div class="card-body">
+      <span class="card-tag">展示会</span>
+      <div class="card-title">ライセンシングジャパン2026、6月17〜19日に東京ビッグサイト開催</div>
+      <div class="card-meta">コンテンツ東京（RX Japan）｜2026年</div>
+      <div class="card-note">※ 注：直近7日以内の記事が見つかりませんでした</div>
+      <div class="card-summary">
+        日本最大のライセンス業界専門展「ライセンシングジャパン」が2026年6月17〜19日に東京ビッグサイトで開催。国内外から800以上のキャラクター・ブランドIPが出展し、IPホルダーとライセンシーのビジネスマッチングを促進する。版権・キャラクターグッズ・アパレル・文具など多彩なカテゴリが集結し、ライセンスビジネスの最前線を体感できる年次イベントとして業界内で注目度が高まっている。
+      </div>
+      <a class="card-link" href="https://www.content-tokyo.jp/hub/ja-jp/about/lj.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- Japan 3 -->
+  <div class="card japan">
+    <img class="card-img" src="https://placehold.co/860x200/fde8e8/e74c3c?text=Anime+NYC+Licensing+Summit+2026" alt="Anime NYC Licensing Summit" />
+    <div class="card-body">
+      <span class="card-tag">アニメIP</span>
+      <div class="card-title">Anime NYC × Tracks、2026年8月にアニメIPライセンスサミット開催へ</div>
+      <div class="card-meta">In Asian Spaces｜2025年12月3日</div>
+      <div class="card-note">※ 注：直近7日以内の記事が見つかりませんでした</div>
+      <div class="card-summary">
+        米国東海岸最大のアニメイベント「Anime NYC」と「X Tracks Licensing Summits」が提携し、2026年8月20日にニューヨーク・ジャビッツセンターで初の「Anime NYC × Tracks Licensing Summit」を開催。日本アニメIPの北米展開・商業化を推進する国際ビジネスプラットフォームとして注目が集まる。ライセンス契約・商品化権・配信権など多面的なIPビジネス商談の場となる見込みだ。
+      </div>
+      <a class="card-link" href="https://inasianspaces.com/2025/12/03/anime-nyc-x-tracks-licensing-summit-2026-anime-ip/" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- ══ GLOBAL ARTICLES ══ -->
+  <div class="section-heading">🌍 グローバルIPニュース</div>
+
+  <!-- Global 1 -->
+  <div class="card global">
+    <img class="card-img" src="https://placehold.co/860x200/e8f4fd/2980b9?text=Cursor+AI+Agent+2026" alt="Cursor AI Agent" />
+    <div class="card-body">
+      <span class="card-tag">Global</span>
+      <div class="card-title">Cursor Refreshes Its Vibe Coding Platform with Focus on AI Agents</div>
+      <div class="card-title-en">Cursor、AIエージェント機能を中核とした次世代プラットフォームへ刷新</div>
+      <div class="card-meta">SiliconANGLE｜2026年4月2日 ✅ 直近7日以内</div>
+      <div class="card-summary">
+        <strong>【詳細訳】</strong><br>
+        AIコーディングプラットフォームの最大手CursorがAIエージェント機能を大幅に強化し、次世代プラットフォームとして正式に刷新した。今回のアップデートにより、AIエージェントがコードベース全体を自律的に理解し、ターミナルコマンドの実行・複数ファイルのリファクタリング・コードレビューまで一連のタスクを人間の介入なしに完遂できるようになった。これはAnthropicのClaude CodeやOpenAIのCodexに真っ向から対抗する戦略的なポジショニングだ。<br><br>
+        背景として、2026年初頭にX（旧Twitter）上で「Cursorオワコン論」がバズを呼んだことがある。Claude Codeが非エンジニア層を含む幅広いユーザーに急速普及し、時価総額300億ドル（約4.5兆円）のCursorは競争激化の波にさらされていた。今回のリリースはその流れへの本格的な反撃と位置づけられ、「エディタ補助型」から「エージェント実行型」へのパラダイムシフトを宣言するものだ。<br><br>
+        <strong>業界への影響：</strong>AIエージェントが自律的にプロダクト開発を担う時代が本格到来しつつある。コード生成だけでなく、コンテンツ制作・LP制作・データ分析・グッズ企画といった業務も自動化の対象になりうる。特にIPコマーシャライゼーション分野では、ライセンス管理や商品ラインナップ分析・トレンドリサーチをAIエージェントに委ねる活用例が今後急増すると予想される。KONNEKTのような企画・ブランド開発を軸とする企業にとっても、AIエージェントの導入は業務効率化と新規事業開発の両面で大きな武器になりうる。
+      </div>
+      <a class="card-link" href="https://siliconangle.com/2026/04/02/cursor-refreshes-vibe-coding-platform-focus-ai-agents/" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- Global 2 -->
+  <div class="card global">
+    <img class="card-img" src="https://placehold.co/860x200/e8f4fd/2980b9?text=Dentsu+x+Iconic+Arts+IP" alt="Dentsu Iconic Arts" />
+    <div class="card-body">
+      <span class="card-tag">Global</span>
+      <div class="card-title">Dentsu Partners with Iconic Arts to Accelerate IP Creation for Brands Through Data-Driven Entertainment</div>
+      <div class="card-title-en">電通×Iconic Arts、データドリブンなブランドIP創出で戦略パートナーシップ締結</div>
+      <div class="card-meta">Licensing International｜2026年</div>
+      <div class="card-note">※ 注：直近7日以内の記事が見つかりませんでした</div>
+      <div class="card-summary">
+        <strong>【詳細訳】</strong><br>
+        電通エンターテインメント（Dentsu Entertainment）と米国のIPクリエイションエージェンシー「Iconic Arts」が戦略的グローバルパートナーシップを締結した。本提携は、消費者データとエンゲージメント指標を活用し、ブランドの独自知的財産（IP）を創出・商業化することを目的としている。特にアニメや連続エンタメフォーマットに注力し、既存の人気IPに依存せず、各ブランドが「IPホルダー」として自社ファンダムを形成する新潮流を体現する取り組みだ。<br><br>
+        役割分担として、電通はグローバルネットワークを活かしたメディアプランニングとマーケティング展開を担当し、Iconic ArtはIPコンセプト開発・ストーリーテリング・アニメーション制作を担う。データ分析によって市場性を事前に検証するアプローチは、従来の「ヒット依存型」IPビジネスを大きく変革する可能性がある。<br><br>
+        <strong>業界への影響：</strong>NetflixやAmazon Primeなどの配信プラットフォームが独自IP需要を押し上げる中、ブランド発のIPが主流になりつつある。アパレル・コスメ・食品など非エンタメ企業が自社キャラクター・ストーリーを育成する事例が国内外で急増しており、日本市場でも同様のトレンドが加速中だ。コネクト・インターナショナルが展開するAnge Charme、GOD ONLY KNOWS、LAVANDA、Armillary.といったブランドIPにおいても、データドリブンなファンダム形成戦略を取り入れる好機が到来していると言えるだろう。
+      </div>
+      <a class="card-link" href="https://licensinginternational.org/news/dentsu-partners-with-iconic-arts-to-accelerate-ip-creation-for-brands-through-data-driven-entertainment/" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- ══ PROPOSALS ══ -->
+  <div class="section-heading">💡 KONNEKT への提言</div>
+  <div class="proposal-grid">
+
+    <div class="proposal-card">
+      <div class="proposal-icon">🎪</div>
+      <div class="proposal-title">ライセンシングジャパン2026 出展を検討したい</div>
+      <span class="proposal-brand">Ange Charme</span>
+      <span class="proposal-brand">GOD ONLY KNOWS</span>
+      <span class="proposal-brand">Armillary.</span>
+      <div class="proposal-body">
+        6月17〜19日に東京ビッグサイトで開催されるライセンシングジャパンは、国内最大のライセンス商談の場。自社ブランドIPのライセンスアウト先を開拓したり、コラボ相手を探したりするのに最適な機会。特にAnge CharmeやGOD ONLY KNOWSのキャラクター・グラフィックIPをアパレル・文具・ホーム分野にライセンス展開する第一歩として出展（またはビジター参加）を検討してみるのがおすすめ。
+      </div>
+    </div>
+
+    <div class="proposal-card">
+      <div class="proposal-icon">📊</div>
+      <div class="proposal-title">データドリブンなIP育成フレームワーク導入を視野に</div>
+      <span class="proposal-brand">LAVANDA</span>
+      <span class="proposal-brand">Armillary.</span>
+      <div class="proposal-body">
+        電通×Iconic Arts型のアプローチ（SNS・販売データで市場性を事前検証）を参考に、LAVANDAやArmillary.のコンテンツ企画においてもエンゲージメント指標を活用した仮説検証サイクルを取り入れてみたい。「なんとなく作る」から「データで作る」へのシフトが、ブランドIPの持続的な価値向上につながる。
+      </div>
+    </div>
+
+    <div class="proposal-card">
+      <div class="proposal-icon">🎌</div>
+      <div class="proposal-title">北米アニメIPとのコラボ商品企画が面白そう</div>
+      <span class="proposal-brand">Ange Charme</span>
+      <span class="proposal-brand">GOD ONLY KNOWS</span>
+      <div class="proposal-body">
+        Anime NYC × Tracks Licensing Summit（2026年8月）は、日本アニメIPの北米展開ニーズが集まる国際プラットフォーム。逆に、北米で人気のアニメIPとAnge CharmeやGOD ONLY KNOWSのデザインセンスを掛け合わせた限定コラボグッズを国内外で展開するアプローチも検討の価値あり。グローバルファンダムへのリーチを一気に広げる戦略として有力。
+      </div>
+    </div>
+
+    <div class="proposal-card">
+      <div class="proposal-icon">🤖</div>
+      <div class="proposal-title">AIエージェントを活用した業務効率化を試してみては</div>
+      <span class="proposal-brand">Ange Charme</span>
+      <span class="proposal-brand">LAVANDA</span>
+      <span class="proposal-brand">Armillary.</span>
+      <div class="proposal-body">
+        CursorやClaude Codeのようなエージェント型AIは、LP制作・商品説明文生成・ライセンス書類ドラフト・トレンドリサーチなど非エンジニアでも使いやすいツールとして急速に普及中。ゆりこさんの企画・デザイン業務にも取り入れてみることで、アイデア出しから制作物のプロト確認までのサイクルを大幅に短縮できる可能性がある。まずは小さなタスクから試してみるのがおすすめ。
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══ BACKNUMBER ══ -->
+  <div class="backnumber">
+    <h2>📂 バックナンバー</h2>
+    <p class="backnumber-empty">過去レポートは現在準備中です（今日が初回配信日）。明日以降に蓄積されます。</p>
+  </div>
+
+</main>
+
+<footer>
+  © 2026 KONNEKT INTERNATIONAL INC. — IP News Research Agent<br>
+  本レポートはAIが自動生成したものです。情報の正確性については元記事をご確認ください。
+</footer>
+
+</body>
+</html>
