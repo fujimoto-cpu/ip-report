@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONNEKT IP News Daily | 2026-04-08</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif;
+    background: #f8fafc;
+    color: #1a1a2e;
+    line-height: 1.7;
+  }
+  a { color: #2980b9; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ── Header ── */
+  .site-header {
+    background: #fff;
+    border-top: 5px solid transparent;
+    border-image: linear-gradient(90deg, #2980b9, #6dd5fa) 1;
+    box-shadow: 0 2px 12px rgba(0,0,0,.07);
+    padding: 28px 40px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .header-brand { display: flex; align-items: center; gap: 14px; }
+  .header-logo {
+    width: 46px; height: 46px; border-radius: 10px;
+    background: linear-gradient(135deg, #2980b9, #6dd5fa);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; color: #fff; font-size: 18px; letter-spacing: -1px;
+  }
+  .header-title { font-size: 1.45rem; font-weight: 800; color: #1a1a2e; }
+  .header-sub { font-size: .82rem; color: #6b7280; margin-top: 2px; }
+  .header-date {
+    font-size: .9rem; color: #6b7280;
+    background: #f0f4f8; padding: 6px 16px; border-radius: 20px;
+  }
+
+  /* ── Container ── */
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+
+  /* ── Summary Banner ── */
+  .summary-banner {
+    background: linear-gradient(135deg, #eaf4fc, #dff0fb);
+    border-left: 4px solid #2980b9;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+  }
+  .summary-banner h2 { font-size: 1rem; color: #2980b9; margin-bottom: 10px; font-weight: 700; }
+  .summary-banner ul { list-style: none; }
+  .summary-banner ul li { padding: 4px 0; font-size: .93rem; }
+  .summary-banner ul li::before { content: "▶ "; color: #2980b9; font-size: .8rem; }
+
+  /* ── Section heading ── */
+  .section-heading {
+    font-size: 1.15rem; font-weight: 800; color: #1a1a2e;
+    margin: 40px 0 16px;
+    display: flex; align-items: center; gap: 8px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e5eaf0;
+  }
+
+  /* ── Cards ── */
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: box-shadow .2s, transform .2s;
+  }
+  .card:hover { box-shadow: 0 6px 24px rgba(0,0,0,.11); transform: translateY(-2px); }
+
+  .card-jp { border-left: 5px solid #e74c3c; }
+  .card-global { border-left: 5px solid #2980b9; }
+
+  .card-img {
+    width: 100%; height: 200px; object-fit: cover;
+    display: block; background: #eef2f7;
+  }
+  .card-body { padding: 20px 24px 22px; }
+  .card-badge {
+    display: inline-block; font-size: .72rem; font-weight: 700;
+    padding: 2px 10px; border-radius: 20px; margin-bottom: 8px;
+    letter-spacing: .04em;
+  }
+  .badge-jp { background: #fdecea; color: #c0392b; }
+  .badge-global { background: #e8f4fd; color: #1a6fa5; }
+
+  .card-title { font-size: 1.05rem; font-weight: 800; color: #1a1a2e; margin-bottom: 6px; line-height: 1.45; }
+  .card-title-en { font-size: .88rem; color: #4b5563; margin-bottom: 8px; font-style: italic; }
+  .card-meta { font-size: .78rem; color: #9ca3af; margin-bottom: 12px; }
+  .card-summary { font-size: .88rem; color: #374151; line-height: 1.8; margin-bottom: 14px; }
+  .card-notice { font-size: .76rem; color: #b45309; background: #fef3c7; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 10px; }
+  .card-link {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: .82rem; font-weight: 700; color: #2980b9;
+    background: #eaf4fc; padding: 6px 14px; border-radius: 6px;
+    transition: background .2s;
+  }
+  .card-link:hover { background: #c9e4f8; text-decoration: none; }
+
+  /* ── Insight Grid ── */
+  .insight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 8px;
+  }
+  .insight-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    padding: 18px 20px;
+    border-top: 4px solid;
+    transition: box-shadow .2s, transform .2s;
+  }
+  .insight-card:hover { box-shadow: 0 5px 20px rgba(0,0,0,.1); transform: translateY(-2px); }
+  .insight-card:nth-child(1) { border-top-color: #e74c3c; }
+  .insight-card:nth-child(2) { border-top-color: #2980b9; }
+  .insight-card:nth-child(3) { border-top-color: #27ae60; }
+  .insight-card:nth-child(4) { border-top-color: #f39c12; }
+  .insight-icon { font-size: 1.4rem; margin-bottom: 8px; }
+  .insight-label { font-size: .75rem; font-weight: 700; color: #9ca3af; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 6px; }
+  .insight-text { font-size: .85rem; color: #374151; line-height: 1.6; }
+
+  /* ── Backnumber ── */
+  .backnumber { margin-top: 40px; }
+  .backnumber h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: 12px; color: #4b5563; }
+  .backnumber-list { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+  .backnumber-list li a {
+    display: inline-block; padding: 5px 14px;
+    background: #e5eaf0; border-radius: 20px;
+    font-size: .82rem; color: #374151;
+    transition: background .15s;
+  }
+  .backnumber-list li a:hover { background: #c9d4e0; text-decoration: none; }
+  .backnumber-empty { font-size: .85rem; color: #9ca3af; }
+
+  /* ── Footer ── */
+  .site-footer {
+    text-align: center; font-size: .75rem; color: #9ca3af;
+    margin-top: 60px; padding: 20px;
+    border-top: 1px solid #e5eaf0;
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════ HEADER ══════════ -->
+<header class="site-header">
+  <div class="header-brand">
+    <div class="header-logo">K</div>
+    <div>
+      <div class="header-title">KONNEKT IP News Daily</div>
+      <div class="header-sub">コネクト・インターナショナル株式会社 / 日次 IP ニュースレポート</div>
+    </div>
+  </div>
+  <div class="header-date">📅 2026-04-08（水）</div>
+</header>
+
+<!-- ══════════ MAIN ══════════ -->
+<main class="container">
+
+  <!-- ── Summary Banner ── -->
+  <div class="summary-banner">
+    <h2>📌 今日のハイライト</h2>
+    <ul>
+      <li>KADOKAWAとアニプレックスがアニメ映画配給会社「アニメック」を設立、IPの劇場展開を強化</li>
+      <li>第19回ライセンシングジャパン（2026年6月）に向け、IP創出ゾーンが新設・出展公募中</li>
+      <li>Disney×OpenAI Soraが200超キャラクターのAIライセンスを締結、生成AI×IPの新モデルが加速</li>
+    </ul>
+  </div>
+
+  <!-- ══ 日本記事 ══ -->
+  <h2 class="section-heading">🇯🇵 日本の IP ニュース</h2>
+
+  <!-- 記事1 -->
+  <article class="card card-jp">
+    <img class="card-img"
+      src="https://placehold.co/860x200/fdecea/c0392b?text=KADOKAWA+%C3%97+Aniplex"
+      alt="KADOKAWA × アニプレックス アニメック設立"
+      onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
+    <div class="card-body">
+      <span class="card-badge badge-jp">🇯🇵 アニメ IP</span>
+      <span class="card-notice">注：直近7日以内の記事が見つかりませんでした</span>
+      <h3 class="card-title">KADOKAWAとアニプレックス、共同出資によるアニメ映画配給会社「アニメック」を設立</h3>
+      <div class="card-meta">KADOKAWAグループ ポータルサイト｜2026-03-02</div>
+      <p class="card-summary">
+        KADOKAWAとアニプレックスが共同出資によるアニメ映画配給会社「アニメック」を設立した。アニメ映画の配給営業と配給宣伝に特化した事業を展開し、両社が保有する膨大なIPを映画館での上映に向けて一気通貫でプロデュースする体制を構築する。国内劇場市場でのアニメIP活用が加速し、タイトルごとのライセンス収益を最大化できる新たな仕組みとして業界全体から注目を集めている。
+      </p>
+      <a class="card-link" href="https://group.kadokawa.co.jp/information/news_release/2026030202.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </article>
+
+  <!-- 記事2 -->
+  <article class="card card-jp">
+    <img class="card-img"
+      src="https://placehold.co/860x200/fdecea/c0392b?text=Licensing+Japan+2026"
+      alt="ライセンシングジャパン 2026"
+      onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
+    <div class="card-body">
+      <span class="card-badge badge-jp">🇯🇵 キャラクター IP</span>
+      <span class="card-notice">注：直近7日以内の記事が見つかりませんでした</span>
+      <h3 class="card-title">第19回ライセンシングジャパン、2026年6月に東京ビッグサイトで開催――IP創出ゾーンを新設</h3>
+      <div class="card-meta">コンテンツ東京（リードエグジビションジャパン）｜2026年6月17〜19日開催</div>
+      <p class="card-summary">
+        日本最大のキャラクター・ブランドライセンス専門展「ライセンシングジャパン」の第19回が2026年6月17〜19日、東京ビッグサイトにて開催される。世界から800超のキャラクターとブランドが集結し、自社IPの創出を検討する経営者・マーケター向けの「IP創出ゾーン」が新設された点が今回の目玉。ライセンサーとライセンシーが直接商談できる場として、IP活用を模索する企業にとって最大のネットワーキングの場となる。
+      </p>
+      <a class="card-link" href="https://www.content-tokyo.jp/hub/ja-jp/about/lj.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </article>
+
+  <!-- 記事3 -->
+  <article class="card card-jp">
+    <img class="card-img"
+      src="https://placehold.co/860x200/fdecea/c0392b?text=Artist+D2C+IP+2026"
+      alt="アーティスト D2C IP"
+      onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
+    <div class="card-body">
+      <span class="card-badge badge-jp">🇯🇵 アーティスト IP</span>
+      <span class="card-notice">注：直近7日以内の記事が見つかりませんでした</span>
+      <h3 class="card-title">UUUMが仕掛けるアーティストIP活用型 P2C/D2C 事業――タレントのIPをブランド化する潮流が加速</h3>
+      <div class="card-meta">UUUM公式ブログ｜2026年</div>
+      <p class="card-summary">
+        UUUMがクリエイターIPを核とした「P2C（Person to Consumer）」D2C事業を本格展開。クリエイターやタレントが直接ディレクションするファッションブランドの立ち上げ・運営を支援し、ファンとの直接関係を強化するモデルが業界標準化しつつある。検索結果では辻希美さんプロデュースの「Ange Charme」（アンジュ シャルム）など、タレントIPのアパレルD2C化が加速していることも確認されており、コネクトが展開するブランドとも強い親和性を持つ動きとして注目される。
+      </p>
+      <a class="card-link" href="https://www.uuum.co.jp/blog/144130" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </article>
+
+  <!-- ══ グローバル記事 ══ -->
+  <h2 class="section-heading">🌍 グローバルの IP ニュース</h2>
+
+  <!-- 記事4 -->
+  <article class="card card-global">
+    <img class="card-img"
+      src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News"
+      alt="Disney × OpenAI Sora"
+      onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
+    <div class="card-body">
+      <span class="card-badge badge-global">🌍 AI × IP Licensing</span>
+      <span class="card-notice">注：直近7日以内の記事が見つかりませんでした</span>
+      <h3 class="card-title">The Walt Disney Company and OpenAI reach landmark agreement to bring beloved characters to Sora</h3>
+      <div class="card-title-en">（ウォルト・ディズニー社とOpenAI、愛されるキャラクターをSoraに提供する画期的な契約を締結）</div>
+      <div class="card-meta">OpenAI 公式｜2025-12-11</div>
+      <p class="card-summary">
+        【背景】<br>
+        IPライセンス業界では、生成AIツールの急速な普及により、従来の「物理的商品への使用許諾」から「AI生成コンテンツへのリアルタイムIP活用」という新たなフェーズへの移行が始まっている。コンテンツホルダーがAIプラットフォームとどのように協業しながら収益を最大化するかが問われる時代に入った。ディズニーとOpenAIの合意はその最初の大規模な実証例として業界全体に衝撃を与えた。
+        <br><br>
+        【事実】<br>
+        ウォルト・ディズニー社とOpenAIは、AI動画生成ツール「Sora」へのキャラクターライセンス供与に関する3年間の契約を締結。ミッキーマウス、アリエル、シンデレラ、アイアンマン、ダース・ベイダーをはじめ、Disney・Marvel・Pixar・Star Warsから200以上のキャラクター・衣装・乗り物・舞台環境のIPが使用可能となった。ユーザーはSoraを通じてこれらのIPを使った短尺動画を生成・シェアでき、厳選されたSora生成動画はDisney+でも視聴できる。財務面ではディズニーがOpenAIに10億ドルのエクイティ投資を実施し、追加株式取得のワラントも付与された。
+        <br><br>
+        【最新動向・注意点】<br>
+        2026年3月24日、OpenAIはSoraアプリをモバイル・APIともに終了することを発表（アプリ終了：2026年4月26日、API終了：2026年9月24日）。このIP契約の具体的な継続形態が今後注目される。
+        <br><br>
+        【業界への影響】<br>
+        このディール以降、IPホルダーがAIプラットフォームとライセンス収益を共有するモデルが業界標準化しつつある。コンテンツのAI利用を禁止するのではなく、ライセンス化によって収益に転換するアプローチは、今後すべてのIPホルダーが検討すべき戦略の一つとなりつつある。
+        <br><br>
+        【コネクトとの関連】<br>
+        コネクト・インターナショナルが展開するAnge Charme（アンジュ シャルム）・GOD ONLY KNOWS・LAVANDA（ラバンダ）・Armillary.といったブランドIPも、生成AIプラットフォームとのライセンス契約が新たなビジネス機会となりうる。ファンがブランドのキャラクターやビジュアルアイデンティティを使った動画や画像を生成できる仕組みを整えることで、エンゲージメントと収益の両立が期待できる。
+      </p>
+      <a class="card-link" href="https://openai.com/index/disney-sora-agreement/" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </article>
+
+  <!-- 記事5 -->
+  <article class="card card-global">
+    <img class="card-img"
+      src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News"
+      alt="Dentsu × Iconic Arts"
+      onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
+    <div class="card-body">
+      <span class="card-badge badge-global">🌍 Data-Driven IP</span>
+      <span class="card-notice">注：直近7日以内の記事が見つかりませんでした</span>
+      <h3 class="card-title">Dentsu Partners with Iconic Arts to Accelerate IP Creation for Brands Through Data-Driven Entertainment</h3>
+      <div class="card-title-en">（電通、データドリブン型エンタメIPクリエイションを加速すべくIconic Artsと戦略的提携）</div>
+      <div class="card-meta">Licensing International｜2026-02-20</div>
+      <p class="card-summary">
+        【背景】<br>
+        企業のマーケティング戦略が「単発キャンペーン型」から「長期IP・フランチャイズ型」へと移行する中、データに基づいたIP開発の需要が急増している。アニメや連続エンタメフォーマットを活用したブランドIPの創出が世界的なトレンドとなっており、広告代理店とIP専門スタジオの連携モデルが注目されている。
+        <br><br>
+        【事実】<br>
+        電通エンターテインメント（dentsu）が、IP開発に特化したエンタメ・テクノロジースタジオ「Iconic Arts」との戦略的グローバルパートナーシップを発表した。Iconic Artsが独自開発した「IP-IQ」プラットフォームは、制作着手前の段階で視聴者ターゲティング・プラットフォーム選択・IPスケーラビリティを数値化できるデータインテリジェンスシステム。2025年のサンダンス映画祭でデモを披露し業界から高い評価を受けた。同社は米国・日本・ラテンアメリカで展開し、サントリーホールディングスからの戦略的投資も受けている。
+        <br><br>
+        【業界への影響】<br>
+        広告大手とIP開発スタジオの連携は、ブランドが自社IPを「短期広告」ではなく「長期フランチャイズ資産」として育てる動きを加速させる。特にアニメフォーマットへの注目は日本市場との親和性が高く、グローバルで通用するオリジナルIPの創出に有効なアプローチとして広がりを見せている。
+        <br><br>
+        【コネクトとの関連】<br>
+        コネクト・インターナショナルがAnge Charme・LAVANDA・Armillary.などのブランドIPを長期的なフランチャイズ資産として育成する際、Iconic Arts的なデータドリブンIP戦略の導入が有効と考えられる。ファンの嗜好データや購買データに基づいたグッズ開発・海外展開の意思決定に活用することで、勘や経験に頼らない戦略的なIPスケーリングが実現できる。
+      </p>
+      <a class="card-link" href="https://licensinginternational.org/news/dentsu-partners-with-iconic-arts-to-accelerate-ip-creation-for-brands-through-data-driven-entertainment/" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </article>
+
+  <!-- ══ 提言 ══ -->
+  <h2 class="section-heading">💡 KONNEKT への提言</h2>
+  <div class="insight-grid">
+
+    <div class="insight-card">
+      <div class="insight-icon">🤖</div>
+      <div class="insight-label">AI × IP 収益化</div>
+      <div class="insight-text">
+        Disney×OpenAI Soraの事例のように、Ange Charme・GOD ONLY KNOWS・LAVANDA・Armillary.のIPを生成AIプラットフォームへライセンス供与するモデルの検討がおすすめ。禁止ではなく許諾でマネタイズするアプローチを早期に整えたい。
+      </div>
+    </div>
+
+    <div class="insight-card">
+      <div class="insight-icon">📊</div>
+      <div class="insight-label">データドリブン IP 戦略</div>
+      <div class="insight-text">
+        電通×Iconic Arts事例のように、ファンの購買・エンゲージメントデータを活用したIP開発の優先順位付けを検討したい。次のグッズ展開やコラボ先の選定を「感覚」から「データ」ベースへシフトすることで精度が上がる。
+      </div>
+    </div>
+
+    <div class="insight-card">
+      <div class="insight-icon">🛍️</div>
+      <div class="insight-label">アーティスト D2C 強化</div>
+      <div class="insight-text">
+        UUUMのP2C事例を参考に、既存ブランド（Ange Charme など）のD2C化をさらに深めるのがおすすめ。アーティスト本人が企画をディレクションするコラボラインを定期的にリリースし、ファンとの直接関係を強化したい。
+      </div>
+    </div>
+
+    <div class="insight-card">
+      <div class="insight-icon">🎪</div>
+      <div class="insight-label">ライセンシングジャパン</div>
+      <div class="insight-text">
+        2026年6月の第19回ライセンシングジャパンへの出展・来場を検討したい。IP創出ゾーンでの情報収集はもちろん、グローバルバイヤーへのブランド露出機会として活用できる。Armillary.・LAVANDAなどの出展を視野に入れてみては。
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══ Backnumber ══ -->
+  <div class="backnumber">
+    <h2>📂 バックナンバー</h2>
+    <p class="backnumber-empty">現時点では公開済みのバックナンバーが確認できませんでした。</p>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  &copy; 2026 KONNEKT INTERNATIONAL INC. — IP News Daily | Generated 2026-04-08
+</footer>
+
+</body>
+</html>
