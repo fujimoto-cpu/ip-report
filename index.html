@@ -3,72 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KONNEKT IP News Report — バックナンバー</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<title>KONNEKT IP News Report</title>
 <style>
-  :root { --accent:#e94560; --accent2:#0f3460; --bg:#f5f5f7; --card-bg:#fff; --text:#1d1d1f; --muted:#6e6e73; --border:#e0e0e5; }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Noto Sans JP',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
-  header { background:linear-gradient(135deg,#1a1a2e 0%,#16213e 60%,#0f3460 100%); color:#fff; padding:48px 24px 40px; text-align:center; position:relative; overflow:hidden; }
-  header::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 70% 50%,rgba(233,69,96,.18) 0%,transparent 60%); }
-  .hi { position:relative; max-width:900px; margin:0 auto; }
-  .brand-tag { display:inline-block; border:1px solid rgba(255,255,255,.3); border-radius:20px; padding:4px 16px; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.7); margin-bottom:18px; }
-  header h1 { font-size:clamp(22px,4vw,34px); font-weight:700; margin-bottom:8px; }
-  header h1 span { color:#e94560; }
-  .hsub { font-size:14px; color:rgba(255,255,255,.55); letter-spacing:1px; }
-  main { max-width:900px; margin:0 auto; padding:40px 16px 80px; }
-  .section-title { font-size:20px; font-weight:700; margin-bottom:24px; padding-bottom:12px; border-bottom:2px solid var(--border); }
-  .report-list { list-style:none; }
-  .report-item { background:var(--card-bg); border-radius:14px; box-shadow:0 2px 12px rgba(0,0,0,.07); margin-bottom:16px; overflow:hidden; transition:box-shadow .2s; display:flex; align-items:stretch; }
-  .report-item:hover { box-shadow:0 6px 24px rgba(0,0,0,.13); }
-  .report-item:first-child .item-bar { background:var(--accent); }
-  .item-bar { width:5px; flex-shrink:0; background:var(--accent2); }
-  .item-body { padding:20px 24px; flex:1; display:flex; align-items:center; gap:20px; }
-  .item-date { font-size:13px; font-weight:700; color:var(--muted); background:var(--bg); padding:4px 12px; border-radius:8px; white-space:nowrap; }
-  .item-title { font-size:15px; font-weight:600; flex:1; }
-  .item-title a { color:var(--accent2); text-decoration:none; }
-  .item-title a:hover { text-decoration:underline; color:var(--accent); }
-  .item-badge { font-size:11px; background:#e8f4fd; color:#2980b9; border-radius:6px; padding:2px 10px; font-weight:700; white-space:nowrap; }
-  .item-badge.latest { background:#fdecea; color:#c0392b; }
-  @media(max-width:640px){ .item-body { flex-wrap:wrap; gap:10px; } .item-title { width:100%; } }
-  footer { text-align:center; padding:32px 16px; font-size:12px; color:var(--muted); border-top:1px solid var(--border); margin-top:20px; }
-  footer strong { color:var(--text); }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', sans-serif; background: #f8fafc; color: #1a1a2e; }
+header { background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%); color: #fff; padding: 48px 24px 40px; text-align: center; }
+header .tag { display: inline-block; background: rgba(233,69,96,0.15); color: #e94560; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; letter-spacing: 0.5px; }
+header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+header p { font-size: 14px; color: rgba(255,255,255,0.6); }
+main { max-width: 720px; margin: -24px auto 40px; padding: 0 16px; position: relative; z-index: 1; }
+.report-list { list-style: none; }
+.report-item { background: #fff; border-radius: 12px; margin-bottom: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06); transition: box-shadow 0.2s, transform 0.2s; }
+.report-item:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); transform: translateY(-2px); }
+.report-item a { display: flex; align-items: center; padding: 20px 24px; text-decoration: none; color: inherit; gap: 16px; }
+.report-date { font-size: 13px; color: #64748b; min-width: 100px; }
+.report-date .day { font-size: 22px; font-weight: 700; color: #1a1a2e; display: block; line-height: 1.2; }
+.report-title { flex: 1; font-size: 15px; font-weight: 500; color: #334155; }
+.badge { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 12px; white-space: nowrap; }
+.badge-latest { background: #e94560; color: #fff; }
+.badge-past { background: #e2e8f0; color: #64748b; }
+.arrow { color: #cbd5e1; font-size: 18px; }
+.empty { text-align: center; padding: 60px 24px; color: #94a3b8; }
+footer { text-align: center; padding: 24px; font-size: 12px; color: #94a3b8; }
+footer a { color: #64748b; }
 </style>
+<script>
+const REPORTS = [
+  "2026-04-08",
+  "2026-04-07",
+  "2026-04-06",
+  "2026-04-05",
+  "2026-03-29",
+  "2026-03-28"
+];
+const DAYS = ["日","月","火","水","木","金","土"];
+
+function render() {
+  const list = document.getElementById("report-list");
+  REPORTS.forEach((date, i) => {
+    const d = new Date(date + "T00:00:00");
+    const month = d.getMonth() + 1;
+    const day = d.getDate();
+    const dow = DAYS[d.getDay()];
+    const li = document.createElement("li");
+    li.className = "report-item";
+    const badge = i === 0
+      ? '<span class="badge badge-latest">最新</span>'
+      : '<span class="badge badge-past">既刊</span>';
+    li.innerHTML = `
+      <a href="${date}.html">
+        <div class="report-date">
+          <span class="day">${month}/${day}</span>
+          ${date}（${dow}）
+        </div>
+        <div class="report-title">KONNEKT IP News Daily</div>
+        ${badge}
+        <span class="arrow">&#8250;</span>
+      </a>`;
+    list.appendChild(li);
+  });
+}
+document.addEventListener("DOMContentLoaded", render);
+</script>
 </head>
 <body>
 <header>
-  <div class="hi">
-    <div class="brand-tag">KONNEKT INTERNATIONAL — IP News Daily</div>
-    <h1>📂 IP <span>News</span> Report</h1>
-    <p class="hsub">バックナンバー一覧</p>
-  </div>
+  <div class="tag">KONNEKT INTERNATIONAL</div>
+  <h1>IP News Report</h1>
+  <p>Connecting values from around the world to create new trends.</p>
 </header>
-
 <main>
-  <div class="section-title">過去のレポート</div>
-  <ul class="report-list">
-    <li class="report-item">
-      <div class="item-bar"></div>
-      <div class="item-body">
-        <span class="item-date">2026-03-29</span>
-        <div class="item-title"><a href="2026-03-29.html">📊 IP News Report — 2026年3月29日（日）</a></div>
-        <span class="item-badge latest">最新</span>
-      </div>
-    </li>
-    <li class="report-item">
-      <div class="item-bar"></div>
-      <div class="item-body">
-        <span class="item-date">2026-03-28</span>
-        <div class="item-title"><a href="2026-03-28.html">📊 IP News Report — 2026年3月28日（土）</a></div>
-        <span class="item-badge">既刊</span>
-      </div>
-    </li>
-  </ul>
+  <ul id="report-list" class="report-list"></ul>
 </main>
-
 <footer>
-  <strong>KONNEKT INTERNATIONAL INC.（コネクト・インターナショナル株式会社）</strong><br>
-  IP News Daily Report — バックナンバー一覧<br>
-  Connecting values from around the world to create new trends.
+  &copy; 2026 <a href="https://konnekt-i.com" target="_blank">KONNEKT INTERNATIONAL INC.</a>
 </footer>
 </body>
 </html>
