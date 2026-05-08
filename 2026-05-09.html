@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONNEKT IP News Weekly - 2026-05-09</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+    background: #f8fafc;
+    color: #1a1a2e;
+    line-height: 1.7;
+  }
+  .container { max-width: 860px; margin: 0 auto; padding: 0 20px 60px; }
+  header {
+    background: #ffffff;
+    padding: 40px 20px 30px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    position: relative;
+    overflow: hidden;
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2980b9, #6dd5fa);
+  }
+  header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a2e;
+    letter-spacing: 0.05em;
+  }
+  header .date {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #5a6478;
+    font-weight: 500;
+  }
+  .summary {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    padding: 22px 26px;
+    border-radius: 12px;
+    margin: 30px 0;
+    border-left: 4px solid #2980b9;
+  }
+  .summary h2 {
+    font-size: 15px;
+    color: #2980b9;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .summary ul { list-style: none; }
+  .summary li {
+    padding: 4px 0;
+    font-size: 14px;
+    color: #1a1a2e;
+  }
+  .summary li::before {
+    content: '▸ ';
+    color: #6dd5fa;
+    font-weight: 700;
+  }
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 40px 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  .article-card {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 4px solid #ccc;
+  }
+  .article-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  }
+  .article-card.jp { border-left-color: #e74c3c; }
+  .article-card.global { border-left-color: #2980b9; }
+  .article-card img {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    display: block;
+  }
+  .article-content { padding: 22px 26px; }
+  .article-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #1a1a2e;
+    line-height: 1.45;
+  }
+  .article-card .subtitle {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+  .article-card .meta {
+    font-size: 12px;
+    color: #5a6478;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #e2e8f0;
+  }
+  .article-card .summary-text {
+    font-size: 14px;
+    color: #2d3748;
+    margin-bottom: 16px;
+  }
+  .article-card a.read-more {
+    display: inline-block;
+    color: #2980b9;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 1px solid #2980b9;
+    padding-bottom: 1px;
+  }
+  .article-card a.read-more:hover { color: #1a5680; }
+  .proposals {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .proposals h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1a1a2e;
+  }
+  .proposals-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .proposal-item {
+    padding: 18px 20px;
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    border-radius: 10px;
+    border-left: 3px solid #2980b9;
+  }
+  .proposal-item h4 {
+    font-size: 14px;
+    color: #2980b9;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  .proposal-item p {
+    font-size: 13px;
+    color: #1a1a2e;
+    line-height: 1.6;
+  }
+  .backnumbers {
+    margin-top: 40px;
+    padding: 24px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .backnumbers h2 {
+    font-size: 16px;
+    color: #1a1a2e;
+    margin-bottom: 14px;
+    font-weight: 700;
+  }
+  .backnumbers ul { list-style: none; }
+  .backnumbers li { padding: 4px 0; font-size: 13px; }
+  .backnumbers a {
+    color: #2980b9;
+    text-decoration: none;
+  }
+  .backnumbers a:hover { text-decoration: underline; }
+  .backnumbers .all-link {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #e2e8f0;
+    font-weight: 600;
+  }
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 12px;
+    color: #94a3b8;
+  }
+  @media (max-width: 600px) {
+    .proposals-grid { grid-template-columns: 1fr; }
+    header h1 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>KONNEKT IP News Weekly</h1>
+  <div class="date">2026-05-09 (Sat)</div>
+</header>
+
+<div class="container">
+
+  <div class="summary">
+    <h2>📌 今週のトピック</h2>
+    <ul>
+      <li>国内アパレル小売×アニメIPコラボが連発（ドラゴンボール×ドンキ、コナン×ワークマン）</li>
+      <li>食品ブランド×キャラクターIPの「単品販売」化が新トレンド（ちいかわ×東京ばな奈）</li>
+      <li>ライセンスExpo 2026に向けて「真正性のあるパートナーシップ」が世界的キーワードに</li>
+    </ul>
+  </div>
+
+  <h2 class="section-title">🇯🇵 日本の記事</h2>
+
+  <div class="article-card jp">
+    <img src="https://collabo-cafe.com/wp-content/uploads/8d7e6d518603f7e7df24c4d84f46cc72.jpg" alt="ドラゴンボール × ドンキ・アピタ" onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
+    <div class="article-content">
+      <h3>ドラゴンボール × ドン・キホーテ／アピタ 限定アパレル全6種が5月9日発売</h3>
+      <div class="meta">コラボカフェ ｜ 2026-05-08</div>
+      <div class="summary-text">
+        TVアニメ「ドラゴンボール」と全国のドン・キホーテ／アピタによるコラボアパレルが、5月9日9時より順次発売。バイクに乗ったブルマと孫悟空などのオーバーサイズTシャツ全4種に加え、筋斗雲悟空・チャオズの総柄ハンガー付きパイル上下2種が登場。M/L/LLサイズで価格は3,299円（税込）。刺繍デザインを多用したストリート寄りの企画で、ナショナルチェーン量販店経由の若年層リーチを狙った直販型ライセンス展開。
+      </div>
+      <a class="read-more" href="https://collabo-cafe.com/events/collabo/dragonball-don-quijote-aita-item-2026-0509/" target="_blank">元記事を読む →</a>
+    </div>
+  </div>
+
+  <div class="article-card jp">
+    <img src="https://collabo-cafe.com/wp-content/uploads/78a5eb21691db38f738aafe0e763bddc.jpg" alt="名探偵コナン × ワークマン" onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
+    <div class="article-content">
+      <h3>名探偵コナン × ワークマン 全国1,088店舗で初コラボグッズ5月下旬発売</h3>
+      <div class="meta">コラボカフェ ｜ 2026-05-02</div>
+      <div class="summary-text">
+        TVアニメ放送30周年を迎える「名探偵コナン」と作業服チェーン・ワークマンの初コラボ。プリント半袖Tシャツ全5種（各980円）、KIDS Tシャツ5種（各780円）、UVクールポンチョ3種（各1,900円）、真空ペットボトルホルダー3種（各1,780円）、収納ケース付き折り畳み傘3種（各1,500円）の全19種を、ワークマン／WORKMAN Plus／#ワークマン女子等の全国1,088店舗で順次発売。アニメIPと作業服機能性ウェアの融合事例。
+      </div>
+      <a class="read-more" href="https://collabo-cafe.com/events/collabo/conan-workman-item-2026/" target="_blank">元記事を読む →</a>
+    </div>
+  </div>
+
+  <div class="article-card jp">
+    <img src="https://www.cinemacafe.net/imgs/ogp_f/802297.jpg" alt="ちいかわ × 東京ばな奈" onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
+    <div class="article-content">
+      <h3>ちいかわ × 東京ばな奈 コラボトートバッグが初の単品販売（5月7日〜）</h3>
+      <div class="meta">cinemacafe.net ｜ 2026-05-04</div>
+      <div class="summary-text">
+        ちいかわと東京ばな奈のコラボトートバッグが、これまでお菓子セット販売限定だったところから、5月7日より単品販売（1,350円・本体1,228円）開始。バッグ表裏にコラボ限定オリジナルイラスト、側面にハチワレ・うさぎ・くりまんじゅう・モモンガ・ラッコのキャラを配置。ちいかわシルエットの特製チャーム付き。JR東京駅グランスタ「POP UP GRANSTA GREEN」（5/7〜17）、東京ソラマチ「空の小町」（5/18〜31）等で展開。グッズの「単品販売」へのフォーマット拡張は、IP×食品ブランドの新パターン。
+      </div>
+      <a class="read-more" href="https://www.cinemacafe.net/article/2026/05/04/109080.html" target="_blank">元記事を読む →</a>
+    </div>
+  </div>
+
+  <h2 class="section-title">🌍 グローバルの記事</h2>
+
+  <div class="article-card global">
+    <img src="https://ml.globenewswire.com/Resource/Download/54c7de95-9bba-408b-a96c-062784d901f8" alt="Ashley Graham at Licensing Expo 2026" onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
+    <div class="article-content">
+      <h3>Ashley Graham to Spotlight the Power of Authentic Partnerships at Licensing Expo 2026</h3>
+      <div class="subtitle">アシュリー・グラハムが Licensing Expo 2026 基調講演に登壇 ―「真正性のあるパートナーシップ」を語る</div>
+      <div class="meta">GlobeNewswire ｜ 2026-05-07</div>
+      <div class="summary-text">
+        世界最大のブランドライセンス見本市「Licensing Expo 2026」（5/19〜21、ラスベガス・マンダレイベイ）に、スーパーモデル兼起業家のアシュリー・グラハムが基調講演者として登壇する。彼女のFireside Chat「Unlocking the Power of Authentic Partnerships in Brand and Talent Collaboration」は、5月19日 14:00 PST に License Global Main Stage で実施。<br><br>
+        グラハムは「インクルーシビティ」と「真正性」をキャリアの柱とし、JCPenneyのインクルーシブ・コレクション、モダン・ランブルスコ・ワインブランド「Lucci」、映画『プラダを着た悪魔2』への出演など多角的な事業展開を行う。トークでは、UTA社のパートナー兼エージェントであるNatasha Boloukiが共に登壇し、「自身の価値観とオーディエンスに沿うパートナー戦略」を議論する。<br><br>
+        Global Licensing Group のVP Amanda Cioletti は「グラハムは、インクルーシビティと真正性を中心に据えたブランドが、いかに消費者と深く共鳴するかを体現している」とコメント。Licensing Expo 2026には全カテゴリーで5,000以上のブランドが集結し、Target・Walmart・H&M・The Home Depotなどのリテーラー、Netflix・Amazon MGM Studios・Mattel・LEGO・Warner Bros. Discoveryといった主要IPホルダーが参加する見込み。<br><br>
+        <strong>業界への示唆：</strong>セレブリティIPのライセンス価値が「フォロワー数」ではなく「価値観の整合性」で測られる時代に移行している。当社のArmillary.（末吉秀太さんプロデュース）やAnge Charme（辻希美さんプロデュース）のような、"本人の哲学を商品に落とし込む"型のブランド構築モデルと共通する潮流。
+      </div>
+      <a class="read-more" href="https://www.globenewswire.com/news-release/2026/05/07/3289625/0/en/ashley-graham-to-spotlight-the-power-of-authentic-partnerships-as-a-keynote-speaker-at-licensing-expo-2026.html" target="_blank">元記事を読む →</a>
+    </div>
+  </div>
+
+  <div class="article-card global">
+    <img src="https://ml.globenewswire.com/Resource/Download/c9030679-9fe0-409f-9367-7adc5af2b14a" alt="Licensing Partners International x UNCF" onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
+    <div class="article-content">
+      <h3>Licensing Partners International Launches Strategic Brand Licensing Initiative with UNCF</h3>
+      <div class="subtitle">Licensing Partners International、米国黒人大学基金（UNCF）と戦略的ブランドライセンス契約を締結</div>
+      <div class="meta">GlobeNewswire ｜ 2026-05-05</div>
+      <div class="summary-text">
+        トレードマークライセンスのリーダーである Licensing Partners International（LPI）が、米国黒人大学基金 UNCF と提携し、UNCFにとって初となる包括的・エンタープライズレベルのブランドライセンスプログラムを発足させた。発表は2026年5月5日、ワシントンDC。<br><br>
+        UNCFは1944年設立、教育アクセスと学生成功支援の全米最大級アドボカシー団体で、累計60億ドル超を高等教育に投じ、毎年13,000以上の奨学金を37のHBCU加盟校を含む全米600超の大学に提供している。LPIは大学スポーツライセンス首位企業 CLC の一部門で、スポーツ・非営利・コンシューマーブランドの商標ライセンスと派生商品開発を専門とする。<br><br>
+        提携の狙いは、UNCFの象徴的メッセージ「A Mind Is a Terrible Thing to Waste®」を中心とした商品ラインを構築し、ブランドガバナンスの強化・持続的な収益源の確保・全国的な認知度向上を同時に実現すること。CLCのVP Brian White は「UNCFが規律あるブランド管理に基づく現代的ライセンスモデルを構築するのを支援する」、UNCF会長兼CEO Dr. Michael L. Lomax は「我々のレガシーを守りながら拡張可能なライセンスプログラムを構築できる」とコメント。<br><br>
+        <strong>業界への示唆：</strong>従来「商業的IP」の文脈でしか語られなかったブランドライセンスが、ノンプロフィット／ミッションドリブンな組織でも収益と認知の両立手段として正規化されつつある。日本のIPホルダーや当社が手がけるアーティストブランドにとっても、「ブランドメッセージ＝商品」型の長期収益モデルの好例。
+      </div>
+      <a class="read-more" href="https://www.globenewswire.com/news-release/2026/05/05/3288139/0/en/licensing-partners-international-launches-strategic-brand-licensing-initiative-with-uncf.html" target="_blank">元記事を読む →</a>
+    </div>
+  </div>
+
+  <div class="proposals">
+    <h2>💡 KONNEKT INTERNATIONAL への提言</h2>
+    <div class="proposals-grid">
+      <div class="proposal-item">
+        <h4>① 量販店チャネル活用の検討</h4>
+        <p>ドラゴンボール×ドンキ、コナン×ワークマンに見るように、ナショナルチェーンの全国網を使ったIPコラボがファンエンゲージメント＆認知拡大の即効施策に。Ange CharmeやLAVANDAも、自社ECに加え量販／ライフスタイル系チェーンとのスポット展開を検討したい。</p>
+      </div>
+      <div class="proposal-item">
+        <h4>② 真正性ストーリーの強化</h4>
+        <p>Ashley Grahamの基調講演テーマ「Authentic Partnerships」は、当社のアーティストブランドの強みと完全に一致。Armillary.／GOD ONLY KNOWS／LAVANDA／Ange Charme各ブランドの"本人の哲学"を可視化したコンテンツ（インタビュー・制作背景動画など）の二次活用がおすすめ。</p>
+      </div>
+      <div class="proposal-item">
+        <h4>③ 単品販売×ストーリー商品の展開</h4>
+        <p>ちいかわ×東京ばな奈の「セット販売→単品販売」モデルは、初期はセット商品でファン獲得→定番化したアイテムを単品で再販という二段構えがポイント。当社ブランドのコラボ商品でも、初期受注好調なアイテムの定番単品化検討の余地。</p>
+      </div>
+      <div class="proposal-item">
+        <h4>④ ミッション型ブランドへの示唆</h4>
+        <p>UNCFの事例は、「ブランドの哲学＝メッセージ」を中核に置いたライセンスプログラムが、収益と社会的価値を両立させる好例。アーティストの世界観を"商品"に翻訳する当社モデルにとって、長期視点でのブランドガバナンス設計に活かせそう。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="backnumbers">
+    <h2>📂 バックナンバー</h2>
+    <ul>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-04-08.html" target="_blank">2026-04-08</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-04-07.html" target="_blank">2026-04-07</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-04-06.html" target="_blank">2026-04-06</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-04-05.html" target="_blank">2026-04-05</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-03-29.html" target="_blank">2026-03-29</a></li>
+    </ul>
+    <div class="all-link">
+      <a href="https://fujimoto-cpu.github.io/ip-report/" target="_blank">📚 全てのバックナンバーを見る →</a>
+    </div>
+  </div>
+
+  <footer>
+    KONNEKT INTERNATIONAL INC. ｜ Weekly IP News Report
+  </footer>
+
+</div>
+
+</body>
+</html>
