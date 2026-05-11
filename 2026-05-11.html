@@ -1,359 +1,444 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KONNEKT IP News Weekly — 2026-05-11</title>
-<style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif;
-  background: #f8fafc;
-  color: #1a1a2e;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-}
-.container { max-width: 920px; margin: 0 auto; padding: 0 20px 60px; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KONNEKT IP News Weekly | 2026-05-11</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Segoe UI', sans-serif;
+      background: #f8fafc;
+      color: #1a1a2e;
+      line-height: 1.7;
+    }
 
-.header {
-  background: #ffffff;
-  border-top: 6px solid;
-  border-image: linear-gradient(90deg, #2980b9 0%, #6dd5fa 100%) 1;
-  padding: 36px 40px 32px;
-  margin-bottom: 28px;
-  border-radius: 0 0 12px 12px;
-  box-shadow: 0 4px 18px rgba(41, 128, 185, 0.08);
-}
-.header-top {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 14px;
-}
-.brand-badge {
-  display: inline-block;
-  background: #1a2744;
-  color: #2980b9;
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  padding: 7px 16px;
-  border-radius: 999px;
-}
-.date-pill {
-  display: inline-block;
-  color: #6b7c93;
-  font-size: 13px;
-  font-weight: 500;
-}
-.header h1 {
-  font-size: 30px;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  color: #1a1a2e;
-  margin-bottom: 8px;
-}
-.header .subtitle {
-  color: #6b7c93;
-  font-size: 14px;
-}
+    /* ── Header ── */
+    .site-header {
+      background: #ffffff;
+      border-top: 5px solid transparent;
+      border-image: linear-gradient(90deg, #2980b9, #6dd5fa) 1;
+      padding: 28px 32px 24px;
+      box-shadow: 0 2px 12px rgba(41,128,185,0.08);
+    }
+    .header-inner { max-width: 900px; margin: 0 auto; }
+    .brand-badge {
+      display: inline-block;
+      background: #1a2744;
+      color: #2980b9;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    .report-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #1a1a2e;
+      letter-spacing: -0.01em;
+    }
+    .report-title span {
+      background: linear-gradient(90deg, #2980b9, #6dd5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .report-date {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #6b7280;
+    }
 
-.summary-banner {
-  background: linear-gradient(135deg, #ffffff 0%, #eef5fc 100%);
-  border: 1px solid #dbe7f3;
-  border-radius: 12px;
-  padding: 22px 26px;
-  margin-bottom: 32px;
-}
-.summary-banner h2 {
-  font-size: 15px;
-  color: #2980b9;
-  margin-bottom: 12px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-}
-.summary-banner ul { list-style: none; padding: 0; }
-.summary-banner li {
-  padding: 7px 0 7px 22px;
-  position: relative;
-  color: #2a3b52;
-  font-size: 14px;
-}
-.summary-banner li::before {
-  content: "▸";
-  color: #2980b9;
-  position: absolute;
-  left: 4px;
-  font-weight: 700;
-}
+    /* ── Container ── */
+    .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
 
-.section-title {
-  font-size: 22px;
-  font-weight: 800;
-  color: #1a1a2e;
-  margin: 36px 0 18px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #e6ecf2;
-}
+    /* ── Summary Banner ── */
+    .summary-banner {
+      background: linear-gradient(135deg, #eaf4fb 0%, #f0f9ff 100%);
+      border: 1px solid #bae0f7;
+      border-left: 4px solid #2980b9;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 36px;
+    }
+    .summary-banner h2 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #2980b9;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+    .summary-banner ul { list-style: none; padding: 0; }
+    .summary-banner ul li {
+      font-size: 14px;
+      color: #374151;
+      padding: 4px 0;
+      padding-left: 18px;
+      position: relative;
+    }
+    .summary-banner ul li::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: #2980b9;
+      font-size: 9px;
+      top: 7px;
+    }
 
-.article-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 24px 26px;
-  margin-bottom: 18px;
-  box-shadow: 0 2px 10px rgba(15, 35, 65, 0.05);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-  border-left: 5px solid #e74c3c;
-}
-.article-card.global { border-left-color: #2980b9; }
-.article-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(15, 35, 65, 0.10);
-}
-.article-title {
-  font-size: 18px;
-  font-weight: 700;
-  color: #1a1a2e;
-  margin-bottom: 4px;
-  line-height: 1.45;
-}
-.article-title-en {
-  font-size: 14px;
-  color: #6b7c93;
-  font-weight: 500;
-  margin-bottom: 12px;
-}
-.article-meta {
-  font-size: 12px;
-  color: #8a96a8;
-  margin-bottom: 14px;
-  letter-spacing: 0.02em;
-}
-.article-image {
-  width: 100%;
-  max-height: 220px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 14px;
-  background: #f0f4f8;
-}
-.article-body { color: #2a3b52; font-size: 14.5px; }
-.article-link {
-  display: inline-block;
-  margin-top: 12px;
-  color: #2980b9;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 14px;
-}
-.article-link:hover { text-decoration: underline; }
+    /* ── Section Title ── */
+    .section-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #1a1a2e;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e5e7eb;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-.suggestions {
-  background: linear-gradient(135deg, #1a2744 0%, #2c3e60 100%);
-  color: #ffffff;
-  border-radius: 14px;
-  padding: 32px 30px;
-  margin-top: 32px;
-}
-.suggestions h2 {
-  font-size: 20px;
-  margin-bottom: 18px;
-  font-weight: 700;
-}
-.sug-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-.sug-card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(109, 213, 250, 0.18);
-  border-radius: 10px;
-  padding: 18px 18px;
-}
-.sug-card h3 {
-  font-size: 14px;
-  color: #6dd5fa;
-  margin-bottom: 8px;
-  letter-spacing: 0.02em;
-}
-.sug-card p {
-  font-size: 13.5px;
-  line-height: 1.7;
-  color: #e8eef7;
-}
+    /* ── Cards ── */
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+      margin-bottom: 24px;
+      overflow: hidden;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .card:hover {
+      box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+      transform: translateY(-2px);
+    }
+    .card.jp { border-left: 4px solid #e74c3c; }
+    .card.global { border-left: 4px solid #2980b9; }
 
-.backnumbers {
-  margin-top: 32px;
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 24px 26px;
-  box-shadow: 0 2px 10px rgba(15, 35, 65, 0.05);
-}
-.backnumbers h2 {
-  font-size: 16px;
-  color: #2980b9;
-  margin-bottom: 14px;
-  font-weight: 700;
-}
-.backnumbers ul { list-style: none; }
-.backnumbers li { padding: 6px 0; font-size: 14px; }
-.backnumbers a { color: #2980b9; text-decoration: none; }
-.backnumbers a:hover { text-decoration: underline; }
-.backnumbers .index-link {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
-  background: #2980b9;
-  color: #ffffff;
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 600;
-}
-.backnumbers .index-link:hover { background: #1f6394; text-decoration: none; }
+    .card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      background: #e2e8f0;
+    }
+    .card-body { padding: 20px 24px 22px; }
+    .card-meta {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .card-meta .source { font-weight: 600; color: #6b7280; }
+    .card-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    .card-tag.jp { background: #fef2f2; color: #e74c3c; }
+    .card-tag.global { background: #eff6ff; color: #2980b9; }
 
-footer {
-  text-align: center;
-  margin-top: 40px;
-  color: #8a96a8;
-  font-size: 12px;
-}
+    .card-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+    .card-title-en {
+      font-size: 13px;
+      color: #6b7280;
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+    .card-summary {
+      font-size: 14px;
+      color: #374151;
+      line-height: 1.75;
+    }
+    .card-link {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 13px;
+      color: #2980b9;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .card-link:hover { border-color: #2980b9; }
+    .card-link::after { content: ' →'; }
 
-@media (max-width: 640px) {
-  .header { padding: 26px 22px; }
-  .header h1 { font-size: 22px; }
-  .article-card { padding: 18px 18px; }
-  .sug-grid { grid-template-columns: 1fr; }
-}
-</style>
+    /* ── Insights Grid ── */
+    .insights-section { margin-top: 48px; }
+    .insights-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    @media (max-width: 600px) { .insights-grid { grid-template-columns: 1fr; } }
+    .insight-card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+      border-top: 3px solid #2980b9;
+    }
+    .insight-card:nth-child(2) { border-top-color: #e74c3c; }
+    .insight-card:nth-child(3) { border-top-color: #10b981; }
+    .insight-card:nth-child(4) { border-top-color: #f59e0b; }
+    .insight-icon { font-size: 22px; margin-bottom: 8px; }
+    .insight-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 8px;
+    }
+    .insight-body { font-size: 13px; color: #4b5563; line-height: 1.7; }
+
+    /* ── Backnumber ── */
+    .backnumber {
+      margin-top: 48px;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+    }
+    .backnumber h2 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: #1a1a2e;
+    }
+    .backnumber ul { list-style: none; padding: 0; }
+    .backnumber ul li {
+      padding: 6px 0;
+      border-bottom: 1px solid #f3f4f6;
+      font-size: 14px;
+    }
+    .backnumber ul li:last-child { border-bottom: none; }
+    .backnumber ul li a { color: #2980b9; text-decoration: none; }
+    .backnumber ul li a:hover { text-decoration: underline; }
+    .backnumber .index-link {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 13px;
+      color: #6b7280;
+      text-decoration: none;
+    }
+    .backnumber .index-link:hover { color: #2980b9; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 12px;
+      color: #9ca3af;
+      border-top: 1px solid #e5e7eb;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand-badge">KONNEKT INTERNATIONAL</div>
+    <h1 class="report-title">IP News <span>Weekly</span></h1>
+    <p class="report-date">2026年5月11日（月）発行 ｜ Vol. 2026-05-11</p>
+  </div>
+</header>
+
 <div class="container">
 
-  <header class="header">
-    <div class="header-top">
-      <span class="brand-badge">KONNEKT INTERNATIONAL</span>
-      <span class="date-pill">2026年5月11日（月）</span>
-    </div>
-    <h1>KONNEKT IP News Weekly</h1>
-    <p class="subtitle">アーティスト／キャラクターIPと商品化ビジネスの最新動向</p>
-  </header>
-
-  <section class="summary-banner">
-    <h2>今週のサマリー</h2>
+  <!-- Summary Banner -->
+  <div class="summary-banner">
+    <h2>今週のハイライト</h2>
     <ul>
-      <li>日本ではアパレル×キャラクターIPの“初コラボ”案件が連続発表。studio CLIP×ノンタン、SNIDEL×LeSportsacなど、長期愛されIPと女性向けブランドの相性の良さが鮮明に。</li>
-      <li>グローバルではゲームIPが映画・ファッション・コンスーマー領域へ越境する流れが本格化。BLACKPINK×Razerなど、アーティストIPとプロダクトのクロスオーバー事例も加速。</li>
-      <li>ライセンス市場全体は2025年に小売売上1,177億ドルへ拡大。Licensing Expo 2026（5/19–21）を起点に、フード、ゲーム、エンタメ各カテゴリで新規パートナーシップが続々。</li>
+      <li>アニものづくりアワード2026がエントリー開始。アニメ×企業コラボの優秀事例を顕彰、IP業界の注目が集まる。</li>
+      <li>2026年版IPランキング公開。サンリオ・ドラえもん等が企業コラボ件数で上位独占、コラボIPのトレンドが明らかに。</li>
+      <li>ディズニー×OpenAI Sora提携が本格展開へ。200以上のキャラクターをAI動画生成に解禁、IPライセンスの新潮流。</li>
     </ul>
-  </section>
+  </div>
 
+  <!-- Japan Articles -->
   <h2 class="section-title">🇯🇵 日本のIPニュース</h2>
 
-  <article class="article-card">
-    <h3 class="article-title">「メイドインアビス」アニメイトフェア in 2026 開催決定 ― 5/7より通販事前予約スタート</h3>
-    <div class="article-meta">PR TIMES（arma bianca） ｜ 2026年5月7日</div>
-    <img class="article-image" src="https://placehold.co/860x200/fde9e8/c0392b?text=Made+in+Abyss+%C3%97+animate+Fair+2026" alt="メイドインアビス アニメイトフェア">
-    <div class="article-body">
-      arma biancaは、人気アニメ「メイドインアビス」のアニメイトフェアを2026年8月1日より全国アニメイトで開催する。今回のテーマは「運動会」で、新規描き下ろしビジュアルを用いた缶バッジ、アクリルスタンド、トレーディング系商品などの新商品が多数登場予定。5月7日からはアニメイト通販で事前予約キャンペーンが先行し、限定特典の早期確保を狙うコアファン需要に応える。長尺コンテンツのアニメ放送間隔を埋める“フェア＝中継ぎ施策”として、IPのファン体温維持と物販売上の継続発生を両立する設計だ。
-    </div>
-    <a class="article-link" href="https://prtimes.jp/main/html/rd/p/000008956.000016064.html" target="_blank" rel="noopener">元記事を読む →</a>
-  </article>
-
-  <article class="article-card">
-    <h3 class="article-title">studio CLIP、絵本「ノンタン」と初コラボ ― 50周年記念で生活雑貨37型を5/13発売</h3>
-    <div class="article-meta">PR TIMES（アンドエスティHD） ｜ 2026年5月7日</div>
-    <img class="article-image" src="https://placehold.co/860x200/fff4e6/d35400?text=studio+CLIP+%C3%97+Nontan" alt="studio CLIP × ノンタン">
-    <div class="article-body">
-      ライフスタイルブランドstudio CLIPは、絵本『ノンタン』50周年を記念し、初コラボとなる生活雑貨37型を2026年5月13日より発売する。ハンディファン、保冷ポーチ、ランチアイテム、ブランケットなど夏向け雑貨が中心で、ノスタルジー需要を持つ親世代と、ファンシー雑貨に親和性の高い若年女性層の双方に訴求する設計。店舗で5,000円以上購入＋コラボ商品1点以上で限定ステッカーがもらえる施策も用意し、来店誘導とバスケット単価向上の両方を狙う。長寿IPのアパレル雑貨展開の成功事例として注目。
-    </div>
-    <a class="article-link" href="https://prtimes.jp/main/html/rd/p/000003098.000001304.html" target="_blank" rel="noopener">元記事を読む →</a>
-  </article>
-
-  <article class="article-card">
-    <h3 class="article-title">SNIDEL × LeSportsac 初コラボ、“ストリートフォーマル”全8型を5/13発売</h3>
-    <div class="article-meta">PR TIMES（マッシュホールディングス） ｜ 2026年5月7日</div>
-    <img class="article-image" src="https://placehold.co/860x200/fdeef4/c2185b?text=SNIDEL+%C3%97+LeSportsac" alt="SNIDEL × LeSportsac">
-    <div class="article-body">
-      SNIDELとLeSportsacが初コラボし、機能性とフォーマル感を融合させた全8型を2026年5月13日より発売する。LOGO JACQUARD WEBBING、立体リボンのBOWシリーズなど、SNIDELの女性らしさとLeSportsacの軽量ナイロン技術を組み合わせたバッグが中心。発表は5月11日12時、店頭・EC販売は5月13日10時と告知公開タイミングを分けてSNS拡散とサイト集客を最大化する設計。フェミニン×実用、日系×米系の組み合わせは、コラボの新鮮さと購入動機の両立に成功している好例だ。
-    </div>
-    <a class="article-link" href="https://prtimes.jp/main/html/rd/p/000004146.000018505.html" target="_blank" rel="noopener">元記事を読む →</a>
-  </article>
-
-  <h2 class="section-title">🌍 グローバルのIPニュース</h2>
-
-  <article class="article-card global">
-    <h3 class="article-title">Licensing Expo 2026、ゲームIPがメインストリーム・エンタメに ― 5/20に専門パネル開催</h3>
-    <div class="article-title-en">Gaming's Expanding Influence: Licensing Expo 2026 to Host Panel on How Gaming Brands Are Shaping Mainstream Entertainment</div>
-    <div class="article-meta">GlobeNewswire ｜ 2026年5月4日</div>
-    <img class="article-image" src="https://placehold.co/860x200/e8f4fb/2980b9?text=Licensing+Expo+2026+%E2%80%94+Gaming+IP" alt="Licensing Expo 2026 Gaming Panel">
-    <div class="article-body">
-      Licensing Expo 2026は2026年5月19〜21日にラスベガス（マンダレイベイ）で開催され、5月20日（水）にはゲームIPの拡張性をテーマにした注目パネル「Beyond the Controller: How Gaming Brands Are Shaping Mainstream Entertainment」を実施する。CD Projekt Red、Supercell、Ubisoftといった大手ゲームスタジオに加え、エージェンシーThink Influenceが登壇し、ゲームのキャラクターやワールドが、コンスーマー商品、出版、アパレル、コレクタブル、トイ、リテール協業、テレビ、映画、ビューティ、体験型施設へどう波及していくかが議論される。世界ゲーム市場は2030年までに5,051億ドル規模に達すると予測され、クラウド／モバイル／AR・VR／eスポーツがその牽引役となる。Licensing Expoには2025年に世界小売1,177億ドルへ拡大したライセンス市場のキープレイヤー（ポケモン、レゴ、ワーナー、SEGA、BBC、コカ・コーラ、NASCAR、ネットフリックス、ソニーピクチャーズなど）が一堂に会し、ゲームIPがいかにキャラクター／エンタメ／ファッションIPの境界を溶かしているかを示す場となる。任天堂やマインクラフトの映画化に続く“ゲームIPの越境”は、もはやニッチではなく王道の戦略であることが今回のパネル設計から読み取れる。アーティストや独自IPを抱えるブランドにとっても、自社IPをどう複数カテゴリ・複数メディアに展開するか、極めて示唆に富むトピックだ。
-    </div>
-    <a class="article-link" href="https://www.globenewswire.com/news-release/2026/05/04/3286448/0/en/gaming-s-expanding-influence-licensing-expo-2026-to-host-panel-on-how-gaming-brands-are-shaping-mainstream-entertainment.html" target="_blank" rel="noopener">元記事を読む →</a>
-  </article>
-
-  <article class="article-card global">
-    <h3 class="article-title">【K-pop】BLACKPINK × Razer「Play in Pink」コレクション、5/7アーリーアクセス／5/14世界一斉発売</h3>
-    <div class="article-title-en">Play In Pink: BLACKPINK X Razer Collection Opens For Sales</div>
-    <div class="article-meta">Razer Newsroom ｜ 2026年5月7日</div>
-    <img class="article-image" src="https://placehold.co/860x200/fde6f1/c2185b?text=BLACKPINK+%C3%97+Razer+%E2%80%94+Play+in+Pink" alt="BLACKPINK x Razer">
-    <div class="article-body">
-      ゲーミングギア大手Razerは、K-popグループBLACKPINKとの共同開発コレクション「Play in Pink」のアーリーアクセス販売を2026年5月7日にRazer.comおよびRazerStoreで開始し、5月14日にグローバル一斉本販売を開始した。BLACKPINKがグループ全体としてゲーミングブランドと組んだのは初めてで、K-popとゲーミング・ハードウェアの本格的なクロスオーバー事例として象徴的意味を持つ。コレクションのラインアップは、薄型RGBキーボード「Ornata V3 Tenkeyless – BLACKPINK Edition」、エルゴノミクスマウス「DeathAdder Essential – BLACKPINK Edition」、マウスマット「Gigantus V2」、ゲーミングチェア「Enki X」など、価格帯は29.99ドルから499.99ドルと、エントリーから本格派まで幅広い。デザインはBLACKPINKのカラーアイデンティティであるピンクを基調にしつつ、ファン心をくすぐるフォトカードなどファンマーチ的要素もパッケージに同梱。ファンダム（BLINK）の所有欲を満たすコレクタブル要素と、実用ガジェットとしてのスペックを両立させた点が、従来の“アーティストロゴ入りグッズ”との大きな違いだ。香港のBLACKPINK World Tour＜DEADLINE＞ポップアップでのお披露目を経て、世界同時販売へ繋げる導線設計も巧みで、ライブツアーとプロダクトローンチを一体運用する新しいIPマネタイズの教科書的事例といえる。
-    </div>
-    <a class="article-link" href="https://www.razer.com/newsroom/product-news/blackpink-razer-collection-open-for-sales" target="_blank" rel="noopener">元記事を読む →</a>
-  </article>
-
-  <article class="article-card global">
-    <h3 class="article-title">Licensing Partners International、UNCFと提携 ― HBCU連合の戦略ブランドライセンス事業を発表</h3>
-    <div class="article-title-en">Licensing Partners International Launches Strategic Brand Licensing Initiative with UNCF</div>
-    <div class="article-meta">GlobeNewswire ｜ 2026年5月5日</div>
-    <img class="article-image" src="https://placehold.co/860x200/eaf3fa/1f6394?text=LPI+%C3%97+UNCF+%E2%80%94+Brand+Licensing" alt="LPI x UNCF">
-    <div class="article-body">
-      Licensing Partners International（LPI）は、米国最大の歴史的黒人大学（HBCU）支援組織UNCFと提携し、UNCFのブランドおよび関連HBCUコミュニティの資産を活用した本格的なライセンス事業を立ち上げると発表した。アパレル、アクセサリー、ホーム、コンスーマー商品、コレクタブル、デジタル領域などを横断する複数カテゴリのライセンスプログラムを展開し、収益はUNCFのHBCU学生奨学金や教育事業にリターンされるソーシャルインパクト型のスキームとなっている。これは単なるブランドライセンスにとどまらず、コミュニティの文化資産（HBCU文化、ヘリテージ、デザイン言語）を消費財に翻訳する“カルチャーIP化”の典型例で、教育機関やNPOが保有する知財・象徴資源を商業的に展開する新潮流の象徴的な動きと位置づけられる。Care Bearsの45周年新規パートナー発表、OodieのPolly Pocket Comfort Wear、Bonnier Books×ロンドン動物学会200周年、BACARDÍのIMG Licensing起用など、5月第1週はLicensing Expoを目前にした大型発表ラッシュとなっており、その中でもLPI×UNCFは“ブランド＋社会的意義＋複数カテゴリ展開”のお手本ケースとして際立つ。アーティスト／コミュニティIPの社会性と商業性を両立させたい日本企業にも示唆が多い。
-    </div>
-    <a class="article-link" href="https://www.globenewswire.com/news-release/2026/05/05/3288139/0/en/licensing-partners-international-launches-strategic-brand-licensing-initiative-with-uncf.html" target="_blank" rel="noopener">元記事を読む →</a>
-  </article>
-
-  <section class="suggestions">
-    <h2>💡 KONNEKT への提言</h2>
-    <div class="sug-grid">
-      <div class="sug-card">
-        <h3>BRANDS ／ アンジュ シャルム・LAVANDA</h3>
-        <p>SNIDEL×LeSportsacのように、アーティスト発ブランドが“老舗ライフスタイルブランド”と組むコラボ枠を年1〜2本入れる構成がおすすめ。辻希美プロデュースのAnge Charme、宇野実彩子（AAA）プロデュースのLAVANDAそれぞれに、世代観の合うバッグ／雑貨ブランドとの限定カプセルを検討したい。</p>
+  <!-- JP Article 1 -->
+  <div class="card jp">
+    <img class="card-img" src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News" alt="アニものづくりアワード2026" onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
+    <div class="card-body">
+      <div class="card-tag jp">JAPAN</div>
+      <div class="card-meta">
+        <span class="source">アニものづくりアワード</span>
+        <span>｜</span>
+        <span>2026年5月11日</span>
       </div>
-      <div class="sug-card">
-        <h3>BRANDS ／ GOD ONLY KNOWS・Armillary.</h3>
-        <p>BLACKPINK×Razerの“アーティスト×実用プロダクト＋ファンマーチ要素”の構成は、岩田剛典プロデュースのGOD ONLY KNOWSや末吉秀太（AAA）プロデュースのArmillary.でも応用が効きそう。ガジェット／オーディオ／スポーツ系の異業種コラボでファンの所有欲と日常使い需要を両取りできるとよさそう。</p>
+      <h3 class="card-title">アニものづくりアワード2026、本日よりエントリー開始</h3>
+      <p class="card-summary">
+        アニメ業界と一般企業・団体とのビジネス活性化を目指す「アニものづくりアワード2026」が、2026年5月11日（月）よりエントリーの受付を正式に開始した。コラボ商品、広告クリエイティブ、プロモーション施策、事業連携など多岐にわたる部門で優れた取り組みを顕彰するこのアワードは、アニメIPとものづくりの融合を促進し、業界横断的なビジネス創出の場として注目を集めている。
+      </p>
+      <a class="card-link" href="https://animono.jp/" target="_blank" rel="noopener">元記事を読む</a>
+    </div>
+  </div>
+
+  <!-- JP Article 2 -->
+  <div class="card jp">
+    <img class="card-img" src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News" alt="IPランキング2026" onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
+    <div class="card-body">
+      <div class="card-tag jp">JAPAN</div>
+      <div class="card-meta">
+        <span class="source">コラボタイムズ</span>
+        <span>｜</span>
+        <span>2026年4月14日</span>
       </div>
-      <div class="sug-card">
-        <h3>LICENSE ／ キャラクターIP拡張</h3>
-        <p>studio CLIP×ノンタンやアニメイトフェアの事例のように、長寿キャラ＋雑貨／フェア型展開が安定して機能している。預かりIPの“周年アニバーサリー”を起点に、生活雑貨・アパレル雑貨カテゴリでの限定カプセル運用を年間カレンダーに組み込めると、商品化売上のベースが厚くなりそう。</p>
+      <h3 class="card-title">IPランキング2026｜企業コラボが多い人気キャラ・作品TOP20【最新版】</h3>
+      <p class="card-summary">
+        2020年1月〜2026年3月に国内で実施された企業コラボの件数をもとに、コラボ活動量が最も多いIPをランキング形式で発表。サンリオ（450超のキャラクター群）がトップクラスを維持し、ドラえもん・ディズニーが続く。コラボ活動量が急増する「旬のIP」や、アニメ放送・映画公開を機に急上昇する銘柄も明らかにされている。
+      </p>
+      <a class="card-link" href="https://collabo-times.com/2026/04/14/ip-ranking/" target="_blank" rel="noopener">元記事を読む</a>
+    </div>
+  </div>
+
+  <!-- JP Article 3 -->
+  <div class="card jp">
+    <img class="card-img" src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News" alt="コンテンツ東京2026" onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
+    <div class="card-body">
+      <div class="card-tag jp">JAPAN</div>
+      <div class="card-meta">
+        <span class="source">PR TIMES / RX Japan</span>
+        <span>｜</span>
+        <span>2026年</span>
       </div>
-      <div class="sug-card">
-        <h3>GOODS／CUSTOMIZE ／ Licensing Expo起点の越境</h3>
-        <p>Licensing Expo 2026（5/19–21・ラスベガス）はゲームIP越境がメインテーマ。KONNEKTのOEM／ODMとリアルタイムカスタマイズの強みは、海外ゲームIP・エンタメIPの日本側商品化パートナーとして売り込めるカードになりそう。現地視察または日本側エージェント／代理店とのコンタクト整理が活かせそう。</p>
+      <h3 class="card-title">ライセンス業界最大の祭典「ライセンシングジャパン2026」、6月17〜19日に東京ビッグサイトで開催——来場登録スタート</h3>
+      <p class="card-summary">
+        日本最大のライセンスビジネス専門展「ライセンシングジャパン2026」（コンテンツ東京内）が2026年6月17日（水）〜19日（金）に東京ビッグサイト西展示棟で開催される。世界から800超のキャラクター・ブランドが集結する予定で、来場登録がすでに開始された。今回は「IP創出ゾーン」が新設され、自社IPを構築したい企業向けの商談・情報収集エリアとして注目を集めている。
+      </p>
+      <a class="card-link" href="https://prtimes.jp/main/html/rd/p/000002029.000026157.html" target="_blank" rel="noopener">元記事を読む</a>
+    </div>
+  </div>
+
+  <!-- Global Articles -->
+  <h2 class="section-title">🌍 グローバルIPニュース</h2>
+
+  <!-- Global Article 1 -->
+  <div class="card global">
+    <img class="card-img" src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News" alt="Disney OpenAI Sora" onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
+    <div class="card-body">
+      <div class="card-tag global">GLOBAL</div>
+      <div class="card-meta">
+        <span class="source">OpenAI / The Walt Disney Company</span>
+        <span>｜</span>
+        <span>2025年12月〜2026年展開</span>
+      </div>
+      <h3 class="card-title">ディズニーとOpenAIが歴史的ライセンス契約締結——200超のIPキャラクターをAI動画生成「Sora」に解禁</h3>
+      <p class="card-title-en">The Walt Disney Company and OpenAI reach landmark agreement to bring beloved characters to Sora</p>
+      <p class="card-summary">
+        ウォルト・ディズニー・カンパニーとOpenAIは3年間のライセンス契約を締結し、AIビデオ生成プラットフォーム「Sora」がディズニー・マーベル・ピクサー・スター・ウォーズの200以上のキャラクター、衣装、小道具、乗り物、象徴的な環境を素材にした短尺動画を生成できるようになると発表した。ファンはSoraやChatGPTを通じて、自分でプロンプトを入力しながらお気に入りキャラクターを使ったオリジナル動画を作成・シェアできる。ディズニー+では、OpenAIとの協働で制作されたSora動画のキュレーションコンテンツを視聴する機能も実装予定だ。また契約の一環として、ディズニーはOpenAIへ10億ドルの株式投資を行い、追加株式購入のワラントも取得する。なお、タレントの肖像権・声は今回の契約範囲外とされており、IPとパーソナリティの権利分離という慎重な構造設計が施されている。この契約は「ブランドIPが生成AI時代にどう活用されるか」の方向性を示す業界的マイルストーンとして広く注目されており、IPオーナーが主体的に条件を定めながらAIエコシステムに参画する先行モデルともなっている。
+      </p>
+      <a class="card-link" href="https://openai.com/index/disney-sora-agreement/" target="_blank" rel="noopener">元記事を読む</a>
+    </div>
+  </div>
+
+  <!-- Global Article 2 -->
+  <div class="card global">
+    <img class="card-img" src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News" alt="Gaming IP Licensing Expo 2026" onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
+    <div class="card-body">
+      <div class="card-tag global">GLOBAL</div>
+      <div class="card-meta">
+        <span class="source">GlobeNewswire / Think Influence</span>
+        <span>｜</span>
+        <span>2026年5月4日</span>
+      </div>
+      <h3 class="card-title">ゲームIPが主流エンタメを席巻——Licensing Expo 2026でメインセッションに登場</h3>
+      <p class="card-title-en">Gaming's Expanding Influence: Licensing Expo 2026 to Host Panel on How Gaming Brands Are Shaping Mainstream Entertainment</p>
+      <p class="card-summary">
+        ライセンシングエキスポ2026（2026年5月開催）において、インフルエンサーマーケティング企業Think Influenceがメインステージに登壇し、「ゲームIPが主流エンターテインメントとブランドコラボに与える影響」をテーマにパネルディスカッションを行うことが発表された。グローバルゲーム市場は2030年までに5050億ドル規模へ成長すると予測されており、クラウドゲーミング・モバイル・AR/VR・eスポーツがその成長を牽引する。これまでゲームIPは特定コア層向けのニッチコンテンツと見なされてきたが、今やアパレル・食品・玩具・ストリーミングなど幅広いカテゴリーとの大型コラボが日常化している。Think Influenceは、ゲームブランドのクリエイターエコノミーへの統合、クロスメディア展開、リアルイベントとの融合といった新たなIPマネタイズ手法を提示する予定だ。ゲームIPを軸にしたライセンスビジネスが、エンタメ産業全体で最も成長著しいセグメントとなりつつあり、日本のゲーム企業にとってもグローバルなライセンス戦略の再設計が急務となっている。
+      </p>
+      <a class="card-link" href="https://www.globenewswire.com/news-release/2026/05/04/3286448/0/en/gaming-s-expanding-influence-licensing-expo-2026-to-host-panel-on-how-gaming-brands-are-shaping-mainstream-entertainment.html" target="_blank" rel="noopener">元記事を読む</a>
+    </div>
+  </div>
+
+  <!-- Global Article 3 -->
+  <div class="card global">
+    <img class="card-img" src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News" alt="Dentsu Iconic Arts" onerror="this.src='https://placehold.co/860x200/f0f4f8/1a1a2e?text=IP+News'">
+    <div class="card-body">
+      <div class="card-tag global">GLOBAL</div>
+      <div class="card-meta">
+        <span class="source">dentsu / Marketing Dive</span>
+        <span>｜</span>
+        <span>2026年2月19日</span>
+      </div>
+      <h3 class="card-title">電通エンターテインメントとIconic Artsが提携——データ駆動でブランドIPをアニメ・シリアル形式に昇華</h3>
+      <p class="card-title-en">Dentsu Partners with Iconic Arts to Accelerate IP Creation for Brands Through Data-Driven Entertainment</p>
+      <p class="card-summary">
+        電通エンターテインメントは2026年2月19日、エンターテインメント・テクノロジースタジオ「Iconic Arts」との戦略的グローバル提携を発表した。両社は、コンテンツ・体験・インタラクティブメディア・コンシューマープロダクトを横断する形で、ブランド向けのオリジナルIPを創出することを目的としている。提携の核心となるのは、Iconic Artsが開発した独自データインテリジェンスプラットフォーム「IP-IQ」だ。このツールは制作開始前の段階でクリエイティブ開発・ターゲット設定・プラットフォーム選定・長期的なIPスケーラビリティを科学的に評価・ガイドする機能を持ち、「作る前にデータで答えを出す」IP開発手法を実現する。特に注目されるのは、アニメおよびシリアルエンタメフォーマットへの重点フォーカスで、日本↔米国・グローバル市場へIPをシームレスに展開する「Japan ↔ US Synergyイニシアティブ」を中核戦略に据えている。この提携はサンダンス映画祭のBrandStorytelling プログラムでも紹介され、短期キャンペーン型マーケティングから長期IP・トランスメディアフランチャイズ開発へのブランド戦略シフトを象徴する動きとして業界の高い関心を集めている。
+      </p>
+      <a class="card-link" href="https://www.dentsu.com/news-releases/dentsu-partners-with-iconic-arts-to-accelerate-ip-creation-for-brands-through-data-driven-entertainment" target="_blank" rel="noopener">元記事を読む</a>
+    </div>
+  </div>
+
+  <!-- Insights -->
+  <div class="insights-section">
+    <h2 class="section-title">💡 KONNEKTへの提言</h2>
+    <div class="insights-grid">
+      <div class="insight-card">
+        <div class="insight-icon">🤖</div>
+        <div class="insight-title">AI動画ライセンスを先行検討したい</div>
+        <div class="insight-body">
+          ディズニー×Sora型のAIライセンス契約は、IPオーナーが主体的に条件設計できるモデル。辻希美・岩田剛典ら所属タレントのIPについても、生成AIプラットフォームとのライセンス条件を今のうちから整理しておくのがおすすめ。肖像権・声の範囲を明確にした「AIライセンス規約ひな型」の作成を検討したい。
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-icon">🎮</div>
+        <div class="insight-title">ゲームIPとのクロスコラボを活かせそう</div>
+        <div class="insight-body">
+          ゲームIPが主流エンタメのライセンス市場で急成長中。Armillary.（末吉秀太）やLAVANDA（宇野実彩子）のブランドを、人気ゲームIPとのコラボグッズ・デジタルコンテンツに絡めると、若年層への新たなリーチが期待できそう。ライセンシングエキスポ2026（5月開催）での情報収集も価値がありそう。
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-icon">📊</div>
+        <div class="insight-title">データ活用でIPの「売れる形」を見極めたい</div>
+        <div class="insight-body">
+          電通×Iconic ArtsのIP-IQのように、制作・展開の前にデータで需要を検証するアプローチが主流化しつつある。KONNEKTが持つ各ブランドについても、SNSエンゲージメントデータや購買データを活用したIP展開方向の優先度づけを取り入れると、コラボ成功率の向上につながりやすい。
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-icon">🏪</div>
+        <div class="insight-title">ライセンシングジャパン2026への出展・来場を検討したい</div>
+        <div class="insight-body">
+          6月17〜19日開催のライセンシングジャパン2026は、世界の800以上のIPホルダー・ライセンシーが集まる最大の商談場。新設の「IP創出ゾーン」はKONNEKTのIPビジネス拡張に直接役立つ情報が集まりそう。GOD ONLY KNOWSやAnge Charmeのライセンス展開を検討している場合、出展やバイヤーとしての参加を活かせそう。
+        </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="backnumbers">
+  <!-- Backnumber -->
+  <div class="backnumber">
     <h2>📂 バックナンバー</h2>
     <ul>
-      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-05-09.html">2026-05-09 のレポート</a></li>
-      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-04-08.html">2026-04-08 のレポート</a></li>
-      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-04-07.html">2026-04-07 のレポート</a></li>
-      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-04-06.html">2026-04-06 のレポート</a></li>
-      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-04-05.html">2026-04-05 のレポート</a></li>
+      <li>現在バックナンバーはありません。今号が最初のレポートです。</li>
     </ul>
-    <a class="index-link" href="https://fujimoto-cpu.github.io/ip-report/">一覧ページを開く</a>
-  </section>
-
-  <footer>
-    © KONNEKT INTERNATIONAL INC. ／ IP News Weekly Report
-  </footer>
+    <a class="index-link" href="https://fujimoto-cpu.github.io/ip-report/">→ レポート一覧ページ</a>
+  </div>
 
 </div>
+
+<footer>
+  © 2026 KONNEKT INTERNATIONAL INC. — 本レポートは社内参考情報として作成されています。
+</footer>
+
 </body>
 </html>
