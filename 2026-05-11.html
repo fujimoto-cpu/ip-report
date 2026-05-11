@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONNEKT IP News Weekly — 2026-05-11</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif;
+  background: #f8fafc;
+  color: #1a1a2e;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 0 20px 60px; }
+
+.header {
+  background: #ffffff;
+  border-top: 6px solid;
+  border-image: linear-gradient(90deg, #2980b9 0%, #6dd5fa 100%) 1;
+  padding: 36px 40px 32px;
+  margin-bottom: 28px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 18px rgba(41, 128, 185, 0.08);
+}
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.brand-badge {
+  display: inline-block;
+  background: #1a2744;
+  color: #2980b9;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  padding: 7px 16px;
+  border-radius: 999px;
+}
+.date-pill {
+  display: inline-block;
+  color: #6b7c93;
+  font-size: 13px;
+  font-weight: 500;
+}
+.header h1 {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+}
+.header .subtitle {
+  color: #6b7c93;
+  font-size: 14px;
+}
+
+.summary-banner {
+  background: linear-gradient(135deg, #ffffff 0%, #eef5fc 100%);
+  border: 1px solid #dbe7f3;
+  border-radius: 12px;
+  padding: 22px 26px;
+  margin-bottom: 32px;
+}
+.summary-banner h2 {
+  font-size: 15px;
+  color: #2980b9;
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.summary-banner ul { list-style: none; padding: 0; }
+.summary-banner li {
+  padding: 7px 0 7px 22px;
+  position: relative;
+  color: #2a3b52;
+  font-size: 14px;
+}
+.summary-banner li::before {
+  content: "▸";
+  color: #2980b9;
+  position: absolute;
+  left: 4px;
+  font-weight: 700;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin: 36px 0 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e6ecf2;
+}
+
+.article-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 26px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 10px rgba(15, 35, 65, 0.05);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  border-left: 5px solid #e74c3c;
+}
+.article-card.global { border-left-color: #2980b9; }
+.article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(15, 35, 65, 0.10);
+}
+.article-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+  line-height: 1.45;
+}
+.article-title-en {
+  font-size: 14px;
+  color: #6b7c93;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.article-meta {
+  font-size: 12px;
+  color: #8a96a8;
+  margin-bottom: 14px;
+  letter-spacing: 0.02em;
+}
+.article-image {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  background: #f0f4f8;
+}
+.article-body { color: #2a3b52; font-size: 14.5px; }
+.article-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #2980b9;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+}
+.article-link:hover { text-decoration: underline; }
+
+.suggestions {
+  background: linear-gradient(135deg, #1a2744 0%, #2c3e60 100%);
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 32px 30px;
+  margin-top: 32px;
+}
+.suggestions h2 {
+  font-size: 20px;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+.sug-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.sug-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(109, 213, 250, 0.18);
+  border-radius: 10px;
+  padding: 18px 18px;
+}
+.sug-card h3 {
+  font-size: 14px;
+  color: #6dd5fa;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+.sug-card p {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #e8eef7;
+}
+
+.backnumbers {
+  margin-top: 32px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 26px;
+  box-shadow: 0 2px 10px rgba(15, 35, 65, 0.05);
+}
+.backnumbers h2 {
+  font-size: 16px;
+  color: #2980b9;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+.backnumbers ul { list-style: none; }
+.backnumbers li { padding: 6px 0; font-size: 14px; }
+.backnumbers a { color: #2980b9; text-decoration: none; }
+.backnumbers a:hover { text-decoration: underline; }
+.backnumbers .index-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #2980b9;
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.backnumbers .index-link:hover { background: #1f6394; text-decoration: none; }
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #8a96a8;
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  .header { padding: 26px 22px; }
+  .header h1 { font-size: 22px; }
+  .article-card { padding: 18px 18px; }
+  .sug-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="header">
+    <div class="header-top">
+      <span class="brand-badge">KONNEKT INTERNATIONAL</span>
+      <span class="date-pill">2026年5月11日（月）</span>
+    </div>
+    <h1>KONNEKT IP News Weekly</h1>
+    <p class="subtitle">アーティスト／キャラクターIPと商品化ビジネスの最新動向</p>
+  </header>
+
+  <section class="summary-banner">
+    <h2>今週のサマリー</h2>
+    <ul>
+      <li>日本ではアパレル×キャラクターIPの“初コラボ”案件が連続発表。studio CLIP×ノンタン、SNIDEL×LeSportsacなど、長期愛されIPと女性向けブランドの相性の良さが鮮明に。</li>
+      <li>グローバルではゲームIPが映画・ファッション・コンスーマー領域へ越境する流れが本格化。BLACKPINK×Razerなど、アーティストIPとプロダクトのクロスオーバー事例も加速。</li>
+      <li>ライセンス市場全体は2025年に小売売上1,177億ドルへ拡大。Licensing Expo 2026（5/19–21）を起点に、フード、ゲーム、エンタメ各カテゴリで新規パートナーシップが続々。</li>
+    </ul>
+  </section>
+
+  <h2 class="section-title">🇯🇵 日本のIPニュース</h2>
+
+  <article class="article-card">
+    <h3 class="article-title">「メイドインアビス」アニメイトフェア in 2026 開催決定 ― 5/7より通販事前予約スタート</h3>
+    <div class="article-meta">PR TIMES（arma bianca） ｜ 2026年5月7日</div>
+    <img class="article-image" src="https://placehold.co/860x200/fde9e8/c0392b?text=Made+in+Abyss+%C3%97+animate+Fair+2026" alt="メイドインアビス アニメイトフェア">
+    <div class="article-body">
+      arma biancaは、人気アニメ「メイドインアビス」のアニメイトフェアを2026年8月1日より全国アニメイトで開催する。今回のテーマは「運動会」で、新規描き下ろしビジュアルを用いた缶バッジ、アクリルスタンド、トレーディング系商品などの新商品が多数登場予定。5月7日からはアニメイト通販で事前予約キャンペーンが先行し、限定特典の早期確保を狙うコアファン需要に応える。長尺コンテンツのアニメ放送間隔を埋める“フェア＝中継ぎ施策”として、IPのファン体温維持と物販売上の継続発生を両立する設計だ。
+    </div>
+    <a class="article-link" href="https://prtimes.jp/main/html/rd/p/000008956.000016064.html" target="_blank" rel="noopener">元記事を読む →</a>
+  </article>
+
+  <article class="article-card">
+    <h3 class="article-title">studio CLIP、絵本「ノンタン」と初コラボ ― 50周年記念で生活雑貨37型を5/13発売</h3>
+    <div class="article-meta">PR TIMES（アンドエスティHD） ｜ 2026年5月7日</div>
+    <img class="article-image" src="https://placehold.co/860x200/fff4e6/d35400?text=studio+CLIP+%C3%97+Nontan" alt="studio CLIP × ノンタン">
+    <div class="article-body">
+      ライフスタイルブランドstudio CLIPは、絵本『ノンタン』50周年を記念し、初コラボとなる生活雑貨37型を2026年5月13日より発売する。ハンディファン、保冷ポーチ、ランチアイテム、ブランケットなど夏向け雑貨が中心で、ノスタルジー需要を持つ親世代と、ファンシー雑貨に親和性の高い若年女性層の双方に訴求する設計。店舗で5,000円以上購入＋コラボ商品1点以上で限定ステッカーがもらえる施策も用意し、来店誘導とバスケット単価向上の両方を狙う。長寿IPのアパレル雑貨展開の成功事例として注目。
+    </div>
+    <a class="article-link" href="https://prtimes.jp/main/html/rd/p/000003098.000001304.html" target="_blank" rel="noopener">元記事を読む →</a>
+  </article>
+
+  <article class="article-card">
+    <h3 class="article-title">SNIDEL × LeSportsac 初コラボ、“ストリートフォーマル”全8型を5/13発売</h3>
+    <div class="article-meta">PR TIMES（マッシュホールディングス） ｜ 2026年5月7日</div>
+    <img class="article-image" src="https://placehold.co/860x200/fdeef4/c2185b?text=SNIDEL+%C3%97+LeSportsac" alt="SNIDEL × LeSportsac">
+    <div class="article-body">
+      SNIDELとLeSportsacが初コラボし、機能性とフォーマル感を融合させた全8型を2026年5月13日より発売する。LOGO JACQUARD WEBBING、立体リボンのBOWシリーズなど、SNIDELの女性らしさとLeSportsacの軽量ナイロン技術を組み合わせたバッグが中心。発表は5月11日12時、店頭・EC販売は5月13日10時と告知公開タイミングを分けてSNS拡散とサイト集客を最大化する設計。フェミニン×実用、日系×米系の組み合わせは、コラボの新鮮さと購入動機の両立に成功している好例だ。
+    </div>
+    <a class="article-link" href="https://prtimes.jp/main/html/rd/p/000004146.000018505.html" target="_blank" rel="noopener">元記事を読む →</a>
+  </article>
+
+  <h2 class="section-title">🌍 グローバルのIPニュース</h2>
+
+  <article class="article-card global">
+    <h3 class="article-title">Licensing Expo 2026、ゲームIPがメインストリーム・エンタメに ― 5/20に専門パネル開催</h3>
+    <div class="article-title-en">Gaming's Expanding Influence: Licensing Expo 2026 to Host Panel on How Gaming Brands Are Shaping Mainstream Entertainment</div>
+    <div class="article-meta">GlobeNewswire ｜ 2026年5月4日</div>
+    <img class="article-image" src="https://placehold.co/860x200/e8f4fb/2980b9?text=Licensing+Expo+2026+%E2%80%94+Gaming+IP" alt="Licensing Expo 2026 Gaming Panel">
+    <div class="article-body">
+      Licensing Expo 2026は2026年5月19〜21日にラスベガス（マンダレイベイ）で開催され、5月20日（水）にはゲームIPの拡張性をテーマにした注目パネル「Beyond the Controller: How Gaming Brands Are Shaping Mainstream Entertainment」を実施する。CD Projekt Red、Supercell、Ubisoftといった大手ゲームスタジオに加え、エージェンシーThink Influenceが登壇し、ゲームのキャラクターやワールドが、コンスーマー商品、出版、アパレル、コレクタブル、トイ、リテール協業、テレビ、映画、ビューティ、体験型施設へどう波及していくかが議論される。世界ゲーム市場は2030年までに5,051億ドル規模に達すると予測され、クラウド／モバイル／AR・VR／eスポーツがその牽引役となる。Licensing Expoには2025年に世界小売1,177億ドルへ拡大したライセンス市場のキープレイヤー（ポケモン、レゴ、ワーナー、SEGA、BBC、コカ・コーラ、NASCAR、ネットフリックス、ソニーピクチャーズなど）が一堂に会し、ゲームIPがいかにキャラクター／エンタメ／ファッションIPの境界を溶かしているかを示す場となる。任天堂やマインクラフトの映画化に続く“ゲームIPの越境”は、もはやニッチではなく王道の戦略であることが今回のパネル設計から読み取れる。アーティストや独自IPを抱えるブランドにとっても、自社IPをどう複数カテゴリ・複数メディアに展開するか、極めて示唆に富むトピックだ。
+    </div>
+    <a class="article-link" href="https://www.globenewswire.com/news-release/2026/05/04/3286448/0/en/gaming-s-expanding-influence-licensing-expo-2026-to-host-panel-on-how-gaming-brands-are-shaping-mainstream-entertainment.html" target="_blank" rel="noopener">元記事を読む →</a>
+  </article>
+
+  <article class="article-card global">
+    <h3 class="article-title">【K-pop】BLACKPINK × Razer「Play in Pink」コレクション、5/7アーリーアクセス／5/14世界一斉発売</h3>
+    <div class="article-title-en">Play In Pink: BLACKPINK X Razer Collection Opens For Sales</div>
+    <div class="article-meta">Razer Newsroom ｜ 2026年5月7日</div>
+    <img class="article-image" src="https://placehold.co/860x200/fde6f1/c2185b?text=BLACKPINK+%C3%97+Razer+%E2%80%94+Play+in+Pink" alt="BLACKPINK x Razer">
+    <div class="article-body">
+      ゲーミングギア大手Razerは、K-popグループBLACKPINKとの共同開発コレクション「Play in Pink」のアーリーアクセス販売を2026年5月7日にRazer.comおよびRazerStoreで開始し、5月14日にグローバル一斉本販売を開始した。BLACKPINKがグループ全体としてゲーミングブランドと組んだのは初めてで、K-popとゲーミング・ハードウェアの本格的なクロスオーバー事例として象徴的意味を持つ。コレクションのラインアップは、薄型RGBキーボード「Ornata V3 Tenkeyless – BLACKPINK Edition」、エルゴノミクスマウス「DeathAdder Essential – BLACKPINK Edition」、マウスマット「Gigantus V2」、ゲーミングチェア「Enki X」など、価格帯は29.99ドルから499.99ドルと、エントリーから本格派まで幅広い。デザインはBLACKPINKのカラーアイデンティティであるピンクを基調にしつつ、ファン心をくすぐるフォトカードなどファンマーチ的要素もパッケージに同梱。ファンダム（BLINK）の所有欲を満たすコレクタブル要素と、実用ガジェットとしてのスペックを両立させた点が、従来の“アーティストロゴ入りグッズ”との大きな違いだ。香港のBLACKPINK World Tour＜DEADLINE＞ポップアップでのお披露目を経て、世界同時販売へ繋げる導線設計も巧みで、ライブツアーとプロダクトローンチを一体運用する新しいIPマネタイズの教科書的事例といえる。
+    </div>
+    <a class="article-link" href="https://www.razer.com/newsroom/product-news/blackpink-razer-collection-open-for-sales" target="_blank" rel="noopener">元記事を読む →</a>
+  </article>
+
+  <article class="article-card global">
+    <h3 class="article-title">Licensing Partners International、UNCFと提携 ― HBCU連合の戦略ブランドライセンス事業を発表</h3>
+    <div class="article-title-en">Licensing Partners International Launches Strategic Brand Licensing Initiative with UNCF</div>
+    <div class="article-meta">GlobeNewswire ｜ 2026年5月5日</div>
+    <img class="article-image" src="https://placehold.co/860x200/eaf3fa/1f6394?text=LPI+%C3%97+UNCF+%E2%80%94+Brand+Licensing" alt="LPI x UNCF">
+    <div class="article-body">
+      Licensing Partners International（LPI）は、米国最大の歴史的黒人大学（HBCU）支援組織UNCFと提携し、UNCFのブランドおよび関連HBCUコミュニティの資産を活用した本格的なライセンス事業を立ち上げると発表した。アパレル、アクセサリー、ホーム、コンスーマー商品、コレクタブル、デジタル領域などを横断する複数カテゴリのライセンスプログラムを展開し、収益はUNCFのHBCU学生奨学金や教育事業にリターンされるソーシャルインパクト型のスキームとなっている。これは単なるブランドライセンスにとどまらず、コミュニティの文化資産（HBCU文化、ヘリテージ、デザイン言語）を消費財に翻訳する“カルチャーIP化”の典型例で、教育機関やNPOが保有する知財・象徴資源を商業的に展開する新潮流の象徴的な動きと位置づけられる。Care Bearsの45周年新規パートナー発表、OodieのPolly Pocket Comfort Wear、Bonnier Books×ロンドン動物学会200周年、BACARDÍのIMG Licensing起用など、5月第1週はLicensing Expoを目前にした大型発表ラッシュとなっており、その中でもLPI×UNCFは“ブランド＋社会的意義＋複数カテゴリ展開”のお手本ケースとして際立つ。アーティスト／コミュニティIPの社会性と商業性を両立させたい日本企業にも示唆が多い。
+    </div>
+    <a class="article-link" href="https://www.globenewswire.com/news-release/2026/05/05/3288139/0/en/licensing-partners-international-launches-strategic-brand-licensing-initiative-with-uncf.html" target="_blank" rel="noopener">元記事を読む →</a>
+  </article>
+
+  <section class="suggestions">
+    <h2>💡 KONNEKT への提言</h2>
+    <div class="sug-grid">
+      <div class="sug-card">
+        <h3>BRANDS ／ アンジュ シャルム・LAVANDA</h3>
+        <p>SNIDEL×LeSportsacのように、アーティスト発ブランドが“老舗ライフスタイルブランド”と組むコラボ枠を年1〜2本入れる構成がおすすめ。辻希美プロデュースのAnge Charme、宇野実彩子（AAA）プロデュースのLAVANDAそれぞれに、世代観の合うバッグ／雑貨ブランドとの限定カプセルを検討したい。</p>
+      </div>
+      <div class="sug-card">
+        <h3>BRANDS ／ GOD ONLY KNOWS・Armillary.</h3>
+        <p>BLACKPINK×Razerの“アーティスト×実用プロダクト＋ファンマーチ要素”の構成は、岩田剛典プロデュースのGOD ONLY KNOWSや末吉秀太（AAA）プロデュースのArmillary.でも応用が効きそう。ガジェット／オーディオ／スポーツ系の異業種コラボでファンの所有欲と日常使い需要を両取りできるとよさそう。</p>
+      </div>
+      <div class="sug-card">
+        <h3>LICENSE ／ キャラクターIP拡張</h3>
+        <p>studio CLIP×ノンタンやアニメイトフェアの事例のように、長寿キャラ＋雑貨／フェア型展開が安定して機能している。預かりIPの“周年アニバーサリー”を起点に、生活雑貨・アパレル雑貨カテゴリでの限定カプセル運用を年間カレンダーに組み込めると、商品化売上のベースが厚くなりそう。</p>
+      </div>
+      <div class="sug-card">
+        <h3>GOODS／CUSTOMIZE ／ Licensing Expo起点の越境</h3>
+        <p>Licensing Expo 2026（5/19–21・ラスベガス）はゲームIP越境がメインテーマ。KONNEKTのOEM／ODMとリアルタイムカスタマイズの強みは、海外ゲームIP・エンタメIPの日本側商品化パートナーとして売り込めるカードになりそう。現地視察または日本側エージェント／代理店とのコンタクト整理が活かせそう。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="backnumbers">
+    <h2>📂 バックナンバー</h2>
+    <ul>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-05-09.html">2026-05-09 のレポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-04-08.html">2026-04-08 のレポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-04-07.html">2026-04-07 のレポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-04-06.html">2026-04-06 のレポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-04-05.html">2026-04-05 のレポート</a></li>
+    </ul>
+    <a class="index-link" href="https://fujimoto-cpu.github.io/ip-report/">一覧ページを開く</a>
+  </section>
+
+  <footer>
+    © KONNEKT INTERNATIONAL INC. ／ IP News Weekly Report
+  </footer>
+
+</div>
+</body>
+</html>
