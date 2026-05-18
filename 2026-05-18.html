@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KONNEKT IP News Weekly | 2026-05-18</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+      background: #f8fafc;
+      color: #1a1a2e;
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      background: linear-gradient(135deg, #2980b9 0%, #6dd5fa 100%);
+      padding: 0;
+    }
+    .header-inner {
+      background: #fff;
+      margin: 6px 6px 0;
+      border-radius: 12px 12px 0 0;
+      padding: 28px 32px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .badge-konnekt {
+      display: inline-block;
+      background: #1a2744;
+      color: #2980b9;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 999px;
+      width: fit-content;
+    }
+    .header-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: #1a2744;
+      line-height: 1.2;
+    }
+    .header-date {
+      font-size: 14px;
+      color: #6b7280;
+      font-weight: 500;
+    }
+
+    /* ===== CONTAINER ===== */
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* ===== SUMMARY BANNER ===== */
+    .summary-banner {
+      background: linear-gradient(120deg, #1a2744 0%, #2980b9 100%);
+      color: #fff;
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin: 28px 0 32px;
+    }
+    .summary-banner h2 {
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #6dd5fa;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+    .summary-banner ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .summary-banner li {
+      font-size: 15px;
+      line-height: 1.6;
+      padding-left: 22px;
+      position: relative;
+    }
+    .summary-banner li::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: #6dd5fa;
+      font-size: 11px;
+      top: 4px;
+    }
+
+    /* ===== SECTION HEADING ===== */
+    .section-heading {
+      font-size: 20px;
+      font-weight: 800;
+      color: #1a2744;
+      margin: 40px 0 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-heading::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, #e0e7ef 0%, transparent 100%);
+    }
+
+    /* ===== CARD ===== */
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(26,39,68,0.07);
+      margin-bottom: 24px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border-left: 5px solid #e74c3c;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 28px rgba(26,39,68,0.13);
+    }
+    .card.global {
+      border-left-color: #2980b9;
+    }
+    .card.kpop {
+      border-left-color: #e91e63;
+    }
+
+    .card-img {
+      width: 100%;
+      height: auto;
+      max-height: 280px;
+      object-fit: cover;
+      display: block;
+      background: #e0e7ef;
+    }
+    .card-body {
+      padding: 22px 24px 20px;
+    }
+    .card-meta {
+      font-size: 13px;
+      color: #8896a8;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .card-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #1a2744;
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+    .card-summary {
+      font-size: 15px;
+      color: #374151;
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+    .card-link {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 700;
+      color: #2980b9;
+      text-decoration: none;
+      padding: 8px 18px;
+      border: 2px solid #2980b9;
+      border-radius: 8px;
+      min-height: 44px;
+      line-height: 1.5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .card-link:hover {
+      background: #2980b9;
+      color: #fff;
+    }
+
+    /* ===== TEIGEN (SUGGESTIONS) ===== */
+    .teigen-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 40px;
+    }
+    .teigen-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(26,39,68,0.07);
+      padding: 22px 20px 20px;
+      border-top: 4px solid #2980b9;
+    }
+    .teigen-card.kpop-card {
+      border-top-color: #e91e63;
+    }
+    .teigen-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #2980b9;
+      margin-bottom: 10px;
+    }
+    .teigen-card.kpop-card .teigen-label {
+      color: #e91e63;
+    }
+    .teigen-card h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: #1a2744;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .teigen-card p {
+      font-size: 14px;
+      color: #4b5563;
+      line-height: 1.75;
+    }
+
+    /* ===== BACKNUMBER ===== */
+    .backnumber {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(26,39,68,0.06);
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+    .backnumber h2 {
+      font-size: 17px;
+      font-weight: 800;
+      color: #1a2744;
+      margin-bottom: 16px;
+    }
+    .backnumber ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .backnumber a {
+      color: #2980b9;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .backnumber a:hover { text-decoration: underline; }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      text-align: center;
+      font-size: 12px;
+      color: #9ca3af;
+      padding: 24px 16px 32px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    /* ===== RESPONSIVE: 640px ===== */
+    @media (max-width: 640px) {
+      .header-inner { padding: 20px 18px 18px; }
+      .header-title { font-size: 22px; }
+      .summary-banner { padding: 18px 16px; }
+      .card-title { font-size: 18px; }
+      .teigen-grid { grid-template-columns: 1fr; }
+      .card-body { padding: 16px 16px 14px; }
+      .backnumber { padding: 18px 16px; }
+    }
+
+    /* ===== RESPONSIVE: 480px ===== */
+    @media (max-width: 480px) {
+      .card-summary { font-size: 15px; }
+      .card-meta { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <span class="badge-konnekt">KONNEKT INTERNATIONAL</span>
+      <h1 class="header-title">IP News Weekly Report</h1>
+      <p class="header-date">2026年5月18日（月）</p>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- SUMMARY BANNER -->
+  <div class="summary-banner">
+    <h2>Today's Highlights</h2>
+    <ul>
+      <li>サンリオキャラクター大賞2026連動グッズ第4弾が5月13日発売。ポムポムプリン30周年で中間1位、推し活グッズ需要が継続拡大</li>
+      <li>Netflixが827億ドルでWarner Bros.を買収——ハリーポッター・DCなど超大型IPのライセンス戦略が再編局面へ</li>
+      <li>🇰🇷 韓国大手小売がK-POP IPとのコラボを軸にファンダム新規顧客獲得を加速。BTSブランドだけで年間35億ドル超のIP収益を創出</li>
+    </ul>
+  </div>
+
+  <!-- JAPAN ARTICLES -->
+  <h2 class="section-heading">🇯🇵 日本のIPニュース</h2>
+
+  <!-- Japan Article 1 -->
+  <article class="card">
+    <img
+      class="card-img"
+      src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=Sanrio+Character+Awards+2026"
+      alt="サンリオキャラクター大賞2026連動グッズ第4弾"
+      loading="lazy"
+    >
+    <div class="card-body">
+      <p class="card-meta">にじめん &nbsp;|&nbsp; 2026年5月13日</p>
+      <h2 class="card-title">サンリオキャラクター大賞2026連動グッズ第4弾が5月13日発売——ポムポムプリン30周年で中間1位</h2>
+      <p class="card-summary">
+        2026年サンリオキャラクター大賞の連動グッズ第4弾が5月13日よりサンリオショップ・オンラインショップで順次発売開始。マスコットホルダー、アップリケショルダー、シークレットマスコットチャームなど「推し」を全力アピールできるアイテムがラインナップされた。大賞の中間発表では30周年を迎えるポムポムプリンが1位を獲得し、シナモロール2位、ポチャッコ3位と続く。ファン投票と連動したグッズ展開が購買意欲を高め、キャラクターIPのグッズ需要は引き続き堅調に推移している。
+      </p>
+      <a class="card-link" href="https://nijimen.kusuguru.co.jp/topics/615170" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </article>
+
+  <!-- Japan Article 2 -->
+  <article class="card">
+    <img
+      class="card-img"
+      src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=Sanrio+x+GU+Collab+2026"
+      alt="サンリオキャラクターズ×GUコラボ"
+      loading="lazy"
+    >
+    <div class="card-body">
+      <p class="card-meta">エキサイトニュース（にじめん） &nbsp;|&nbsp; 2026年5月</p>
+      <h2 class="card-title">サンリオキャラクターズ×GUコラボパジャマ・Tシャツ、7月13日発売——日焼けキティ・シナモロールが夏仕様で登場</h2>
+      <p class="card-summary">
+        GUとサンリオキャラクターズがコラボしたパジャマ・Tシャツが7月13日に発売予定として発表された。日焼けしたハローキティ、シナモロール、ポムポムプリンをデザインした夏らしいアパレルで、ファストファッションブランドとキャラクターIPの協業が再び注目を集めている。幅広い年齢層に訴求できるリーズナブルな価格帯で展開され、サンリオIPのアパレル活用が引き続き多角化している。
+      </p>
+      <a class="card-link" href="https://www.excite.co.jp/news/article/Nijimen_0000000000616251/" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </article>
+
+  <!-- Japan Article 3 -->
+  <article class="card">
+    <img
+      class="card-img"
+      src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=Y2K+Heisei+Retro+Revival+2026"
+      alt="Y2K・平成レトロキャラクターリバイバル"
+      loading="lazy"
+    >
+    <div class="card-body">
+      <p class="card-meta">アニメイトタイムズ &nbsp;|&nbsp; 2026年5月</p>
+      <h2 class="card-title">Y2Kファッションが「おしゃれな平成マンガ」として再評価——Z世代が牽引するレトロキャラクターIP復刻ブーム</h2>
+      <p class="card-summary">
+        2000年代初頭のY2Kスタイルをコンセプトに取り入れたアニメ・マンガ作品が注目を集めており、当時の懐かしいキャラクターIPがアパレルコラボや復刻グッズで再評価されている。Z世代を中心に「平成レトロ」感覚が新しくおしゃれなものとして受け入れられ、サンリオのリラックマ平成初期デザイン復刻なども話題に。レトロIPの商品開発・ライセンス活用が活発化しており、懐かしさと新しさを融合させた展開が消費者の共感を呼んでいる。
+      </p>
+      <a class="card-link" href="https://www.animatetimes.com/news/details.php?id=1747960905" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </article>
+
+  <!-- GLOBAL ARTICLES -->
+  <h2 class="section-heading">🌍 グローバルIPニュース</h2>
+
+  <!-- Global Article 1 -->
+  <article class="card global">
+    <img
+      class="card-img"
+      src="https://placehold.co/860x200/e8f4fd/1a2744?text=Netflix+Warner+Bros+Acquisition"
+      alt="Netflix Warner Bros Acquisition"
+      loading="lazy"
+    >
+    <div class="card-body">
+      <p class="card-meta">LBBOnline &nbsp;|&nbsp; 2026年5月</p>
+      <h2 class="card-title">Netflix、827億ドルでWarner Bros.を買収——ハリポタ・DCのライセンス市場に激震</h2>
+      <p class="card-summary">
+        <strong>【背景】</strong>Netflixが世界的な大型M&Aとして、Warner Bros. DiscoveryのストリーミングプラットフォームおよびIPポートフォリオを約827億ドル（約12兆円）で買収することを発表した。この取引によりハリウッドのメジャースタジオ数は従来の5社から4社へと集約される見込みであり、エンタメ業界の歴史的な再編が進んでいる。<br><br>
+        <strong>【主要IP・影響範囲】</strong>買収対象IPにはハリー・ポッター、DCコミックス（バットマン・スーパーマンほか）、ゲーム・オブ・スローンズなどの巨大フランチャイズが含まれる。これらはアパレル、玩具、ゲーム、テーマパークへの展開で世界規模のライセンス収益を生んでおり、新しいオーナーの戦略次第でライセンス条件が大きく変わる可能性がある。<br><br>
+        <strong>【業界への影響】</strong>業界アナリストは、Netflixが配信プラットフォームとのシナジーを優先する形でライセンス戦略を再設計するとみている。既存ライセンシーとの契約の引き継ぎ可否についても不透明な部分が多く、アパレル・玩具メーカー各社が動向を注視している。一方で、地理的・カテゴリー別ライセンスの整理・集約が進むことで、日本・アジア市場での新たなライセンス募集が生じる可能性もある。<br><br>
+        <strong>【KONNEKTとの関連】</strong>グローバルIPの巨大化・集約が進む中、ニッチながら熱狂的なファン基盤を持つタレントIP（辻希美・岩田剛典・宇野実彩子・末吉秀太）の希少性はむしろ高まる。大手プラットフォームが大型IPに経営資源を集中させる一方で、KONNEKTが担うような「タレントの世界観を丸ごと商品化するライセンス」領域の需要は独自のポジションを築ける。この再編期こそ、グローバル展開の基盤整備を加速させる好機と言える。
+      </p>
+      <a class="card-link" href="https://lbbonline.com/news/Netflixs-dollar827-Billion-Warner-Bros-Acquisition-What-It-Means-for-Licensing" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </article>
+
+  <!-- Global Article 2 -->
+  <article class="card global">
+    <img
+      class="card-img"
+      src="https://placehold.co/860x200/e8f4fd/1a2744?text=Celebrity+D2C+Brand+2026"
+      alt="Celebrity D2C Brands"
+      loading="lazy"
+    >
+    <div class="card-body">
+      <p class="card-meta">The Drum &nbsp;|&nbsp; 2026年</p>
+      <h2 class="card-title">スター自らがオーナーに——D2Cブランドがセレブリティ経済の構造を刷新</h2>
+      <p class="card-summary">
+        <strong>【背景】</strong>かつてセレブリティ・エコノミーは「ブランドが有名人の顔を借りる」広告モデルが主流だったが、2025〜2026年にかけてその構造が大きく転換している。スターたちは単なるアンバサダーにとどまらず、自らがブランドオーナーとなるD2C（Direct-to-Consumer）モデルへと移行しているのだ。<br><br>
+        <strong>【主要事例】</strong>リアーナのFenty Beautyは2025年に年間6億ポンド超の収益を達成。セレーナ・ゴメスのRare Beautyは全セレブリティビューティブランド中Instagramフォロワー数1位（4.3億人超）を誇る。キム・カーダシアンのSKIMSはローンチからわずか4年で評価額40億ドルを突破した。共通点は、商品・ブランド哲学・ファンコミュニティが一体となった「IP＋プラットフォーム戦略」にある。<br><br>
+        <strong>【トレンドの核心】</strong>2025年の調査ではミレニアル・Z世代がSNS経由で「最も購買したい商品カテゴリー」の1位がファッションアイテムであり、スター主導のファッションラインへの需要は急拡大している。日常的なSNSコンテンツが即購買につながる構造が、従来型広告との圧倒的な差別化を生んでいる。スポンサーはイメージを一時的に借りるのに対し、D2Cブランドはセレブの世界観そのものを商品化できる。<br><br>
+        <strong>【業界影響】</strong>ファッション・ビューティ以外にも、ライフスタイル・フード・サプリメントと領域が広がっており、「スター×D2C」の組み合わせは事業領域を問わないモデルとなりつつある。プラットフォーム側（TikTok Shop、Instagram Shopping等）のコマース機能強化が追い風となり、ローンチ当日に数億円規模の売上を達成するケースも相次いでいる。<br><br>
+        <strong>【KONNEKTとの関連】</strong>Ange Charme（辻希美）、GOD ONLY KNOWS（岩田剛典）、LAVANDA（宇野実彩子）はこのD2C潮流と高い親和性を持つ。ファンとの深いエンゲージメントを活かし、SNSローンチと連動したコレクション展開を設計することで、高い初動購買が期待できる。「所有するブランド」への移行を意識した戦略設計が、今後の成長に直結すると考えられる。
+      </p>
+      <a class="card-link" href="https://www.thedrum.com/opinion/from-endorsement-to-snackable-fame-star-backed-d2c-brands-are-remaking-celebrity" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </article>
+
+  <!-- Global Article 3: K-pop -->
+  <article class="card kpop">
+    <img
+      class="card-img"
+      src="https://placehold.co/860x200/fce4ec/880e4f?text=K-POP+IP+Fandom+Retail+2026"
+      alt="Korean Retailers K-POP IP Fandom Strategy"
+      loading="lazy"
+    >
+    <div class="card-body">
+      <p class="card-meta">🇰🇷 Seoul Economic Daily &nbsp;|&nbsp; 2026年4月23日</p>
+      <h2 class="card-title">🇰🇷 韓国大手小売がコンテンツIP×ファンダム戦略を強化——BTS IPだけで年間35億ドル超の収益</h2>
+      <p class="card-summary">
+        <strong>【背景・概要】</strong>韓国の大手小売・ブランド企業が、K-POP・映画・ゲームなどのコンテンツIPとのコラボレーションを通じて、ファンダムを新規顧客として取り込む戦略を急速に強化している。CJ ONSTYLE、SPAO、エアビーアンドビー、ロッテワールドなど多業種の企業が、HYBE・SM Entertainment・JYP配下のIPを活用した限定商品展開やポップアップイベントを積極展開している。<br><br>
+        <strong>【ファンダム経済の規模】</strong>BTSブランドだけで音楽・グッズ・コラボを合わせた年間IP収益が推計35億ドル超に上る。HYBE、SM、JYPは傘下にIPライセンス専門子会社（HYBE IPX、JYP Three Sixty等）を設立しており、IPライセンスが単なる付随事業から中核事業へと格上げされている。<br><br>
+        <strong>【ポップアップが主要チャネルに】</strong>K-POPグッズの物販はオンラインストアからリアルのポップアップイベントへシフトが顕著で、現在ではポップアップがK-POP IPのマネタイズチャネルトップ3に入っている。体験型マーケティングとグッズ購買を組み合わせることで、ファンの感情的愛着と購買行動が直結する設計が功を奏している。<br><br>
+        <strong>【偽造品対策とライセンス品の価値】</strong>押収された偽造品のうちBTS関連が7,519点、Stray Kids関連が2,208点、TWICEが2,186点と、ブランド価値の高さが偽造ターゲットになるほどである。それゆえ正規ライセンスパートナーとしての品質管理・信頼性が強力な差別化ポイントとなっている。<br><br>
+        <strong>【KONNEKTとの関連】</strong>KONNEKTが今後注力する韓国系エンタメ領域において、このファンダム経済の構造——IPライセンス・ポップアップ展開・D2Cグッズ——を深く理解することは事業の根幹となる。韓国系IPホルダーとの正規ライセンス提携、日本国内でのポップアップ支援、グッズ製造ノウハウの提供など、KONNEKTが介在できる機会は多岐にわたる。日韓エンタメIPの橋渡し役としてのポジション確立を本格的に検討したい。
+      </p>
+      <a class="card-link" href="https://en.sedaily.com/news/2026/04/23/retailers-turn-to-content-ip-fandoms-to-win-new-customers" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </article>
+
+  <!-- SUGGESTIONS / TEIGEN -->
+  <h2 class="section-heading">💡 KONNEKT への提言</h2>
+  <div class="teigen-grid">
+
+    <div class="teigen-card">
+      <p class="teigen-label">① BRANDS 視点</p>
+      <h3>D2Cブランドのスター所有モデルへの移行を検討したい</h3>
+      <p>
+        Fenty Beauty・SKIMSのように、アーティスト自身がブランドを所有する形態が世界標準になりつつある。辻希美・宇野実彩子・岩田剛典といったタレントのIPにおいても、単なるグッズ販売にとどまらず、「世界観ごと商品化するD2Cブランド」へと発展させる構想を描けると、長期的な資産価値の形成につながりそうだ。SNSとECを直結させた初回ドロップ設計が、特に有効に機能すると考えられる。
+      </p>
+    </div>
+
+    <div class="teigen-card">
+      <p class="teigen-label">② LICENSE 視点</p>
+      <h3>大手IP再編期こそ、独自IPのライセンス拡張チャンス</h3>
+      <p>
+        Netflix・Warner Bros.合併に象徴されるように、グローバルIPが大手へ集約される一方で、ニッチ・コミュニティ型IPへの需要は独自のポジションを築きやすい。KONNEKTのタレントIPは既存ファン基盤の熱量が強みであり、アパレル・アクセサリー・インテリアなど生活圏に近い領域へのライセンス拡張を積極的に検討したい時期と言えそうだ。
+      </p>
+    </div>
+
+    <div class="teigen-card">
+      <p class="teigen-label">③ GOODS 視点</p>
+      <h3>推し活グッズの「投票連動」「数量限定」設計を活かせそう</h3>
+      <p>
+        サンリオキャラクター大賞の連動グッズが示すように、ファンが能動的に関われる仕掛け（投票・ランキング）と期間・数量の限定性を組み合わせた商品設計が購買動機を高める。Armillary.（末吉秀太）やKONNEKT各ブランドでも、ファン参加型のグッズ企画・ポップアップと連動した販売フローを検討してみると良さそうだ。
+      </p>
+    </div>
+
+    <div class="teigen-card kpop-card">
+      <p class="teigen-label">④ 🇰🇷 Korean Entertainment 視点</p>
+      <h3>韓国ファンダム経済への参入——日韓IPブリッジとしてのポジション</h3>
+      <p>
+        HYBE・SM・JYPが専門子会社を通じてIPライセンスを本格化する中、日本市場でK-POP IPを扱える正規パートナー需要は高まっている。KONNEKTが韓国エンタメ領域に注力するうえで、（1）韓国IPホルダーとの正規ライセンス契約による国内展開、（2）ポップアップ運営支援・会場調達、（3）日本向けグッズOEM製造のノウハウ提供という三つの切り口を早期に整えると、参入障壁の低い「日韓IPブリッジ」としての独自ポジションが確立できそうだ。
+      </p>
+    </div>
+
+  </div>
+
+  <!-- BACKNUMBER -->
+  <div class="backnumber">
+    <h2>📂 バックナンバー</h2>
+    <ul>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-05-11.html" target="_blank" rel="noopener">📄 2026-05-11 レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-05-09.html" target="_blank" rel="noopener">📄 2026-05-09 レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-04-08.html" target="_blank" rel="noopener">📄 2026-04-08 レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-04-07.html" target="_blank" rel="noopener">📄 2026-04-07 レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-04-06.html" target="_blank" rel="noopener">📄 2026-04-06 レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/index.html" target="_blank" rel="noopener">📋 レポート一覧ページへ</a></li>
+    </ul>
+  </div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  © 2026 KONNEKT INTERNATIONAL INC. — IP News Weekly Report &nbsp;|&nbsp; Generated automatically
+</footer>
+
+</body>
+</html>
