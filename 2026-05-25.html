@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KONNEKT IP News Weekly | 2026-05-25</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Segoe UI', sans-serif;
+      color: #1a1a2e;
+      overflow-x: hidden;
+    }
+    /* ── HEADER ── */
+    .site-header {
+      background: #fff;
+      border-top: 5px solid transparent;
+      border-image: linear-gradient(90deg, #2980b9, #6dd5fa) 1;
+      box-shadow: 0 2px 12px rgba(41,128,185,.12);
+      padding: 28px 16px 24px;
+    }
+    .header-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .brand-badge {
+      background: #1a2744;
+      color: #2980b9;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      padding: 5px 14px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .header-titles { flex: 1; }
+    .header-titles h1 {
+      margin: 0 0 4px;
+      font-size: 28px;
+      font-weight: 800;
+      background: linear-gradient(90deg, #2980b9, #6dd5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+    .header-date {
+      font-size: 13px;
+      color: #6b7280;
+      font-weight: 500;
+    }
+    /* ── CONTAINER ── */
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    /* ── SUMMARY BANNER ── */
+    .summary-banner {
+      background: linear-gradient(135deg, #1a2744 0%, #2980b9 100%);
+      color: #fff;
+      border-radius: 14px;
+      padding: 24px 32px;
+      margin: 28px 0;
+    }
+    .summary-banner h2 {
+      margin: 0 0 12px;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      opacity: .85;
+      text-transform: uppercase;
+    }
+    .summary-banner ul {
+      margin: 0;
+      padding: 0 0 0 18px;
+      list-style: none;
+    }
+    .summary-banner li {
+      padding: 5px 0;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .summary-banner li::before {
+      content: '▸ ';
+      color: #6dd5fa;
+      font-weight: 700;
+    }
+    /* ── SECTION HEADER ── */
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 36px 0 16px;
+    }
+    .section-head h2 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 800;
+      color: #1a2744;
+    }
+    .section-line {
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, #2980b9, transparent);
+      border-radius: 1px;
+    }
+    /* ── ARTICLE CARD ── */
+    .article-card {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,.07);
+      margin-bottom: 24px;
+      transition: box-shadow .2s, transform .2s;
+      border-left: 5px solid #e74c3c;
+    }
+    .article-card:hover {
+      box-shadow: 0 8px 28px rgba(0,0,0,.13);
+      transform: translateY(-2px);
+    }
+    .article-card.global { border-left-color: #2980b9; }
+    .article-card.korea  { border-left-color: #e91e63; }
+    .article-card img {
+      width: 100%;
+      height: auto;
+      max-height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+    .article-body { padding: 22px 26px 24px; }
+    .article-meta {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .article-card h3 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.4;
+      color: #1a2744;
+    }
+    .article-card p {
+      margin: 0 0 16px;
+      font-size: 15px;
+      line-height: 1.75;
+      color: #374151;
+    }
+    .read-more {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      color: #2980b9;
+      text-decoration: none;
+      border: 1.5px solid #2980b9;
+      border-radius: 999px;
+      padding: 7px 20px;
+      transition: background .18s, color .18s;
+      min-height: 44px;
+      line-height: 1.8;
+    }
+    .read-more:hover {
+      background: #2980b9;
+      color: #fff;
+    }
+    .korea .read-more { color: #e91e63; border-color: #e91e63; }
+    .korea .read-more:hover { background: #e91e63; color: #fff; }
+    /* ── TEIGEN ── */
+    .teigen-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 16px 0 40px;
+    }
+    .teigen-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.07);
+      transition: box-shadow .2s;
+    }
+    .teigen-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,.12); }
+    .teigen-label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #2980b9;
+      margin-bottom: 8px;
+    }
+    .teigen-card.korea-card .teigen-label { color: #e91e63; }
+    .teigen-card h4 {
+      margin: 0 0 8px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #1a2744;
+      line-height: 1.4;
+    }
+    .teigen-card p {
+      margin: 0;
+      font-size: 13px;
+      color: #4b5563;
+      line-height: 1.65;
+    }
+    /* ── BACKNUMBER ── */
+    .backnumber {
+      background: #fff;
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    }
+    .backnumber h2 {
+      margin: 0 0 14px;
+      font-size: 16px;
+      font-weight: 800;
+      color: #1a2744;
+    }
+    .backnumber ul {
+      margin: 0 0 10px;
+      padding: 0;
+      list-style: none;
+    }
+    .backnumber li { padding: 4px 0; }
+    .backnumber a {
+      color: #2980b9;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .backnumber a:hover { text-decoration: underline; }
+    .backnumber .index-link {
+      font-size: 13px;
+      color: #6b7280;
+    }
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 20px 16px;
+      font-size: 12px;
+      color: #9ca3af;
+    }
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .header-titles h1 { font-size: 22px; }
+      .summary-banner { padding: 16px 16px; }
+      .teigen-grid { grid-template-columns: 1fr; }
+      .article-card h3 { font-size: 18px; }
+      .section-head h2 { font-size: 17px; }
+      .article-body { padding: 16px 16px 18px; }
+      .article-card { margin-bottom: 16px; }
+    }
+    @media (max-width: 480px) {
+      body { font-size: 15px; }
+      .article-meta { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="header-inner">
+    <span class="brand-badge">KONNEKT INTERNATIONAL</span>
+    <div class="header-titles">
+      <h1>IP News Weekly Report</h1>
+      <p class="header-date">2026年5月25日（月）発行</p>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- ===== SUMMARY BANNER ===== -->
+  <div class="summary-banner">
+    <h2>今週のハイライト</h2>
+    <ul>
+      <li>呪術廻戦5周年×くら寿司コラボが全国展開—アニバーサリーIPが飲食チャネルを席巻</li>
+      <li>EMODA×ハローキティがY2K・平成レトロで若年女性層へ訴求—サンリオIPの横展開が加速</li>
+      <li>🇰🇷 BLACKPINK&aespaがMet Gala 2026に登場—K-POPアーティストのファッションIPとしての世界的地位が確立</li>
+    </ul>
+  </div>
+
+  <!-- ===== 日本記事 ===== -->
+  <div class="section-head">
+    <h2>🇯🇵 日本の注目IP・ライセンスニュース</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <!-- 日本1 -->
+  <article class="article-card">
+    <img src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=JJK+%C3%97+Kura+Sushi" alt="呪術廻戦×くら寿司" loading="lazy">
+    <div class="article-body">
+      <div class="article-meta">アニメ！アニメ！ ｜ 2026年5月11日</div>
+      <h3>「呪術廻戦」×くら寿司が5周年コラボ—全国店舗でキャラIPグッズ＆限定メニューを展開</h3>
+      <p>アニメ「呪術廻戦」の放送5周年を記念し、5月15日（金）から全国のくら寿司にてコラボキャンペーンが始まった。虎杖悠仁・五条悟ら主要キャラクターをイメージしたオリジナルメニューに加え、くら寿司限定の描き下ろしグッズ（クリアファイル・ラバーコースターなど）を展開。店舗の「ビッくらポン！」では缶バッジやアクリルスタンドがIP景品として登場。3フェーズに分けた展開で先着計90万名へのプレゼントも実施するなど、大型アニバーサリーIPと飲食チェーンが連携したライセンス展開が注目を集めている。</p>
+      <a class="read-more" href="https://animeanime.jp/article/2026/05/11/98822.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </article>
+
+  <!-- 日本2 -->
+  <article class="article-card">
+    <img src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=Nijisanji+%C3%97+Sanrio" alt="にじさんじ×サンリオ" loading="lazy">
+    <div class="article-body">
+      <div class="article-meta">PR TIMES / ANYCOLOR ｜ 2026年5月19日</div>
+      <h3>にじさんじ「Speciale」×サンリオキャラクターズ コラボグッズが5/20発売—VTuber×キャラクターIPが融合</h3>
+      <p>ANYCOLOR（にじさんじ）所属ユニット「Speciale」（七瀬すず菜ら5名）とサンリオキャラクターズのコラボグッズが、2026年5月20日（水）18時より「にじさんじオフィシャルストア」で受注販売を開始した。アクリルスタンド・キラキラ缶バッジセット・ポーチ・着ぐるみマスコットなど全8種類を展開。VTuberという新世代のタレントIPと定番キャラクターIPを掛け合わせることで、10〜20代女性ファンに強く訴求するコラボとして業界から注目されている。</p>
+      <a class="read-more" href="https://prtimes.jp/main/html/rd/p/000001496.000030865.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </article>
+
+  <!-- 日本3 -->
+  <article class="article-card">
+    <img src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=EMODA+%C3%97+Hello+Kitty" alt="EMODA×ハローキティ" loading="lazy">
+    <div class="article-body">
+      <div class="article-meta">アニメ！アニメ！ ｜ 2026年5月23日</div>
+      <h3>「EMODA」×ハローキティ&マイメロディ—"日焼け"デザインでY2K・平成レトロ層を狙うサンリオIP活用</h3>
+      <p>ファッションブランド「EMODA（エモダ）」がサンリオの「ハローキティ」「マイメロディ」とコラボし、"日焼けした"デザインをあしらったアパレル＆バッグを2026年5月27日（水）から発売する。MINI LACE T/S（¥5,390）・スキッパーニット（¥5,940）・クリアショルダーバッグ（¥7,590）の3型展開で、EMODA公式通販「RUNWAY channel」やZOZOTOWNでも取り扱う。サンリオIPをY2K・平成レトロ文脈にのせてアパレルへ展開した事例として、今後のキャラクターIPの横展開に示唆を与えている。</p>
+      <a class="read-more" href="https://animeanime.jp/article/2026/05/23/99196.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </article>
+
+  <!-- ===== グローバル記事 ===== -->
+  <div class="section-head">
+    <h2>🌍 グローバルIP・ライセンスニュース</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <!-- グローバル1 -->
+  <article class="article-card global">
+    <img src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=Entertainment+IP+Licensing+2026" alt="エンタメIPライセンス業界" loading="lazy">
+    <div class="article-body">
+      <div class="article-meta">Licensing International ｜ 2026年5月</div>
+      <h3>エンタメIPライセンス業界が大転換—Netflix×Warner Bros.統合・AI活用・LBE拡大が同時進行</h3>
+      <p>エンターテインメントIPライセンス業界が歴史的な転換点を迎えている。最大の焦点はNetflixによるWarner Bros.Discovery買収提案（企業価値$82.7bn）で、Paramountも対抗入札（1株$30）に名乗りを上げ、競合が激化。もし成立すれば、ハリー・ポッターやDCコミックスなど主要フランチャイズIPのライセンスプログラムが大幅に再編される可能性がある。メジャースタジオ数が5社から4社へ集約されることで、ライセンシー（権利使用者）との交渉力・条件が変化するという業界共通の懸念もある。</p>
+      <p>一方でテクノロジー分野では、電通（Dentsu）がデータドリブンIPクリエイションを推進するエンタメスタジオ「Iconic Arts」と戦略的グローバル提携を締結。コンテンツ・体験・インタラクティブメディア・コンシューマープロダクツにまたがるIPを共同開発する。Disney CEO Bob IgerはOpenAIのSam AltmanとAI活用・IP保護について交渉中と明言。IPコンテンツへのAI適用が合法的・収益的に整備される方向性が見えてきた。また、Spin MasterとゲームデベロッパーのSupercellが複数フランチャイズIPをまたいだトイライン提携を発表し、ゲームIPとフィジカル商品の融合が加速している。さらにUniversal Products & Experiencesが「Epic Universe」テーマパークを5月にオープンし、場所型エンターテインメント（LBE）がIPライセンスの新たな収益柱として急成長中だ。業界のコンソリデーション・AI化・LBE化が同時進行する2026年は、IPライセンス戦略の根本的な見直しが求められる1年となりそうだ。</p>
+      <a class="read-more" href="https://licensinginternational.org/news/entertainment-licensing-faces-consolidation-technology-advances/" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </article>
+
+  <!-- グローバル2 -->
+  <article class="article-card global">
+    <img src="https://placehold.co/860x200/f0f4f8/1a1a2e?text=HYBE+SM+JYP+YG+FANOMENON" alt="FANOMENON K-POP Festival" loading="lazy">
+    <div class="article-body">
+      <div class="article-meta">allkpop / Hypebeast ｜ 2026年4月</div>
+      <h3>HYBE・SM・JYP・YGが「FANOMENON」合同事業設立—K-POPをCoachellaに対抗するグローバルIPへ</h3>
+      <p>韓国エンターテインメント界の4大メジャー—HYBE、SM Entertainment、JYP Entertainment、YG Entertainment—が合同事業体（JV）を設立し、グローバルK-POPフェスティバル「FANOMENON」の開催計画を発表した。JVはJYP Entertainment創業者のJ.Y. Parkが主導し、「fan（ファン）」と「phenomenon（現象）」を組み合わせた名称には、K-POP文化そのものを世界規模の現象に昇華させるという意図が込められている。</p>
+      <p>このJVが実現すれば、HYBE傘下のBTS・NewJeans・TWICEから、SM傘下のaespa・NCT・EXO、JYP傘下のSTRAY KIDS・ITZY・NMIXX・2PM、YG傘下のBLACKPINK・BIGBANGまで、韓国最大級のアーティストラインナップが一堂に会するフェスティバルが誕生する。CoachellaやGlastonburyといった欧米の大型フェスに対抗する「K-POPフラッグシップイベント」として機能することが期待されている。グッズ・ライセンス商品・デジタルコンテンツ・ファンエクスペリエンスなど多角的なIPマネタイズが見込まれ、フェスティバル自体がIPプラットフォームになる点が注目点だ。また、同期間にHYBE-YG間でYG PLUSが国内アルバム・デジタル配信・物流を継続担う流通契約（2026年5月19日更新）も締結され、4社間のビジネス基盤が一層強固になっている。K-POPがグローバルIPとして音楽ビジネスの枠を超え、フェス・グッズ・体験型コンテンツへとエコシステムを拡張しようとする動きは、日本のアーティストIPビジネスにとっても大きな示唆を持つ。</p>
+      <a class="read-more" href="https://www.allkpop.com/article/2026/04/hybe-sm-jyp-yg-form-joint-venture-for-global-k-pop-festival-phenomenon-led-by-jy-park" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </article>
+
+  <!-- グローバル3 K-POP -->
+  <article class="article-card global korea">
+    <img src="https://placehold.co/860x200/fce4ec/880e4f?text=%F0%9F%87%B0%F0%9F%87%B7+BLACKPINK+%26+aespa+Met+Gala+2026" alt="BLACKPINK aespa Met Gala 2026" loading="lazy">
+    <div class="article-body">
+      <div class="article-meta">Outlook India / UPI ｜ 2026年5月5日</div>
+      <h3>🇰🇷 BLACKPINK&aespaがMet Gala 2026でK-POPのブランドIPとしての世界的地位を証明</h3>
+      <p>2026年5月4日（現地時間）、ニューヨークで開催されたMet Gala 2026にBLACKPINKとaespaのメンバーが登場し、K-POPアーティストのグローバルファッション・ブランドIPとしての地位を改めて世界に示した。BLACKPINKのLisaは2025年末にホストコミティメンバーに就任が発表されており、K-POP史上初の快挙として注目を集めた。Jennieは長年のブランドアンバサダーを務めるシャネル製スタラップスドレス（スパンコール15,000個・製作時間540時間）を着用。Roséはイヴ・サンローラン、JisooはDiorをそれぞれ体現した。</p>
+      <p>SM EntertainmentのaespaからはKarinaとNingningがMet Gala初参加。Karina（26）は、韓国の伝統衣装「ハンボク」からインスパイアされたPrada製カスタムガウンで韓国文化の国際的発信を担い、中国人メンバーのNingning（23）はGucciのカスケードドレスで登場した。一方でaespaに対しては「米国での知名度不足」を指摘するオンライン批判も一部で浮上しており、K-POPアーティスト間のグローバルブランド影響力の格差という課題も露わになった。しかし全体として、今回のMet Gala登場はK-POPが音楽ビジネスを超えて「ファッションIPとしての価値」を世界の舞台で体現した歴史的出来事として評価されている。各アーティストが複数の高級ブランドのアンバサダーを担い、ブランド側もK-POPアーティストをグローバルIP資産として位置付けることで相互にブランド価値を高め合う構図は、今後のアーティストIPビジネスのあるべき姿を示している。</p>
+      <a class="read-more" href="https://www.outlookindia.com/art-entertainment/k-drama/met-gala-2026-blackpink-and-aespas-debut-sparks-kpop-fashion-debate" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </article>
+
+  <!-- ===== 提言 ===== -->
+  <div class="section-head">
+    <h2>💡 KONNEKTへの提言</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="teigen-grid">
+    <div class="teigen-card">
+      <div class="teigen-label">① BRANDS視点</div>
+      <h4>アニバーサリーIP×D2C展開の活用を検討したい</h4>
+      <p>呪術廻戦×くら寿司のようにアニバーサリーイヤーのIPは熱量が高い。KONNEKTが扱うアーティストIPでも周年タイミングを軸に、D2C限定グッズやコラボ商品をタイムリーに展開することで、ファンの購買意欲を最大化できそうだ。</p>
+    </div>
+    <div class="teigen-card">
+      <div class="teigen-label">② LICENSE視点</div>
+      <h4>トレンドに乗ったクロスライセンスがブランド価値を高めそう</h4>
+      <p>EMODA×サンリオのように、キャラクターIPをY2K・平成レトロ等の時流トレンドと掛け合わせるクロスライセンスは若年層への訴求力が高い。KONNEKTのIP資産も、旬のファッション文脈に乗せたライセンス展開を検討する価値がありそうだ。</p>
+    </div>
+    <div class="teigen-card">
+      <div class="teigen-label">③ GOODS視点</div>
+      <h4>VTuber×キャラクターIPの複合グッズ戦略を活かせそう</h4>
+      <p>にじさんじ×サンリオの事例は、異なるIP同士の相乗効果でファン層を広げるモデル。KONNEKTが保有するアーティストIPもデジタルネイティブなVTuberやキャラクターと組み合わせることで、既存ファン以外の新たな層へのリーチを狙える可能性がある。</p>
+    </div>
+    <div class="teigen-card korea-card">
+      <div class="teigen-label">④ 🇰🇷 Korean Entertainment視点</div>
+      <h4>K-POPアーティストのブランドアンバサダー戦略を参考にしたい</h4>
+      <p>BLACKPINKやaespaがMet Galaで示したように、K-POPアーティストは複数ラグジュアリーブランドのアンバサダーを担い音楽×ファッションIPとして世界展開している。KONNEKTが今後注力する韓国系エンタメ領域でも、アーティストIPのブランドアンバサダー起用や高感度ファッション・美容ブランドとのコラボを積極的に検討できそうだ。</p>
+    </div>
+  </div>
+
+  <!-- ===== バックナンバー ===== -->
+  <div class="backnumber">
+    <h2>📂 バックナンバー</h2>
+    <ul>
+      <li>バックナンバーは現在収集中です。</li>
+    </ul>
+    <p class="index-link">→ <a href="https://fujimoto-cpu.github.io/ip-report/">レポート一覧ページ</a></p>
+  </div>
+
+</div><!-- /container -->
+
+<footer>
+  &copy; 2026 KONNEKT INTERNATIONAL INC. — IP News Weekly Report
+</footer>
+
+</body>
+</html>
