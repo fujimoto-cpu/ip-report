@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONNEKT IP News Weekly | 2026-06-08</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0;
+  background: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  color: #1a1a2e;
+  overflow-x: hidden;
+}
+.header {
+  background: #fff;
+  border-top: 6px solid transparent;
+  border-image: linear-gradient(90deg, #2980b9, #6dd5fa) 1;
+  padding: 28px 24px 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.07);
+}
+.badge {
+  display: inline-block;
+  background: #1a2744;
+  color: #2980b9;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.header h1 {
+  margin: 0 0 6px;
+  font-size: 26px;
+  font-weight: 800;
+  color: #1a2744;
+}
+.header .date-label {
+  color: #666;
+  font-size: 14px;
+}
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+.summary-banner {
+  background: linear-gradient(135deg, #e8f4fd 0%, #f0fafe 100%);
+  border: 1px solid #b8d8f0;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin-bottom: 28px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.summary-banner strong { color: #1a2744; }
+.section-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #1a2744;
+  margin: 32px 0 14px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #e2e8f0;
+}
+.article-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-left: 5px solid #e74c3c;
+}
+.article-card.global { border-left-color: #2980b9; }
+.article-card.kpop   { border-left-color: #e91e63; }
+.article-card img {
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: cover;
+  display: block;
+}
+.article-body { padding: 16px 20px 18px; }
+.article-body h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #1a2744;
+}
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.source {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2980b9;
+}
+.meta-sep { color: #ccc; font-size: 13px; }
+.pub-date { color: #666; font-size: 13px; }
+.article-body p {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #334155;
+}
+.read-more {
+  display: inline-block;
+  font-size: 13px;
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #2980b9;
+  padding: 4px 12px;
+  border-radius: 4px;
+  transition: background .15s;
+}
+.read-more:hover { background: #2980b9; color: #fff; }
+.insight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+.insight-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.06);
+  border-top: 3px solid #2980b9;
+}
+.insight-card.brands  { border-top-color: #e74c3c; }
+.insight-card.license { border-top-color: #f39c12; }
+.insight-card.goods   { border-top-color: #27ae60; }
+.insight-card.korean  { border-top-color: #e91e63; }
+.insight-card h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a2744;
+}
+.insight-card p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: #475569;
+}
+.backnumber {
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px 22px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+  margin-top: 28px;
+}
+.backnumber h3 { margin: 0 0 10px; font-size: 15px; color: #1a2744; }
+.backnumber ul { margin: 0; padding-left: 18px; }
+.backnumber li { font-size: 13px; margin-bottom: 4px; }
+.backnumber a { color: #2980b9; text-decoration: none; }
+.backnumber a:hover { text-decoration: underline; }
+.footer-note {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 12px;
+  margin-top: 32px;
+}
+@media (max-width: 640px) {
+  .header h1 { font-size: 22px; }
+  .article-body h2 { font-size: 18px; }
+  .insight-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  body { font-size: 15px; }
+  .pub-date, .source, .meta-sep { font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">KONNEKT INTERNATIONAL</div>
+  <h1>📊 IP News Weekly</h1>
+  <div class="date-label">2026年6月8日（月）週次レポート</div>
+</div>
+
+<div class="container">
+
+  <!-- サマリーバナー -->
+  <div class="summary-banner">
+    <strong>今週のハイライト：</strong>サンリオ「ぐでたま」×アベイルの夏グッズが6月6日に発売、「ブルーロック」×ピルクルが健康訴求型コラボで注目を集め、『るるぶ忍たま乱太郎』が旅行ガイドとアニメIPの融合で話題に。グローバルではスーパーモデルCoco RochaがD2Cブランドでテレビ通販QVCに進出、たまごっち30周年記念の公式ライセンスウェアが展開、K-POPではaespaがPUBG Mobileとコラボイベントを開催。ノスタルジア×ライセンスの潮流が日米韓で同時進行している。
+  </div>
+
+  <!-- 🇯🇵 日本の記事 -->
+  <div class="section-title">🇯🇵 日本の記事</div>
+
+  <!-- 記事1: ぐでたま × アベイル -->
+  <div class="article-card">
+    <img src="https://placehold.co/860x200/fff0f3/e74c3c?text=ぐでたま+×+アベイル+2026夏" alt="ぐでたま × アベイル コラボ" loading="lazy">
+    <div class="article-body">
+      <h2>サンリオ「ぐでたま」×アベイル 夏の新作コラボグッズが6月6日より登場</h2>
+      <div class="article-meta">
+        <span class="source">コラボカフェ</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-06（2日前）</span>
+      </div>
+      <p>サンリオの人気キャラクター「ぐでたま」とカジュアルブランド「アベイル（Avail）」のコラボグッズが2026年6月6日（土）より全国のアベイル店舗および公式オンラインストア「しまむらパーク」で発売開始。ぐでたまがベーコンエッグやハンバーガー姿になった遊び心あるデザインを採用し、ダイカットクッション・ミニタオル・バニティポーチ・ストラップのほか、収納ボックス・保冷アイテム・メラミンプレートなど夏にぴったりなラインナップが揃う。プチプライスで揃えやすいアベイルとサンリオIPの組み合わせは、幅広い年齢層のファン消費を取り込む施策として注目されている。</p>
+      <a class="read-more" href="https://collabo-cafe.com/events/collabo/gudetama-summer-avail-item2026-0606/" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- 記事2: ブルーロック × ピルクル -->
+  <div class="article-card">
+    <img src="https://placehold.co/860x200/e8f4fd/2980b9?text=ブルーロック+×+ピルクル+コラボ" alt="ブルーロック × ピルクル" loading="lazy">
+    <div class="article-body">
+      <h2>「ブルーロック」×ピルクル 潔・凪・玲王ら12人が"健康エゴイスト"に 数量限定パッケージ発売</h2>
+      <div class="article-meta">
+        <span class="source">アニメ！アニメ！</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-02（6日前）</span>
+      </div>
+      <p>日清ヨーク株式会社が、人気サッカーアニメ「ブルーロック」との初コラボ企画を2026年6月8日（月）より全国（沖縄除く）で数量限定発売。主人公・潔世一を筆頭とする12キャラクターを「TEAM睡眠」「TEAM免疫」「TEAMエイジングライフ」の3チームに振り分け、ピルクル3商品のパッケージをデザイン。試合前の健康管理と若者への乳酸菌飲料訴求を組み合わせた機能訴求型IPコラボとして注目。特設サイトには「もしブルーロックのキャラがピルクルを飲んだら」をテーマにしたアナザーストーリーも公開中。</p>
+      <a class="read-more" href="https://animeanime.jp/article/2026/06/02/99599.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- 記事3: るるぶ × 忍たま乱太郎 -->
+  <div class="article-card">
+    <img src="https://placehold.co/860x200/f0fdf4/27ae60?text=るるぶ+忍たま乱太郎" alt="るるぶ × 忍たま乱太郎" loading="lazy">
+    <div class="article-body">
+      <h2>アニメ×旅行ガイドの異色コラボ 『るるぶ 忍たま乱太郎』が6月4日に発売</h2>
+      <div class="article-meta">
+        <span class="source">アニメ！アニメ！</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-03（5日前）</span>
+      </div>
+      <p>JTBパブリッシングから『るるぶ 忍たま乱太郎』（1,760円税込）が2026年6月4日に発売。アニメ「忍たま乱太郎」と旅行情報誌「るるぶ」のコラボという異色の組み合わせで、94人のキャラクター紹介や原作者・尼子騒兵衛先生の出身地・兵庫県尼崎市のガイドを収録。声優・岡野浩介さんやミュージカルキャストのインタビュー、特製ステッカー付録も付属し、聖地巡礼ファンを強力にターゲット。アニメIPをガイドブックへ転化することで、出版・観光・グッズ消費を横断する新たなIP活用モデルを示した事例として業界から高い注目を集めている。</p>
+      <a class="read-more" href="https://animeanime.jp/article/2026/06/03/99681.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- 🌍 グローバルの記事 -->
+  <div class="section-title">🌍 グローバルの記事</div>
+
+  <!-- Global記事1: Coco Rocha OFF/DUTY -->
+  <div class="article-card global">
+    <img src="https://placehold.co/860x200/f0f4f8/2980b9?text=Coco+Rocha+OFF%2FDUTY+by+Xcel+Brands" alt="Coco Rocha OFF/DUTY" loading="lazy">
+    <div class="article-body">
+      <h2>スーパーモデルCoco RochaがXcel BrandsとD2Cブランド「OFF/DUTY」立ち上げ — QVCで秋デビュー</h2>
+      <div class="article-meta">
+        <span class="source">GlobeNewswire / FashionNetwork</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-04（4日前）</span>
+      </div>
+      <p>Xcel Brands（米国）は2026年6月4日、国際的スーパーモデル・起業家・インフルエンサーのCoco Rochaと共同で新ファッション＆アクセサリーブランド「OFF/DUTY by Coco Rocha」を立ち上げ、2026年秋にQVC（米国の大手テレビ通販チャンネル）でデビューすると発表した。</p>
+      <p>コレクションのコンセプトはRochaのオフランウェイワードローブ——空港、ファッションウィークの舞台裏、ビジネスミーティング、子どもの学校送迎、国際出張といった現実の生活シーンから着想を得たもの。「最も大切なワードローブとは、何度でも自然と手が伸びるピース」という哲学のもと、ニット、デニム、アウターウェア、ハンドバッグを核とした汎用性・快適性・高見えスタイルを打ち出す。</p>
+      <p>Xcel Brandsはすでに複数のセレブリティ主導ブランドをテレビ通販・EC向けに展開する実績を持つ企業で、今回もQVCという広大なリーチ（累計視聴者数1億人超）を活用しDTC販売に直接つなぐ構造を採用。インフルエンサーの世界観とテレビ通販の購買即決性を掛け合わせた「インフルエンサー×テレビD2C」モデルとして、エンタメIPとリテール業界双方から注目を集めている。Rochaは「20年超のキャリアで得た視点を、あらゆる女性のクローゼットに届けたい」とコメントしている。</p>
+      <a class="read-more" href="https://us.fashionnetwork.com/news/Off-duty-by-coco-rocha-to-launch-on-qvc-this-fall,1837816.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- Global記事2: The Oodie × Tamagotchi -->
+  <div class="article-card global">
+    <img src="https://placehold.co/860x200/fff8e1/f39c12?text=The+Oodie+×+Tamagotchi+30th+Anniversary" alt="The Oodie × Tamagotchi" loading="lazy">
+    <div class="article-body">
+      <h2>たまごっち30周年記念 × The Oodie 公式ライセンスコレクション発売 — 平成レトロ需要を攻略</h2>
+      <div class="article-meta">
+        <span class="source">The Pop Insider / Total Licensing</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-02（6日前）</span>
+      </div>
+      <p>オーストラリア発の「着るブランケット」ブランドThe Oodieが、バンダイ（たまごっち）から公式ライセンスを取得し、30周年記念スペシャルコレクションを2026年6月2日に発表した。</p>
+      <p>ラインナップはOodie（大判着るブランケット）・スリープTシャツ・シェルパブランケットの3種で、1996年登場のオリジナル「たまごっち」キャラクター群のビビッドなグラフィックを全面に配置。The Oodieの特徴であるマシュマロタッチの起毛素材にたまごっちの愛らしいドット絵風デザインを組み合わせることで、90年代〜2000年代に育ったミレニアル世代と、Y2K/平成レトロブームを享受するZ世代の双方を狙った設計となっている。</p>
+      <p>販売は豪州・英国・米国・カナダのThe Oodie公式サイトのみの限定展開。「30周年アニバーサリー × 公式ライセンス × ノスタルジア消費」という三位一体の戦略は、レトロIPが単なる懐古ではなく新たな収益モデルとして機能することを示す好事例として、ライセンス業界で高評価を得ている。</p>
+      <a class="read-more" href="https://thepopinsider.com/the-oodie-tamagotchi-30th-anniversary-collection-launch/" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- Global記事3 (K-POP): PUBG Mobile × aespa -->
+  <div class="article-card kpop">
+    <img src="https://placehold.co/860x200/fce4ec/e91e63?text=🇰🇷+PUBG+Mobile+×+aespa+Collab+2026" alt="PUBG Mobile × aespa" loading="lazy">
+    <div class="article-body">
+      <h2>🇰🇷 PUBG Mobile × aespa K-POPコラボ始動 — メンバースキン・ボイスパック・楽曲を実装</h2>
+      <div class="article-meta">
+        <span class="source">Outlook Respawn / GameingAmigos</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-01（7日前）</span>
+      </div>
+      <p>世界累計1億人超のプレイヤーを誇るモバイルゲーム「PUBG Mobile」が、SM EntertainmentのK-POPグループaespaとのコラボイベントを2026年6月1日（Version 4.4アップデート）に開始した。開催期間は6月30日まで。</p>
+      <p>コラボ内容は、カリナ・ジゼル・ニンニン・ウィンターの4メンバー各スキンセット（いずれもミシック品質）、オリジナルボイスパック、楽曲テーマのエモート、さらにaespaの代表曲「Whiplash」「Dark Arts」をモチーフにしたコレクションアルバムの収集機能まで多岐にわたる。専用のLucky Spinやプレイ報酬でコスメティクスが入手可能。</p>
+      <p>注目すべきは、「Dark Arts」がPUBG Mobile との前回コラボ（2025年）で制作されたオリジナル楽曲であり、今回もゲーム連動型楽曲を活用している点。SM Entertainmentは音楽・グッズに加え、ゲームIPライセンスを重要な収益チャネルと位置づけており、aespaの「バーチャルとリアルの境界を超える」世界観がゲーム内コンテンツとの親和性を高めている。K-POPのIP収益多様化戦略の最前線として業界から注目されている。</p>
+      <a class="read-more" href="https://respawn.outlookindia.com/gaming/gaming-news/pugb-mobile-aespa-collaboration-event-june-2026" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- 💡 KONNEKT への提言 -->
+  <div class="section-title">💡 KONNEKT への提言</div>
+  <div class="insight-grid">
+    <div class="insight-card brands">
+      <h3>① BRANDS 視点</h3>
+      <p>ぐでたま×アベイルのように、手の届く価格帯のカジュアルブランドとアーティストIPを組み合わせることで、コアファン以外の「ライト層」取り込みを狙えそう。アンジュシャルム（辻希美）やラバンダ（宇野実彩子）のビジュアルを活かした夏向けライフスタイルグッズ展開を検討したい。</p>
+    </div>
+    <div class="insight-card license">
+      <h3>② LICENSE 視点</h3>
+      <p>「るるぶ×忍たま」のようにアニメIPを出版・観光コンテンツへと転化する手法は、KONNEKTのアーティストIPにも応用できそう。たとえばGOD ONLY KNOWS（岩田剛典）のファン聖地や世界観をガイドブック・Zineとしてパッケージ化し、旅行・カルチャー文脈でライセンスする方向性は面白い。</p>
+    </div>
+    <div class="insight-card goods">
+      <h3>③ GOODS 視点</h3>
+      <p>たまごっち30周年×The Oodieは「公式ライセンス×平成ノスタルジア×ホームウェア」の成功例。Armillary.（末吉秀太）の音楽世界観をリラックスウェアや就寝グッズに落とし込む企画など、「お家時間・おやすみ時間」をテーマにしたライセンスグッズは親和性が高そう。</p>
+    </div>
+    <div class="insight-card korean">
+      <h3>④ 🇰🇷 Korean Entertainment 視点</h3>
+      <p>PUBGとaespaのコラボは「ゲーム×K-POP IP」の有効性を改めて示した。KONNEKTが注力する韓国系エンタメ領域においても、モバイルゲームや日本のゲームタイトルとのIPライセンスを将来的な軸として検討するとリーチ拡大につながりそう。まずはゲーム会社との接点を模索するのがおすすめ。</p>
+    </div>
+  </div>
+
+  <!-- 📂 バックナンバー -->
+  <div class="backnumber">
+    <h3>📂 バックナンバー</h3>
+    <p style="font-size:13px;color:#666;margin:0 0 8px;">過去のレポートは見つかりませんでした（初回レポートです）。</p>
+    <a href="https://fujimoto-cpu.github.io/ip-report/" style="font-size:13px;color:#2980b9;">📋 レポート一覧へ →</a>
+  </div>
+
+  <div class="footer-note">
+    KONNEKT INTERNATIONAL INC. | IP News Weekly Report | 2026-06-08<br>
+    自動生成レポートです。記事の著作権は各媒体に帰属します。
+  </div>
+
+</div>
+</body>
+</html>
