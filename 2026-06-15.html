@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONNEKT IP News Weekly | 2026-06-15</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0;
+  background: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  color: #1a1a2e;
+  overflow-x: hidden;
+}
+.header {
+  background: #fff;
+  border-top: 6px solid transparent;
+  border-image: linear-gradient(90deg, #2980b9, #6dd5fa) 1;
+  padding: 28px 24px 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.07);
+}
+.badge {
+  display: inline-block;
+  background: #1a2744;
+  color: #2980b9;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.header h1 {
+  margin: 0 0 6px;
+  font-size: 26px;
+  font-weight: 800;
+  color: #1a2744;
+}
+.header .date-label {
+  color: #666;
+  font-size: 14px;
+}
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+.summary-banner {
+  background: linear-gradient(135deg, #e8f4fd 0%, #f0fafe 100%);
+  border: 1px solid #b8d8f0;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin-bottom: 28px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.summary-banner strong { color: #1a2744; }
+.section-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #1a2744;
+  margin: 32px 0 14px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #e2e8f0;
+}
+.article-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-left: 5px solid #e74c3c;
+}
+.article-card.global { border-left-color: #2980b9; }
+.article-card.kpop   { border-left-color: #e91e63; }
+.article-card img {
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: cover;
+  display: block;
+}
+.article-body { padding: 16px 20px 18px; }
+.article-body h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #1a2744;
+}
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.source {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2980b9;
+}
+.meta-sep { color: #ccc; font-size: 13px; }
+.pub-date { color: #666; font-size: 13px; }
+.article-body p {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #334155;
+}
+.read-more {
+  display: inline-block;
+  font-size: 13px;
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #2980b9;
+  padding: 4px 12px;
+  border-radius: 4px;
+  transition: background .15s;
+}
+.read-more:hover { background: #2980b9; color: #fff; }
+.insight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+.insight-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.06);
+  border-top: 3px solid #2980b9;
+}
+.insight-card.brands  { border-top-color: #e74c3c; }
+.insight-card.license { border-top-color: #f39c12; }
+.insight-card.goods   { border-top-color: #27ae60; }
+.insight-card.korean  { border-top-color: #e91e63; }
+.insight-card h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a2744;
+}
+.insight-card p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: #475569;
+}
+.backnumber {
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px 22px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+  margin-top: 28px;
+}
+.backnumber h3 { margin: 0 0 10px; font-size: 15px; color: #1a2744; }
+.backnumber ul { margin: 0; padding-left: 18px; }
+.backnumber li { font-size: 13px; margin-bottom: 4px; }
+.backnumber a { color: #2980b9; text-decoration: none; }
+.backnumber a:hover { text-decoration: underline; }
+.footer-note {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 12px;
+  margin-top: 32px;
+}
+@media (max-width: 640px) {
+  .header h1 { font-size: 22px; }
+  .article-body h2 { font-size: 18px; }
+  .insight-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  body { font-size: 15px; }
+  .pub-date, .source, .meta-sep { font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">KONNEKT INTERNATIONAL</div>
+  <h1>📊 IP News Weekly</h1>
+  <div class="date-label">2026年6月15日（月）週次レポート</div>
+</div>
+
+<div class="container">
+
+  <!-- サマリーバナー -->
+  <div class="summary-banner">
+    <strong>今週のハイライト：</strong>サンリオ×Hondaの共創プロジェクト「SMILE RIDER PROJECT」が始動しクロミ仕様のCBR1000RR-Rが鈴鹿8耐に参戦、JINSがバービーとのY2K映えコラボサングラスを発売、サンリオうさぎキャラ新ユニット「チアリステイルズ」がデビュー。グローバルではスポーツ×音楽IPコラボとしてBilly Joel×NY Knicks×Sportiqeコレクションが話題を呼び、Gary Vee（VeeFriends）×Topps Chromeの2026年版が大規模リリース。K-POP枠ではSMエンターテインメントのRIIZEがキャラクターIP「Little RIIZE」をCUコンビニとコラボしFOOD×ポップアップを展開。ブランド・モータースポーツ・カード×セレブ・K-POP全方位でIPの収益多様化が加速した一週間。
+  </div>
+
+  <!-- 🇯🇵 日本の記事 -->
+  <div class="section-title">🇯🇵 日本の記事</div>
+
+  <!-- 記事1: サンリオ × Honda SMILE RIDER PROJECT -->
+  <div class="article-card">
+    <img src="https://prtimes.jp/i/37629/739/resize/d400-r1.jpg" alt="サンリオ × Honda SMILE RIDER PROJECT クロミ CBR1000RR-R" loading="lazy">
+    <div class="article-body">
+      <h2>サンリオ×Honda「SMILE RIDER PROJECT」始動！クロミ仕様CBR1000RR-Rが鈴鹿8耐に参戦</h2>
+      <div class="article-meta">
+        <span class="source">アニメ！アニメ！ / Honda企業情報</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-03（12日前）</span>
+      </div>
+      <p>ホンダとサンリオが共創プロジェクト「SMILE RIDER PROJECT」を2026年6月3日に発表。「子供も大人もみんな笑顔に」をテーマに、バイク・モータースポーツの魅力発信と交通安全啓発を一体化したIP活用例として注目を集める。第一弾は「SANRIO CHARACTERS × Honda Kumamoto Racing」として2026年鈴鹿8耐（7月5日決勝）に「クロミ」デザインのCBR1000RR-R FIREBLADE SPで参戦。ヘルメットやレーシングスーツ、ピット内装にクロミ・ハローキティ・ポムポムプリンをあしらい、鈴鹿市内28校の小学1年生約1,400人に交通安全Tシャツを配布する地域連携も実施。Honda熊本製作所50周年記念に連動した取り組みで、キャラクターIPが産業・スポーツ・社会貢献を横断する新モデルとして話題を呼んでいる。</p>
+      <a class="read-more" href="https://animeanime.jp/article/2026/06/03/99663.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- 記事2: JINS × Barbie サングラス -->
+  <div class="article-card">
+    <img src="https://www.fashion-press.net/img/news/147016/top.jpg" alt="JINS × Barbie コラボサングラス キャットアイ" loading="lazy">
+    <div class="article-body">
+      <h2>JINS×バービーのサングラス Y2K映えの「ぷっくりキャットアイ」3型・9色が6月4日発売</h2>
+      <div class="article-meta">
+        <span class="source">ファッションプレス / WWD JAPAN</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-04（11日前）</span>
+      </div>
+      <p>JINSが人気ファッションドール「バービー」とのコラボによるウィメンズサングラスを2026年6月4日（木）より一部店舗にて発売。バービーが歴代のキャリア・ライフスタイルで着用してきたサングラスからインスパイアされた「ナロー キャットアイ」「ボールド キャットアイ」「バタフライ」の3型・9色展開で価格はすべて10,900円。フレームはぷっくりした丸みのキャットアイ、テンプルエンドはバービーのヘアブラシをモチーフにした遊び心溢れるデザイン。付属のハート型カラビナ付きオリジナルケースもSNS映えを意識した設計で、"YOU CAN BE ANYTHING"のメッセージもフレームに刻印。バービーブームとY2K・平成レトロの潮流を巧みに取り込んだ大衆向けIPコラボとして注目を集めている。</p>
+      <a class="read-more" href="https://www.fashion-press.net/news/147016" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- 記事3: サンリオ チアリステイルズ -->
+  <div class="article-card">
+    <img src="https://prtimes.jp/i/37629/740/resize/d400-r1.jpg" alt="サンリオ チアリステイルズ うさぎキャラクターユニット" loading="lazy">
+    <div class="article-body">
+      <h2>サンリオ うさぎキャラ新ユニット「チアリステイルズ」6月9日始動 ——マロンクリームら4キャラが「いっぽ」を後押し</h2>
+      <div class="article-meta">
+        <span class="source">サンリオ公式 / ファッションプレス</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-09（6日前）</span>
+      </div>
+      <p>サンリオが2026年6月9日（火）、うさぎキャラクターによる新ユニット「Cheeristails（チアリステイルズ）」を始動。マロンクリーム・ウサハナ・ウィッシュミーメル・ぼんぼんりぼんの4キャラクターが集結し、「Cheer（応援）」と「tails（しっぽ）」を組み合わせたユニット名のとおり「4つのしっぽと一緒にいっぽ」というコンセプトのもと、自分らしさに迷う人に寄り添い前へ進む一歩を促す世界観を打ち出した。2026年6月27・28日開催の「サンリオフェス2026 in みなとみらい」でオリジナルテーマソングのダンスパフォーマンスを初披露し、秋にはサンリオオリジナル商品の発売も予定。既存キャラを再グループ化してIPの寿命を延ばす施策は、ライセンス訴求力を維持しながら新たなファン層を開拓する手法として注目される。</p>
+      <a class="read-more" href="https://www.sanrio.co.jp/news/etc/ct-cheeristails-debut-20260609/" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- 🌍 グローバルの記事 -->
+  <div class="section-title">🌍 グローバルの記事</div>
+
+  <!-- Global記事1: Sportiqe × Billy Joel × NY Knicks -->
+  <div class="article-card global">
+    <img src="https://thepopinsider.com/wp-content/uploads/sites/6/2026/06/sportiqe-billy-joel-knicks-new-york-state-of-mind.jpg" alt="Sportiqe × Billy Joel × NY Knicks New York State of Mind" loading="lazy">
+    <div class="article-body">
+      <h2>Billy Joel × NY Knicks × Sportiqe「New York State of Mind」コレクション発売 — 音楽×スポーツIPコラボが話題</h2>
+      <div class="article-meta">
+        <span class="source">Pollstar News / Brands Untapped</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-03（12日前）</span>
+      </div>
+      <p>米国のライフスタイルアパレルブランド「Sportiqe」が、伝説的アーティスト・ビリー・ジョエルとNBAニューヨーク・ニックスのIPを組み合わせたコレクション「New York State of Mind」を2026年6月3日に発売した。背景にはニックスの実に28年ぶりとなるNBAファイナル出場があり、同曲がニューヨークという都市のアイコンとして持つ圧倒的な文化的認知度を活用することで、スポーツ・音楽・都市アイデンティティの三位一体のブランディングを実現している。</p>
+      <p>製品は「ドレイクフーディ」と「ニューヨーク・ステート・オブ・マインド Tシャツ」の2型で、ニックスのシグネチャーカラーであるオレンジのパフインクでビリー・ジョエルの歌詞が印字され、クノックスロゴが配置されたダヴカラーの超ソフト素材を採用。フーディはドローコードなしのリラックスフィット設計で着用感にもこだわった。ビリー・ジョエルのマーチャンダイジングパートナー「Bravado」との契約に基づくライセンス展開で、NBA Store NYC内Sportiqeのショップ・イン・ショップとsportiqe.comで購入可能。</p>
+      <p>注目すべきはこのコレクションが「Billy Joel × Sportiqe」コラボの第1章に過ぎず、2026年を通じてニューヨーク州内の他チーム・会場とも連携した商品展開が予定されている点だ。前年（2025年）に展開したフランク・シナトラ × ニューヨーク・ヤンキースコラボを踏まえた「ニューヨーク文化IP × スポーツチームグッズ」という一貫した戦略が見えており、音楽レガシーIPとスポーツIPのクロスライセンスが消費者の感情的アタッチメントを強化しつつ大きな経済効果を生む好例となっている。ライセンス業界では「場所×チーム×アーティスト」の三者ライセンスモデルの成功事例として高い関心を集めている。</p>
+      <a class="read-more" href="https://news.pollstar.com/2026/06/03/new-york-knicks-state-of-mind-billy-joel-and-knicks-release-nba-finals-merch-via-sportiqe-and-bravado/" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- Global記事2: VeeFriends × Topps Chrome 2026 -->
+  <div class="article-card global">
+    <img src="https://www.licenseglobal.com/sites/default/files/2026-06/veefriends-topps-chrome-2026-launch.jpg" alt="VeeFriends × Topps Chrome 2026 collection" loading="lazy">
+    <div class="article-body">
+      <h2>Gary Vee（VeeFriends）× Topps Chrome 2026 グローバルリリース — MrBeast・Livvy Dunneらセレブ自署カードが話題</h2>
+      <div class="article-meta">
+        <span class="source">License Global / Beckett</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-10（5日前）</span>
+      </div>
+      <p>起業家・インフルエンサーのGary Vaynerchuk（ゲーリー・ヴァイナーチャック）が創設したIPブランド「VeeFriends」と、コレクタブルカード大手Toppsがコラボした「2026 Topps Chrome® VeeFriends」が2026年6月10日に世界同時リリースされた。2025年の初回Chrome版から大幅にスケールアップし、ベースセットは200キャラクター（うち149がChrome初登場）に倍増。トレーディングカードを通じてVeeFriendsのIPを物理コレクタブル市場で確立しようとする野心的な取り組みだ。</p>
+      <p>注目は「Content Condors」インサートシリーズで、Gary Vee本人のほかJimmy "MrBeast" Donaldson（YouTubeチャンネル登録者3億人超）、eスポーツ選手のCody "Clix" Conrod、自己啓発コーチのMel Robbins、体操選手でインフルエンサーのLivvy Dunne、Mongraalら、デジタルカルチャーをけん引するクリエイターの直筆サインカードが含まれている点だ。著名インフルエンサーの名前がカードに連なることで、Z世代コレクターへのアピールが大幅に高まっている。</p>
+      <p>チェイスカードはBlack Cat Refractors（番号付き/7）・Blast Off parallels（1/1限定）などのレアリティ設計が巧みで、コレクター心理を刺激するErupt inserts・Megaheads inserts・Original Sketch Selectionsも収録。流通はHobbyボックス（$239.99）・Megaボックス（$59.99）・Valueブラスターボックス（$29.99）の3形態で、Topps.com・Fanatics・Dick's・Target・GameStop・地域ホビーショップで取り扱い。「インフルエンサーIPの物理グッズ収益化」という次世代ライセンスモデルとして、IP業界から広く注目されている。</p>
+      <a class="read-more" href="https://www.licenseglobal.com/celebrity/veefriends-and-topps-release-new-collection" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- Global記事3 (K-POP): CU × RIIZE Little RIIZE -->
+  <div class="article-card kpop">
+    <img src="https://static.asiae.co.kr/images/2026/06/14/asiae-cu-riize-little-riize-collab.jpg" alt="CU × RIIZE Little RIIZE character collaboration products" loading="lazy">
+    <div class="article-body">
+      <h2>🇰🇷 CUコンビニ × RIIZE「Little RIIZE」キャラクターコラボ食品&ポップアップ — K-POPキャラIPが流通最前線へ</h2>
+      <div class="article-meta">
+        <span class="source">The Asia Business Daily (아시아경제)</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-14（1日前）</span>
+      </div>
+      <p>韓国大手コンビニチェーン「CU」（BGFリテール）が2026年6月14日、SMエンターテインメント所属のグループ「RIIZE」のキャラクターブランド「Little RIIZE」を活用したコラボ商品とポップアップストアの展開を発表した。RIIZEの2ndミニアルバム「Ⅱ（Two）」のリリースを記念したもので、コラボ商品は6月17日から順次発売され、食パン3種・マカロン2種・ボトルキャンディ1種の計6商品が揃う。</p>
+      <p>「Little RIIZE」はRIIZEメンバー自身が描いたオリジナルキャラクターで、商品パッケージやグッズに全面採用。特に7月8日発売予定のボトルキャンディはLittle RIIZEキャラクターの形を模した容器にスター型砂糖菓子を入れており、キャップ部分はキーホルダーとしても使用できる設計。購入特典として数量限定のLittle RIIZEピンバッジも配布される。</p>
+      <p>ポップアップストアは6月20日〜7月5日の16日間、ソウル・城東区のCUソンス デザートパーク店で開設し、RIIZEをテーマにしたフォトスポットやファンメッセージコーナーが設けられる予定。コンビニ小売とアイドルIPを結びつけた施策はCUですでに定着しており、K-POPアーティストとのコラボ商品売上は2025年比21.5%増、2026年1〜5月は同40.7%増と急拡大。RIIZEをはじめSMアーティストのIPがリアルの消費財にまで広がる「K-POP IP×食料品×ポップアップ」モデルは、日本への応用含め注目度が高まっている。</p>
+      <a class="read-more" href="https://www.asiae.co.kr/en/article/distribution/2026061410305970617" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- 💡 KONNEKT への提言 -->
+  <div class="section-title">💡 KONNEKT への提言</div>
+  <div class="insight-grid">
+    <div class="insight-card brands">
+      <h3>① BRANDS 視点</h3>
+      <p>サンリオ×Hondaのように、キャラクターIPを「社会課題（交通安全）×モータースポーツ」という新文脈に持ち込むことで既存ファン以外の層へリーチする施策が増えている。KONNEKTのアーティストブランド（辻希美・宇野実彩子・岩田剛典・末吉秀太）も、ライフスタイル課題（ウェルネス・エコ等）を軸にした産業コラボを検討してみると面白そう。特に宇野実彩子のLAVANDAはビューティ×ウェルネス文脈と相性が良いのでは。</p>
+    </div>
+    <div class="insight-card license">
+      <h3>② LICENSE 視点</h3>
+      <p>Billy Joel × Knicks × Sportiqeのコラボは「音楽レガシーIP × スポーツチーム × アパレル」の三者ライセンスが機能することを示した。KONNEKTでも、アーティストIPを特定のスポーツチームや地元コミュニティと組み合わせることで、地域密着型のライセンス収益を生み出せそう。岩田剛典（GOD ONLY KNOWS）と地域スポーツやスタジアム周辺グッズとのタイアップは検討の価値がありそう。</p>
+    </div>
+    <div class="insight-card goods">
+      <h3>③ GOODS 視点</h3>
+      <p>VeeFriends × Topps Chromeは「インフルエンサーIPをトレーディングカード化」することで従来グッズとは異なるコレクター市場を開拓した。KONNEKTのアーティストIPについてもトレカ・フォトカード市場への参入を検討したい。特にK-POPのトレカ文化を踏まえると、GOD ONLY KNOWSや末吉秀太のアーティストフォトカードを限定流通で展開するのはファン消費を高める手段として有効そう。</p>
+    </div>
+    <div class="insight-card korean">
+      <h3>④ 🇰🇷 Korean Entertainment 視点</h3>
+      <p>CU × RIIZEのコラボはK-POPアイドルのオリジナルキャラクターIPをFMCG（日用消費財）へ展開する最前線事例。CUでのコラボ売上40.7%増という数字が示すように、K-POPキャラIPの食品・日用品ライセンスは急成長中。KONNEKTが注力する韓国系エンタメ分野においても、コンビニや飲食チェーンとのキャラクターIPコラボを視野に入れると良さそう。日本国内での韓国アーティストIPコラボ展開も可能性がある。</p>
+    </div>
+  </div>
+
+  <!-- 📂 バックナンバー -->
+  <div class="backnumber">
+    <h3>📂 バックナンバー</h3>
+    <ul>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-06-08.html">2026-06-08 週次レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-06-01.html">2026-06-01 週次レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-05-25.html">2026-05-25 週次レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-05-18.html">2026-05-18 週次レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-05-11.html">2026-05-11 週次レポート</a></li>
+    </ul>
+    <a href="https://fujimoto-cpu.github.io/ip-report/" style="font-size:13px;color:#2980b9;display:inline-block;margin-top:8px;">📋 レポート一覧へ →</a>
+  </div>
+
+  <div class="footer-note">
+    KONNEKT INTERNATIONAL INC. | IP News Weekly Report | 2026-06-15<br>
+    自動生成レポートです。記事の著作権は各媒体に帰属します。
+  </div>
+
+</div>
+</body>
+</html>
