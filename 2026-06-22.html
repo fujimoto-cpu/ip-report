@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IPニュース週報 2026-06-22 | KONNEKT INTERNATIONAL</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+    background: #f5f6fa;
+    color: #2c3e50;
+    line-height: 1.7;
+  }
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white;
+    padding: 44px 20px;
+    text-align: center;
+  }
+  .header .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 4px 18px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  .header .issue-date {
+    font-size: 22px;
+    font-weight: 300;
+    margin: 8px 0 10px;
+    opacity: 0.9;
+  }
+  .header .meta {
+    font-size: 13px;
+    opacity: 0.6;
+  }
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 36px 20px 64px;
+  }
+  .section-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #7f8c8d;
+    margin: 44px 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ecf0f1;
+  }
+  .section-title:first-child { margin-top: 0; }
+  .card {
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    overflow: hidden;
+    display: flex;
+    border-left: 5px solid #ccc;
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.11); }
+  .card.japan  { border-left-color: #e74c3c; }
+  .card.global { border-left-color: #2980b9; }
+  .card.korea  { border-left-color: #e91e63; }
+  .card-img {
+    width: 148px;
+    min-height: 110px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: #ecf0f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .card-body { padding: 16px 20px; flex: 1; }
+  .card-tags {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 12px;
+    letter-spacing: 0.3px;
+  }
+  .tag-japan  { background: #fdecea; color: #c0392b; }
+  .tag-global { background: #eaf3fb; color: #1a6fa0; }
+  .tag-korea  { background: #fce4ec; color: #c2185b; }
+  .tag-date   { background: #f5f5f5; color: #7f8c8d; font-weight: 400; }
+  .card-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.45;
+  }
+  .card-title a { color: #2c3e50; text-decoration: none; }
+  .card-title a:hover { color: #2980b9; text-decoration: underline; }
+  .card-desc { font-size: 13px; color: #5d6d7e; line-height: 1.65; }
+  /* 提言 */
+  .teigen-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 14px;
+  }
+  .teigen-card {
+    background: white;
+    border-radius: 8px;
+    padding: 18px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-top: 3px solid #0f3460;
+  }
+  .teigen-card h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+    line-height: 1.45;
+  }
+  .teigen-card p { font-size: 13px; color: #5d6d7e; line-height: 1.65; }
+  /* ソース */
+  .backlinks ul { list-style: none; padding: 0; margin-top: 14px; }
+  .backlinks li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ecf0f1;
+    font-size: 13px;
+  }
+  .backlinks li:last-child { border-bottom: none; }
+  .backlinks a { color: #2980b9; text-decoration: none; }
+  .backlinks a:hover { text-decoration: underline; }
+  .src-label {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    background: #ecf0f1;
+    color: #7f8c8d;
+    padding: 1px 7px;
+    border-radius: 4px;
+    margin-right: 8px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .src-date { color: #bdc3c7; font-size: 12px; margin-left: 6px; }
+  .footer {
+    text-align: center;
+    padding: 28px 20px;
+    font-size: 12px;
+    color: #bdc3c7;
+    border-top: 1px solid #ecf0f1;
+    margin-top: 48px;
+  }
+  @media (max-width: 620px) {
+    .card-img { width: 100px; min-height: 90px; }
+    .teigen-grid { grid-template-columns: 1fr; }
+    .header h1 { font-size: 22px; }
+    .header .issue-date { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">KONNEKT INTERNATIONAL</div>
+  <h1>IP ニュース週報</h1>
+  <div class="issue-date">2026年6月22日号</div>
+  <div class="meta">キャラクターIP・エンターテインメント・K-POP ライセンス 最新動向</div>
+</div>
+
+<div class="container">
+
+  <!-- ===== 日本向け ===== -->
+  <div class="section-title">🇯🇵 日本向け — キャラクターIP・ライセンス</div>
+
+  <!-- 1. ちいかわ -->
+  <div class="card japan">
+    <div class="card-img">
+      <img src="https://prcdn.freetls.fastly.net/release_image/26157/2084/26157-2084-eec523b3a03ee70018306f0c421bd1c7-1200x630.jpg"
+           alt="ちいかわ 日本キャラクター大賞2026" loading="lazy">
+    </div>
+    <div class="card-body">
+      <div class="card-tags">
+        <span class="tag tag-japan">🇯🇵 日本</span>
+        <span class="tag tag-date">5日前 · 6月17日</span>
+      </div>
+      <div class="card-title">
+        <a href="https://www.oricon.co.jp/news/2461434/" target="_blank" rel="noopener">
+          ちいかわ、日本キャラクター大賞2026グランプリ3年連続獲得・殿堂入り認定
+        </a>
+      </div>
+      <div class="card-desc">
+        「ちいかわ」が「日本キャラクター大賞2026」でグランプリ3連覇を達成し、同賞史上初の「殿堂入り」に認定された。SNSを主軸としたコミュニティ形成とグッズ展開で継続的な人気を維持しており、キャラクターIPのロングテール商品化モデルとして業界内での注目度が高い。
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. TOPPAN × シンエイ動画 -->
+  <div class="card japan">
+    <div class="card-body">
+      <div class="card-tags">
+        <span class="tag tag-japan">🇯🇵 日本</span>
+        <span class="tag tag-date">6日前 · 6月16日</span>
+      </div>
+      <div class="card-title">
+        <a href="https://prtimes.jp/main/html/rd/p/000001914.000033034.html" target="_blank" rel="noopener">
+          TOPPAN × シンエイ動画50周年 「TOPPA!!! BASE AKIBA」でリアルコラボ開催
+        </a>
+      </div>
+      <div class="card-desc">
+        TOPPANがJR秋葉原駅構内に運営するIPポップアップ店「TOPPA!!! BASE AKIBA」で、ドラえもん・クレヨンしんちゃん等で知られるシンエイ動画の創立50周年記念コラボを実施（6月30日〜7月16日）。限定グッズ販売と「WithShot®」技術を用いたデジタルフォトブース体験を提供し、老舗IPの実店舗体験型展開として注目される。
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. SNK -->
+  <div class="card japan">
+    <div class="card-body">
+      <div class="card-tags">
+        <span class="tag tag-japan">🇯🇵 日本</span>
+        <span class="tag tag-date">5日前 · 6月17日</span>
+      </div>
+      <div class="card-title">
+        <a href="https://prtimes.jp/main/html/rd/p/000000886.000028651.html" target="_blank" rel="noopener">
+          SNK、ライセンシングジャパン2026出展——KOF・METAL SLUGなどゲームIPライセンスを本格展開
+        </a>
+      </div>
+      <div class="card-desc">
+        SNKが東京ビッグサイト「ライセンシングジャパン2026」（6/17〜19）にブース出展（ブースNo.30-14）。THE KING OF FIGHTERS・Garou・侍スピリッツ・METAL SLUGなどの人気ゲームIPについて、アパレル・フィギュア・デジタルコンテンツへの多角的ライセンス展開事例を紹介。日本・東南アジアでの高い認知を活かした越境IPライセンスへの動きが本格化しつつある。
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== グローバル向け ===== -->
+  <div class="section-title">🌍 グローバル向け — エンターテインメントIP・K-POP</div>
+
+  <!-- 4. tonies × Hasbro -->
+  <div class="card global">
+    <div class="card-body">
+      <div class="card-tags">
+        <span class="tag tag-global">🌍 グローバル</span>
+        <span class="tag tag-date">11日前 · 6月11日</span>
+      </div>
+      <div class="card-title">
+        <a href="https://www.prnewswire.com/news-releases/tonies-and-hasbro-reimagine-monopoly-guess-who-and-the-game-of-life-for-a-new-era-of-screen-free-listening-led-gaming-for-tonieplay-302797239.html" target="_blank" rel="noopener">
+          tonies × Hasbro：MONOPOLY・GUESS WHO?・人生ゲームをTonieplay音声体験へ
+        </a>
+      </div>
+      <div class="card-desc">
+        toniesSEとHasbroが提携を拡大し、3つの古典ボードゲームをToniebox 2向けスクリーンフリー音声体験「Tonieplay」に移植。2026年夏に米国先行プレオーダー開始後、グローバル展開予定。既存IPライセンスを音声インタラクションプラットフォームへ転用するモデルとして、D2Cおよびサブスクリプション型IP体験ビジネスの新しい方向性を示す。
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Netflix KPop Demon Hunters -->
+  <div class="card korea">
+    <div class="card-body">
+      <div class="card-tags">
+        <span class="tag tag-korea">🇰🇷 K-POP / 韓国</span>
+        <span class="tag tag-date">2日前 · 6月20日</span>
+      </div>
+      <div class="card-title">
+        <a href="https://www.netflix.com/tudum/articles/kpop-demon-hunters-one-year-anniversary" target="_blank" rel="noopener">
+          Netflix「KPop Demon Hunters」1周年——MattelとHasbroが史上初の「共同マスタートイ」契約
+        </a>
+      </div>
+      <div class="card-desc">
+        Netflixの歴代最多視聴アニメ映画「KPop Demon Hunters」（累計325M+再生）が1周年を迎え、MattelとHasbroを業界初の「共同グローバルマスタートイライセンシー」に指名。ドール・アクションフィギュア・ゲームを6月22日より世界同時展開。K-POPとアニメを融合した世界観を軸に、Loungefly・Jazwares等のコラボも同時展開。アジア発コンテンツIPの商品化モデルとして業界の注目度が最高潮に。
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== KONNEKT 提言 ===== -->
+  <div class="section-title">💡 KONNEKT 提言</div>
+  <div class="teigen-grid">
+    <div class="teigen-card">
+      <h4>① 「殿堂入り」基準で読むIPロングテール戦略</h4>
+      <p>ちいかわの3連覇殿堂入りは、キャラクターIPの「持続的人気」が投資価値の正式な指標として確立されたことを示す。旬の新規IPを追い続けるより、長期支持されるIPとのパートナーシップを早期に確保することが中長期的な優位性につながる。</p>
+    </div>
+    <div class="teigen-card">
+      <h4>② 実店舗ポップアップによるIP体験化の有効性</h4>
+      <p>TOPPAN × シンエイ動画のAKIBAコラボは、デジタル配信時代でも「リアル体験」がIP価値を高める補完チャネルであることを示す。老舗IPの周年記念と体験型実店舗の組み合わせは、ファンエンゲージメントとメディア露出を効率的に同時獲得する手法として参照価値が高い。</p>
+    </div>
+    <div class="teigen-card">
+      <h4>③ ゲームIPの越境ライセンスに拡大余地</h4>
+      <p>SNKのライセンシングジャパン本格出展は、ゲームIPがアパレル・フィギュア・デジタルへ横展開する市場機会を明示。KOFやMETAL SLUGは東南アジア・中東でも高い認知を持ち、日本発ゲームIPの越境ライセンスは未開拓ながら潜在規模の大きいセグメントとして検討に値する。</p>
+    </div>
+    <div class="teigen-card">
+      <h4>④ 「共同マスタートイ」が示すIP商品化の新構造</h4>
+      <p>Netflix × Mattel/Hasbroの協調ライセンスは、超大型IPが複数の競合大手と同時に組む前例のない商品化構造。K-POPとアニメを掛け合わせたKDHの世界観は、アジア発IPが欧米玩具市場に本格参入する先駆事例として今後の業界標準になりうる。</p>
+    </div>
+  </div>
+
+  <!-- ===== ソース一覧 ===== -->
+  <div class="section-title">📎 ソース一覧</div>
+  <div class="backlinks">
+    <ul>
+      <li>
+        <span class="src-label">Oricon</span>
+        <a href="https://www.oricon.co.jp/news/2461434/" target="_blank" rel="noopener">ちいかわ、日本キャラクター大賞2026グランプリ3連覇・殿堂入り</a>
+        <span class="src-date">2026年6月17日</span>
+      </li>
+      <li>
+        <span class="src-label">PR Times</span>
+        <a href="https://prtimes.jp/main/html/rd/p/000001914.000033034.html" target="_blank" rel="noopener">TOPPAN、「TOPPA!!! BASE AKIBA」で50周年シンエイ動画とコラボ実施</a>
+        <span class="src-date">2026年6月16日</span>
+      </li>
+      <li>
+        <span class="src-label">PR Times</span>
+        <a href="https://prtimes.jp/main/html/rd/p/000000886.000028651.html" target="_blank" rel="noopener">SNKが「ライセンシングジャパン2026」にブース出展——ゲームIPライセンス展開事例を紹介</a>
+        <span class="src-date">2026年6月17日</span>
+      </li>
+      <li>
+        <span class="src-label">PR Newswire</span>
+        <a href="https://www.prnewswire.com/news-releases/tonies-and-hasbro-reimagine-monopoly-guess-who-and-the-game-of-life-for-a-new-era-of-screen-free-listening-led-gaming-for-tonieplay-302797239.html" target="_blank" rel="noopener">tonies® and Hasbro Reimagine MONOPOLY®, GUESS WHO?®, and THE GAME OF LIFE® for Tonieplay®</a>
+        <span class="src-date">2026年6月11日</span>
+      </li>
+      <li>
+        <span class="src-label">Netflix Tudum</span>
+        <a href="https://www.netflix.com/tudum/articles/kpop-demon-hunters-one-year-anniversary" target="_blank" rel="noopener">KPop Demon Hunters One-Year Anniversary: New Merch from Mattel, Loungefly, Hasbro, Jazwares</a>
+        <span class="src-date">2026年6月20日</span>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>KONNEKT INTERNATIONAL INC. — IPニュース週報 2026年6月22日号</p>
+  <p style="margin-top:4px; opacity:0.7;">本レポートは社内情報共有目的で作成されています。</p>
+</div>
+
+</body>
+</html>
