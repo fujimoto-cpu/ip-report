@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONNEKT IP News Weekly | 2026-06-29</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0;
+  background: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  color: #1a1a2e;
+  overflow-x: hidden;
+}
+.header {
+  background: #fff;
+  border-top: 6px solid transparent;
+  border-image: linear-gradient(90deg, #2980b9, #6dd5fa) 1;
+  padding: 28px 24px 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.07);
+}
+.badge {
+  display: inline-block;
+  background: #1a2744;
+  color: #2980b9;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.header h1 {
+  margin: 0 0 6px;
+  font-size: 26px;
+  font-weight: 800;
+  color: #1a2744;
+}
+.header .date-label {
+  color: #666;
+  font-size: 14px;
+}
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+.summary-banner {
+  background: linear-gradient(135deg, #e8f4fd 0%, #f0fafe 100%);
+  border: 1px solid #b8d8f0;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin-bottom: 28px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.summary-banner strong { color: #1a2744; }
+.section-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #1a2744;
+  margin: 32px 0 14px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #e2e8f0;
+}
+.article-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-left: 5px solid #e74c3c;
+}
+.article-card.global { border-left-color: #2980b9; }
+.article-card.kpop   { border-left-color: #e91e63; }
+.article-card img {
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: cover;
+  display: block;
+}
+.article-body { padding: 16px 20px 18px; }
+.article-body h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #1a2744;
+}
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.source {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2980b9;
+}
+.meta-sep { color: #ccc; font-size: 13px; }
+.pub-date { color: #666; font-size: 13px; }
+.article-body p {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #334155;
+}
+.read-more {
+  display: inline-block;
+  font-size: 13px;
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #2980b9;
+  padding: 4px 12px;
+  border-radius: 4px;
+  transition: background .15s;
+}
+.read-more:hover { background: #2980b9; color: #fff; }
+.insight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+.insight-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.06);
+  border-top: 3px solid #2980b9;
+}
+.insight-card.brands  { border-top-color: #e74c3c; }
+.insight-card.license { border-top-color: #f39c12; }
+.insight-card.goods   { border-top-color: #27ae60; }
+.insight-card.korean  { border-top-color: #e91e63; }
+.insight-card h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a2744;
+}
+.insight-card p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: #475569;
+}
+.backnumber {
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px 22px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+  margin-top: 28px;
+}
+.backnumber h3 { margin: 0 0 10px; font-size: 15px; color: #1a2744; }
+.backnumber ul { margin: 0; padding-left: 18px; }
+.backnumber li { font-size: 13px; margin-bottom: 4px; }
+.backnumber a { color: #2980b9; text-decoration: none; }
+.backnumber a:hover { text-decoration: underline; }
+.footer-note {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 12px;
+  margin-top: 32px;
+}
+@media (max-width: 640px) {
+  .header h1 { font-size: 22px; }
+  .article-body h2 { font-size: 18px; }
+  .insight-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  body { font-size: 15px; }
+  .pub-date, .source, .meta-sep { font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">KONNEKT INTERNATIONAL</div>
+  <h1>📊 IP News Weekly</h1>
+  <div class="date-label">2026年6月29日（月）週次レポート</div>
+</div>
+
+<div class="container">
+
+  <!-- サマリーバナー -->
+  <div class="summary-banner">
+    <strong>今週のハイライト：</strong>HUNTER×HUNTERが累計1億部突破と約1年半ぶりの連載再開（週刊少年ジャンプ31号、6/29〜）を同時発表、渋谷「Hunter Town」体験施策（6/29〜7/5）も開始。ナルミヤキャラクターズが日本キャラクター大賞2026選定委員特別賞を受賞し、ANGEL BLUE・mezzo pianoなど平成Y2Kジュニアアパレルキャラクターの商品化ポテンシャルが再評価。しまむら×モンチッチ（50周年超レトロIP）の夏コラボグッズが全国発売（6/24〜）。グローバルでは、Brawl StarsとadidasがデジタルスキンからリアルアパレルまでをカバーするマルチフェーズIPパートナーシップを発表（Starr Cup 6/18-7/2）、Pippi LongstockingのCGIアニメシリーズ52話がStudioCanal×Heyday Films制作で始動しRights & Brandsがグローバルライセンスを担当。韓国枠では光州市GICONがAnnecy MIFA 2026のKorea Business Showcaseに初出展し、5本の韓国アニメIPがグローバルライセンス・共同制作パートナーを探している。
+  </div>
+
+  <!-- 🇯🇵 日本の記事 -->
+  <div class="section-title">🇯🇵 日本の記事</div>
+
+  <!-- 記事1: ナルミヤキャラクターズ -->
+  <div class="article-card">
+    <div class="article-body">
+      <h2>ナルミヤキャラクターズ、日本キャラクター大賞2026選定委員特別賞受賞——平成Y2Kジュニアアパレルキャラクターが再評価</h2>
+      <div class="article-meta">
+        <span class="source">PR Times / 株式会社ナルミヤ・インターナショナル</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-17（12日前）</span>
+      </div>
+      <p>ナルミヤ・インターナショナルが展開するキャラクターブランドグループ「ナルミヤキャラクターズ」（ANGEL BLUE・mezzo piano・pom ponette・DAISY LOVERSなど）が「日本キャラクター大賞2026」の選定委員特別賞を受賞した。2000年代に人気を博した平成ジュニアアパレルブランドのオリジナルキャラクターが、Z世代の「平成レトロ」「Y2Kリバイバル」ブームの中で再び注目を集め、SNSでの自然拡散・コラボ・アパレル復刻へと展開が広がっている。グッズ・アパレル・デジタルスタンプ等への展開を加速させており、約20年の時を経て二次的なライフサイクルが始まりつつある事例として、キャラクターIPの長期価値戦略の観点から業界の注目を集めている。</p>
+      <a class="read-more" href="https://prtimes.jp/main/html/rd/p/000000441.000066361.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- 記事2: しまむら × モンチッチ -->
+  <div class="article-card">
+    <div class="article-body">
+      <h2>しまむら × モンチッチ 夏コラボグッズ全国発売——50周年超レトロIPとファストファッション大手のコラボ</h2>
+      <div class="article-meta">
+        <span class="source">しまむら公式 / モンチッチ公式</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-24（5日前）</span>
+      </div>
+      <p>セキグチが展開するロングセラーキャラクター「モンチッチ」とファストファッション大手「しまむら」のコラボグッズが、2026年6月24日（火）より全国のしまむら店舗、6月25日（水）よりオンラインストアにて順次発売開始となった。アパレル・バッグ・ポーチ等のアイテムがラインナップされ、1974年誕生・50周年を超えるレトロキャラクターIPが現役のマス流通ブランドと組むモデルとして注目を集めている。懐かしさと現代性を兼ね備えたレトロIPの親世代（30〜40代）と子世代（10〜20代）双方に訴求するコラボは、世代を超えたIPの商品化戦略として示唆に富む。</p>
+      <a class="read-more" href="https://www.monchhichi.co.jp/news/detail.php?id=1708" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- 記事3: HUNTER×HUNTER -->
+  <div class="article-card">
+    <div class="article-body">
+      <h2>HUNTER×HUNTER 累計1億部突破・週刊少年ジャンプで連載再開——渋谷Hunter Town 6/29〜7/5開催</h2>
+      <div class="article-meta">
+        <span class="source">アニメアニメ / 集英社</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-29（本日）</span>
+      </div>
+      <p>冨樫義博による人気漫画「HUNTER×HUNTER」がシリーズ累計1億部を突破し、本日発売の週刊少年ジャンプ31号より約1年半ぶりの連載再開が始まった。単行本39巻は7月3日（木）発売予定。連載再開に合わせ、渋谷では大型体験型コンテンツ「Hunter Town」が6月29日（日）〜7月5日（土）の期間で開催される。累計1億部というマイルストーン達成と連載再開が同時に重なったことで、グッズ・コラボ・版権関連の需要が急増しており、出版社・版権管理会社・ライセンシーの間で大型案件の動きが加速している。長期休載を経ての「再起動」がIPの商品化市場に与えるインパクトは大きく、類似の長期IP再起動案件の参考事例となる。</p>
+      <a class="read-more" href="https://animeanime.jp/article/2026/06/29/100506.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- 🌍 グローバルの記事 -->
+  <div class="section-title">🌍 グローバルの記事</div>
+
+  <!-- Global記事1: Brawl Stars × adidas -->
+  <div class="article-card global">
+    <div class="article-body">
+      <h2>Brawl Stars × adidas：デジタルスキン・アパレル・ポップアップを横断するマルチフェーズIPパートナーシップ始動</h2>
+      <div class="article-meta">
+        <span class="source">PR Newswire / Supercell</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-18（11日前）</span>
+      </div>
+      <p>Supercellの人気モバイルゲーム「Brawl Stars」とadidasが正式なIPライセンスパートナーシップを発表した。adidasブランドの「adidas Brawlers」スキンがゲーム内に初登場し、6月18日〜7月2日開催のStarr Cup期間中に入手可能となった。さらに8月1日にはSpike・Leon・Edgar・Nitaをモチーフにした公式アパレル・フットウェアコレクションが発売予定で、6月20〜21日にはブルックリンでファンイベント・ポップアップも実施された。ゲームIPのライセンスが「デジタル衣装（in-game）→リアルアパレル（実店舗）→体験型イベント（ポップアップ）」を同時に動かすマルチフェーズ構造で展開された事例として、ゲーム×ファッションIPコラボの新スタンダードを示している。</p>
+      <a class="read-more" href="https://www.prnewswire.com/news-releases/brawl-stars-and-adidas-launch-multi-phase-partnership-across-digital-apparel-and-an-in-person-fan-experience-302803738.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- Global記事2: Pippi Longstocking -->
+  <div class="article-card global">
+    <div class="article-body">
+      <h2>「ピッピ・ロングストッキング」CGIアニメシリーズ新作52話をStudioCanal×Heyday Filmsが制作発表——Rights &amp; Brandsがグローバルライセンス担当</h2>
+      <div class="article-meta">
+        <span class="source">Variety / StudioCanal</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-19（10日前）</span>
+      </div>
+      <p>StudioCanalとHeyday Films（Paddington シリーズ制作チーム）が、アストリッド・リンドグレーンの名作「ピッピ・ロングストッキング」の新たなCGIアニメシリーズ（52話×11分）の制作を発表した。脚本はSara Daddy、製作総指揮にHeydayのDavid Heyman。フランス・英国向けマーチャンダイジングはStudioCanal Kids & Familyが担当し、グローバルライセンスはRights & Brandsが一括して担う。1945年創作の古典的キャラクターIPが現代のCGI技術と有力制作チームの組み合わせで「現代化」される事例であり、地域別にマーチ担当を分担しつつグローバル展開を図る構造は、KONNEKTが日本向けサブライセンスを検討する上でも参考となるモデル。</p>
+      <a class="read-more" href="https://variety.com/2026/film/global/pippi-longstocking-animated-series-studiocanal-heyday-films-1236785957/" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- K-POP記事: Korean animation at Annecy -->
+  <div class="article-card kpop">
+    <div class="article-body">
+      <h2>🇰🇷 韓国アニメIP5作品がAnnecy MIFA 2026に初出展——光州市GICONがKorea Business Showcaseを実施</h2>
+      <div class="article-meta">
+        <span class="source">Variety / GICON（光州コンテンツ振興院）</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-21〜26（Annecy開催期間）</span>
+      </div>
+      <p>光州市のコンテンツ振興機関「GICON」が、フランス・アンシーで開催された国際アニメーション映画祭MIFA 2026の「Korea Business Showcase」に初めて出展した。Gigabuilder、Elixir of the Sunを含む韓国アニメIP5作品がグローバルのバイヤー・ライセンサー・共同制作パートナーに向けてプレゼンテーションを行い、欧州・北米市場への参入を目指す動きを見せた。K-POPアイドルIPに続き、韓国発アニメIPが欧米のライセンス市場に本格的に進出してきている流れは今後も加速が予想される。KONNEKTが韓国エンタメコンテンツの「日本窓口」として機能する際、K-POPのみならずアニメ・キャラクターIPも対象に含めることで、取り扱い案件の多様化と収益源の拡張が図れる。</p>
+      <a class="read-more" href="https://variety.com/2026/tv/global/korean-tv-animation-ips-gicon-gwangju-1236788049/" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- 💡 KONNEKT への提言 -->
+  <div class="section-title">💡 KONNEKT への提言</div>
+  <div class="insight-grid">
+    <div class="insight-card brands">
+      <h3>① BRANDS 視点</h3>
+      <p>HUNTER×HUNTERの1億部達成と連載再開が示すように、長期休載を経ても強固なファン基盤を持つIPは「再起動」によって商品化市場が急拡大する。KONNEKTが扱うアーティストIPも、一時的な活動停止後の「カムバック」施策において、グッズ先行予約・体験型イベント連動を事前設計しておくことで、再始動と同時に収益化できる仕組みを整えておくことが重要。</p>
+    </div>
+    <div class="insight-card license">
+      <h3>② LICENSE 視点</h3>
+      <p>Pippi LongstockingはStudioCanal Kids & Familyが仏・英マーチを担い、Rights & Brandsがグローバルを担当する地域別分担構造を採用している。古典的IPの「現代化」ライセンスにおいて、日本向けサブライセンスの窓口としてKONNEKTが機能するポジションは、欧州クラシックIPの日本市場参入ルートとして有望。著作権管理が明確な欧州IPは権利処理がしやすく、交渉窓口を早期に確立する価値がある。</p>
+    </div>
+    <div class="insight-card goods">
+      <h3>③ GOODS 視点</h3>
+      <p>ナルミヤキャラクターズの受賞としまむら×モンチッチのコラボは、「平成レトロ・Y2K」文脈でのキャラクターIP復刻がマス流通まで到達していることを示す。KONNEKTのグッズ案件では、懐かしさ・世代間共感を切り口にしたブランドコラボの提案が、20〜40代向けアパレル・雑貨カテゴリで特に刺さる可能性が高い。レトロIPと現代ブランドの組み合わせは獲得単価が低く、在庫リスクも限定的な点でライセンシーの参入障壁が低い。</p>
+    </div>
+    <div class="insight-card korean">
+      <h3>④ 🇰🇷 Korean Entertainment 視点</h3>
+      <p>光州市GICONのAnnecy MIFA初出展は、韓国アニメIPが欧米市場への国際展開を本格化させていることを示す。K-POPアイドルIPに続き、韓国アニメ・キャラクターIPも欧米・アジアのライセンス市場で存在感を高めつつある。KONNEKTが韓国エンタメ案件の「日本窓口」として機能する際、K-POPのみならずアニメ・キャラクターIPも取り扱い範囲に含めることで、案件多様化と収益源の拡張が期待できる。</p>
+    </div>
+  </div>
+
+  <!-- 📂 バックナンバー -->
+  <div class="backnumber">
+    <h3>📂 バックナンバー</h3>
+    <ul>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-06-22.html">2026-06-22 週次レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-06-15.html">2026-06-15 週次レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-06-08.html">2026-06-08 週次レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-06-01.html">2026-06-01 週次レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-05-25.html">2026-05-25 週次レポート</a></li>
+    </ul>
+    <a href="https://fujimoto-cpu.github.io/ip-report/" style="font-size:13px;color:#2980b9;display:inline-block;margin-top:8px;">📋 レポート一覧へ →</a>
+  </div>
+
+  <div class="footer-note">
+    KONNEKT INTERNATIONAL INC. | IP News Weekly Report | 2026-06-29<br>
+    自動生成レポートです。記事の著作権は各媒体に帰属します。
+  </div>
+
+</div>
+</body>
+</html>
