@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONNEKT IP News Weekly | 2026-07-06</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0;
+  background: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  color: #1a1a2e;
+  overflow-x: hidden;
+}
+.header {
+  background: #fff;
+  border-top: 6px solid transparent;
+  border-image: linear-gradient(90deg, #2980b9, #6dd5fa) 1;
+  padding: 28px 24px 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.07);
+}
+.badge {
+  display: inline-block;
+  background: #1a2744;
+  color: #2980b9;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.header h1 {
+  margin: 0 0 6px;
+  font-size: 26px;
+  font-weight: 800;
+  color: #1a2744;
+}
+.header .date-label {
+  color: #666;
+  font-size: 14px;
+}
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+.summary-banner {
+  background: linear-gradient(135deg, #e8f4fd 0%, #f0fafe 100%);
+  border: 1px solid #b8d8f0;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin-bottom: 28px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.summary-banner strong { color: #1a2744; }
+.section-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #1a2744;
+  margin: 32px 0 14px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #e2e8f0;
+}
+.article-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-left: 5px solid #e74c3c;
+}
+.article-card.global { border-left-color: #2980b9; }
+.article-card.kpop   { border-left-color: #e91e63; }
+.article-body { padding: 16px 20px 18px; }
+.article-body h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #1a2744;
+}
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.source {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2980b9;
+}
+.meta-sep { color: #ccc; font-size: 13px; }
+.pub-date { color: #666; font-size: 13px; }
+.article-body p {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #334155;
+}
+.read-more {
+  display: inline-block;
+  font-size: 13px;
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #2980b9;
+  padding: 4px 12px;
+  border-radius: 4px;
+  transition: background .15s;
+}
+.read-more:hover { background: #2980b9; color: #fff; }
+.insight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+.insight-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.06);
+  border-top: 3px solid #2980b9;
+}
+.insight-card.brands  { border-top-color: #e74c3c; }
+.insight-card.license { border-top-color: #f39c12; }
+.insight-card.goods   { border-top-color: #27ae60; }
+.insight-card.korean  { border-top-color: #e91e63; }
+.insight-card h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a2744;
+}
+.insight-card p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: #475569;
+}
+.backnumber {
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px 22px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+  margin-top: 28px;
+}
+.backnumber h3 { margin: 0 0 10px; font-size: 15px; color: #1a2744; }
+.backnumber ul { margin: 0; padding-left: 18px; }
+.backnumber li { font-size: 13px; margin-bottom: 4px; }
+.backnumber a { color: #2980b9; text-decoration: none; }
+.backnumber a:hover { text-decoration: underline; }
+.footer-note {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 12px;
+  margin-top: 32px;
+}
+@media (max-width: 640px) {
+  .header h1 { font-size: 22px; }
+  .article-body h2 { font-size: 18px; }
+  .insight-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  body { font-size: 15px; }
+  .pub-date, .source, .meta-sep { font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">KONNEKT INTERNATIONAL</div>
+  <h1>📊 IP News Weekly</h1>
+  <div class="date-label">2026年7月6日（月）週次レポート</div>
+</div>
+
+<div class="container">
+
+  <!-- サマリーバナー -->
+  <div class="summary-banner">
+    <strong>今週のハイライト：</strong>ONE PIECE×ラウンドワンが国内100店舗＋北米59店舗の計159店舗で日米同時コラボを7月18日に開始、アニメIPの国際同時展開モデルとして注目。映画「ちいかわ 人魚の島のひみつ」が7月24日公開へ向け6大情報を一挙解禁。アニメ「ハイキュー!!」×いきなり！ステーキの"い（き）なりざき"コラボが7月17日より全国168店舗でスタート。グローバルではブラッツ25周年×高級ファッションブランドRodarteのコレクタードール＆アパレルが本日bratz.com独占発売（各$75）。BBC Studios×LEGO EntertainmentがLEGO Bluey Shortsの全世界配信を開始（YouTube/Bluey.TV、全10話・12言語）。韓国枠では、玩具大手SAMGエンターテインメントがNetflixアニメ「K-Pop Demon Hunters」公式商品の韓国独占販売代理店に就任、6月24日より多チャンネル展開中。
+  </div>
+
+  <!-- 🇯🇵 日本の記事 -->
+  <div class="section-title">🇯🇵 日本の記事</div>
+
+  <!-- 記事1: ONE PIECE × ラウンドワン -->
+  <div class="article-card">
+    <div class="article-body">
+      <h2>ONE PIECE × ラウンドワン 初の日米同時コラボ——国内100店舗＋北米59店舗で同一コンセプト展開</h2>
+      <div class="article-meta">
+        <span class="source">PR Times / ラウンドワン</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-07-01（5日前）</span>
+      </div>
+      <p>アミューズメント施設「ラウンドワン」と「ONE PIECE」が初めて日本・北米で同一コンセプトのコラボを同時実施する。7月18日〜10月17日の期間中、国内100店舗と北米59店舗の計159店舗で、描き下ろしビジュアルを使用したプライズ景品・限定カードゲーム・コラボフードメニューを全店同時展開。国内施設IPコラボが北米拠点とほぼ同等のスケールで同時始動する事例は珍しく、版権管理・グッズ制作・販促ツールの国際整合コストを克服したモデルとして業界の注目を集めている。</p>
+      <a class="read-more" href="https://prtimes.jp/main/html/rd/p/000000080.000027772.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- 記事2: 映画ちいかわ -->
+  <div class="article-card">
+    <div class="article-body">
+      <h2>映画「ちいかわ 人魚の島のひみつ」7月3日「夏が来るDAY」で6大情報一挙解禁——7月24日劇場公開</h2>
+      <div class="article-meta">
+        <span class="source">アニメ！アニメ！</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-07-01（5日前）</span>
+      </div>
+      <p>7月24日（金）全国公開の映画「ちいかわ 人魚の島のひみつ」が、7月3日の「夏が来るDAY」で新映像・ビジュアル・主題歌など6大情報を同時解禁した。原作者ナガノ氏完全監修のオリジナルストーリー「セイレーン編」、OPテーマ曲「くつずれ」ほかを発表。公開記念グッズは全国のちいかわらんど等で順次発売予定。SNS発のキャラクターIPが劇場映画としてメガスケール展開に到達した事例であり、ライセンスビジネスにおける「デジタル原作IP→映画→グッズ→体験」の転換モデルとして注目される。</p>
+      <a class="read-more" href="https://animeanime.jp/article/2026/07/01/100565.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- 記事3: ハイキュー!! × いきなり！ステーキ -->
+  <div class="article-card">
+    <div class="article-body">
+      <h2>アニメ「ハイキュー!!」×「いきなり！ステーキ」"い（き）なりざき"コラボ決定——7月17日〜8月23日・全国168店舗</h2>
+      <div class="article-meta">
+        <span class="source">PR Times / 中外鉱業</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-29（7日前）</span>
+      </div>
+      <p>アニメ「ハイキュー!!」と「いきなり！ステーキ」が「い（き）なりざき」をキーワードにコラボを実施。7月17日〜8月23日の期間中、全国168店舗にてコラボ展開が行われる。稲荷崎高校6メンバーの描き下ろし店員姿ビジュアルを使用し、アクリルスタンド・缶バッジ・ぬいぐるみマスコット等グッズ60店舗で販売。コラボメニュー注文でトレーディングカード特典付き。飲食チェーン×アニメIPの定番コラボが、キャラクター選定のユニークさ（稲荷崎＝"いきなり"のダジャレ）とグッズ展開の組み合わせで集客と購買を同時に刺激する好例。</p>
+      <a class="read-more" href="https://prtimes.jp/main/html/rd/p/000000809.000059072.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- 🌍 グローバルの記事 -->
+  <div class="section-title">🌍 グローバルの記事</div>
+
+  <!-- Global記事1: Bratz × Rodarte -->
+  <div class="article-card global">
+    <div class="article-body">
+      <h2>Bratz 25周年 × Rodarte——コレクタードール＆アパレルコレクション本日bratz.com独占発売</h2>
+      <div class="article-meta">
+        <span class="source">PR Newswire / MGA Entertainment</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-30（6日前）</span>
+      </div>
+      <p>トイIP「ブラッツ」25周年記念として、高級ファッションブランドRodarteとのコラボレーションコレクタードール＆アパレルコレクションが7月6日よりbratz.comで独占発売（8月以降セルフリッジズへ拡大）。クロエ（白サテンガウン＋花アップリケ）とサーシャ（紫黒シマーアンサンブル＋フェアリーウィング）各$75。アパレルラインもshoprodarte.comで同時展開。トイIPとラグジュアリーファッションの掛け合わせで単価を引き上げ、ブランドのプレミアム化を図るアニバーサリー戦略の典型事例として、コレクター市場への訴求を強化している。</p>
+      <a class="read-more" href="https://www.prnewswire.com/news-releases/bratz-and-rodarte-introduce-a-fashion-collaboration-featuring-coveted-collector-dolls-and-exclusive-apparel-302813601.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- Global記事2: BBC Studios × LEGO Bluey Shorts -->
+  <div class="article-card global">
+    <div class="article-body">
+      <h2>BBC Studios × LEGO Entertainment「LEGO Bluey Shorts」全世界配信スタート——全10話・12言語・YouTube無料公開</h2>
+      <div class="article-meta">
+        <span class="source">Advanced Television / BBC Studios</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-07-02（4日前）</span>
+      </div>
+      <p>BBC StudiosとLEGO Entertainmentが共同制作した「LEGO Bluey Shorts」（全10話・各約2分）の全世界配信が開始された。人気子供向けアニメ「ブルーイ」の名シーンをLEGOアニメで再現した本シリーズは、YouTube公式チャンネルおよびBluey.TVで無料視聴可能。毎週新エピソードが公開され9月3日まで続く予定で、12言語に対応。玩具IPとアニメIPの相互補完による「ショートコンテンツ」戦略は視聴プラットフォームのファン獲得と玩具購買促進を同時に狙うモデルとして注目される。</p>
+      <a class="read-more" href="https://www.advanced-television.com/2026/07/02/bbc-studios-lego-entertainment-launch-lego-bluey-shorts/" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- 🇰🇷 K-POP記事 -->
+  <div class="section-title">🇰🇷 Korean Entertainment</div>
+
+  <!-- K-POP記事: SAMG × K-Pop Demon Hunters -->
+  <div class="article-card kpop">
+    <div class="article-body">
+      <h2>🇰🇷 SAMGエンターテインメント、Netflix「K-Pop Demon Hunters」キャラクター商品の韓国独占販売代理店に就任</h2>
+      <div class="article-meta">
+        <span class="source">The Asia Business Daily（아시아경제）</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-06-22（14日前）</span>
+      </div>
+      <p>韓国玩具大手のSAMGエンターテインメントが、Mattelから「K-Pop Demon Hunters」（Netflixの韓国発K-Popテーマアニメ）公式キャラクター商品の韓国独占販売代理権を取得した。6月24日より、自社のティニーピング店舗・オンラインストア・大型ディスカウント店など多チャンネルで展開を開始。年内に50種以上のアイテム投入を予定し、初弾は13キャラのランダムキーリング。7月以降はミニフィギュアやドールも追加予定。Netflixオリジナルコンテンツの韓国発IPが、グローバル玩具大手Mattelのライセンスを通じて地場の独占代理店モデルで商品化されるケースは、日本市場参入における独占ライセンス交渉の参考事例となる。</p>
+      <a class="read-more" href="https://www.asiae.co.kr/en/article/2026062208461369393" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- 💡 KONNEKT への提言 -->
+  <div class="section-title">💡 KONNEKT への提言</div>
+  <div class="insight-grid">
+    <div class="insight-card brands">
+      <h3>① BRANDS 視点</h3>
+      <p>ONE PIECE×ラウンドワンの日米同時コラボは、アミューズメント施設IPコラボの国際同時展開モデルとして画期的。国内外の版権管理・グッズ制作・販促ツールの整合を一元化したオペレーションが鍵。KONNEKTが日本IPを海外施設・ブランドに展開する際、「国内先行→海外後追い」ではなく同時展開を提案できる体制の整備が競争優位につながる。</p>
+    </div>
+    <div class="insight-card license">
+      <h3>② LICENSE 視点</h3>
+      <p>Bratz×Rodarteは「トイIP×ラグジュアリーファッション」の組み合わせでコレクター価格帯（$75）を実現したプレミアム化戦略の好例。アニバーサリーのタイミングを活かした高単価ライセンスは、KONNEKTが扱うキャラクターやアーティストIPの周年記念施策にも応用可能。百貨店・セレクトショップへの限定展開が訴求力を高める。</p>
+    </div>
+    <div class="insight-card goods">
+      <h3>③ GOODS 視点</h3>
+      <p>BBC Studios×LEGO「Bluey Shorts」は、ショートコンテンツ（各2分・無料）を玩具購買促進ツールとして機能させるIPクロスメディア戦略の実例。KONNEKTがグッズ案件を扱う際、SNSショートコンテンツを"商品認知ファネルの入口"として設計することで、飛躍的に低いコストで購買行動につなぐ仕組みを構築できる。</p>
+    </div>
+    <div class="insight-card korean">
+      <h3>④ 🇰🇷 Korean Entertainment 視点</h3>
+      <p>SAMGがK-Pop Demon Hunters商品の韓国独占代理店に就任したモデルは、グローバルIPの地域独占ライセンスが地場の流通ネットワークとの組み合わせで高い展開速度を実現する典型例。KONNEKTが韓国IPの「日本窓口」として独占または優先交渉権を確保するアプローチを取ることで、同様の多チャンネル・年内50品番超投入モデルを日本市場で再現できる可能性がある。</p>
+    </div>
+  </div>
+
+  <!-- 📂 バックナンバー -->
+  <div class="backnumber">
+    <h3>📂 バックナンバー</h3>
+    <ul>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-06-29.html">2026-06-29 週次レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-06-22.html">2026-06-22 週次レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-06-15.html">2026-06-15 週次レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-06-08.html">2026-06-08 週次レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-06-01.html">2026-06-01 週次レポート</a></li>
+    </ul>
+    <a href="https://fujimoto-cpu.github.io/ip-report/" style="font-size:13px;color:#2980b9;display:inline-block;margin-top:8px;">📋 レポート一覧へ →</a>
+  </div>
+
+  <div class="footer-note">
+    KONNEKT INTERNATIONAL INC. | IP News Weekly Report | 2026-07-06<br>
+    自動生成レポートです。記事の著作権は各媒体に帰属します。
+  </div>
+
+</div>
+</body>
+</html>
