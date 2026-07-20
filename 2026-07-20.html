@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONNEKT IP News Weekly — 2026-07-20</title>
+<meta property="og:title" content="KONNEKT IP News Weekly 2026-07-20">
+<meta property="og:description" content="今週のIPニュース：ちいかわ×マツキヨコカラ、ナルミヤ×森永ビスケット、頭文字Dグッズ、JellySqueeze×ミニオンズ、K-POP RESCENE/REMINI">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif;
+    background: #f8fafc;
+    color: #1a2744;
+    overflow-x: hidden;
+    line-height: 1.7;
+  }
+  a { color: #2980b9; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Header */
+  .header {
+    background: white;
+    border-top: 4px solid transparent;
+    border-image: linear-gradient(90deg, #2980b9, #6dd5fa) 1;
+    padding: 32px 24px 24px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .header .badge {
+    display: inline-block;
+    background: #1a2744;
+    color: #2980b9;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .header h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1a2744;
+    margin-bottom: 6px;
+  }
+  .header .date {
+    font-size: 14px;
+    color: #666;
+  }
+
+  /* Main container */
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+  }
+
+  /* Summary banner */
+  .summary-banner {
+    background: linear-gradient(135deg, #1a2744, #2980b9);
+    color: white;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+  }
+  .summary-banner h2 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    opacity: 0.85;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .summary-banner p {
+    font-size: 15px;
+    line-height: 1.8;
+    opacity: 0.92;
+  }
+  .summary-skip {
+    margin-top: 12px;
+    font-size: 13px;
+    opacity: 0.7;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 10px;
+  }
+
+  /* Section heading */
+  .section-heading {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 40px 0 20px;
+    color: #1a2744;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-heading::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, #e0e7ef, transparent);
+    margin-left: 8px;
+  }
+
+  /* Article cards */
+  .article-card {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    border-left: 4px solid #e74c3c;
+    transition: box-shadow 0.2s;
+  }
+  .article-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+  .article-card.global { border-left-color: #2980b9; }
+  .article-card.kpop { border-left-color: #e91e63; }
+
+  /* Image area (CSS-based, no external dependency) */
+  .article-image-area {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 52px;
+    background: linear-gradient(135deg, #fde8e8, #fbb6b6);
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .article-image-area::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 20px,
+      rgba(255,255,255,0.08) 20px,
+      rgba(255,255,255,0.08) 40px
+    );
+  }
+  .article-image-area.blue { background: linear-gradient(135deg, #dbeeff, #a8d4f5); }
+  .article-image-area.pink { background: linear-gradient(135deg, #fde0ec, #f9a8d4); }
+  .article-image-area .img-label {
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+    font-size: 11px;
+    color: rgba(0,0,0,0.35);
+    font-style: italic;
+  }
+
+  /* Article body */
+  .article-body {
+    padding: 20px 22px 22px;
+    flex: 1;
+  }
+  .article-body h2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #1a2744;
+  }
+  .article-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+    font-size: 13px;
+  }
+  .source {
+    font-weight: 600;
+    color: #444;
+  }
+  .meta-sep {
+    color: #ccc;
+  }
+  .pub-date {
+    color: #666;
+    font-size: 13px;
+  }
+  .article-summary {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 16px;
+  }
+  .read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #2980b9;
+    padding: 7px 14px;
+    border: 1.5px solid #2980b9;
+    border-radius: 20px;
+    transition: all 0.2s;
+    min-height: 44px;
+  }
+  .read-more:hover {
+    background: #2980b9;
+    color: white;
+    text-decoration: none;
+  }
+  .article-card.kpop .read-more {
+    color: #e91e63;
+    border-color: #e91e63;
+  }
+  .article-card.kpop .read-more:hover {
+    background: #e91e63;
+    color: white;
+  }
+
+  /* Insight section */
+  .insight-section {
+    background: white;
+    border-radius: 12px;
+    padding: 28px;
+    margin-top: 40px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  }
+  .insight-section h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1a2744;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f0f4f8;
+  }
+  .insight-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .insight-block {
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 18px;
+    border: 1px solid #e8eef5;
+  }
+  .insight-block h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #2980b9;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .insight-block.kpop h3 { color: #e91e63; }
+  .insight-block p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.75;
+  }
+
+  /* Backnumbers */
+  .backnumber-section {
+    margin-top: 40px;
+    background: white;
+    border-radius: 12px;
+    padding: 24px 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  }
+  .backnumber-section h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1a2744;
+  }
+  .backnumber-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    background: linear-gradient(90deg, #2980b9, #6dd5fa);
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    min-height: 44px;
+  }
+  .backnumber-link:hover { opacity: 0.9; text-decoration: none; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 32px 16px;
+    font-size: 12px;
+    color: #999;
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .header h1 { font-size: 22px; }
+    .article-body h2 { font-size: 18px; }
+    .insight-grid { grid-template-columns: 1fr; }
+    .article-image-area { height: 160px; font-size: 40px; }
+    .article-summary { font-size: 15px; }
+    .article-meta { font-size: 12px; }
+    .pub-date { font-size: 12px; }
+  }
+  @media (max-width: 480px) {
+    .article-summary { font-size: 15px; }
+    .article-meta { font-size: 12px; }
+    .pub-date { font-size: 12px; }
+    .section-heading { font-size: 18px; }
+  }
+
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    body { background: #0f172a; color: #e2e8f0; }
+    .header, .article-card, .insight-section, .backnumber-section { background: #1e293b; }
+    .header h1, .section-heading, .article-body h2, .insight-section h2, .backnumber-section h2 { color: #e2e8f0; }
+    .article-summary { color: #cbd5e1; }
+    .source, .article-meta { color: #94a3b8; }
+    .insight-block { background: #0f172a; border-color: #334155; }
+    .insight-block p { color: #94a3b8; }
+    .summary-banner { background: linear-gradient(135deg, #0f172a, #1e3a5f); }
+  }
+  :root[data-theme="dark"] body { background: #0f172a; color: #e2e8f0; }
+  :root[data-theme="dark"] .header,
+  :root[data-theme="dark"] .article-card,
+  :root[data-theme="dark"] .insight-section,
+  :root[data-theme="dark"] .backnumber-section { background: #1e293b; }
+  :root[data-theme="dark"] .article-summary { color: #cbd5e1; }
+  :root[data-theme="dark"] .insight-block { background: #0f172a; border-color: #334155; }
+  :root[data-theme="light"] body { background: #f8fafc; color: #1a2744; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="badge">KONNEKT INTERNATIONAL</div>
+  <h1>📊 IP News Weekly</h1>
+  <div class="date">2026年7月20日（月）</div>
+</div>
+
+<div class="container">
+
+  <!-- Summary Banner -->
+  <div class="summary-banner">
+    <h2>今週のハイライト</h2>
+    <p>
+      今週は「ちいかわ」IPの多面的なライセンス展開（薬局×コスメ・花火）、平成Y2Kリバイバルを牽引する「ナルミヤキャラクターズ」の食品コラボ、90年代カーバトル漫画「頭文字D」のグッズポップアップ再浮上を確認。グローバルでは映画「Minions &amp; Monsters」公開に連動したJellySqueeze英国展開と、K-POPガールズグループ「RESCENE」がキャラクターIPを独立資産として構築する韓国発の新モデルが注目を集めた。
+    </p>
+  </div>
+
+  <!-- ====== 🇯🇵 日本記事 ====== -->
+  <div class="section-heading">🇯🇵 日本の記事</div>
+
+  <!-- JP-1: ちいかわ×マツキヨコカラ -->
+  <div class="article-card">
+    <div class="article-image-area">
+      🐾
+      <span class="img-label">キャラIPライセンス</span>
+    </div>
+    <div class="article-body">
+      <h2>ちいかわ×マツキヨコカラ「とびきりサマーキャンペーン」7月16日スタート — 全国薬局でグッズ3形態展開＋花火コラボ</h2>
+      <div class="article-meta">
+        <span class="source">インサイド（inside-games.jp）</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-07-09（11日前）</span>
+      </div>
+      <p class="article-summary">
+        全国のマツモトキヨシグループ・コカラファインで7月16日よりちいかわとの大型コラボキャンペーンがスタート。「当たる」「もらえる」「買える」の3形態で展開し、対象商品1,000円以上購入で応募できる抽選企画（300名にクーラーバッグなど）、公式アプリ会員への先着グッズ配布（全3種ランダム）、限定コスメ・おくすり手帳ケースなどの購入グッズが登場。さらに7月25日には横浜・新港ふ頭でちいかわをイメージしたコラボ花火を5分間打ち上げる特別企画も実施予定。期間は9月15日まで。
+      </p>
+      <a class="read-more" href="https://s.inside-games.jp/article/2026/07/09/184261.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- JP-2: ナルミヤ×森永ビスケット -->
+  <div class="article-card">
+    <div class="article-image-area">
+      🍪
+      <span class="img-label">平成Y2Kリバイバル</span>
+    </div>
+    <div class="article-body">
+      <h2>平成代表「ナルミヤキャラクターズ」×森永ビスケット が初コラボ！エンジェルブルーら全7種パッケージ7月下旬発売</h2>
+      <div class="article-meta">
+        <span class="source">PR TIMES / 日本経済新聞</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-07-10（10日前）</span>
+      </div>
+      <p class="article-summary">
+        エンジェルブルー・メゾ ピアノ ジュニア・ポンポネット ジュニアなど平成ジュニアアパレルブランドキャラクター「ナルミヤキャラクターズ」と森永製菓のビスケットシリーズが初コラボ。マリー・チョイス・ムーンライトなど全7種のパッケージに平成キャラが登場し、2026年7月下旬より全国で順次発売。パッケージキャラを切り取り両面テープで立体的な「ぷっくりオリジナルシール」を作れる仕掛けがZ世代・平成女児世代双方に訴求。応募期間（8月3日〜31日）中は抽選でコラボプレート&マグカップが100名にプレゼントされる。
+      </p>
+      <a class="read-more" href="https://prtimes.jp/main/html/rd/p/000000464.000066361.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- JP-3: 頭文字D -->
+  <div class="article-card">
+    <div class="article-image-area">
+      🚗
+      <span class="img-label">IPリバイバル・グッズ</span>
+    </div>
+    <div class="article-body">
+      <h2>『頭文字D』グッズ全14種が新登場！「藤原とうふ店」ポーチほか池袋・代官山でポップアップ先行販売スタート</h2>
+      <div class="article-meta">
+        <span class="source">PR TIMES / リアルサウンド</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-07-15（5日前）</span>
+      </div>
+      <p class="article-summary">
+        マリモクラフトが1995年開始の峠バトル漫画『頭文字D』（秋名山・藤原とうふ店）の新作オリジナルグッズ全14アイテムを発売。第1弾（3品）を7月1日、第2弾（11品）を7月11日より三省堂書店 池袋本店・代官山蔦屋書店・未来屋書店などポップアップ会場で先行販売。「藤原とうふ店」集金袋をモチーフにした布製ポーチ（2,750円）、名シーンをあしらったコインケース・エコバッグ・サコッシュなど日常使いに特化したラインナップ。2,200円以上購入でステッカー特典プレゼント。7月下旬よりバラエティショップでも一般販売予定。90年代IPの令和リバイバル展開として業界の注目を集めている。
+      </p>
+      <a class="read-more" href="https://prtimes.jp/main/html/rd/p/000000336.000095831.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- ====== 🌍 グローバル記事 ====== -->
+  <div class="section-heading">🌍 グローバルの記事</div>
+
+  <!-- GLOBAL-1: JellySqueeze × Minions & Monsters -->
+  <div class="article-card global">
+    <div class="article-image-area blue">
+      🍋
+      <span class="img-label">エンターテインメントIP ライセンシング</span>
+    </div>
+    <div class="article-body">
+      <h2>英国JellySqueeze、「Minions &amp; Monsters」IPライセンスを活用した限定スナックを英国1,100店舗以上で展開</h2>
+      <div class="article-meta">
+        <span class="source">Licensing.biz</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-07-15（5日前）</span>
+      </div>
+      <p class="article-summary">
+        英国のフルーツポット社が展開するゼリースナックブランド「JellySqueeze」が、Universal Products &amp; Experiences（UP&amp;E）とのライセンス契約を通じ、イルミネーション映画「Minions &amp; Monsters」（2026年7月1日英国公開）のキャラクターデザインを施した限定マルチパックを英国市場で展開した。テスコ・アスダ・ウェイトローズ・オカドを含む英国1,100以上の小売店で販売される。JellySqueeze は人工着色料・香料・甘味料・保存料不使用の非HFSS（高脂肪・高塩・高糖分回避）の果汁ベースゼリーで、子ども向け健康志向スナックとしてのブランドポジションを保ったままエンタメIPを巧みに活用した事例として注目される。映画公開タイミングと商品投入を完全に同期させ、ランチボックスやピクニックシーンでの利用を訴求するメッセージングも秀逸。エンタメIPを食品・スナックカテゴリーに展開するD2C的ライセンスモデルの成功例として、欧州ライセンス業界で評価を受けている。映画の世界観とブランドの「健康的楽しさ」をシームレスに融合させた本アプローチは、KONNEKTがアーティストIPをライフスタイルカテゴリーに展開する際の参考になりそうだ。
+      </p>
+      <a class="read-more" href="https://licensing.biz/jellysqueeze-announces-collaboration-inspired-by-illuminations-minions/" target="_blank" rel="noopener">Read the article →</a>
+    </div>
+  </div>
+
+  <!-- K-POP: RESCENE/REMINI -->
+  <div class="article-card kpop">
+    <div class="article-image-area pink">
+      🇰🇷
+      <span class="img-label">K-POP × キャラクターIP</span>
+    </div>
+    <div class="article-body">
+      <h2>🇰🇷 K-POPガールズグループ「RESCENE」の公式キャラ「REMINI」、キャラクターライセンシングフェア2026でグローバルデビュー</h2>
+      <div class="article-meta">
+        <span class="source">Inven Global / bloomingbit.io</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-07-09（11日前）</span>
+      </div>
+      <p class="article-summary">
+        グローバルキャラクターIPプラットフォーム企業allabo Xが、K-POPガールズグループ「RESCENE（リセンヌ）」の公式キャラクター「REMINI（レミニ）」を発表した。REMINIはRESCENEメンバー5人それぞれの個性を動物キャラとして表現したキャラクタープロジェクトで、ウォニ→ジョタ（Jota）、リブ→リップ（Rippu）、ミナミ→ミン（Ming）、メイ→ヤム（Yam）、ゼナ→ジェロミン（Jjeroming）の5体から構成される。約18ヶ月の開発期間中にメンバーが企画段階から参加し、各キャラクターの個性・世界観をメンバー自ら反映させた点が特徴的だ。2026年キャラクターライセンシングフェア（7月16〜19日、ソウルCOEX）でフォングリップ・クッション・ぬいぐるみ・キーリングなど10種以上のグッズとともに初披露され、RESCENEは同フェアの公式アンバサダーを2年連続で担当。allabo Xは2026年下半期に大型オフラインポップアップストアの開設とライセンスビジネス本格展開を計画しており、音楽活動と独立したキャラクターIPの構築・収益化モデルとして韓国エンタメ業界の注目を集めている。
+      </p>
+      <a class="read-more" href="https://en.bloomingbit.io/feed/news/115887" target="_blank" rel="noopener">Read the article →</a>
+    </div>
+  </div>
+
+  <!-- ====== 💡 KONNEKT への提言 ====== -->
+  <div class="insight-section">
+    <h2>💡 KONNEKT への提言</h2>
+    <div class="insight-grid">
+
+      <div class="insight-block">
+        <h3>① BRANDS 視点</h3>
+        <p>
+          ちいかわ×マツキヨコカラの事例は「ドラッグストア×キャラIP」という日常接点の強さを示している。Ange CharmeやLAVANDAのブランドIPをドラッグストアやコンビニとの限定コラボに展開することで、ファン以外への認知拡大も狙えそうだ。花火コラボのような体験型企画はSNS拡散にも効果的で検討したい。
+        </p>
+      </div>
+
+      <div class="insight-block">
+        <h3>② LICENSE 視点</h3>
+        <p>
+          JellySqueeze×Minionsの事例は「映画公開タイミングと小売配荷の同期」が成功の鍵。KONNEKTのアーティストIPも、コンサートツアーや映像作品リリースと連動した食品・日用品ライセンスを検討すると面白いかもしれない。健康志向ブランドとの組み合わせはアーティストのイメージ維持にも有利だ。
+        </p>
+      </div>
+
+      <div class="insight-block">
+        <h3>③ GOODS 視点</h3>
+        <p>
+          ナルミヤ×森永の「食べながらシールを作る」体験型プロダクトや、頭文字Dの「藤原とうふ店」モチーフ集金袋ポーチは、ファンダムの「世界観への没入」を日常消費と結びつけている。GOD ONLY KNOWSやArmillary.でも、楽曲・世界観を体験できる参加型グッズ企画を活かせそうだ。
+        </p>
+      </div>
+
+      <div class="insight-block kpop">
+        <h3>④ 🇰🇷 Korean Entertainment 視点</h3>
+        <p>
+          RESCENEとallabo Xの連携は「アーティストIPをキャラクターIPとして独立展開する」韓国発の新モデル。音楽活動が停滞した時期でもキャラクターグッズで収益化できる構造は非常に堅牢だ。KONNEKTが韓国系エンタメ領域に注力するならこのモデルを参考に、日本のK-POPファンコミュニティへのライセンス展開を積極的に検討したい。
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ====== 📂 バックナンバー ====== -->
+  <div class="backnumber-section">
+    <h2>📂 バックナンバー</h2>
+    <p style="font-size:14px; color:#666; margin-bottom:14px;">過去のレポートは一覧ページからご確認いただけます。</p>
+    <a class="backnumber-link" href="https://fujimoto-cpu.github.io/ip-report/" target="_blank" rel="noopener">📋 レポート一覧へ →</a>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>KONNEKT INTERNATIONAL INC. | IP News Weekly Report | 自動生成 2026-07-20</p>
+</div>
+
+</body>
+</html>
