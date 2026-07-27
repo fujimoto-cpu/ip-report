@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONNEKT IP News Weekly — 2026-07-27</title>
+<meta property="og:title" content="KONNEKT IP News Weekly 2026-07-27">
+<meta property="og:description" content="今週のIPニュース：クロックス×スーパーマリオ、しゅごキャラ！Y2Kグッズ、クレヨンしんちゃん×LOWRYS FARM、The Oodie×Pusheen、j-hope×Samsung、HYBE×韓国ファッション協会">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif;
+    background: #f8fafc;
+    color: #1a2744;
+    overflow-x: hidden;
+    line-height: 1.7;
+  }
+  a { color: #2980b9; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Header */
+  .header {
+    background: white;
+    border-top: 4px solid transparent;
+    border-image: linear-gradient(90deg, #2980b9, #6dd5fa) 1;
+    padding: 32px 24px 24px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .header .badge {
+    display: inline-block;
+    background: #1a2744;
+    color: #2980b9;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .header h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1a2744;
+    margin-bottom: 6px;
+  }
+  .header .date {
+    font-size: 14px;
+    color: #666;
+  }
+
+  /* Main container */
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+  }
+
+  /* Summary banner */
+  .summary-banner {
+    background: linear-gradient(135deg, #1a2744, #2980b9);
+    color: white;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+  }
+  .summary-banner h2 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    opacity: 0.85;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .summary-banner p {
+    font-size: 15px;
+    line-height: 1.8;
+    opacity: 0.92;
+  }
+  .summary-skip {
+    margin-top: 12px;
+    font-size: 13px;
+    opacity: 0.7;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 10px;
+  }
+
+  /* Section heading */
+  .section-heading {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 40px 0 20px;
+    color: #1a2744;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-heading::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, #e0e7ef, transparent);
+    margin-left: 8px;
+  }
+
+  /* Article cards */
+  .article-card {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    border-left: 4px solid #e74c3c;
+    transition: box-shadow 0.2s;
+  }
+  .article-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+  .article-card.global { border-left-color: #2980b9; }
+  .article-card.kpop { border-left-color: #e91e63; }
+
+  /* Image area (CSS-based, no external dependency) */
+  .article-image-area {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 52px;
+    background: linear-gradient(135deg, #fde8e8, #fbb6b6);
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .article-image-area::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 20px,
+      rgba(255,255,255,0.08) 20px,
+      rgba(255,255,255,0.08) 40px
+    );
+  }
+  .article-image-area.blue { background: linear-gradient(135deg, #dbeeff, #a8d4f5); }
+  .article-image-area.pink { background: linear-gradient(135deg, #fde0ec, #f9a8d4); }
+  .article-image-area.green { background: linear-gradient(135deg, #d9f5e8, #86e0b3); }
+  .article-image-area .img-label {
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+    font-size: 11px;
+    color: rgba(0,0,0,0.35);
+    font-style: italic;
+  }
+
+  /* Article body */
+  .article-body {
+    padding: 20px 22px 22px;
+    flex: 1;
+  }
+  .article-body h2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #1a2744;
+  }
+  .article-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+    font-size: 13px;
+  }
+  .source {
+    font-weight: 600;
+    color: #444;
+  }
+  .meta-sep {
+    color: #ccc;
+  }
+  .pub-date {
+    color: #666;
+    font-size: 13px;
+  }
+  .article-summary {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 16px;
+  }
+  .read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #2980b9;
+    padding: 7px 14px;
+    border: 1.5px solid #2980b9;
+    border-radius: 20px;
+    transition: all 0.2s;
+    min-height: 44px;
+  }
+  .read-more:hover {
+    background: #2980b9;
+    color: white;
+    text-decoration: none;
+  }
+  .article-card.kpop .read-more {
+    color: #e91e63;
+    border-color: #e91e63;
+  }
+  .article-card.kpop .read-more:hover {
+    background: #e91e63;
+    color: white;
+  }
+
+  /* Insight section */
+  .insight-section {
+    background: white;
+    border-radius: 12px;
+    padding: 28px;
+    margin-top: 40px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  }
+  .insight-section h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1a2744;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f0f4f8;
+  }
+  .insight-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .insight-block {
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 18px;
+    border: 1px solid #e8eef5;
+  }
+  .insight-block h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #2980b9;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .insight-block.kpop h3 { color: #e91e63; }
+  .insight-block p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.75;
+  }
+
+  /* Backnumbers */
+  .backnumber-section {
+    margin-top: 40px;
+    background: white;
+    border-radius: 12px;
+    padding: 24px 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  }
+  .backnumber-section h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1a2744;
+  }
+  .backnumber-list {
+    list-style: none;
+    margin-bottom: 16px;
+  }
+  .backnumber-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f4f8;
+    font-size: 14px;
+  }
+  .backnumber-list li:last-child { border-bottom: none; }
+  .backnumber-list a {
+    color: #2980b9;
+    font-weight: 500;
+  }
+  .backnumber-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    background: linear-gradient(90deg, #2980b9, #6dd5fa);
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    min-height: 44px;
+  }
+  .backnumber-link:hover { opacity: 0.9; text-decoration: none; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 32px 16px;
+    font-size: 12px;
+    color: #999;
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .header h1 { font-size: 22px; }
+    .article-body h2 { font-size: 18px; }
+    .insight-grid { grid-template-columns: 1fr; }
+    .article-image-area { height: 160px; font-size: 40px; }
+    .article-summary { font-size: 15px; }
+    .article-meta { font-size: 12px; }
+    .pub-date { font-size: 12px; }
+  }
+  @media (max-width: 480px) {
+    .article-summary { font-size: 15px; }
+    .article-meta { font-size: 12px; }
+    .pub-date { font-size: 12px; }
+    .section-heading { font-size: 18px; }
+  }
+
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    body { background: #0f172a; color: #e2e8f0; }
+    .header, .article-card, .insight-section, .backnumber-section { background: #1e293b; }
+    .header h1, .section-heading, .article-body h2, .insight-section h2, .backnumber-section h2 { color: #e2e8f0; }
+    .article-summary { color: #cbd5e1; }
+    .source, .article-meta { color: #94a3b8; }
+    .insight-block { background: #0f172a; border-color: #334155; }
+    .insight-block p { color: #94a3b8; }
+    .summary-banner { background: linear-gradient(135deg, #0f172a, #1e3a5f); }
+    .backnumber-list li { border-color: #334155; }
+  }
+  :root[data-theme="dark"] body { background: #0f172a; color: #e2e8f0; }
+  :root[data-theme="dark"] .header,
+  :root[data-theme="dark"] .article-card,
+  :root[data-theme="dark"] .insight-section,
+  :root[data-theme="dark"] .backnumber-section { background: #1e293b; }
+  :root[data-theme="dark"] .article-summary { color: #cbd5e1; }
+  :root[data-theme="dark"] .insight-block { background: #0f172a; border-color: #334155; }
+  :root[data-theme="dark"] .backnumber-list li { border-color: #334155; }
+  :root[data-theme="light"] body { background: #f8fafc; color: #1a2744; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="badge">KONNEKT INTERNATIONAL</div>
+  <h1>📊 IP News Weekly</h1>
+  <div class="date">2026年7月27日（月）</div>
+</div>
+
+<div class="container">
+
+  <!-- Summary Banner -->
+  <div class="summary-banner">
+    <h2>今週のハイライト</h2>
+    <p>
+      今週は「クロックス×スーパーマリオ」のグローバルIPライセンス展開、平成Y2Kリバイバルを続ける『しゅごキャラ！』の新規グッズ、「クレヨンしんちゃん×LOWRYS FARM」のアパレルコラボ第2弾を確認。グローバルでは英国発コンフォートウェアブランド「The Oodie」がPusheenと正式ライセンス、BTS j-hopeがSamsungのGalaxy Unpacked 2026キャンペーンの顔に起用、さらにHYBEと韓国ファッション協会がアーティストIPを国内アパレル産業と結ぶMOUを締結した。
+    </p>
+  </div>
+
+  <!-- ====== 🇯🇵 日本記事 ====== -->
+  <div class="section-heading">🇯🇵 日本の記事</div>
+
+  <!-- JP-1: クロックス×スーパーマリオ -->
+  <div class="article-card">
+    <div class="article-image-area">
+      👟🍄
+      <span class="img-label">IPライセンス × フットウェア</span>
+    </div>
+    <div class="article-body">
+      <h2>クロックスと任天堂がコラボ——「スーパーマリオ™ コレクション」全9型が7月16日発売</h2>
+      <div class="article-meta">
+        <span class="source">WWD JAPAN / PR TIMES</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-07-16（11日前）</span>
+      </div>
+      <p class="article-summary">
+        クロックスが任天堂とのライセンス契約を通じ「スーパーマリオ™ コレクション」を7月16日より発売した。マリオ（赤＋青）・ピーチ（ソフトピンク）・ヨッシー（鮮やかなグリーン）・クッパ（力強いトゲのディテール）の4キャラクターをイメージした全9型のクロッグを大人向けサイズで展開する、クロックス初のスーパーマリオスタイル。クロックス公式オンラインストア・直営店で販売中。世界最大規模のゲームIPと日常フットウェアブランドが組んだ本コラボは「IPライセンス × ファッションブランド」の標準モデルを体現しており、ライセンス業界で注目を集めている。
+      </p>
+      <a class="read-more" href="https://www.wwdjapan.com/articles/2414945" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- JP-2: しゅごキャラ！×Y2K -->
+  <div class="article-card">
+    <div class="article-image-area">
+      🎀✨
+      <span class="img-label">平成Y2Kリバイバル × グッズ</span>
+    </div>
+    <div class="article-body">
+      <h2>『しゅごキャラ！』がY2Kをテーマにした新規描き下ろしグッズ発売——渋谷タワレコポップアップ＆WEB販売決定</h2>
+      <div class="article-meta">
+        <span class="source">PR TIMES（Anique株式会社）</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-07-16（11日前）</span>
+      </div>
+      <p class="article-summary">
+        TVアニメ『しゅごキャラ！』のY2Kをテーマにした新規描き下ろしグッズ販売が決定。ケモミミ帽子を被ったあむ・イクトらのイラストを使用した専用アイテムが、2026年8月21日〜31日のタワーレコード渋谷店1FポップアップSHOP＆Aniqueウェブショップで発売される。対象商品3,300円（税込）以上の購入で購入特典オリジナルブロマイド（全5種ランダム）をプレゼント。平成レトロ×Y2Kブームが商業展開として定着してきており、2000年代ジュニアアニメのファッション感度の高い20〜30代層への訴求が続いている。
+      </p>
+      <a class="read-more" href="https://prtimes.jp/main/html/rd/p/000000320.000048489.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- JP-3: クレヨンしんちゃん×LOWRYS FARM -->
+  <div class="article-card">
+    <div class="article-image-area">
+      👶🎭
+      <span class="img-label">アニメIP × アパレルコラボ</span>
+    </div>
+    <div class="article-body">
+      <h2>クレヨンしんちゃん×LOWRYS FARM コラボ第2弾「変身しちゃうゾ!」テーマで全11型——7月24日発売</h2>
+      <div class="article-meta">
+        <span class="source">PR TIMES（株式会社アンドエスティHD）</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-07-24（3日前）</span>
+      </div>
+      <p class="article-summary">
+        LOWRYS FARMが昨年好評を得た「クレヨンしんちゃん」コラボの第2弾を展開。今回は「変身しちゃうゾ!」をテーマに、しんちゃんがアクション仮面・ぶりぶりざえもんに変身した描き下ろしオリジナルデザインを採用。ぬいぐるみ・エコバッグ・巾着をはじめとした全11型のラインアップで、LOWRYS FARM全店・and STストア6店舗・公式WEBストア・ZOZOTOWN・Rakuten Fashionで販売。アニメIPとファストファッション系ブランドのコラボが回数を重ねてファン定番化していく過程を示す事例として注目できる。
+      </p>
+      <a class="read-more" href="https://prtimes.jp/main/html/rd/p/000003189.000001304.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- ====== 🌍 グローバル記事 ====== -->
+  <div class="section-heading">🌍 グローバルの記事</div>
+
+  <!-- GLOBAL-1: The Oodie × Pusheen -->
+  <div class="article-card global">
+    <div class="article-image-area blue">
+      🐱🛋️
+      <span class="img-label">キャラクターIP × コンフォートウェア</span>
+    </div>
+    <div class="article-body">
+      <h2>The Oodie、ネコキャラクター「Pusheen」の公式ライセンスコレクションをグローバル5市場で発売</h2>
+      <div class="article-meta">
+        <span class="source">Total Licensing / LicenseGlobal</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-07-22（5日前）</span>
+      </div>
+      <p class="article-summary">
+        Pusheen（プシーン）はInstagram・TikTok・LINEスタンプを通じて世界規模のファンダムを持つ「インターネット生まれのネコキャラクター」。おやつ・お昼寝・かわいいものへの共感を軸にしたIPは性別・年齢層を問わない普遍的な訴求力を持つ。今回、オーストラリア発の人気コンフォートウェアブランド「The Oodie」がPusheenと正式ライセンス契約を締結し新コレクションを発売。The Ooodieは2018年設立で、アニメキャラクター・映画IP・動物モチーフとのコラボを積み重ねてきた実績を持ち、今回のPusheenコレクションはOoodie™オリジナル（ブランケットフーディー）・シェルパドレッシングガウン・シェルパスウェットジャンパー＆トラウザー・シェルパブランケットの4型構成。Pusheenならではのやわらかな色調とキャラクターディテールをThe Ooodieのシグネチャー素材に落とし込んでおり、映画鑑賞・のんびりした朝・ソファリラックス・昼寝といった「コーチポテト」ライフスタイルとの親和性を前面に押し出したマーケティング展開が特徴的だ。オーストラリア・英国・欧州・米国・カナダの公式サイト限定での販売で、グローバル5市場への同時展開を実現している。「インターネット発のキャラクターIPがライフスタイルカテゴリーに正式参入する」という今回のモデルは、SNS基盤のキャラクターIPがリアル商品に展開する際の成功パターンとして業界から高い評価を受けており、KONNEKTのアーティストIPをコンフォートウェア・ルームウェア・ライフスタイル雑貨へ展開する際の有力な参考事例となりそうだ。
+      </p>
+      <a class="read-more" href="https://www.totallicensing.com/pusheen-collection-from-the-oodie/" target="_blank" rel="noopener">Read the article →</a>
+    </div>
+  </div>
+
+  <!-- GLOBAL-2: j-hope × Samsung -->
+  <div class="article-card global">
+    <div class="article-image-area blue">
+      🌟📱
+      <span class="img-label">K-POPタレントIP × グローバルテック</span>
+    </div>
+    <div class="article-body">
+      <h2>BTS j-hopeがサムスン「Galaxy Unpacked 2026」の顔に——ロンドン撮影の大型キャンペーンで世界的な話題</h2>
+      <div class="article-meta">
+        <span class="source">bookingagentinfo.com / sportskeeda.com</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-07-14（13日前）</span>
+      </div>
+      <p class="article-summary">
+        サムスンモバイルが2年に1度の大型新製品発表会「Galaxy Unpacked 2026」のグローバルブランドキャンペーンにBTSのj-hopeを起用した。7月16日に公開されたティーザー映像ではロンドンの街並みを舞台にj-hopeがGalaxy Z Fold 8を使いながらロンドンを歩く様子を収めており、ビッグベン・赤い2階建てバス・絵画的な壁画など英国らしい映像美が展開された。注目すべきはj-hopeのソロアイコン（太陽・リス・"Hope World"）をキャンペーンのビジュアル言語として有機的に組み込んだ点で、「起用」ではなく「クリエイティブコラボレーション」として設計された構造が従来のセレブ広告と一線を画している。7月22日にロンドンで開催されたGalaxy Unpackedイベントにはj-hopeが実際に登壇し、Galaxy Z Fold 8のプレゼンテーションを行った。K-POPアーティストのグローバルなブランド影響力がテクノロジー企業の最高レベルのマーケティングに活用された事例として、K-POPタレントIPの汎用性と価値を改めて示す結果となった。アーティストIP活用の新しいスタンダードとして業界で広く参照される動きが生まれている。単なる商品推薦を超え、アーティストの世界観・個性・ファンカルチャーを丸ごと借用するサムスンの戦略は、KONNEKT所属アーティストIPとのグローバルブランドパートナーシップを考える上でも参考になるアプローチだ。
+      </p>
+      <a class="read-more" href="https://bookingagentinfo.com/news/bts-j-hope-teams-up-with-samsung-for-galaxy-campaign/" target="_blank" rel="noopener">Read the article →</a>
+    </div>
+  </div>
+
+  <!-- K-POP: HYBE × Korea Fashion Association -->
+  <div class="article-card kpop">
+    <div class="article-image-area pink">
+      🇰🇷👗
+      <span class="img-label">K-POP IP × アパレル産業</span>
+    </div>
+    <div class="article-body">
+      <h2>🇰🇷 HYBE×韓国ファッション協会がMOU締結——アーティストIPを国内アパレル製造業と融合させる新スキーム始動</h2>
+      <div class="article-meta">
+        <span class="source">Korea Herald / JoongAng Daily</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-07-23（4日前）</span>
+      </div>
+      <p class="article-summary">
+        K-POPエンターテインメント最大手のHYBEが2026年7月22日、ソウルCOEXで開催された「2026 K-Fashion Connect」会場において韓国ファッション協会（KFA）とのMOU（業務提携覚書）を締結した。合意内容は、BTS・SEVENTEEN・NewJeans・LE SSERAFIMらHYBE傘下アーティストのIP（肖像権・楽曲・ビジュアルコンセプトなど）を、KFAが保有する国内縫製・テキスタイル製造業者のネットワークと結びつけ「K-ファッション製品」の生産体制を構築するというもの。参加企業・製品カテゴリー・リリーススケジュールは現時点で未公表だが、グローバルファンのエンゲージメントを韓国の繊維産業への持続的需要へと転換する「産業振興型IPビジネス」として業界の注目を集めている。特に重要なのは、このスキームが従来の「グッズ生産→小売→ファン購入」という単純な商流を超え、IP保有者・製造業者・流通業者が有機的に連携した持続可能なエコシステムを志向している点だ。エンタメIPを文化的輸出価値としてだけでなく、国内産業振興の起爆剤として活用するモデルは今後の韓国コンテンツ産業の方向性を示している。KONNEKTが韓国系エンタメ領域に注力する上で、HYBEの動きが日本市場における韓国IPライセンス拡大の布石となる可能性が高く、K-POPアーティストIPを活用した日本国内ライセンス展開の機会を積極的に探っていくタイミングと言えそうだ。
+      </p>
+      <a class="read-more" href="https://www.koreaherald.com/article/10817851" target="_blank" rel="noopener">Read the article →</a>
+    </div>
+  </div>
+
+  <!-- ====== 💡 KONNEKT への提言 ====== -->
+  <div class="insight-section">
+    <h2>💡 KONNEKT への提言</h2>
+    <div class="insight-grid">
+
+      <div class="insight-block">
+        <h3>① BRANDS 視点</h3>
+        <p>
+          クロックス×スーパーマリオは「大衆フットウェアブランドにIPを乗せる」というライセンスモデルを体現している。Ange CharmeやLAVANDAのビジュアルIPをシューズ・アクセサリーブランドへのシーズナルライセンスで展開するのも面白いかもしれない。まず小ロットの限定コレクションから試して反応を見るアプローチが取り組みやすそうだ。
+        </p>
+      </div>
+
+      <div class="insight-block">
+        <h3>② LICENSE 視点</h3>
+        <p>
+          The Oodie×Pusheenは「SNS発のキャラクターIPがコンフォートウェアに進出」した好例。KONNEKTが保有するアーティストIPをルームウェア・コンフォートウェアといった「家の中の日常」カテゴリーに展開できれば、ファン層の購買意欲の高いカテゴリーとしてライセンス収益を期待できそうだ。クレヨンしんちゃん×LOWRYS FARMが第2弾まで続いている点からも、アパレルIPコラボの継続性が確認できる。
+        </p>
+      </div>
+
+      <div class="insight-block">
+        <h3>③ GOODS 視点</h3>
+        <p>
+          しゅごキャラ！Y2Kグッズは「ノスタルジア×現代トレンドの融合」という商品開発手法の参考例。KONNEKTアーティストの過去のビジュアル・ライブ写真をY2Kスタイルで再編集したコレクション展開を検討すると、既存ファン＋新規Z世代の両方に刺さる可能性がある。ポップアップショップとWEB販売の組み合わせも集客とECの相乗効果が狙える好事例だ。
+        </p>
+      </div>
+
+      <div class="insight-block kpop">
+        <h3>④ 🇰🇷 Korean Entertainment 視点</h3>
+        <p>
+          HYBE×韓国ファッション協会のMOUは「アーティストIPを産業インフラと融合させる」新スキームで、KONNEKTが韓国エンタメ領域に注力する際の参考モデルになりそうだ。j-hope×Samsungの事例はK-POPアーティストIPがテクノロジーブランドのトップキャンペーンにも起用されることを示しており、日本市場での韓国アーティストIPのパートナーシップ可能性が想像以上に幅広いことを再確認させてくれる。
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ====== 📂 バックナンバー ====== -->
+  <div class="backnumber-section">
+    <h2>📂 バックナンバー</h2>
+    <ul class="backnumber-list">
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-07-20.html">📄 2026-07-20 週次レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-07-06.html">📄 2026-07-06 週次レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-06-29.html">📄 2026-06-29 週次レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-06-22.html">📄 2026-06-22 週次レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-06-15.html">📄 2026-06-15 週次レポート</a></li>
+    </ul>
+    <a class="backnumber-link" href="https://fujimoto-cpu.github.io/ip-report/" target="_blank" rel="noopener">📋 レポート一覧へ →</a>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>KONNEKT INTERNATIONAL INC. | IP News Weekly Report | 自動生成 2026-07-27</p>
+</div>
+
+</body>
+</html>
