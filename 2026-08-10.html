@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONNEKT IP News Weekly — 2026-08-10</title>
+<meta property="og:title" content="KONNEKT IP News Weekly 2026-08-10">
+<meta property="og:description" content="今週のIPニュース：HUNTER×HUNTER×しまむら、サンリオ×ファミマ×メーカーマスコット、まめゴマ×Aveil、Spencer Spirit×Hot Topic買収、Populart×J Balvin、aespa×BAPE">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif;
+    background: #f8fafc;
+    color: #1a2744;
+    overflow-x: hidden;
+    line-height: 1.7;
+  }
+  a { color: #2980b9; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Header */
+  .header {
+    background: white;
+    border-top: 4px solid transparent;
+    border-image: linear-gradient(90deg, #2980b9, #6dd5fa) 1;
+    padding: 32px 24px 24px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .header .badge {
+    display: inline-block;
+    background: #1a2744;
+    color: #2980b9;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .header h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1a2744;
+    margin-bottom: 6px;
+  }
+  .header .date {
+    font-size: 14px;
+    color: #666;
+  }
+
+  /* Main container */
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+  }
+
+  /* Summary banner */
+  .summary-banner {
+    background: linear-gradient(135deg, #1a2744, #2980b9);
+    color: white;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+  }
+  .summary-banner h2 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    opacity: 0.85;
+    letter-spacing: 0.06em;
+  }
+  .summary-banner p {
+    font-size: 15px;
+    line-height: 1.75;
+    opacity: 0.93;
+  }
+  .summary-banner .skip-note {
+    margin-top: 10px;
+    font-size: 13px;
+    opacity: 0.75;
+  }
+
+  /* Section heading */
+  .section-heading {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1a2744;
+    margin: 36px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e0e7ef;
+  }
+
+  /* Article card */
+  .article-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    margin-bottom: 24px;
+    border-left: 4px solid #e74c3c;
+  }
+  .article-card.global { border-left-color: #2980b9; }
+  .article-card.kpop   { border-left-color: #e91e63; }
+
+  /* Article image area (CSS gradient approach) */
+  .article-image-area {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+    background: linear-gradient(135deg, #fde8e8, #fbb6b6);
+    position: relative;
+    overflow: hidden;
+  }
+  .article-image-area::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255,255,255,0.15) 10px,
+      rgba(255,255,255,0.15) 20px
+    );
+  }
+  .article-image-area.blue  { background: linear-gradient(135deg, #dbeeff, #a8d4f5); }
+  .article-image-area.pink  { background: linear-gradient(135deg, #fde0ec, #f9a8d4); }
+  .article-image-area.green { background: linear-gradient(135deg, #d9f5e8, #86e0b3); }
+  .article-image-area.orange { background: linear-gradient(135deg, #fff3e0, #ffcc80); }
+  .article-image-area .img-label {
+    position: relative;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(30,30,60,0.7);
+    margin-top: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  /* Article body */
+  .article-body {
+    padding: 20px 24px;
+  }
+  .article-body h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a2744;
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+  .article-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 12px;
+  }
+  .article-meta .source { font-weight: 600; color: #2980b9; }
+  .article-meta .meta-sep { color: #ccc; }
+  .pub-date { color: #666; font-size: 13px; }
+  .article-summary {
+    font-size: 15px;
+    color: #334;
+    line-height: 1.75;
+    margin-bottom: 14px;
+  }
+  .read-more {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #2980b9;
+    border: 1px solid #2980b9;
+    padding: 5px 14px;
+    border-radius: 20px;
+    transition: all 0.2s;
+    min-height: 44px;
+    line-height: 34px;
+  }
+  .read-more:hover {
+    background: #2980b9;
+    color: white;
+    text-decoration: none;
+  }
+
+  /* Insight section */
+  .insight-section {
+    background: white;
+    border-radius: 12px;
+    padding: 28px;
+    margin-top: 36px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+  .insight-section h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1a2744;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e7ef;
+  }
+  .insight-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .insight-block {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 16px;
+    border-left: 3px solid #2980b9;
+  }
+  .insight-block.kpop { border-left-color: #e91e63; }
+  .insight-block h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a2744;
+    margin-bottom: 8px;
+  }
+  .insight-block p {
+    font-size: 14px;
+    color: #445;
+    line-height: 1.7;
+  }
+
+  /* Backnumber section */
+  .backnumber-section {
+    background: white;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-top: 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+  .backnumber-section h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a2744;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #e0e7ef;
+    padding-bottom: 8px;
+  }
+  .backnumber-list {
+    list-style: none;
+    margin-bottom: 14px;
+  }
+  .backnumber-list li {
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f4f8;
+  }
+  .backnumber-list li a {
+    font-size: 14px;
+    color: #2980b9;
+  }
+  .backnumber-link {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #2980b9;
+    border: 2px solid #2980b9;
+    padding: 8px 20px;
+    border-radius: 24px;
+    background: linear-gradient(90deg, #2980b9, #6dd5fa);
+    color: white;
+    margin-top: 4px;
+    min-height: 44px;
+    line-height: 28px;
+  }
+  .backnumber-link:hover { opacity: 0.85; text-decoration: none; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 12px;
+    color: #999;
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .header h1 { font-size: 22px; }
+    .article-body h2 { font-size: 18px; }
+    .insight-grid { grid-template-columns: 1fr; }
+    .article-image-area { height: 160px; font-size: 40px; }
+    body { font-size: 15px; }
+    .article-meta { font-size: 12px; }
+    .pub-date { font-size: 12px; }
+  }
+  @media (max-width: 480px) {
+    .article-summary { font-size: 15px; }
+    .article-meta { font-size: 12px; }
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) body { background: #0f172a; color: #e2e8f0; }
+    :root:not([data-theme="light"]) .header,
+    :root:not([data-theme="light"]) .article-card,
+    :root:not([data-theme="light"]) .insight-section,
+    :root:not([data-theme="light"]) .backnumber-section { background: #1e293b; }
+    :root:not([data-theme="light"]) .insight-block { background: #0f172a; border-color: #334155; }
+    :root:not([data-theme="light"]) .summary-banner { background: linear-gradient(135deg, #0f172a, #1e3a5f); }
+    :root:not([data-theme="light"]) .section-heading { color: #e2e8f0; border-color: #334155; }
+    :root:not([data-theme="light"]) .article-body h2 { color: #e2e8f0; }
+    :root:not([data-theme="light"]) .insight-section h2 { color: #e2e8f0; border-color: #334155; }
+    :root:not([data-theme="light"]) .backnumber-section h2 { color: #e2e8f0; border-color: #334155; }
+    :root:not([data-theme="light"]) .backnumber-list li { border-color: #334155; }
+    :root:not([data-theme="light"]) .insight-block h3 { color: #e2e8f0; }
+    :root:not([data-theme="light"]) .article-summary { color: #cbd5e1; }
+    :root:not([data-theme="light"]) .insight-block p { color: #94a3b8; }
+  }
+  :root[data-theme="dark"] body { background: #0f172a; color: #e2e8f0; }
+  :root[data-theme="dark"] .header,
+  :root[data-theme="dark"] .article-card,
+  :root[data-theme="dark"] .insight-section,
+  :root[data-theme="dark"] .backnumber-section { background: #1e293b; }
+  :root[data-theme="dark"] .insight-block { background: #0f172a; border-color: #334155; }
+  :root[data-theme="dark"] .summary-banner { background: linear-gradient(135deg, #0f172a, #1e3a5f); }
+  :root[data-theme="light"] body { background: #f8fafc; color: #1a2744; }
+  :root[data-theme="light"] .header,
+  :root[data-theme="light"] .article-card,
+  :root[data-theme="light"] .insight-section,
+  :root[data-theme="light"] .backnumber-section { background: white; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="badge">KONNEKT INTERNATIONAL</div>
+  <h1>🗞️ IP News Weekly</h1>
+  <div class="date">2026年8月10日（月）週次レポート</div>
+</div>
+
+<div class="container">
+
+  <!-- Summary Banner -->
+  <div class="summary-banner">
+    <h2>今週のハイライト</h2>
+    <p>
+      国内では「HUNTER×HUNTER」グリードアイランド編モチーフのしまむらコラボが8月1日に全39品目発売、「サンリオキャラクターズ×メーカーマスコット」がファミリーマート全国16,400店で8月4日よりキャンペーン展開、平成サンリオキャラ「まめゴマ」のAveilコラボが8月8日スタートと、IPライセンスの動きが目白押し。グローバルではSpencer Spirit Holdings（Spirit Halloween親会社）がHot Topic・BoxLunch・Her Universeを約3.5億ドルで買収し6ブランド連合・3,000店超体制へ、新エンタメIPカンパニー「Populart」がJ Balvinとのコレクタブルで上場デビューした。K-POPはaespa×BAPEのBABY MILO LEMONADEコレクションが8月1日に世界発売。
+    </p>
+  </div>
+
+  <!-- ====== 🇯🇵 日本記事 ====== -->
+  <div class="section-heading">🇯🇵 日本の記事</div>
+
+  <!-- JP-1: HUNTER×HUNTER × しまむら -->
+  <div class="article-card">
+    <div class="article-image-area">
+      ⚔️🃏
+      <span class="img-label">人気アニメIP × ファッションチェーン</span>
+    </div>
+    <div class="article-body">
+      <h2>しまむらに「HUNTER×HUNTER」G.I.編モチーフのグッズがズラリ！カードデザインのアパレル・雑貨、全39品目が8月1日発売</h2>
+      <div class="article-meta">
+        <span class="source">インサイド（inside-games.jp）</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-07-29（12日前）</span>
+      </div>
+      <p class="article-summary">
+        人気漫画「HUNTER×HUNTER」のコラボグッズが2026年8月1日より全国のしまむら・しまむらパーク（オンライン）で発売された。グリードアイランド（G.I.）編のカードビジュアルを全面採用した全39品目が展開され、Tシャツやリラクシングパンツなどのアパレルからキーホルダー・パスケース・枕カバー・収納ボックスまで生活全域をカバーするラインナップ。ゴレイヌの「オレが3人分になる…」など名言入りソックスも話題に。価格帯は429円〜2,189円（税込）で、しまむらパークでは8月1日15時よりオンライン販売もスタート。
+      </p>
+      <a class="read-more" href="https://www.inside-games.jp/article/2026/07/29/185371.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- JP-2: サンリオ×ファミリーマート×メーカーマスコット -->
+  <div class="article-card">
+    <div class="article-image-area orange">
+      🐱🏪
+      <span class="img-label">キャラクターIP × コンビニキャンペーン</span>
+    </div>
+    <div class="article-body">
+      <h2>ファミマ全国16,400店に総勢26キャラが大集合！「サンリオキャラクターズ×メーカーマスコット」キャンペーンが8月4日スタート</h2>
+      <div class="article-meta">
+        <span class="source">PR TIMES（ファミリーマート）</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-08-04（6日前）</span>
+      </div>
+      <p class="article-summary">
+        全国約16,400店のファミリーマートで2026年8月4日より「サンリオキャラクターズ×メーカーマスコット大集合！キャンペーン」がスタートした。ハローキティ・マイメロディ・ポムポムプリン・ポチャッコ・けろけろけろっぴ・バッドばつ丸などのサンリオキャラクターと、お菓子・即席麺メーカーのマスコットキャラクター計26体が集結。対象商品2個購入でファミリーマート限定オリジナルグッズが1個もらえる形式で、8月31日（月）まで実施（景品はなくなり次第終了）。コンビニ×キャラクターIPの大型接点施策として注目。
+      </p>
+      <a class="read-more" href="https://prtimes.jp/main/html/rd/p/000002435.000046210.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- JP-3: まめゴマ × Avail -->
+  <div class="article-card">
+    <div class="article-image-area green">
+      🦭💙
+      <span class="img-label">平成サンリオIP × ファストファッション</span>
+    </div>
+    <div class="article-body">
+      <h2>見ているだけでひんやり癒される！平成サンリオキャラ「まめゴマ」のコラボグッズがアベイルで8月8日発売</h2>
+      <div class="article-meta">
+        <span class="source">インサイド（inside-games.jp）/ サンリオ公式</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-08-03（7日前）</span>
+      </div>
+      <p class="article-summary">
+        サンリオの人気アザラシキャラクター「まめゴマ」のコラボグッズが2026年8月8日より全国アベイル（Avail）の店舗・しまむらパークにて発売。ひんやり感をテーマにした夏向けデザインで、マスコットチャームやパスケースリールなど日常使いのアイテムが多数展開される。まめゴマは2005年デビューの平成キャラで、Z世代・α世代を中心に再ブームとなっている「平成リバイバル」の波に乗った復刻展開。ファストファッション系量販店での大衆展開が、IPの認知再拡大にも寄与している。
+      </p>
+      <a class="read-more" href="https://www.inside-games.jp/article/2026/08/03/185638.html" target="_blank" rel="noopener">元記事を読む →</a>
+    </div>
+  </div>
+
+  <!-- ====== 🌍 グローバル記事 ====== -->
+  <div class="section-heading">🌍 グローバルの記事</div>
+
+  <!-- GLOBAL-1: Spencer Spirit × Hot Topic 買収 -->
+  <div class="article-card global">
+    <div class="article-image-area blue">
+      🛍️💀
+      <span class="img-label">IPライセンス小売 × 大型M&amp;A</span>
+    </div>
+    <div class="article-body">
+      <h2>Spencer Spirit Holdings が Hot Topic・BoxLunch・Her Universe を約3.5億ドルで買収——6ブランド・3,000店超の北米最大IPライセンス小売連合が誕生</h2>
+      <div class="article-meta">
+        <span class="source">PR Newswire / Retail Dive / The Pop Insider</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-08-06（4日前）</span>
+      </div>
+      <p class="article-summary">
+        スピリット・ハロウィン・スペンサーズを運営するSpencer Spirit Holdings社が2026年8月6日、Sycamore Partnersを通じてHot Topic, Inc.のポートフォリオ（Hot Topic・BoxLunch・Her Universe）を約3億5,000万ドルで買収する合意を正式発表した。買収完了後、Spencer Spiritの3ブランド（Spirit Halloween・Spencer's・Spirit Christmas）とHot Topicグループ3ブランドが統合され、北米全体で3,000店超を擁する6ブランド体制となる。Hot Topicは615店超で音楽・エンタメ・ポップカルチャーIPのアパレル・アクセサリー・コレクタブルを販売、BoxLunchは280店超でライセンスグッズを、Her Universeは16年の歴史を持つファンダム向けオンラインファッションブランドとして運営。スティーブ・ヴラネスCEOは引き続き3ブランドを統括し、Spencer Spirit CEOのスティーブン・シルバースタインに直接報告する独立運営体制を維持する。巨大化したIPライセンス小売連合の誕生はライセンサーとの交渉力を高め、排他的マーチャンダイズの拡充やリアル・デジタルの相乗効果が期待される。アニメ・映画・音楽IPをリアル店舗で展開するモデルの大規模統合事例として、ライセンス業界に大きなインパクトを与えている。
+      </p>
+      <a class="read-more" href="https://www.prnewswire.com/news-releases/spencer-spirit-holdings-inc-to-acquire-hot-topic-inc-to-combine-six-iconic-merchandise-concepts-302845131.html" target="_blank" rel="noopener">Read the article →</a>
+    </div>
+  </div>
+
+  <!-- GLOBAL-2: Populart × J Balvin -->
+  <div class="article-card global">
+    <div class="article-image-area blue">
+      🎭🌟
+      <span class="img-label">新世代エンタメIPカンパニー × アーティストコレクタブル</span>
+    </div>
+    <div class="article-body">
+      <h2>新エンタメIPカンパニー「Populart」がデビュー——J Balvinとの世界限定100個・$2,500のコレクタブルで、IP横断ビジネスの新モデルを提示</h2>
+      <div class="article-meta">
+        <span class="source">License Global / The Hype Magazine</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-08-04（6日前）</span>
+      </div>
+      <p class="article-summary">
+        国際的アーティストGal Yosefが設立した新エンタメIPカンパニー「Populart」が2026年8月4日に正式デビューを発表した。Populartはオリジナルキャラクターを軸に、コレクタブル・音楽・ファッション・アニメ・ストーリーテリングを横断する長期エンタメ財産の構築を目指す次世代型IP事業体。単なるコレクタブルブランドではなく、キャラクターが複数メディアを超えて生き続けるエンタメ宇宙の創出を掲げる。第1弾コラボとして、コロンビア発グローバルスーパースターJ Balvinとの「Galy x J Balvin」を発表。世界限定100個・1個2,500ドルという超プレミアム仕様で、26cm・PVC＆ビニール製コレクタブルフィギュアにNFC認証チップを搭載、両アーティストの直筆サイン入り番号証明書付き。8月11日よりウェイトリスト受付、8月13日より一般販売（配送は2026年末〜2027年初め）。「超限定コレクタブル→グローバルIPへの拡張」というルートはIPビジネスの新しいエントリーポイントとして業界の注目を集めており、アーティストIPをキャラクター化してコンシューマープロダクトへ展開するモデルはKONNEKTの事業方向性とも強く共鳴する。
+      </p>
+      <a class="read-more" href="https://www.licenseglobal.com/entertainment/gal-yosef-debuts-entertainment-ip-house-populart-with-j-balvin-as-first-collaborator" target="_blank" rel="noopener">Read the article →</a>
+    </div>
+  </div>
+
+  <!-- K-POP: aespa × BAPE -->
+  <div class="article-card kpop">
+    <div class="article-image-area pink">
+      🇰🇷🦍🍋
+      <span class="img-label">K-POP アーティストIP × グローバルストリートウェア</span>
+    </div>
+    <div class="article-body">
+      <h2>🇰🇷 aespa × BAPE® BABY MILO コレクション登場——LollapaloozaデビューとLEMONADE時代にK-Popとストリートウェアの融合が加速</h2>
+      <div class="article-meta">
+        <span class="source">Complex / BAPE Official</span>
+        <span class="meta-sep">|</span>
+        <span class="pub-date">📅 公開日 2026-07-29（12日前）</span>
+      </div>
+      <p class="article-summary">
+        日本を代表するストリートウェアブランドBAPE®と韓国K-Popグループaespaの限定コラボコレクションが2026年8月1日にComplex.comおよびBAPE STORE®各店舗で世界発売された。BAPEのシグネチャーキャラクター「BABY MILO®」がaespaの最新アルバム「LEMONADE」の世界観を纏い、KARINA・WINTER・GISELLE・NINGNINGの4メンバーそれぞれをBABY MILOスタイルで表現したTシャツ・フーディー・アクセサリーを展開。レモンイエローを基調とした配色はLEMONADE時代を直接反映し、小さなレモンフードを被ったメンバーキャラクターや頭上にレモンをバランスさせたBABY MILOなど遊び心あふれるデザインが特徴。このリリースはaespaの米国最大音楽フェス「Lollapalooza」デビューパフォーマンスとも時期を合わせており、グループのグローバル露出がピークに達したタイミングでの戦略的展開となった。K-PopアーティストのIPキャラクター化→グローバルストリートウェアとの融合→ファンへのリアルプロダクト展開というモデルは、KONNEKTの韓国系エンタメ事業展開においても重要な参考軸となる。
+      </p>
+      <a class="read-more" href="https://www.complex.com/style/a/oruny-choi/aespa-bape-collection-announcement" target="_blank" rel="noopener">Read the article →</a>
+    </div>
+  </div>
+
+  <!-- ====== 💡 KONNEKT への提言 ====== -->
+  <div class="insight-section">
+    <h2>💡 KONNEKT への提言</h2>
+    <div class="insight-grid">
+
+      <div class="insight-block">
+        <h3>① BRANDS 視点</h3>
+        <p>
+          Spencer Spirit × Hot Topicの統合は「IPライセンス小売の規模の経済」を示す事例。KONNEKTはアーティストIP（Ange Charme・GOD ONLY KNOWS・LAVANDA・Armillary.）の商品を扱う小売パートナーを複数横断させるバンドル戦略を検討してみたい。複数小売チェーンへの同時展開で認知を面的に広げつつ、各ブランドの独自性を維持するのがポイントになりそうだ。
+        </p>
+      </div>
+
+      <div class="insight-block">
+        <h3>② LICENSE 視点</h3>
+        <p>
+          まめゴマ×Avail・HxH×しまむらはどちらも「大衆量販型ファッションチェーン×IPライセンス」の組み合わせで、幅広いリーチを低価格帯で実現している。KONNEKTのアーティストIPも、ラグジュアリー志向だけでなく量販チェーン展開（しまむら・アベイル・ライトオン等）を並行させることで、ファンベースの裾野を拡大するアプローチが取り組みやすそうだ。
+        </p>
+      </div>
+
+      <div class="insight-block">
+        <h3>③ GOODS 視点</h3>
+        <p>
+          Populartの「超限定コレクタブルでIPのブランド価値を高めてからコンシューマーへ展開」というモデルはArmillary.（末吉秀太）との相性が良さそうだ。NFCチップ搭載・直筆サイン・限定ナンバリングの組み合わせは既存グッズとの差別化になる。ファン向けのプレミアムレイヤーを作ることで、通常グッズのコレクション欲も高まる可能性がある。
+        </p>
+      </div>
+
+      <div class="insight-block kpop">
+        <h3>④ 🇰🇷 Korean Entertainment 視点</h3>
+        <p>
+          aespa×BAPEは「K-PopアーティストIPをキャラクター（BABY MILO化）に変換してグローバルブランドと組む」パターンで、これはKONNEKTが注力する韓国エンタメ領域で活かせる発想だ。サンリオ×ファミマの「コンビニ×キャラクターIP大集合」型の日本展開と韓国IPを組み合わせると、K-Popファンと一般消費者の両方にリーチする可能性がある。GOD ONLY KNOWS（岩田剛典）の持つ日韓クロスオーバー訴求力もこの文脈で再評価できそうだ。
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ====== 📂 バックナンバー ====== -->
+  <div class="backnumber-section">
+    <h2>📂 バックナンバー</h2>
+    <ul class="backnumber-list">
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-07-27.html">📄 2026-07-27 週次レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-07-20.html">📄 2026-07-20 週次レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-07-06.html">📄 2026-07-06 週次レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-06-29.html">📄 2026-06-29 週次レポート</a></li>
+      <li><a href="https://fujimoto-cpu.github.io/ip-report/2026-06-22.html">📄 2026-06-22 週次レポート</a></li>
+    </ul>
+    <a class="backnumber-link" href="https://fujimoto-cpu.github.io/ip-report/" target="_blank" rel="noopener">📋 レポート一覧へ →</a>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>KONNEKT INTERNATIONAL INC. | IP News Weekly Report | 自動生成 2026-08-10</p>
+</div>
+
+</body>
+</html>
